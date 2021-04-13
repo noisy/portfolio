@@ -1,6 +1,6 @@
 export default {
   template: `
-    <section class="section-proof section bg-white py-5">
+    <section class="section-proof section bg-white py-5 companies">
         <div class="container">
             <h3 class="section-title font-weight-bold text-center mb-5">Great companies I've worked with</h3>
             <div class="logos row mb-5">

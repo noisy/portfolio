@@ -22,7 +22,6 @@ export default {
                             src="assets/images/logos/press-logo-4.png"></a></div>
             </div>
         </div>
-        <!--//container-->
     </section>
     `,
 };
