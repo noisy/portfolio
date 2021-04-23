@@ -1,6 +1,7 @@
 import Navigation from "./components/navigation.js";
 import Home from "./pages/home.js";
 import Projects from "./pages/projects.js";
+import Talks from "./pages/talks.js";
 
 import db from "./db.js";
 
@@ -10,6 +11,7 @@ import db from "./db.js";
 const routes = [
   { path: "/", component: Home },
   { path: "/projects", component: Projects },
+  { path: "/talks", component: Talks },
 ];
 
 // 3. Create the router instance and pass the `routes` option
