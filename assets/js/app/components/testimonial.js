@@ -1,5 +1,5 @@
-const Testimonial = {
-  props: ["author", "title", "body", "pictureUrl", "url"],
+export default {
+  props: ["author", "title", "body", "pictureUrl", "url", "type"],
   template: `
     <div class="testimonial-item">
         <div class="position-relative p-5 shadow">
@@ -15,11 +15,14 @@ const Testimonial = {
                             <cite title="Source" class="quote-source d-inline-block font-style-normal pt-3">
                                 <span class="d-block">{{ author }}</span>
                                 <span class="d-block">{{ title }}</span>
-                                <span class="d-block position-absolute source-link"><i
-                                        class="fab fa-linkedin fa-2x me-1" data-fa-transform="down-3"></i>
-                                    <a class="text-secondary text-link" :href="url" target="_blank">View on
-                                        Linkedin <i class="fas fa-external-link-alt ms-1"
-                                            data-fa-transform="up-1"></i></a></span>
+                                <template v-if="type=='linkedin'">
+                                    <span class="d-block position-absolute source-link">
+                                        <i class="fab fa-linkedin fa-2x me-1" data-fa-transform="down-3"></i>
+                                        <a class="text-secondary text-link" href="https://www.linkedin.com/in/krzysztofszumny/" target="_blank">
+                                            View on Linkedin <i class="fas fa-external-link-alt ms-1" data-fa-transform="up-1"></i>
+                                        </a>
+                                    </span>
+                                </template>
                             </cite>
                         </div>
                     </div>
@@ -29,5 +32,3 @@ const Testimonial = {
     </div>
     `,
 };
-
-export default Testimonial;

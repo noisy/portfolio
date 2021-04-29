@@ -18,6 +18,7 @@ const db = {
     {
       author: "Paweł Ustaborowicz",
       title: "Project Manager, Opera Software",
+      type: "linkedin",
       pictureUrl:
         "https://media-exp1.licdn.com/dms/image/C5603AQG4EuUk13Vf0Q/profile-displayphoto-shrink_100_100/0/1516277136633?e=1626912000&v=beta&t=wFgJg724bKxY4QtqGwk4jLfKmJ_qa_lQkHDhLBcmoz8",
       body:
