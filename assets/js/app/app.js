@@ -2,6 +2,7 @@ import ProjectThumbnail from "./components/projectThumbnail.js";
 import Testimonial from "./components/testimonial.js";
 import Navigation from "./components/navigation.js";
 import Bio from "./components/bio.js";
+import SkillsOverview from "./components/skillsOverview.js";
 
 import Home from "./pages/home.js";
 
@@ -40,4 +41,5 @@ app.component("project-thumbnail", ProjectThumbnail);
 app.component("testimonial", Testimonial);
 app.component("Navigation", Navigation);
 app.component("Bio", Bio);
+app.component("SkillsOverview", SkillsOverview);
 app.mount("#app");
