@@ -1,7 +1,14 @@
 import ProjectThumbnail from "./projectThumbnail.js";
+import db from "./db.js";
 // import Reksio from "./reksio.js";
 
-const app = Vue.createApp({});
+const app = Vue.createApp({
+  data() {
+    return {
+      db,
+    };
+  },
+});
 app.component("project-thumbnail", ProjectThumbnail);
 app.mount("#app");
 
