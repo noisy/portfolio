@@ -440,7 +440,9 @@
                     <!-- <project-thumbnail /> -->
                     <!-- <project-thumbnail /> -->
 
-                    <project-thumbnail v-for="i in 3" />
+                    <project-thumbnail v-for="project in db.projects" :name="project.name" :slug="project.slug"
+                        :summary-title="project.summaryTitle" :summary="project.summary" :tags="project.tags"
+                        :badges="project.badges" :thumbnail-logo="project.thumbnailLogo" />
 
                 </div>
                 <!--//row-->
