@@ -13,6 +13,9 @@ img.grayscale:hover {
     -webkit-filter: grayscale(0%);
 }
 
+img.white {
+    filter: brightness(0) invert(1);
+}
 
 .logos .logo {
     margin: auto;
