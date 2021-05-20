@@ -32,17 +32,6 @@
 </head>
 
 <body>
-    <!-- <div id="app2">
-        <div v-for="i in 5">
-            {{ i }}
-            <reksio :text="i" />
-        </div>
-
-        <div>
-            <reksio :text="99" />
-            <reksio :text="42" />
-        </div>
-    </div> -->
     <div id="app">
         <header class="header">
 
@@ -437,12 +426,14 @@
 
                 <div class="project-cards row mb-5">
 
-                    <!-- <project-thumbnail /> -->
-                    <!-- <project-thumbnail /> -->
+                    <!--
+                    <project-thumbnail></project-thumbnail>
+                    <project-thumbnail></project-thumbnail>
+                    -->
 
                     <project-thumbnail v-for="project in db.projects" :name="project.name" :slug="project.slug"
                         :summary-title="project.summaryTitle" :summary="project.summary" :tags="project.tags"
-                        :badges="project.badges" :thumbnail-logo="project.thumbnailLogo" />
+                        :badges="project.badges" :thumbnail-logo="project.thumbnailLogo"></project-thumbnail>
 
                 </div>
                 <!--//row-->
