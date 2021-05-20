@@ -26,8 +26,6 @@ const router = VueRouter.createRouter({
   routes, // short for `routes: routes`
 });
 
-window.route = VueRouter.useRoute();
-
 const app = Vue.createApp({
   data() {
     return {
