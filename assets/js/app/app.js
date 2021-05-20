@@ -1,6 +1,7 @@
-import ProjectThumbnail from "./projectThumbnail.js";
+import ProjectThumbnail from "./components/projectThumbnail.js";
+// import Reksio from "./components/reksio.js";
+import Testimonial from "./components/testimonial.js";
 import db from "./db.js";
-// import Reksio from "./reksio.js";
 
 const app = Vue.createApp({
   data() {
@@ -10,6 +11,7 @@ const app = Vue.createApp({
   },
 });
 app.component("project-thumbnail", ProjectThumbnail);
+app.component("testimonial", Testimonial);
 app.mount("#app");
 
 // const app2 = Vue.createApp({});
