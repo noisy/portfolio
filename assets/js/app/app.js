@@ -1,18 +1,14 @@
-
 import Navigation from "./components/navigation.js";
 import Home from "./pages/home.js";
+import Projects from "./pages/projects.js";
 
 import db from "./db.js";
-
-const About = { template: "<div>About</div>" };
-const Projects = { template: "<div>Projects</div>" };
 
 // 2. Define some routes
 // Each route should map to a component.
 // We'll talk about nested routes later.
 const routes = [
   { path: "/", component: Home },
-  { path: "/about", component: About },
   { path: "/projects", component: Projects },
 ];
 
