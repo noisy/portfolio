@@ -8,6 +8,7 @@ const db = {
       tags: ["angular", "python-django", "android", "java", "ccpp"],
       badges: ["Java", "C/C++", "Android", "Python", "Perl"],
       thumbnailLogo: "logo-opera.svg",
+      featured: true,
     },
     // {
     //   name: "Reksio",

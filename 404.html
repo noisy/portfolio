@@ -42,31 +42,6 @@
     </div>
 
     <div id="app2">
-        <section class="section-featured-projects py-5">
-            <div class="container">
-                <h3 class="section-title font-weight-bold text-center mb-5">Featured Projects</h3>
-
-                <div class="project-cards row mb-5">
-
-                    <!--
-                    <project-thumbnail></project-thumbnail>
-                    <project-thumbnail></project-thumbnail>
-                    -->
-
-                    <project-thumbnail v-for="project in db.projects" :name="project.name" :slug="project.slug"
-                        :summary-title="project.summaryTitle" :summary="project.summary" :tags="project.tags"
-                        :badges="project.badges" :thumbnail-logo="project.thumbnailLogo"></project-thumbnail>
-
-                </div>
-                <!--//row-->
-                <div class="text-center">
-                    <a class="btn btn-primary" href="projects.html">View all projects</a>
-                </div>
-            </div>
-            <!--///container-->
-
-        </section>
-
         <section class="section-latest-blog py-5">
             <div class="container">
                 <h3 class="section-title font-weight-bold text-center mb-5">Latest Blog Posts</h3>
