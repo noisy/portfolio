@@ -19,13 +19,21 @@ export default {
     </PageHeader>
     <section class="section pt-5 px-3 px-lg-0">
         <div class="container">
-            <Talk/>
+            <Talk
+                v-for="talk in talks"
+                :source="talk.source"
+                :id="talk.id"
+                :type="talk.type"
+                :title="talk.title"
+                :description="talk.description"
+                :date="talk.date"
+            />
         </div>
     </section>
     <HireMeFooter/>
   `,
   setup(props) {
-    const { projects } = useDB();
-    return { projects };
+    const { talks } = useDB();
+    return { talks };
   },
 };

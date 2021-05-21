@@ -30,6 +30,17 @@ const db = {
     { name: "Java", tag: ".java" },
     { name: "Blockchain", tag: ".blockchain" },
   ],
+  talks: [
+    {
+      source: "youtube",
+      id: "fz1Oz47q5IU",
+      type: "video",
+      title: "How to use and store your Bitcoins in a secure way",
+      description:
+        "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus penatibus et magnis dis parturient montes, nascetur ridiculus mus..",
+      date: "Jan 4, 2018",
+    },
+  ],
   testimonials: [
     {
       author: "Paweł Ustaborowicz",
