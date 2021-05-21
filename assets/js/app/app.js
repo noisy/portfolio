@@ -1,5 +1,6 @@
 import ProjectThumbnail from "./components/projectThumbnail.js";
 import Testimonial from "./components/testimonial.js";
+import Navigation from "./components/navigation.js";
 import db from "./db.js";
 
 // 1. Define route components.
@@ -36,4 +37,5 @@ const app = Vue.createApp({
 app.use(router);
 app.component("project-thumbnail", ProjectThumbnail);
 app.component("testimonial", Testimonial);
+app.component("Navigation", Navigation);
 app.mount("#app");
