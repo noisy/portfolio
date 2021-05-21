@@ -1,11 +1,12 @@
 import ProjectThumbnail from "./components/projectThumbnail.js";
 import Testimonial from "./components/testimonial.js";
 import Navigation from "./components/navigation.js";
+import Bio from "./components/bio.js";
+
+import Home from "./pages/home.js";
+
 import db from "./db.js";
 
-// 1. Define route components.
-// These can be imported from other files
-const Home = { template: "<div>Home</div>" };
 const About = { template: "<div>About</div>" };
 const Projects = { template: "<div>Projects</div>" };
 
@@ -38,4 +39,5 @@ app.use(router);
 app.component("project-thumbnail", ProjectThumbnail);
 app.component("testimonial", Testimonial);
 app.component("Navigation", Navigation);
+app.component("Bio", Bio);
 app.mount("#app");

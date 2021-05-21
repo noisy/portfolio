@@ -1,5 +1,5 @@
-export default home = {
-  props: [],
+export default {
   template: `
-    `,
+    <bio/>
+  `,
 };
