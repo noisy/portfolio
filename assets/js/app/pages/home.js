@@ -4,6 +4,9 @@ import Companies from "../components/companies.js";
 import Testimonials from "../components/testimonials.js";
 import ProjectThumbnail from "../components/projectThumbnail.js";
 import FeaturedProjects from "../components/featuredProjects.js";
+import LatestBlogPosts from "../components/latestBlogPosts.js";
+import FeaturedIn from "../components/featuredIn.js";
+import HireMeFooter from "../components/hireMeFooter.js";
 import { useDB } from "../composables/useDB.js";
 
 export default {
@@ -14,6 +17,9 @@ export default {
     Testimonials,
     ProjectThumbnail,
     FeaturedProjects,
+    LatestBlogPosts,
+    FeaturedIn,
+    HireMeFooter,
   },
   template: `
     <Bio/>
@@ -21,6 +27,9 @@ export default {
     <Companies/>
     <Testimonials :testimonials="testimonials" />
     <FeaturedProjects/>
+    <LatestBlogPosts/>
+    <FeaturedIn/>
+    <HireMeFooter/>
   `,
   setup(props) {
     const { testimonials } = useDB();
