@@ -27,6 +27,7 @@ const db = {
       tags: ["python-django"],
       badges: ["Python", "Django", "jQuery"],
       thumbnailLogo: "spistresci.png",
+      featured: true,
     },
     {
       name: "Digital Asset Managment Platform",
@@ -47,6 +48,7 @@ const db = {
       tags: ["python-django", "angular"],
       badges: ["Python", "Django", "Angular"],
       thumbnailLogo: "logo-seerene.svg",
+      featured: true,
     },
   ],
   projectFilters: [
