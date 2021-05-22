@@ -18,7 +18,7 @@ export default {
                 <project-thumbnail
                   v-for="project in projects"
                   :name="project.name"
-                  :slug="project.slug"
+                  :thumbnail="project.thumbnail"
                   :summary-title="project.summaryTitle"
                   :summary="project.summary"
                   :tags="project.tags"

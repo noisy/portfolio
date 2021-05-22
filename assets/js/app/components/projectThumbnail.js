@@ -4,7 +4,7 @@ const ProjectThumbnail = {
       type: String,
       required: true,
     },
-    slug: {
+    thumbnail: {
       type: String,
       required: true,
     },
@@ -34,7 +34,7 @@ const ProjectThumbnail = {
         <div class="card rounded-0 border-0 shadow-sm mb-5">
             <div class="card-img-container position-relative">
                 <img class="card-img-top rounded-0"
-                    :src="'assets/images/projects/' + slug + '.png'" alt="">
+                    :src="'assets/images/projects/' + thumbnail" alt="">
                 <div class="card-img-overlay overlay-logo text-center">
                     <div class="project-logo"><img class="img-fluid w-50 white"
                             :src="'assets/images/logos/' + thumbnailLogo "></div>

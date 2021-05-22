@@ -8,7 +8,7 @@ export default {
         <div class="container">
             <h3 class="section-title font-weight-bold text-center mb-5">Featured Projects</h3>
             <div class="project-cards row mb-5">
-            <project-thumbnail v-for="project in projects" :name="project.name" :slug="project.slug"
+            <project-thumbnail v-for="project in projects" :name="project.name" :thumbnail="project.thumbnail"
                     :summary-title="project.summaryTitle" :summary="project.summary" :tags="project.tags"
                     :badges="project.badges" :thumbnail-logo="project.thumbnailLogo"></project-thumbnail>
 
