@@ -50,6 +50,17 @@ const db = {
       thumbnailLogo: "logo-seerene.svg",
       featured: true,
     },
+    {
+      name: "HiveProjects",
+      thumbnail: "hiveprojects.png",
+      summaryTitle: "HiveProjects",
+      summary:
+        "Hive Projects is a directory of over a hundred apps, sites and tools built by Hive community. Your project is not listed here? You can add it on your own!",
+      tags: ["python-django", "blockchain"],
+      badges: ["Python", "Django", "blockchain"],
+      thumbnailLogo: "hiveprojects.png",
+      featured: true,
+    },
   ],
   projectFilters: [
     { name: "Angular", tag: ".angular" },
