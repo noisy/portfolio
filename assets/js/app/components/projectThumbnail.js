@@ -4,6 +4,10 @@ const ProjectThumbnail = {
       type: String,
       required: true,
     },
+    slug: {
+      type: String,
+      required: true,
+    },
     thumbnail: {
       type: String,
       required: true,
@@ -39,14 +43,17 @@ const ProjectThumbnail = {
                     <div class="project-logo"><img class="img-fluid w-50 white"
                             :src="'assets/images/logos/' + thumbnailLogo "></div>
                 </div>
-                <a class="card-img-overlay overlay-content text-start p-lg-4" href="project.html">
+                <router-link class="card-img-overlay overlay-content text-start p-lg-4" :to="{name: 'project', params: {slug}}">
                     <h5 class="card-title font-weight-bold">{{ summaryTitle }}</h5>
                     <p class="card-text">{{ summary }}</p>
-                </a>
+                </router-link>
             </div>
             <div class="card-body pb-0">
-                <h4 class="card-title text-truncate text-center mb-0"><a class="text-link"
-                        href="project.html">{{ name }} </a></h4>
+                <h4 class="card-title text-truncate text-center mb-0">
+                  <router-link lass="text-link" to="/project">
+                      {{ name }}
+                  </router-link>
+                </h4>
             </div>
 
             <div class="card-footer border-0 text-center bg-white pb-4">

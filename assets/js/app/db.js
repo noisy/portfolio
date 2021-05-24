@@ -2,6 +2,7 @@ const db = {
   projects: [
     {
       name: "Opera Mobile for Android",
+      slug: "opera-mobile",
       thumbnail: "opera-mobile.png",
       summaryTitle: "Example title",
       summary: "Description of a project",
@@ -12,6 +13,7 @@ const db = {
     },
     {
       name: "Opera Max for Android",
+      slug: "opera-max",
       thumbnail: "opera-max.jpg",
       summaryTitle: "Example title",
       summary: "Data management and data saving app for Android",
@@ -21,6 +23,7 @@ const db = {
     },
     {
       name: "SpisTresci.pl",
+      slug: "spistresci-pl",
       thumbnail: "spistresci.png",
       summaryTitle: "Example title",
       summary: "Description of a project",
@@ -31,6 +34,7 @@ const db = {
     },
     {
       name: "Digital Asset Managment Platform",
+      slug: "myzonza",
       thumbnail: "myzonza.png",
       summaryTitle: "Zonza & MyZonza",
       summary:
@@ -41,6 +45,7 @@ const db = {
     },
     {
       name: "Seerene",
+      slug: "seerene",
       thumbnail: "seerene.jpg",
       summaryTitle: "Seerene",
       summary:
@@ -52,6 +57,7 @@ const db = {
     },
     {
       name: "HiveProjects",
+      slug: "hiveprojects",
       thumbnail: "hiveprojects.png",
       summaryTitle: "HiveProjects",
       summary:
