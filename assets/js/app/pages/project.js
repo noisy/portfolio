@@ -9,7 +9,7 @@ export default {
   },
   template: `
     <PageHeader :title="project.name">{{ project.summary }}</PageHeader>
-    <ProjectInfo :companyName="project.companyName"></ProjectInfo>
+    <ProjectInfo :companyName="project.companyName" :technologies="project.technologies"></ProjectInfo>
     <HireMeFooter/>
   `,
   setup(props) {

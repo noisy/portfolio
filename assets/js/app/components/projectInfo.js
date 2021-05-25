@@ -1,5 +1,5 @@
 export default {
-  props: ["companyName"],
+  props: ["companyName", "technologies"],
   template: `
             <aside class="project-sidebar col-12 col-lg-4 ps-lg-5">
                 <div class="project-sidebar-inner bg-white p-4">
@@ -20,47 +20,11 @@ export default {
                         <h3 class="sidebar-title mb-3">Technologies Used</h3>
                         <div class="webdev-icons row mb-5 justify-content-center">
 
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/angular.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/react.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/nodejs.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/javascript.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/jquery-alt.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/html5.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/css3.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/sass.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/less.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/python.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/ruby.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/php.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/postgresql.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/mysql-alt.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/mongodb-alt.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/grunt.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/webpack.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/bootstrap4.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/flux.svg"></div>
-                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"><img class="img-fluid"
-                                    src="/assets/images/webdev-icons/vue.svg"></div>
-
+                            <div class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"
+                                v-for="iconName in technologies"
+                            >
+                                <img class="img-fluid" :src="'/assets/images/webdev-icons/' + iconName + '.svg'" :title="iconName">
+                            </div>
                         </div>
                     </div>
                     <!--//section-row-->

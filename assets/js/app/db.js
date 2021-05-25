@@ -9,6 +9,7 @@ const db = {
       summary: "Description of a project",
       tags: ["python-django", "android", "java", "ccpp"],
       badges: ["Java", "C/C++", "Android", "Python"],
+      technologies: ["java", "c", "cpp", "android"],
       thumbnailLogo: "logo-opera.svg",
       featured: true,
     },
