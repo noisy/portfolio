@@ -8,5 +8,6 @@ export { default as LatestBlogPosts } from "./latestBlogPosts.js";
 export { default as FeaturedIn } from "./featuredIn.js";
 export { default as HireMeFooter } from "./hireMeFooter.js";
 export { default as PageHeader } from "./pageHeader.js";
+export { default as ProjectInfo } from "./projectInfo.js";
 export { default as Projects } from "./projects.js";
 export { default as Talk } from "./talk.js";

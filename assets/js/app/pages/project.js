@@ -1,13 +1,15 @@
-import { PageHeader, HireMeFooter } from "../components/index.js";
+import { PageHeader, ProjectInfo, HireMeFooter } from "../components/index.js";
 import { useDB } from "../composables/useDB.js";
 
 export default {
   components: {
     PageHeader,
+    ProjectInfo,
     HireMeFooter,
   },
   template: `
     <PageHeader :title="project.name">{{ project.summary }}</PageHeader>
+    <ProjectInfo :companyName="project.companyName"></ProjectInfo>
     <HireMeFooter/>
   `,
   setup(props) {

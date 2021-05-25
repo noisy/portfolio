@@ -50,7 +50,7 @@ const ProjectThumbnail = {
             </div>
             <div class="card-body pb-0">
                 <h4 class="card-title text-truncate text-center mb-0">
-                  <router-link lass="text-link" to="/project">
+                  <router-link lass="text-link" :to="{name: 'project', params: {slug}}">
                       {{ name }}
                   </router-link>
                 </h4>
