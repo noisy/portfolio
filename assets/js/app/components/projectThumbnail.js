@@ -38,10 +38,10 @@ const ProjectThumbnail = {
         <div class="card rounded-0 border-0 shadow-sm mb-5">
             <div class="card-img-container position-relative">
                 <img class="card-img-top rounded-0"
-                    :src="'assets/images/projects/' + thumbnail" alt="">
+                    :src="'/assets/images/projects/' + thumbnail" alt="">
                 <div class="card-img-overlay overlay-logo text-center">
                     <div class="project-logo"><img class="img-fluid w-50 white"
-                            :src="'assets/images/logos/' + thumbnailLogo "></div>
+                            :src="'/assets/images/logos/' + thumbnailLogo "></div>
                 </div>
                 <router-link class="card-img-overlay overlay-content text-start p-lg-4" :to="{name: 'project', params: {slug}}">
                     <h5 class="card-title font-weight-bold">{{ summaryTitle }}</h5>
