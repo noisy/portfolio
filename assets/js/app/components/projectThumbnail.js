@@ -34,7 +34,7 @@ const ProjectThumbnail = {
     },
   },
   template: `
-    <div class="isotope-item col-12 col-lg-4" :class="tags">
+    <div class="col-12 col-lg-4" :class="tags">
         <div class="card rounded-0 border-0 shadow-sm mb-5">
             <div class="card-img-container position-relative">
                 <img class="card-img-top rounded-0"
