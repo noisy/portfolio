@@ -2,6 +2,7 @@ import Navigation from "./components/navigation.js";
 import Home from "./pages/home.js";
 import Project from "./pages/project.js";
 import Projects from "./pages/projects.js";
+import OperaMobile from "./pages/projects/operaMobile.js";
 import Talks from "./pages/talks.js";
 
 import db from "./db.js";
@@ -11,6 +12,11 @@ import db from "./db.js";
 // We'll talk about nested routes later.
 const routes = [
   { path: "/", component: Home },
+  {
+    path: "/project/opera-mobile",
+    name: "opera-mobile",
+    component: OperaMobile,
+  },
   { path: "/project/:slug", name: "project", component: Project },
   { path: "/projects", component: Projects },
   { path: "/talks", component: Talks },
