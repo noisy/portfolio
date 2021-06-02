@@ -1,5 +1,5 @@
 export { default as Bio } from "../../../../src/components/bio.js";
-export { default as SkillsOverview } from "./skillsOverview.js";
+export { default as SkillsOverview } from "../../../../src/components/skillsOverview.js";
 export { default as Companies } from "./companies.js";
 export { default as Testimonials } from "./testimonials.js";
 export { default as ProjectThumbnail } from "./projectThumbnail.js";
