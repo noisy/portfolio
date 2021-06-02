@@ -77,7 +77,11 @@
                 Pages
               </a>
               <div
-                class="dropdown-menu dropdown-menu-right text-capitalize shadow-lg"
+                class="
+                  dropdown-menu dropdown-menu-right
+                  text-capitalize
+                  shadow-lg
+                "
                 aria-labelledby="navigationLink"
               >
                 <a class="dropdown-item" href="project.html"

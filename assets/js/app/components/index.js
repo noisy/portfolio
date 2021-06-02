@@ -1,4 +1,4 @@
-export { default as Bio } from "./bio.js";
+export { default as Bio } from "../../../../src/components/bio.js";
 export { default as SkillsOverview } from "./skillsOverview.js";
 export { default as Companies } from "./companies.js";
 export { default as Testimonials } from "./testimonials.js";
