@@ -1,10 +1,25 @@
 <template>
+  <Navigation>test</Navigation>
+
   <div id="nav">
     <router-link to="/">Home</router-link> |
     <router-link to="/about">About</router-link>
   </div>
   <router-view />
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import Navigation from "@/components/Navigation.vue"; // @ is an alias to /src
+
+export default defineComponent({
+  name: "App",
+  components: {
+    Navigation,
+  },
+});
+</script>
+
 
 <style lang="scss">
 #app {
