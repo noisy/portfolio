@@ -3,13 +3,17 @@ const db = {
     {
       name: "Opera Mobile for Android",
       slug: "opera-mobile",
+      url: "opera.com/mobile",
+      archivedUrl:
+        "https://web.archive.org/web/20110310200345/https://opera.com/mobile",
+      type: "Mobile Application",
       companyName: "Opera Software",
       thumbnail: "opera-mobile.png",
       summaryTitle: "Example title",
       summary: "Description of a project",
       tags: ["python-django", "android", "java", "ccpp"],
       badges: ["Java", "C/C++", "Android", "Python"],
-      technologies: ["java", "c", "cpp", "android"],
+      technologies: ["android", "c", "cpp", "java"],
       thumbnailLogo: "logo-opera.svg",
       featured: true,
     },

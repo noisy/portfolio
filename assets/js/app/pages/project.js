@@ -14,8 +14,7 @@ export default {
         <div class="row">
           <ProjectInfo
             class="col-12 col-lg-4 ps-lg-5"
-            :companyName="project.companyName"
-            :technologies="project.technologies"
+            :project="project"
           />
           <section class="col-12 col-lg-8">
             <slot></slot>
