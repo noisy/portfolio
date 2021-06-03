@@ -1,11 +1,16 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import Home from "../views/Home.vue";
+import { Home, Projects } from "@/views";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
     name: "Home",
     component: Home,
+  },
+  {
+    path: "/projects",
+    name: "projects",
+    component: Projects,
   },
   // TO IMPLEMENT:
   {
@@ -21,11 +26,6 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/talks",
     name: "talks",
-    component: Home,
-  },
-  {
-    path: "/projects",
-    name: "projects",
     component: Home,
   },
   {
