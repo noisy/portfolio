@@ -1,7 +1,4 @@
 import {
-  Bio,
-  SkillsOverview,
-  Companies,
   Testimonials,
   ProjectThumbnail,
   FeaturedProjects,
@@ -14,9 +11,6 @@ import { useDB } from "../composables/useDB.js";
 
 export default {
   components: {
-    Bio,
-    SkillsOverview,
-    Companies,
     Testimonials,
     ProjectThumbnail,
     FeaturedProjects,
@@ -25,9 +19,9 @@ export default {
     HireMeFooter,
   },
   template: `
-    <Bio/>
-    <SkillsOverview/>
-    <Companies/>
+    <!-- <Bio/> -->
+    <!-- <SkillsOverview/> -->
+    <!-- <Companies/> -->
     <Testimonials :testimonials="testimonials" />
     <FeaturedProjects/>
     <LatestBlogPosts/>

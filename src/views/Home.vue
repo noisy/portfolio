@@ -2,6 +2,8 @@
   <Bio />
   <SkillsOverview />
   <Companies />
+  <Testimonials :testimonials="testimonials" />
+
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
     <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
@@ -14,18 +16,9 @@ import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
 import Bio from "@/components/Bio.vue";
 import Companies from "@/components/Companies.vue";
 import SkillsOverview from "@/components/SkillsOverview.vue";
+import Testimonials from "@/components/Testimonials.vue";
 
-// import {
-// Bio,
-// SkillsOverview,
-// Companies,
-// Testimonials,
-// ProjectThumbnail,
-// FeaturedProjects,
-// LatestBlogPosts,
-// FeaturedIn,
-// HireMeFooter,
-// } from "@/components/";
+import { useDB } from "@/composables/useDB";
 
 export default defineComponent({
   name: "Home",
@@ -33,7 +26,12 @@ export default defineComponent({
     Bio,
     Companies,
     SkillsOverview,
+    Testimonials,
     HelloWorld,
+  },
+  setup() {
+    const { testimonials } = useDB();
+    return { testimonials };
   },
 });
 
@@ -48,8 +46,6 @@ export default defineComponent({
 //   FeaturedIn,
 //   HireMeFooter,
 // } from "../components/index.js";
-
-// import { useDB } from "../composables/useDB.js";
 
 // export default {
 //   components: {

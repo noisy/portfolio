@@ -1,5 +1,5 @@
 import ProjectsGrid from "./projectsGrid.js";
-import { useFeaturedProjects } from "../composables/useFeaturedProjects.js";
+import { useFeaturedProjects } from "../../../../src/composables/useFeaturedProjects.js";
 
 export default {
   components: { ProjectsGrid },
