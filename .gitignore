@@ -23,6 +23,8 @@ pnpm-debug.log*
 
 # VisualStudioCode #
 .vscode/*
+!.vscode/docs/
+
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
