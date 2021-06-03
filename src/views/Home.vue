@@ -3,6 +3,10 @@
   <SkillsOverview />
   <Companies />
   <Testimonials :testimonials="testimonials" />
+  <!-- <FeaturedProjects/> -->
+  <!-- <LatestBlogPosts/> -->
+  <!-- <FeaturedIn/> -->
+  <HireMeFooter />
 </template>
 
 <script lang="ts">

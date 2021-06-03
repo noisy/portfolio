@@ -8,19 +8,16 @@
 	"Single File Component": {
 		"prefix": "vue",
 		"body": [
-			"<template>$TM_SELECTED_TEXT</template>",
+			"<template>$TM_SELECTED_TEXT$CLIPBOARD</template>",
 			"",
 			"<script lang=\"ts\">",
 			"import { defineComponent } from \"vue\";",
 			"export default defineComponent({",
 			"  name: \"$TM_FILENAME_BASE$1\",",
-			"  setup() {",
-			"    return {};",
-			"  },",
-			"});",
+			"  ${2:setup(){\n    return {\\};\n  \\},}",
+			"})",
 			"</script>",
-			"",
-			"<style lang=\"scss\"></style>",
+			"${3:\n<style lang=\"scss\"></style>}",
 		],
 		"description": ""
 	},

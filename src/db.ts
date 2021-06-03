@@ -120,6 +120,7 @@ const db = {
   links: {
     linkedinProfile: "https://www.linkedin.com/in/krzysztofszumny/",
   },
+  contactEmail: "hello@krzysztofszumny.com",
 };
 
 export default db;
