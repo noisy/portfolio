@@ -3,32 +3,17 @@
   <SkillsOverview />
   <Companies />
   <Testimonials :testimonials="testimonials" />
-
-  <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
-  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
-import Bio from "@/components/Bio.vue";
-import Companies from "@/components/Companies.vue";
-import SkillsOverview from "@/components/SkillsOverview.vue";
-import Testimonials from "@/components/Testimonials.vue";
+import * as components from "@/components";
 
 import { useDB } from "@/composables/useDB";
 
 export default defineComponent({
   name: "Home",
-  components: {
-    Bio,
-    Companies,
-    SkillsOverview,
-    Testimonials,
-    HelloWorld,
-  },
+  components,
   setup() {
     const { testimonials } = useDB();
     return { testimonials };
