@@ -3,9 +3,8 @@
   <SkillsOverview />
   <Companies />
   <Testimonials :testimonials="testimonials" />
-  <!-- <FeaturedProjects/> -->
+  <FeaturedProjects />
   <!-- <LatestBlogPosts/> -->
-  <ProjectThumbnail :project="project" />
   <FeaturedIn />
   <HireMeFooter />
 </template>
@@ -13,15 +12,14 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import * as components from "@/components";
-
-import { useDB } from "@/composables/useDB";
+import { useDB } from "@/composables";
 
 export default defineComponent({
   name: "Home",
   components,
   setup() {
-    const { testimonials, projects } = useDB();
-    return { testimonials, project: projects[0] };
+    const { testimonials } = useDB();
+    return { testimonials };
   },
 });
 </script>

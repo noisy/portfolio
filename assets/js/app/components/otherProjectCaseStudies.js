@@ -1,4 +1,4 @@
-import ProjectsGrid from "./projectsGrid.js";
+import ProjectsGrid from "../../../../src/components/ProjectsGrid.js";
 
 export default {
   props: ["projects"],

@@ -1,4 +1,4 @@
-import { useDB } from "./useDB.js";
+import { useDB } from "./useDB";
 
 export function useFeaturedProjects() {
   const { projects } = useDB();
