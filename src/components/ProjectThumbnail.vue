@@ -4,14 +4,14 @@
       <div class="card-img-container position-relative">
         <img
           class="card-img-top rounded-0"
-          :src="`/assets/images/projects/${project.thumbnail}`"
+          :src="`/images/projects/${project.thumbnail}`"
           alt=""
         />
         <div class="card-img-overlay overlay-logo text-center">
           <div class="project-logo">
             <img
               class="img-fluid w-50 white"
-              :src="`/assets/images/logos/${project.thumbnailLogo}`"
+              :src="`/images/logos/${project.thumbnailLogo}`"
             />
           </div>
         </div>
@@ -52,7 +52,7 @@
 </template>
 
 <script lang="ts">
-import { IProject } from "@/types";
+import IProject from "@/types/IProject";
 import { defineComponent, PropType } from "vue";
 
 export default defineComponent({

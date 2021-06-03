@@ -34,6 +34,12 @@ const routes: Array<RouteRecordRaw> = [
     component: Home,
   },
   {
+    path: "/project/opera-mobile",
+    name: "opera-mobile",
+    component: Home,
+  },
+  { path: "/project/:slug", name: "project", component: Home },
+  {
     path: "/about",
     name: "About",
     // route level code-splitting

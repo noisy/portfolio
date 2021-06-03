@@ -5,6 +5,7 @@
   <Testimonials :testimonials="testimonials" />
   <!-- <FeaturedProjects/> -->
   <!-- <LatestBlogPosts/> -->
+  <ProjectThumbnail :project="project" />
   <FeaturedIn />
   <HireMeFooter />
 </template>
@@ -19,8 +20,8 @@ export default defineComponent({
   name: "Home",
   components,
   setup() {
-    const { testimonials } = useDB();
-    return { testimonials };
+    const { testimonials, projects } = useDB();
+    return { testimonials, project: projects[0] };
   },
 });
 </script>
