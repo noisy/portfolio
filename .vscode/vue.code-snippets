@@ -8,23 +8,23 @@
 	"Single File Component": {
 		"prefix": "vue",
 		"body": [
-			"<template>$TM_SELECTED_TEXT$CLIPBOARD</template>",
+			"<template>$1</template>",
 			"",
 			"<script lang=\"ts\">",
 			"import { defineComponent } from \"vue\";",
 			"export default defineComponent({",
-			"  name: \"$TM_FILENAME_BASE$1\",",
-			"  ${2:setup(){\n    return {\\};\n  \\},}",
+			"  name: \"$TM_FILENAME_BASE$2\",",
+			"  ${3:setup(){\n    return {\\};\n  \\},}",
 			"})",
 			"</script>",
-			"${3:\n<style lang=\"scss\"></style>}",
+			"${4:\n<style lang=\"scss\"></style>}",
 		],
 		"description": ""
 	},
 	"Import Vue Component": {
 		"prefix": "import-vue",
 		"body": [
-			"export { default as $CLIPBOARD$1 } from \"./$CLIPBOARD$1.vue\";",
+			"export { default as $1 } from \"./$1.vue\";",
 		],
 		"description": ""
 	}

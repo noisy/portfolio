@@ -5,7 +5,7 @@
   <Testimonials :testimonials="testimonials" />
   <!-- <FeaturedProjects/> -->
   <!-- <LatestBlogPosts/> -->
-  <!-- <FeaturedIn/> -->
+  <FeaturedIn />
   <HireMeFooter />
 </template>
 
@@ -23,44 +23,4 @@ export default defineComponent({
     return { testimonials };
   },
 });
-
-// import {
-//   Bio,
-//   SkillsOverview,
-//   Companies,
-//   Testimonials,
-//   ProjectThumbnail,
-//   FeaturedProjects,
-//   LatestBlogPosts,
-//   FeaturedIn,
-//   HireMeFooter,
-// } from "../components/index.js";
-
-// export default {
-//   components: {
-//     Bio,
-//     SkillsOverview,
-//     Companies,
-//     Testimonials,
-//     ProjectThumbnail,
-//     FeaturedProjects,
-//     LatestBlogPosts,
-//     FeaturedIn,
-//     HireMeFooter,
-//   },
-//   template: `
-//     <Bio/>
-//     <SkillsOverview/>
-//     <Companies/>
-//     <Testimonials :testimonials="testimonials" />
-//     <FeaturedProjects/>
-//     <LatestBlogPosts/>
-//     <FeaturedIn/>
-//     <HireMeFooter/>
-//   `,
-//   setup(props) {
-//     const { testimonials } = useDB();
-//     return { testimonials };
-//   },
-// };
 </script>
