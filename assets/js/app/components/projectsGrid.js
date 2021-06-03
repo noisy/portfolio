@@ -1,4 +1,4 @@
-import ProjectThumbnail from "./projectThumbnail.js";
+import ProjectThumbnail from "../../../../src/components/projectThumbnail.js";
 import { setupIsotopeFilters } from "../../isotope-custom.js";
 
 export default {

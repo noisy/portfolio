@@ -1,4 +1,4 @@
-import ProjectThumbnail from "./projectThumbnail.js";
+import ProjectThumbnail from "../../../../src/components/projectThumbnail.js";
 import ProjectsGrid from "./projectsGrid.js";
 import ProjectsFilters from "./filters.js";
 
