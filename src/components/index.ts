@@ -15,3 +15,4 @@ export { default as ProjectThumbnail } from "./ProjectThumbnail.vue";
 export { default as SkillsOverview } from "./SkillsOverview.vue";
 export { default as Testimonial } from "./Testimonial.vue";
 export { default as Testimonials } from "./Testimonials.vue";
+export { default as Talk } from "./Talk.vue";

@@ -3,7 +3,7 @@ import Home from "./pages/home.js";
 import Project from "../../../src/views/project.js";
 import Projects from "../../../src/views/projects.js";
 import OperaMobile from "../../../src/views/projects/operaMobile.js";
-import Talks from "./pages/talks.js";
+import Talks from "../../../src/views/talks.js";
 
 import db from "./db.js";
 
