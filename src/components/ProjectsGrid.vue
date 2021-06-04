@@ -29,7 +29,7 @@ export default defineComponent({
     },
   },
   setup() {
-    onMounted(setupIsotopeFilters);
+    onMounted(() => setupIsotopeFilters());
   },
 });
 </script>
