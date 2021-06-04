@@ -7,6 +7,7 @@ export { default as HireMeFooter } from "./HireMeFooter.vue";
 export { default as Navigation } from "./Navigation.vue";
 export { default as PageHeader } from "./PageHeader.vue";
 export { default as ProjectsGrid } from "./ProjectsGrid.vue";
+export { default as ProjectInfo } from "./ProjectInfo.vue";
 export { default as ProjectThumbnail } from "./ProjectThumbnail.vue";
 export { default as SkillsOverview } from "./SkillsOverview.vue";
 export { default as Testimonial } from "./Testimonial.vue";

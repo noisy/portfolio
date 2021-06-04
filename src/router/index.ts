@@ -1,16 +1,21 @@
 import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
-import { Home, Projects } from "@/views";
+import { Home, Project, Projects } from "@/views";
 
 const routes: Array<RouteRecordRaw> = [
   {
     path: "/",
-    name: "Home",
+    name: "home",
     component: Home,
   },
   {
     path: "/projects",
     name: "projects",
     component: Projects,
+  },
+  {
+    path: "/project/:slug",
+    name: "project",
+    component: Project,
   },
   // TO IMPLEMENT:
   {
@@ -33,12 +38,6 @@ const routes: Array<RouteRecordRaw> = [
     name: "contact",
     component: Home,
   },
-  {
-    path: "/project/opera-mobile",
-    name: "opera-mobile",
-    component: Home,
-  },
-  { path: "/project/:slug", name: "project", component: Home },
   {
     path: "/about",
     name: "About",

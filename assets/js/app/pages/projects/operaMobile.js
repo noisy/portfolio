@@ -1,4 +1,4 @@
-import Project from "../project.js";
+import Project from "../../../../../src/views/project.js";
 import CoverImage from "../../components/coverImage.js";
 import OtherProjectCaseStudies from "../../components/otherProjectCaseStudies.js";
 import Testimonial from "../../components/testimonial.js";
