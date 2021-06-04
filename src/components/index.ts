@@ -4,6 +4,7 @@ export { default as FeaturedIn } from "./FeaturedIn.vue";
 export { default as FeaturedProjects } from "./FeaturedProjects.vue";
 export { default as HireMeFooter } from "./HireMeFooter.vue";
 export { default as Navigation } from "./Navigation.vue";
+export { default as PageHeader } from "./PageHeader.vue";
 export { default as ProjectsGrid } from "./ProjectsGrid.vue";
 export { default as ProjectThumbnail } from "./ProjectThumbnail.vue";
 export { default as SkillsOverview } from "./SkillsOverview.vue";

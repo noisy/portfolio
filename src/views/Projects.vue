@@ -1,30 +1,34 @@
 <template>
-  <!-- <PageHeader title="Projects"
+  <PageHeader title="Projects"
     >In-depth Case Studies to show you what I can offer and how I
     work</PageHeader
   >
-  <Projects /> -->
+
+  <section class="section pt-5">
+    <div class="container">
+      <!-- <ProjectsFilters :filters="projectFilters" /> -->
+      <ProjectsGrid :projects="projects" />
+    </div>
+  </section>
+
   <HireMeFooter />
 </template>
 
 <script lang="ts">
 import { useDB } from "@/composables";
 import { defineComponent } from "vue";
-import {
-  HireMeFooter,
-  // PageHeader,
-  // Projects
-} from "@/components";
+import { HireMeFooter, ProjectsGrid, PageHeader } from "@/components";
+
 export default defineComponent({
   name: "Projects",
   components: {
-    // PageHeader,
-    // Projects,
+    PageHeader,
+    ProjectsGrid,
     HireMeFooter,
   },
   setup() {
-    const { projects } = useDB();
-    return { projects };
+    const { projects, projectFilters } = useDB();
+    return { projects, projectFilters };
   },
 });
 </script>
