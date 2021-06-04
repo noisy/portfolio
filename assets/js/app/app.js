@@ -2,7 +2,7 @@ import Navigation from "./components/navigation.js";
 import Home from "./pages/home.js";
 import Project from "../../../src/views/project.js";
 import Projects from "../../../src/views/projects.js";
-import OperaMobile from "./pages/projects/operaMobile.js";
+import OperaMobile from "../../../src/views/projects/operaMobile.js";
 import Talks from "./pages/talks.js";
 
 import db from "./db.js";

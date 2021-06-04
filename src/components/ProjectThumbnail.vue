@@ -17,7 +17,7 @@
         </div>
         <router-link
           class="card-img-overlay overlay-content text-start p-lg-4"
-          :to="{ name: 'project', params: { slug: project.slug } }"
+          :to="{ name: `project-${project.slug}` }"
         >
           <h5 class="card-title font-weight-bold">
             {{ project.summaryTitle }}
@@ -29,7 +29,7 @@
         <h4 class="card-title text-truncate text-center mb-0">
           <router-link
             lass="text-link"
-            :to="{ name: 'project', params: { slug: project.slug } }"
+            :to="{ name: `project-${project.slug}` }"
           >
             {{ project.name }}
           </router-link>
