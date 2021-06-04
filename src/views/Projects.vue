@@ -3,10 +3,9 @@
     >In-depth Case Studies to show you what I can offer and how I
     work</PageHeader
   >
-
   <section class="section pt-5">
     <div class="container">
-      <!-- <ProjectsFilters :filters="projectFilters" /> -->
+      <Filters :filters="projectFilters" />
       <ProjectsGrid :projects="projects" />
     </div>
   </section>
@@ -17,14 +16,15 @@
 <script lang="ts">
 import { useDB } from "@/composables";
 import { defineComponent } from "vue";
-import { HireMeFooter, ProjectsGrid, PageHeader } from "@/components";
+import { Filters, HireMeFooter, ProjectsGrid, PageHeader } from "@/components";
 
 export default defineComponent({
   name: "Projects",
   components: {
+    Filters,
+    HireMeFooter,
     PageHeader,
     ProjectsGrid,
-    HireMeFooter,
   },
   setup() {
     const { projects, projectFilters } = useDB();

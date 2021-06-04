@@ -1,6 +1,6 @@
 import ProjectThumbnail from "../../../../src/components/projectThumbnail.js";
 import ProjectsGrid from "../../../../src/components/ProjectsGrid.js";
-import ProjectsFilters from "./filters.js";
+import ProjectsFilters from "../../../../src/components/filters.js";
 
 import { useDB } from "../composables/useDB.js";
 

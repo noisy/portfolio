@@ -2,6 +2,7 @@ export { default as Bio } from "./Bio.vue";
 export { default as Companies } from "./Companies.vue";
 export { default as FeaturedIn } from "./FeaturedIn.vue";
 export { default as FeaturedProjects } from "./FeaturedProjects.vue";
+export { default as Filters } from "./Filters.vue";
 export { default as HireMeFooter } from "./HireMeFooter.vue";
 export { default as Navigation } from "./Navigation.vue";
 export { default as PageHeader } from "./PageHeader.vue";

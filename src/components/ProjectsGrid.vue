@@ -16,7 +16,7 @@ import { onMounted, PropType } from "vue";
 import IProject from "@/types/IProject";
 import ProjectThumbnail from "./ProjectThumbnail.vue";
 
-// import { setupIsotopeFilters } from "../../assets/js/isotope-custom.js";
+import { setupIsotopeFilters } from "@/libs/isotope-custom";
 
 import { defineComponent } from "vue";
 export default defineComponent({
@@ -29,7 +29,7 @@ export default defineComponent({
     },
   },
   setup() {
-    // onMounted(setupIsotopeFilters);
+    onMounted(setupIsotopeFilters);
   },
 });
 </script>
