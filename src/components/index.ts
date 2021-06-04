@@ -6,6 +6,7 @@ export { default as FeaturedProjects } from "./FeaturedProjects.vue";
 export { default as Filters } from "./Filters.vue";
 export { default as HireMeFooter } from "./HireMeFooter.vue";
 export { default as Navigation } from "./Navigation.vue";
+export { default as OtherProjectCaseStudies } from "./OtherProjectCaseStudies.vue";
 export { default as PageHeader } from "./PageHeader.vue";
 export { default as ProjectsGrid } from "./ProjectsGrid.vue";
 export { default as ProjectInfo } from "./ProjectInfo.vue";

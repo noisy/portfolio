@@ -1,5 +1,5 @@
 <template>
-  <CoverImage :url="'/images/projects/' + project.thumbnail" />
+  <CoverImage :url="`/images/projects/${project.thumbnail}`" />
 
   <div class="section-row">
     <div class="mb-5">
@@ -334,23 +334,23 @@
   </div>
   <!--//section-row-->
 
-  <!-- <OtherProjectCaseStudies :projects="projects" /> -->
+  <OtherProjectCaseStudies :projects="projects" />
 </template>
 
 <script lang="ts">
 import { useDB } from "@/composables";
-import { CoverImage, Testimonial } from "@/components";
+import { CoverImage, Testimonial, OtherProjectCaseStudies } from "@/components";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "OperaMobile",
   components: {
     CoverImage,
-    // OtherProjectCaseStudies,
+    OtherProjectCaseStudies,
     Testimonial,
   },
   setup() {
-    const otherCaseStudies = ["opera-max"];
+    const otherCaseStudies = ["opera-mobile"];
     const { projects, testimonials } = useDB();
     return {
       project: projects.find((p) => p.slug == "opera-mobile"),
