@@ -5,7 +5,7 @@
     <div class="row">
       <ProjectInfo class="col-12 col-lg-4 ps-lg-5" :project="project" />
       <section class="col-12 col-lg-8">
-        <slot></slot>
+        <router-view></router-view>
       </section>
     </div>
   </div>
@@ -14,9 +14,9 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { defineComponent } from "vue";
 import { PageHeader, ProjectInfo, HireMeFooter } from "@/components";
-import IProject from "@/types/IProject";
+import { useDB } from "@/composables";
 
 export default defineComponent({
   name: "Project",
@@ -25,11 +25,16 @@ export default defineComponent({
     ProjectInfo,
     HireMeFooter,
   },
-  props: {
-    project: {
-      required: true,
-      type: Object as PropType<IProject>,
-    },
+  setup() {
+    const otherCaseStudies = ["opera-max"];
+    const { projects, testimonials } = useDB();
+    return {
+      project: projects.find((p) => p.slug == "opera-mobile"),
+      projects: projects.filter((p) => otherCaseStudies.includes(p.slug)),
+      testimonials: testimonials.filter((p) =>
+        p.relevantForProjects.includes("opera-mobile")
+      ),
+    };
   },
 });
 </script>

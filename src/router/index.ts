@@ -14,9 +14,16 @@ const routes: Array<RouteRecordRaw> = [
     component: Projects,
   },
   {
-    path: "/project/opera-mobile",
-    name: "project-opera-mobile",
-    component: OperaMobile,
+    path: "/project/",
+    name: "project",
+    component: Project,
+    children: [
+      {
+        path: "opera-mobile",
+        name: "project-opera-mobile",
+        component: OperaMobile,
+      },
+    ],
   },
   // TO IMPLEMENT:
   {

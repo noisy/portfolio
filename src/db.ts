@@ -10,7 +10,7 @@ const db = {
       companyName: "Opera Software",
       thumbnail: "opera-mobile.png",
       summaryTitle: "Example title",
-      summary: "Description of a project",
+      summary: "Opera Mobile was a mobile application for",
       tags: ["python-django", "android", "java", "ccpp"],
       badges: ["Java", "C/C++", "Android", "Python"],
       technologies: ["android", "c", "cpp", "java"],
