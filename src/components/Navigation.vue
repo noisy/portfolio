@@ -2,24 +2,28 @@
   <nav class="top-bar theme-bg-primary-darken">
     <div class="container-fluid">
       <nav class="navbar navbar-expand-lg navbar-dark position-relative">
-        <ul class="social-list list-inline mb-0">
+        <!-- <ul class="social-list list-inline mb-0">
           <li class="list-inline-item">
             <a class="text-white" href="#"
               ><i class="fab fa-twitter fa-fw"></i
             ></a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white" href="#"
+            <a
+              class="text-white"
+              href="https://www.linkedin.com/in/krzysztofszumny/"
               ><i class="fab fa-linkedin-in fa-fw"></i
             ></a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white" href="#"
+            <a class="text-white" href="https://github.com/noisy/"
               ><i class="fab fa-github-alt fa-fw"></i
             ></a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white" href="#"
+            <a
+              class="text-white"
+              href="https://stackoverflow.com/users/338581/noisy"
               ><i class="fab fa-stack-overflow fa-fw"></i
             ></a>
           </li>
@@ -28,7 +32,7 @@
               ><i class="fab fa-codepen fa-fw"></i
             ></a>
           </li>
-        </ul>
+        </ul> -->
         <!--//social-list-->
 
         <button
@@ -39,33 +43,68 @@
           aria-controls="navigation"
           aria-expanded="false"
           aria-label="Toggle navigation"
+          @click="toggleMenu()"
         >
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse text-uppercase" id="navigation">
+        <div
+          class="navbar-collapse text-uppercase"
+          :class="{ collapse: menuCollapsed }"
+          id="navigation"
+        >
+          <ul class="navbar-nav me-lg-auto">
+            <li class="nav-item ms-lg-1">
+              <router-link
+                class="nav-link"
+                :to="{ name: 'home' }"
+                @click="closeMenu()"
+                >Home</router-link
+              >
+            </li>
+          </ul>
           <ul class="navbar-nav ms-lg-auto">
             <li class="nav-item me-lg-3">
-              <router-link class="nav-link" to="/">Home</router-link>
-            </li>
-            <li class="nav-item me-lg-3">
-              <router-link class="nav-link" to="/projects"
+              <router-link
+                class="nav-link"
+                :to="{ name: 'projects' }"
+                @click="closeMenu()"
                 >Projects</router-link
               >
             </li>
             <li class="nav-item me-lg-3">
-              <router-link class="nav-link" to="/talks">Talks</router-link>
+              <router-link
+                class="nav-link"
+                :to="{ name: 'talks' }"
+                @click="closeMenu()"
+                >Talks</router-link
+              >
             </li>
             <li class="nav-item me-lg-3">
-              <router-link class="nav-link" to="/blog">Blog</router-link>
+              <router-link
+                class="nav-link"
+                :to="{ name: 'blog' }"
+                @click="closeMenu()"
+                >Blog</router-link
+              >
             </li>
             <li class="nav-item me-lg-3">
-              <router-link class="nav-link" to="/resume">Resume</router-link>
+              <router-link
+                class="nav-link"
+                :to="{ name: 'resume' }"
+                @click="closeMenu()"
+                >Resume</router-link
+              >
             </li>
-            <li class="nav-item me-lg-3">
-              <router-link class="nav-link" to="/contact">Contact</router-link>
+            <li class="nav-item me-0">
+              <router-link
+                class="nav-link"
+                :to="{ name: 'contact' }"
+                @click="closeMenu()"
+                >Contact</router-link
+              >
             </li>
-            <li class="nav-item dropdown me-0">
+            <!-- <li class="nav-item dropdown me-0">
               <a
                 class="nav-link dropdown-toggle"
                 href="#"
@@ -77,11 +116,7 @@
                 Pages
               </a>
               <div
-                class="
-                  dropdown-menu dropdown-menu-right
-                  text-capitalize
-                  shadow-lg
-                "
+                class="dropdown-menu dropdown-menu-right text-capitalize shadow-lg"
                 aria-labelledby="navigationLink"
               >
                 <a class="dropdown-item" href="project.html"
@@ -92,12 +127,32 @@
                 >
                 <a class="dropdown-item" href="blog-post.html">Blog Post</a>
               </div>
-            </li>
+            </li> -->
           </ul>
           <span id="slide-line"></span>
         </div>
       </nav>
     </div>
-    <!--//container-->
   </nav>
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+export default defineComponent({
+  name: "Navigation",
+  data: () => ({
+    menuCollapsed: true,
+  }),
+  methods: {
+    toggleMenu() {
+      this.menuCollapsed = !this.menuCollapsed;
+    },
+    closeMenu() {
+      this.menuCollapsed = true;
+    },
+  },
+  setup() {
+    return {};
+  },
+});
+</script>
