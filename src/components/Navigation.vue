@@ -151,8 +151,5 @@ export default defineComponent({
       this.menuCollapsed = true;
     },
   },
-  setup() {
-    return {};
-  },
 });
 </script>
