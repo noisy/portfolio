@@ -6,7 +6,6 @@
   <FeaturedProjects />
   <LatestBlogPosts />
   <FeaturedIn />
-  <HireMeFooter />
 </template>
 
 <script lang="ts">

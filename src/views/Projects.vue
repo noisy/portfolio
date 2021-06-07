@@ -9,20 +9,17 @@
       <ProjectsGrid :projects="projects" />
     </div>
   </section>
-
-  <HireMeFooter />
 </template>
 
 <script lang="ts">
 import { useDB } from "@/composables";
 import { defineComponent } from "vue";
-import { Filters, HireMeFooter, ProjectsGrid, PageHeader } from "@/components";
+import { Filters, ProjectsGrid, PageHeader } from "@/components";
 
 export default defineComponent({
   name: "Projects",
   components: {
     Filters,
-    HireMeFooter,
     PageHeader,
     ProjectsGrid,
   },

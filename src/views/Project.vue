@@ -9,13 +9,11 @@
       </section>
     </div>
   </div>
-
-  <HireMeFooter />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { PageHeader, ProjectInfo, HireMeFooter } from "@/components";
+import { PageHeader, ProjectInfo } from "@/components";
 import { useDB } from "@/composables";
 
 export default defineComponent({
@@ -23,7 +21,6 @@ export default defineComponent({
   components: {
     PageHeader,
     ProjectInfo,
-    HireMeFooter,
   },
   setup() {
     const otherCaseStudies = ["opera-max"];

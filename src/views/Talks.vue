@@ -19,19 +19,17 @@
       />
     </div>
   </section>
-  <HireMeFooter />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import { PageHeader, HireMeFooter, Talk } from "@/components";
+import { PageHeader, Talk } from "@/components";
 import { useDB } from "@/composables";
 
 export default defineComponent({
   name: "Talks",
   components: {
     PageHeader,
-    HireMeFooter,
     Talk,
   },
   setup() {

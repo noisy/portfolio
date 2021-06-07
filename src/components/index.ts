@@ -4,6 +4,7 @@ export { default as CoverImage } from "./CoverImage.vue";
 export { default as FeaturedIn } from "./FeaturedIn.vue";
 export { default as FeaturedProjects } from "./FeaturedProjects.vue";
 export { default as Filters } from "./Filters.vue";
+export { default as Footer } from "./Footer.vue";
 export { default as HireMeFooter } from "./HireMeFooter.vue";
 export { default as LatestBlogPosts } from "./LatestBlogPosts.vue";
 export { default as Navigation } from "./Navigation.vue";
