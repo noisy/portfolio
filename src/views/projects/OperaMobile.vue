@@ -314,6 +314,7 @@
       :title="t.title"
       :picture-url="t.pictureUrl"
       :type="t.type"
+      :url="t.url"
     >
     </Testimonial>
   </div>
