@@ -1,9 +1,4 @@
-export interface ITestimonial {
-  author: string;
-  title: string;
-  type: "linkedin" | "steemit";
-  pictureUrl: string;
-  body: string;
-  relevantForProjects: string[];
-  url: string;
-}
+export * from "./IDB";
+export * from "./IProject";
+export * from "./ITalk";
+export * from "./ITestimonial";

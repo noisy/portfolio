@@ -15,7 +15,7 @@
 import { PropType, defineComponent, onMounted } from "vue";
 import ProjectThumbnail from "./ProjectThumbnail.vue";
 import { setupIsotopeFilters } from "@/libs/isotope-custom";
-import IProject from "@/types/IProject";
+import { IProject } from "@/types";
 
 export default defineComponent({
   name: "ProjectsGrid",

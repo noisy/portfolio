@@ -19,6 +19,11 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "Filters",
-  props: ["filters"],
+  props: {
+    filters: {
+      type: Object,
+      required: true,
+    },
+  },
 });
 </script>

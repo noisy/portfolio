@@ -53,6 +53,31 @@
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  props: ["author", "title", "body", "pictureUrl", "url", "type"],
+  props: {
+    author: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    body: {
+      type: String,
+      required: true,
+    },
+    pictureUrl: {
+      type: String,
+      required: true,
+    },
+    url: {
+      type: String,
+      required: true,
+    },
+    type: {
+      type: String,
+      required: true,
+    },
+  },
 });
 </script>

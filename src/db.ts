@@ -1,4 +1,6 @@
-const db = {
+import { IDB } from "./types/IDB";
+
+const db: IDB = {
   projects: [
     {
       name: "Opera Mobile for Android",

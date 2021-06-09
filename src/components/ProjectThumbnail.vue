@@ -53,7 +53,7 @@
 
 <script lang="ts">
 import { PropType, defineComponent } from "vue";
-import IProject from "@/types/IProject";
+import { IProject } from "@/types";
 
 export default defineComponent({
   name: "ProjectThumbnail",

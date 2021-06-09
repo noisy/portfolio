@@ -43,6 +43,31 @@
 import { defineComponent } from "vue";
 export default defineComponent({
   name: "Talk",
-  props: ["source", "id", "type", "title", "description", "date"],
+  props: {
+    source: {
+      type: String,
+      required: true,
+    },
+    id: {
+      type: String,
+      required: true,
+    },
+    type: {
+      type: String,
+      required: true,
+    },
+    title: {
+      type: String,
+      required: true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+    date: {
+      type: String,
+      required: true,
+    },
+  },
 });
 </script>
