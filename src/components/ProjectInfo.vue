@@ -33,9 +33,9 @@
         <h3 class="sidebar-title mb-3">Technologies Used</h3>
         <div class="webdev-icons row mb-5 justify-content-center">
           <div
-            class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"
             v-for="iconName in project.technologies"
             :key="iconName"
+            class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-4"
           >
             <img
               class="img-fluid"
@@ -50,7 +50,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { PropType, defineComponent } from "vue";
 import IProject from "@/types/IProject";
 
 export default defineComponent({

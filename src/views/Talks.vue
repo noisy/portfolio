@@ -9,9 +9,9 @@
     <div class="container">
       <Talk
         v-for="talk in talks"
+        :id="talk.id"
         :key="talk.id"
         :source="talk.source"
-        :id="talk.id"
         :type="talk.type"
         :title="talk.title"
         :description="talk.description"

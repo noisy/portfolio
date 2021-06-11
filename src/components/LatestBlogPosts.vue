@@ -15,10 +15,20 @@
                 alt=""
               />
               <div
-                class="card-img-overlay overlay-mask overlay-logo text-center p-0"
+                class="
+                  card-img-overlay
+                  overlay-mask overlay-logo
+                  text-center
+                  p-0
+                "
               >
                 <div
-                  class="overlay-mask-content text-center w-100 position-absolute"
+                  class="
+                    overlay-mask-content
+                    text-center
+                    w-100
+                    position-absolute
+                  "
                 >
                   <a class="btn btn-primary" href="blog-post.html">Read more</a>
                 </div>
@@ -64,10 +74,20 @@
                 alt=""
               />
               <div
-                class="card-img-overlay overlay-mask overlay-logo text-center p-0"
+                class="
+                  card-img-overlay
+                  overlay-mask overlay-logo
+                  text-center
+                  p-0
+                "
               >
                 <div
-                  class="overlay-mask-content text-center w-100 position-absolute"
+                  class="
+                    overlay-mask-content
+                    text-center
+                    w-100
+                    position-absolute
+                  "
                 >
                   <a class="btn btn-primary" href="blog-post.html">Read more</a>
                 </div>
@@ -113,10 +133,20 @@
                 alt=""
               />
               <div
-                class="card-img-overlay overlay-mask overlay-logo text-center p-0"
+                class="
+                  card-img-overlay
+                  overlay-mask overlay-logo
+                  text-center
+                  p-0
+                "
               >
                 <div
-                  class="overlay-mask-content text-center w-100 position-absolute"
+                  class="
+                    overlay-mask-content
+                    text-center
+                    w-100
+                    position-absolute
+                  "
                 >
                   <a class="btn btn-primary" href="blog-post.html">Read more</a>
                 </div>
@@ -162,10 +192,20 @@
                 alt=""
               />
               <div
-                class="card-img-overlay overlay-mask overlay-logo text-center p-0"
+                class="
+                  card-img-overlay
+                  overlay-mask overlay-logo
+                  text-center
+                  p-0
+                "
               >
                 <div
-                  class="overlay-mask-content text-center w-100 position-absolute"
+                  class="
+                    overlay-mask-content
+                    text-center
+                    w-100
+                    position-absolute
+                  "
                 >
                   <a class="btn btn-primary" href="blog-post.html">Read more</a>
                 </div>

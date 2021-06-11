@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router";
+import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
 import { Home, Project, Projects, Talks } from "@/views";
 import OperaMobile from "@/views/projects/OperaMobile.vue";
 

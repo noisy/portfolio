@@ -12,9 +12,9 @@
 </template>
 
 <script lang="ts">
-import { useDB } from "@/composables";
 import { defineComponent } from "vue";
-import { Filters, ProjectsGrid, PageHeader } from "@/components";
+import { Filters, PageHeader, ProjectsGrid } from "@/components";
+import { useDB } from "@/composables";
 
 export default defineComponent({
   name: "Projects",

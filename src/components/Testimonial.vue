@@ -3,7 +3,13 @@
     <blockquote class="blockquote ps-4">
       <p class="mb-4">{{ body }}</p>
       <i
-        class="quote-icon fas fa-quote-left fa-lg position-absolute text-primary"
+        class="
+          quote-icon
+          fas
+          fa-quote-left fa-lg
+          position-absolute
+          text-primary
+        "
       ></i>
       <footer class="blockquote-footer presudo-hidden mt-4">
         <div class="row client-profile">

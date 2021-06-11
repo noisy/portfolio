@@ -18,11 +18,24 @@
         <div class="row">
           <div class="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
             <div
-              class="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative"
+              class="
+                skills-block-inner
+                bg-white
+                shadow-sm
+                py-4
+                px-5
+                position-relative
+              "
             >
               <h4 class="skills-cat text-center mb-3 mt-5">Frontend</h4>
               <div
-                class="skills-icon-holder position-absolute d-inline-block rounded-circle text-center"
+                class="
+                  skills-icon-holder
+                  position-absolute
+                  d-inline-block
+                  rounded-circle
+                  text-center
+                "
               >
                 <img class="skills-icon" src="images/frontend-icon.svg" />
               </div>
@@ -50,11 +63,24 @@
 
           <div class="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
             <div
-              class="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative"
+              class="
+                skills-block-inner
+                bg-white
+                shadow-sm
+                py-4
+                px-5
+                position-relative
+              "
             >
               <h4 class="skills-cat text-center mb-3 mt-5">Backend</h4>
               <div
-                class="skills-icon-holder position-absolute d-inline-block rounded-circle text-center"
+                class="
+                  skills-icon-holder
+                  position-absolute
+                  d-inline-block
+                  rounded-circle
+                  text-center
+                "
               >
                 <img
                   class="skills-icon"
@@ -84,11 +110,24 @@
 
           <div class="skills-block col-12 col-lg-4">
             <div
-              class="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative"
+              class="
+                skills-block-inner
+                bg-white
+                shadow-sm
+                py-4
+                px-5
+                position-relative
+              "
             >
               <h4 class="skills-cat text-center mb-3 mt-5">Others</h4>
               <div
-                class="skills-icon-holder position-absolute d-inline-block rounded-circle text-center"
+                class="
+                  skills-icon-holder
+                  position-absolute
+                  d-inline-block
+                  rounded-circle
+                  text-center
+                "
               >
                 <img class="skills-icon" src="images/other-skills-icon.svg" />
               </div>

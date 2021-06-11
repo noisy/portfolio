@@ -10,6 +10,7 @@
           :title="t.title"
           :picture-url="t.pictureUrl"
           :type="t.type"
+          :url="t.url"
         >
         </testimonial>
       </div>
@@ -17,7 +18,7 @@
   </section>
 </template>
 <script lang="ts">
-import { defineComponent, PropType } from "vue";
+import { PropType, defineComponent } from "vue";
 import Testimonial from "./Testimonial.vue";
 import { ITestimonial } from "@/types";
 

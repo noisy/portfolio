@@ -15,7 +15,7 @@ import ProjectsGrid from "./ProjectsGrid.vue";
 
 export default defineComponent({
   name: "OtherProjectCaseStudies",
-  props: ["projects"],
   components: { ProjectsGrid },
+  props: ["projects"],
 });
 </script>

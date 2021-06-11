@@ -33,8 +33,8 @@
 </template>
 
 <script lang="ts">
-import { useDB } from "@/composables/useDB";
 import { defineComponent } from "vue";
+import { useDB } from "@/composables/useDB";
 export default defineComponent({
   name: "HireMeFooter",
   setup() {

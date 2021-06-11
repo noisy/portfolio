@@ -2,9 +2,9 @@
   <div class="container">
     <div class="project-cards row mb-5 isotope">
       <project-thumbnail
-        class="isotope-item"
         v-for="project in projects"
         :key="project.slug"
+        class="isotope-item"
         :project="project"
       />
     </div>
@@ -12,13 +12,11 @@
 </template>
 
 <script lang="ts">
-import { onMounted, PropType } from "vue";
-import IProject from "@/types/IProject";
+import { PropType, defineComponent, onMounted } from "vue";
 import ProjectThumbnail from "./ProjectThumbnail.vue";
-
 import { setupIsotopeFilters } from "@/libs/isotope-custom";
+import IProject from "@/types/IProject";
 
-import { defineComponent } from "vue";
 export default defineComponent({
   name: "ProjectsGrid",
   components: { ProjectThumbnail },

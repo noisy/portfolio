@@ -5,4 +5,5 @@ export interface ITestimonial {
   pictureUrl: string;
   body: string;
   relevantForProjects: string[];
+  url: string;
 }

@@ -49,9 +49,9 @@
         </button>
 
         <div
+          id="navigation"
           class="navbar-collapse text-uppercase"
           :class="{ collapse: menuCollapsed }"
-          id="navigation"
         >
           <ul class="navbar-nav me-lg-auto">
             <li class="nav-item ms-lg-1">

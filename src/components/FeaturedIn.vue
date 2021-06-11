@@ -6,7 +6,16 @@
       </h3>
       <div class="press-logos row">
         <div
-          class="align-self-center press-logo px-4 px-lg-4 col-8 col-sm-4 px-md-5 px-lg-5 m-4 mb-lg-0 mx-auto"
+          class="
+            align-self-center
+            press-logo
+            px-4 px-lg-4
+            col-8 col-sm-4
+            px-md-5 px-lg-5
+            m-4
+            mb-lg-0
+            mx-auto
+          "
         >
           <a
             class="logo-link"
@@ -20,7 +29,16 @@
           </a>
         </div>
         <div
-          class="align-self-center press-logo px-4 px-lg-4 col-8 col-sm-4 px-md-5 px-lg-5 m-4 mb-lg-0 mx-auto"
+          class="
+            align-self-center
+            press-logo
+            px-4 px-lg-4
+            col-8 col-sm-4
+            px-md-5 px-lg-5
+            m-4
+            mb-lg-0
+            mx-auto
+          "
         >
           <a
             class="logo-link"
@@ -33,7 +51,16 @@
           /></a>
         </div>
         <div
-          class="align-self-center press-logo px-4 px-lg-4 col-8 col-sm-4 px-md-5 px-lg-5 m-4 mb-lg-0 mx-auto"
+          class="
+            align-self-center
+            press-logo
+            px-4 px-lg-4
+            col-8 col-sm-4
+            px-md-5 px-lg-5
+            m-4
+            mb-lg-0
+            mx-auto
+          "
         >
           <a
             class="logo-link"
@@ -49,6 +76,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 export default defineComponent({
   name: "FeaturedIn",
 });
