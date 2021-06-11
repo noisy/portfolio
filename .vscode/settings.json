@@ -2,6 +2,10 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "editor.codeActionsOnSave": [
+    "source.organizeImports",
+    "source.fixAll.eslint"
+  ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "files.trimTrailingWhitespace": true,
@@ -12,5 +16,5 @@
   },
   "json.format.enable": false,
   "vetur.experimental.templateInterpolationService": true,
-  "vetur.validation.templateProps": true,
+  "vetur.validation.templateProps": true
 }
