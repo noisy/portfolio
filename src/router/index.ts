@@ -1,6 +1,6 @@
 import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
+import { projects } from "./projects";
 import { Home, Project, Projects, Talks } from "@/views";
-import OperaMobile from "@/views/projects/OperaMobile.vue";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -17,13 +17,7 @@ const routes: Array<RouteRecordRaw> = [
     path: "/project/",
     name: "project",
     component: Project,
-    children: [
-      {
-        path: "opera-mobile",
-        name: "project-opera-mobile",
-        component: OperaMobile,
-      },
-    ],
+    children: projects,
   },
   {
     path: "/talks",

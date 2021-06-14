@@ -1,6 +1,21 @@
 export type IProjectTag = "python-django" | "android" | "java" | "ccpp";
-export type IProjectBadge = "Java" | "C/C++" | "Android" | "Python";
-export type ITechnology = "android" | "c" | "cpp" | "java";
+export type IProjectBadge =
+  | "Java"
+  | "C/C++"
+  | "Android"
+  | "Python"
+  | "Django"
+  | "jQuery";
+export type ITechnology =
+  | "android"
+  | "c"
+  | "cpp"
+  | "django"
+  | "java"
+  | "jquery"
+  | "python"
+  | "solr"
+  | "sqlalchemy";
 
 export interface IProjectFilter {
   name: string;
