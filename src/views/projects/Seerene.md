@@ -32,11 +32,11 @@ I've built that build system on my own from scratch using [Cookiecuttter](https:
 
 Before I left STXNext and this project, I've successfully transferred all my knowledge about this build system to other developers, which I believe also proved it was easy to understand also from the code's perspective.
 
-## Optimazing speed of queries to database
+## Optimizing the speed of database queries
 
-To be precise, it was not something on which I've worked personally, however my team did. I've decided to mention this anyway, becuse of the fact how this task was handled. Two guys from our team, which were the most into databases... decided to work on this together. It tooks them over a month of pair programming, analyzing, refactoring everything together, however the result was stunning. Without any majyor hiccups, they optimized execution time of business critical queries, from dozens of minutes, to hundreds of miliseconds.
+To be precise, it was not something on which I've worked personally, however, my team did. I've decided to mention this anyway, because of the fact how this task was handled. Two guys from our team, which were the most into databases... decided to work on this together. Pair programming, analyzing, refactoring took them over a month, however, the result was stunning. Without any major hiccups, they optimized the execution time of business-critical queries, from dozens of minutes to hundreds of milliseconds.
 
-While working in this team, I've learned how powerfull can be a pair-programming as a tool to develop quickly important parts of code with high quality in mind, which also speed ups learning process of participating developers tremendously. I've personally used that technique many times later within that project, on smaller scalle. Since then, I'm huge fan of pair programming! (Which BTW, what my other project proved... can be succesfully done also while working remotly!)
+While working in this team, I've learned how powerful pair-programming can be as a tool to develop quickly important parts of code with high quality in mind. Additionally, this speeds up the learning process of participating developers tremendously. I've personally used that technique many times later within that project, on a smaller scale. Since then, I'm a huge fan of pair programming! (Which BTW, what my other project proved to me... can be successfully done also while working remotely!)
 
 ## Biggest Lessons Learned
 
