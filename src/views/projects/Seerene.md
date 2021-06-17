@@ -46,8 +46,6 @@ The most outstanding thing for me was a realization, that with the right process
 
 What's the point of that, you may ask? Personally, it was making a huge difference for me knowing that STXNext and its client believed in us and trusted us, that we are capable of organizing our work on our own. I believe thanks to that everyone in the team felt more empowered and cared about the outcome even more.
 
-## Conclusion/Summary
+## Summary
 
-When I've started working on this project, there was just a 3 developers from STXNext working on that. I believe work of this initial team was crucial in a process of building strong and long lasting relationship of STXNext and it's client, which before I left... resulted with existinance of 3 big teams, with 5 devs & 2 QAs each, with support of 2 scrum masters and 2 Product Owners.
-
-9 months after leaving, I've convinced one of my former team-mates (the most expirienced one), to change job too, and to work with me together, for another company: Tokenika, for which I've already was working on for a few months.
+When I've started working on this project, there were just 3 developers from STXNext working on that. I believe the work of this initial team was crucial in a process of building a strong and long-lasting relationship of STXNext and its client, which before I left... resulted in the existence of 3 big teams, with 5 devs & 2 QAs each, with support of 2 scrum masters and 2 Product Owners.
