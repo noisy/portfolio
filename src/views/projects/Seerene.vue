@@ -4,6 +4,21 @@
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
 
+    Seerene describes own product as:
+
+    <blockquote class="blockquote my-4 bg-white shadow-sm">
+      <i class="mt-3 ms-3 quote-icon fas fa-quote-left fa-lg text-primary"></i>
+      <p class="px-5 pb-4">
+        Seerene’s Digital Boardroom is a software analytics and process mining
+        technology that analyzes and visualizes the software development
+        processes in your company. It reveals weaknesses and turns your
+        organization into a well-oiled machine, delivering software efficiently,
+        cost-effectively, quickly, and with the highest quality. Seerene
+        provides decision-makers with the information needed to actively drive
+        their organization towards 360° software excellence.
+      </p>
+    </blockquote>
+
     <p class="video-container">
       <iframe
         class="video"
@@ -14,21 +29,17 @@
         allowfullscreen
       ></iframe>
     </p>
-    <p>
-      I've worked on this project during my years at
-      <a href="https://www.stxnext.com/">STXnext</a>. It is a project of a
-      German company of the same name. STXnext offered me the possibility to be
-      a part of a small team of 3 developers, which goal was to show STXnext's
-      ability to work on the development of this product, and thanks to that
-      convince the client to build with STXNext a bigger team or two, with more
-      programmers, QAs and scrum master.
-    </p>
 
-    <div class="mb-5">
-      <a class="btn btn-primary" href="https://www.seerene.com/" target="_blank"
-        ><i class="fas fa-external-link-alt me-2"></i> View Live Site</a
-      >
-    </div>
+    <h3 class="section-title">My role in this project</h3>
+    <p>
+      I've worked on Seerene during my years at
+      <a href="https://www.stxnext.com/">Software House STXnext</a>. It is a
+      project of a German company of the same name. STXnext offered me the
+      possibility to be a part of a small team of 3 developers, which goal was
+      to show STXnext's ability to work on the development of this product, and
+      thanks to that convince the client to build with STXNext a bigger team or
+      two, with more programmers, QAs and scrum master.
+    </p>
 
     <div class="alert bg-white shadow-sm mb-4">
       This template
@@ -257,10 +268,10 @@
     <p>
       The most outstanding thing for me was a realization, that with the right
       process in place and the right people, it is very possible, to work
-      efficiently as a group of developers, **without** a manager or an official
-      team leader. Our team was proof that it is possible to create a team,
-      which can self-organize its work. In my opinion, it was possible mainly
-      thanks to our Scrum Master (who off-loaded us in many ways from
+      efficiently as a group of developers, <b>without</b> a manager or an
+      official team leader. Our team was proof that it is possible to create a
+      team, which can self-organize its work. In my opinion, it was possible
+      mainly thanks to our Scrum Master (who off-loaded us in many ways from
       organizational tasks, which however was not our supervisor).
     </p>
 

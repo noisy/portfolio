@@ -13,6 +13,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { useRoute } from "vue-router";
 import { PageHeader, ProjectInfo } from "@/components";
 import { useDB } from "@/composables";
 
@@ -24,9 +25,21 @@ export default defineComponent({
   },
   setup() {
     const { projects } = useDB();
+    const route = useRoute();
+    debugger;
     return {
-      project: projects.find((p) => p.slug == "opera-mobile"),
+      project: projects.find((p) => `project-${p.slug}` == route.name),
     };
   },
 });
 </script>
+<style lang="scss">
+.project-wrapper {
+  p {
+    margin-bottom: 1.5rem;
+  }
+  .section-row {
+    margin-bottom: 4rem;
+  }
+}
+</style>

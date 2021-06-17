@@ -16,9 +16,9 @@
               class="fas fa-external-link-alt me-3 text-primary"
               data-fa-transform="grow-6 down-2"
             ></i>
-            <strong>Site Link:</strong>
-            <a :href="project.archivedUrl">{{ project.url }}</a>
-            (archive)
+            <strong>Site Link: </strong>
+            <a :href="project.url || project.archivedUrl">{{ project.url }}</a>
+            <span v-if="project.archivedUrl">(archive)</span>
           </li>
           <li>
             <i
