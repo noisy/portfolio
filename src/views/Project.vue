@@ -8,13 +8,15 @@
       </section>
       <ProjectInfo class="col-12 col-lg-4 ps-lg-5" :project="project" />
     </div>
+
+    <OtherProjectCaseStudies :projects="otherProjects" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useRoute } from "vue-router";
-import { PageHeader, ProjectInfo } from "@/components";
+import { OtherProjectCaseStudies, PageHeader, ProjectInfo } from "@/components";
 import { useDB } from "@/composables";
 
 export default defineComponent({
@@ -22,12 +24,14 @@ export default defineComponent({
   components: {
     PageHeader,
     ProjectInfo,
+    OtherProjectCaseStudies,
   },
   setup() {
     const { projects } = useDB();
     const route = useRoute();
     return {
       project: projects.find((p) => `project-${p.slug}` == route.name),
+      otherProjects: projects,
     };
   },
 });

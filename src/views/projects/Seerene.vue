@@ -42,7 +42,7 @@
     </p>
 
     <carousel :items-to-show="1" :wrap-around="true">
-      <slide v-for="slide in 3" :key="slide">
+      <slide v-for="slide in [2, 1, 3]" :key="slide">
         <img
           class="d-block w-100"
           :src="`/images/projects/seerene/seerene-${slide}.png`"
@@ -194,14 +194,12 @@
       each.
     </p>
   </div>
-
-  <OtherProjectCaseStudies :projects="projects" />
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
 import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
-import { CoverImage, OtherProjectCaseStudies } from "@/components";
+import { CoverImage } from "@/components";
 import { useDB } from "@/composables";
 import "vue3-carousel/dist/carousel.css";
 
@@ -209,7 +207,6 @@ export default defineComponent({
   name: "Seerene",
   components: {
     CoverImage,
-    OtherProjectCaseStudies,
     Carousel,
     Slide,
     Pagination,
