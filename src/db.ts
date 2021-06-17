@@ -61,7 +61,7 @@ const db: IDB = {
     {
       name: "Seerene",
       slug: "seerene",
-      companyName: "Seerene, through STXNext",
+      companyName: "Seerene, via STXNext",
       thumbnail: "seerene.jpg",
       summaryTitle: "Seerene",
       summary:

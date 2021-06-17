@@ -41,121 +41,20 @@
       two, with more programmers, QAs and scrum master.
     </p>
 
-    <div class="alert bg-white shadow-sm mb-4">
-      This template
-      <strong>includes the original Sketch source file</strong> for making the
-      browser window in the carousel. The screenshots were taken from the
-      <a
-        class="text-link"
-        href="https://themes.3rdwavemedia.com/bootstrap-templates/product/appify-bootstrap-4-admin-template-for-app-developers/"
-        target="_blank"
-        >Bootstrap 4 admin template Appify</a
-      >.
-    </div>
+    <carousel :items-to-show="1" :wrap-around="true">
+      <slide v-for="slide in 3" :key="slide">
+        <img
+          class="d-block w-100"
+          :src="`/images/projects/seerene/seerene-${slide}.png`"
+          alt=""
+        />
+      </slide>
 
-    <div
-      id="project-carousel"
-      class="theme-carousel carousel slide mb-5"
-      data-ride="carousel"
-    >
-      <ol class="carousel-indicators">
-        <li
-          data-bs-target="#project-carousel"
-          data-slide-to="0"
-          class="active"
-        ></li>
-        <li data-bs-target="#project-carousel" data-slide-to="1"></li>
-        <li data-bs-target="#project-carousel" data-slide-to="2"></li>
-      </ol>
-
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img
-            class="d-block w-100"
-            src="/images/projects/project-slide-1.png"
-            alt=""
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            class="d-block w-100"
-            src="/images/projects/project-slide-2.png"
-            alt=""
-          />
-        </div>
-        <div class="carousel-item">
-          <img
-            class="d-block w-100"
-            src="/images/projects/project-slide-3.png"
-            alt=""
-          />
-        </div>
-      </div>
-
-      <a
-        class="carousel-control-prev"
-        href="#project-carousel"
-        role="button"
-        data-slide="prev"
-      >
-        <svg
-          width="40px"
-          height="40px"
-          viewBox="0 0 150 258"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-        >
-          <g
-            id="Page-1"
-            stroke="none"
-            stroke-width="1"
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <g id="arrow-left" fill="#FFFFFF" fill-rule="nonzero">
-              <path
-                id="Shape"
-                d="M4.1,120.5 L121.9,4.5 C126.6,-0.2 134.2,-0.2 138.9,4.5 L146,11.6 C150.7,16.3 150.7,23.9 146,28.6 L43.7,129 L145.9,229.4 C150.6,234.1 150.6,241.7 145.9,246.4 L138.8,253.5 C134.1,258.2 126.5,258.2 121.8,253.5 L4,137.5 C-0.6,132.8 -0.6,125.2 4.1,120.5 Z"
-              ></path>
-            </g>
-          </g>
-        </svg>
-        <span class="sr-only">Previous</span>
-      </a>
-      <a
-        class="carousel-control-next"
-        href="#project-carousel"
-        role="button"
-        data-slide="next"
-      >
-        <svg
-          width="40px"
-          height="40px"
-          viewBox="0 0 150 258"
-          version="1.1"
-          xmlns="http://www.w3.org/2000/svg"
-          xmlns:xlink="http://www.w3.org/1999/xlink"
-        >
-          <g
-            id="Page-1"
-            stroke="none"
-            stroke-width="1"
-            fill="none"
-            fill-rule="evenodd"
-          >
-            <g id="arrow-right" fill="#FFFFFF" fill-rule="nonzero">
-              <path
-                id="Shape"
-                d="M145.9,137.5 L28.1,253.5 C23.4,258.2 15.8,258.2 11.1,253.5 L4,246.4 C-0.7,241.7 -0.7,234.1 4,229.4 L106.3,129 L4.1,28.6 C-0.6,23.9 -0.6,16.3 4.1,11.6 L11.2,4.5 C15.9,-0.2 23.5,-0.2 28.2,4.5 L146,120.5 C150.6,125.2 150.6,132.8 145.9,137.5 Z"
-              ></path>
-            </g>
-          </g>
-        </svg>
-        <span class="sr-only">Next</span>
-      </a>
-    </div>
-    <!--//theme-carousel-->
+      <template #addons>
+        <navigation />
+        <pagination />
+      </template>
+    </carousel>
   </div>
 
   <div class="section-row">
@@ -291,8 +190,8 @@
       from STXNext working on that. I believe the work of this initial team was
       crucial in a process of building a strong and long-lasting relationship of
       STXNext and its client, which before I left... resulted in the existence
-      of 3 big teams, with 5 devs &amp; 2 QAs each, with support of 2 scrum
-      masters and 2 Product Owners.
+      of 2 big teams, with 5 devs &amp; 2 QAs, Scrum Master and Pruduct Owner in
+      each.
     </p>
   </div>
 
@@ -301,14 +200,20 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
 import { CoverImage, OtherProjectCaseStudies } from "@/components";
 import { useDB } from "@/composables";
+import "vue3-carousel/dist/carousel.css";
 
 export default defineComponent({
   name: "Seerene",
   components: {
     CoverImage,
     OtherProjectCaseStudies,
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
   },
   setup() {
     const otherCaseStudies = ["opera-mobile"];
@@ -334,5 +239,15 @@ export default defineComponent({
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+.carousel /deep/ button {
+  /* Colors */
+  --carousel-color-primary: #41a4f5;
+  --carousel-color-secondary: #0a71c6;
+  --carousel-color-white: #ffffff;
+
+  /* Navigation */
+  --carousel-nav-width: 30px;
 }
 </style>

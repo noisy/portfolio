@@ -3,10 +3,10 @@
 
   <div class="project-wrapper container py-5">
     <div class="row">
-      <ProjectInfo class="col-12 col-lg-4 ps-lg-5" :project="project" />
       <section class="col-12 col-lg-8">
         <router-view></router-view>
       </section>
+      <ProjectInfo class="col-12 col-lg-4 ps-lg-5" :project="project" />
     </div>
   </div>
 </template>
@@ -26,7 +26,6 @@ export default defineComponent({
   setup() {
     const { projects } = useDB();
     const route = useRoute();
-    debugger;
     return {
       project: projects.find((p) => `project-${p.slug}` == route.name),
     };
