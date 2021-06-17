@@ -1,13 +1,21 @@
-export type IProjectTag = "python-django" | "android" | "java" | "ccpp";
+export type IProjectTag =
+  | "angular"
+  | "python-django"
+  | "android"
+  | "java"
+  | "ccpp";
 export type IProjectBadge =
+  | "Angular"
   | "Java"
   | "C/C++"
   | "Android"
   | "Python"
   | "Django"
   | "jQuery";
+
 export type ITechnology =
   | "android"
+  | "angular"
   | "c"
   | "cpp"
   | "django"

@@ -23,14 +23,9 @@ export default defineComponent({
     ProjectInfo,
   },
   setup() {
-    const otherCaseStudies = ["opera-max"];
-    const { projects, testimonials } = useDB();
+    const { projects } = useDB();
     return {
       project: projects.find((p) => p.slug == "opera-mobile"),
-      projects: projects.filter((p) => otherCaseStudies.includes(p.slug)),
-      testimonials: testimonials.filter((p) =>
-        p.relevantForProjects.includes("opera-mobile")
-      ),
     };
   },
 });

@@ -1,5 +1,6 @@
 import { RouteRecordRaw } from "vue-router";
 import OperaMobile from "@/views/projects/OperaMobile.vue";
+import Seerene from "@/views/projects/Seerene.vue";
 import SpisTresci from "@/views/projects/SpisTresci.vue";
 
 export const projects: RouteRecordRaw[] = [
@@ -9,8 +10,13 @@ export const projects: RouteRecordRaw[] = [
     component: OperaMobile,
   },
   {
-    path: "spis-tresci",
+    path: "spistresci",
     name: "project-spistresci-pl",
     component: SpisTresci,
+  },
+  {
+    path: "seerene",
+    name: "project-seerene",
+    component: Seerene,
   },
 ];
