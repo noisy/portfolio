@@ -1,6 +1,6 @@
 # Seerene
 
-I've worked on this project during my years at [STXnext](). It is a project of a German company of the same name. STXnext offered me a possibility to be a part of small team of 3 developers, which goal was to show STXnext's ability to work on development of this product, and thanks to that convince them to build bigger team or two, with more programmers, QAs and scrum master.
+I've worked on this project during my years at [STXnext](). It is a project of a German company of the same name. STXnext offered me the possibility to be a part of a small team of 3 developers, which goal was to show STXnext's ability to work on the development of this product, and thanks to that convince the client to build with STXNext a bigger team or two, with more programmers, QAs and scrum master.
 
 ## Chalanges
 
