@@ -10,27 +10,27 @@ In 2015, I had a lot of experience with Django&Python, only some experience with
 
 Fortunately, instead of focusing just on things which I knew better - backend, we were able to organize our work in a way, which give everyone in a team possibility to contribute in areas where everyone felt the strongest... but leaving the opportunity to contribute smaller things also in other areas. That helped everyone in the team learn a lot of new things.
 
-### Bootstraping new team for a client, new code base, no know-how
+### Bootstrapping new team for a client, new code base, no know-how
 
-Because we formed new independent team, at the beginning we started with very narrow understanding of the codebase, with limited know-how about the whole project. We had contact to all in-house developers of Seerene, and a Product Owner from Seerene, however as you can imagine it was more difficult, to learn about all nitty-gritty details when without having people with the knowlade inside the same room. To deal with that we needed to spent a lot of time on talks via slack or on video calls.
+Because we formed a new independent team, at the beginning we started with a very narrow understanding of the codebase, with limited know-how about the whole project. We had contact with all in-house developers and a Product Owner from Seerene, however as you can imagine it was more difficult, to learn about all nitty-gritty details when without having people with the knowledge inside the same room. To deal with that we needed to spend a lot of time on talks via slack or on video calls.
 
-The important part was to focus on asking the right questions, to learn things which were trully neccesary to developed scoped tasks.
+The important part was to focus on asking the right questions, to learn things that were truly necessary to develop scoped tasks.
 
-I believe the key to do well all of that was in really good Planning and Estimation meetings, during which we together dissected all problems, while trying to identify risks.
+I believe the key to doing well all of that was in really good Planning and Estimation meetings, during which we together dissected all problems while trying to identify risks.
 
-### Lack of infrustructure on our end; Custom CI build-system
+### Lack of infrastructure on our end; Custom CI build-system
 
-To be able to work on a product efficiently, our team needed to also setup a few instances: our local production, staging, few tests instances, which later were used by our QAs.
+To be able to work on a product efficiently, our team needed to also set up a few production-like instances of the project: our local production, staging, few test instances, which later were used by our QAs.
 
-Earlier there were attempts to do those deploys with some basic bash scripts. Despite simplicity, our team quickly realize that this solution was not felxible enought and wasn't scalling well.
+Earlier there were attempts to do those deploys with some basic bash scripts. Despite the simplicity, our team quickly realize that this solution was not flexible enough and wasn't scaling well.
 
-At some point I started working on proper dockerization of the whole thing, creating with Jenskins the building pipeline (CI), responsible for running all unit and E2E tests, but also capeble of bulding new tests instances on-demand with just a few clicks. One of the most important features of that build system (which speed up work of our QAs significantly), was ability to clone prepared databases between instances, with just a few clicks.
+At some point I started working on proper containerization with Docker of the whole thing, creating with Jenkins the building pipeline (CI), responsible for running all unit and E2E tests, but also capable of building new tests instances on-demand with just a few clicks. One of the most important features of that build system (which speeds up the work of our QAs significantly), was the ability to clone prepared databases between instances, with just a few clicks.
 
-All instances build on-demand were also automatically dynamicly setup with own subdomain and with support of HTTPS & SSL certificates.
+All instances build on-demand were also always automatically dynamically set up with their separate subdomain and with the support of HTTPS & SSL certificates.
 
-I've build that build system on my own from scratch with [Cookiecuttter](https://github.com/cookiecutter/Cookiecutter) CLI tool, what helped keep the whole thing very simple, yet powerful and robust.
+I've built that build system on my own from scratch using [Cookiecuttter](https://github.com/cookiecutter/Cookiecutter) CLI tool and its Jinja template language. That helped keep the whole thing very simple, yet powerful and robust.
 
-Before I left STXNext and this project, I've succesfully transfered all my knowladge about this build system to other developers, which I believe also proved it was easy to understand also from code's perspective.
+Before I left STXNext and this project, I've successfully transferred all my knowledge about this build system to other developers, which I believe also proved it was easy to understand also from the code's perspective.
 
 ## Optimazing speed of queries to database
 
