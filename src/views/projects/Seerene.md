@@ -6,9 +6,9 @@ I've worked on this project during my years at [STXnext](). It is a project of a
 
 ### New frontend framework
 
-In 2015, I had a lot of expirience with Django&Python, only some expirience with jQuery and BackboneJS, but no prior expirience with Angular JS. That was a challenge of its own for me.
+In 2015, I had a lot of experience with Django&Python, only some experience with jQuery and BackboneJS, but no prior experience with Angular JS. That was a challenge of its own for me.
 
-Fortunatelly, instead of focusing just on things which I knew better - backend, we were able to organize our work in a way, which give everyone in a team ability to contribiute in areas where everyone felt the strongest... but having oportunity to contrubiute smaller things also in other areas, what helped everyone in the team learn a lot of new things.
+Fortunately, instead of focusing just on things which I knew better - backend, we were able to organize our work in a way, which give everyone in a team possibility to contribute in areas where everyone felt the strongest... but leaving the opportunity to contribute smaller things also in other areas. That helped everyone in the team learn a lot of new things.
 
 ### Bootstraping new team for a client, new code base, no know-how
 
