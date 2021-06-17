@@ -40,11 +40,11 @@ While working in this team, I've learned how powerful pair-programming can be as
 
 ## Biggest Lessons Learned
 
-Often the biggest lessons you learn heppens after some big mistakes. Fortunatelly, this time it was not like that.
+Often the biggest lessons you learn happens after some big mistakes. Fortunately, this time it was not like that.
 
-But even more outstanding thing for me was a realization, that with right people and right process in place, it is very possible, to work efficiently as a group of developers, WITHOUT a manager or an official team leader. Our team was a proof that it is possible to create a team, which can self-organize own work. In my opition it was possible mainly thanks to our Scrum Master (who off-loaded us in many ways from organizationall stuff, however which however was not our supervisor). What's the point, you may ask?
+The most outstanding thing for me was a realization, that with the right process in place and the right people, it is very possible, to work efficiently as a group of developers, **without** a manager or an official team leader. Our team was proof that it is possible to create a team, which can self-organize its work. In my opinion, it was possible mainly thanks to our Scrum Master (who off-loaded us in many ways from organizational tasks, which however was not our supervisor).
 
-Personally, it was making a huge difference for me knowing that STXNext and it's client believed in us and trusted us, that we are capable of organizing our work on our own was. I believe thanks to that everyone in the team felt more empowered and cared about final outcome even more.
+What's the point of that, you may ask? Personally, it was making a huge difference for me knowing that STXNext and its client believed in us and trusted us, that we are capable of organizing our work on our own. I believe thanks to that everyone in the team felt more empowered and cared about the outcome even more.
 
 ## Conclusion/Summary
 
