@@ -4,6 +4,16 @@
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
 
+    <p class="video-container">
+      <iframe
+        class="video"
+        src="https://www.youtube.com/embed/zk3_lOGBlp8"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      ></iframe>
+    </p>
     <p>
       I've worked on this project during my years at
       <a href="https://www.stxnext.com/">STXnext</a>. It is a project of a
@@ -300,3 +310,18 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+}
+.video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
