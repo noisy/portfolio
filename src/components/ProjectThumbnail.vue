@@ -65,3 +65,13 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="scss" scoped>
+.project-cards .card-img-overlay.overlay-logo .project-logo {
+  margin-top: 0;
+  position: absolute;
+  width: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+</style>
