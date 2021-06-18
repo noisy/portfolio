@@ -363,7 +363,7 @@ export default defineComponent({
   },
   setup() {
     const otherCaseStudies = ["opera-mobile"];
-    const { projects, testimonials } = useDB();
+    const { projects } = useDB();
     return {
       projects: projects.filter((p) => otherCaseStudies.includes(p.slug)),
     };

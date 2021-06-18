@@ -1,6 +1,6 @@
 import { RouteLocation } from "vue-router";
 
-function update(to: RouteLocation): void {
+function updateSlideLine(to: RouteLocation): void {
   const slideLine = document.querySelector("#slide-line") as HTMLElement;
   const navItems = document.querySelectorAll("#navigation li");
   const currentItem = document.querySelector(
@@ -36,6 +36,10 @@ function initPosition(currentItem: HTMLElement, slideLine: HTMLElement) {
   }
 }
 
-export function useSlideLine(): { update: (to: RouteLocation) => void } {
-  return { update };
+export function useNavigation(): {
+  updateSlideLine: (to: RouteLocation) => void;
+} {
+  return {
+    updateSlideLine,
+  };
 }

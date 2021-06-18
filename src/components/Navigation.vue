@@ -139,13 +139,13 @@
 <script lang="ts">
 import { defineComponent, watch } from "vue";
 import { useRouter } from "vue-router";
-import { useSlideLine } from "@/composables/useSlideLine";
+import { useNavigation } from "@/composables";
 export default defineComponent({
   name: "Navigation",
   setup() {
     const router = useRouter();
-    const { update } = useSlideLine();
-    watch(router.currentRoute, update);
+    const { updateSlideLine } = useNavigation();
+    watch(router.currentRoute, updateSlideLine);
     return {};
   },
   data: () => ({
