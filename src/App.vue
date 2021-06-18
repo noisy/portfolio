@@ -16,3 +16,6 @@ export default defineComponent({
   },
 });
 </script>
+<style lang="scss">
+@import "./styles/theme-3.scss";
+</style>
