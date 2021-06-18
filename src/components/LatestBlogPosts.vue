@@ -246,7 +246,9 @@
     </div>
 
     <div class="text-center">
-      <a class="btn btn-primary" href="blog.html">View all posts</a>
+      <router-link class="btn btn-primary" :to="{ name: 'blog' }"
+        >View all posts</router-link
+      >
     </div>
   </section>
 </template>
