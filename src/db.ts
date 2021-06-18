@@ -112,7 +112,7 @@ const db: IDB = {
         "github",
       ],
       thumbnailLogo: "logo-seerene.svg",
-      featured: true,
+      featured: false,
       url: "https://www.seerene.com/",
       archivedUrl: "",
       type: "Web Application + CLI tool",
