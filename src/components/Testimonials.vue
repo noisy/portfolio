@@ -5,7 +5,7 @@
   >
     <div class="container-fluid">
       <div class="testimonials container">
-        <Carousel :items-to-show="1" :wrap-around="true">
+        <Carousel :items-to-show="1.4" :wrap-around="true">
           <Slide v-for="t in testimonials" :key="t.author">
             <Testimonial
               class="testimonial"
