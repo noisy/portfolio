@@ -1,4 +1,9 @@
-import { RouteRecordRaw, createRouter, createWebHistory } from "vue-router";
+import {
+  RouteRecordRaw,
+  RouterScrollBehavior,
+  createRouter,
+  createWebHistory,
+} from "vue-router";
 import { projects } from "./projects";
 import { Home, Project, Projects, Talks } from "@/views";
 
@@ -51,9 +56,14 @@ const routes: Array<RouteRecordRaw> = [
   },
 ];
 
+const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
+  return { left: 0, top: 0 };
+};
+
 const router = createRouter({
   history: createWebHistory(process.env.BASE_URL),
   routes,
+  scrollBehavior,
 });
 
 export default router;
