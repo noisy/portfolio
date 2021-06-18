@@ -17,5 +17,5 @@ export const projects: RouteRecordRaw[] = [
     name: "project-seerene",
     component: Seerene,
   },
-  { path: "pithchup", name: "project-pitchup", component: Pitchup },
+  { path: "pithchup-pwa", name: "project-pitchup-pwa", component: Pitchup },
 ];

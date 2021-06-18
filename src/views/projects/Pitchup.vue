@@ -41,11 +41,11 @@
       two, with more programmers, QAs and scrum master.
     </p>
 
-    <carousel :items-to-show="1" :wrap-around="true">
-      <slide v-for="slide in [2, 1, 3]" :key="slide">
+    <carousel :items-to-show="5" :wrap-around="true">
+      <slide v-for="slide in 10" :key="slide">
         <img
           class="d-block w-100"
-          :src="`/images/projects/seerene/seerene-${slide}.png`"
+          :src="`/images/projects/pitchup-pwa/${slide}.png`"
           alt=""
         />
       </slide>
@@ -255,5 +255,8 @@ export default defineComponent({
 
   /* Navigation */
   --carousel-nav-width: 30px;
+}
+.carousel__slide {
+  margin: 0 5px;
 }
 </style>

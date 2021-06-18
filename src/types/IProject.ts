@@ -11,11 +11,14 @@ export type IProjectBadge =
   | "Android"
   | "Python"
   | "Django"
+  | "Vue"
+  | "TypeScript"
   | "jQuery";
 
 export type ITechnology =
   | "android"
   | "angular"
+  | "apollographql"
   | "c"
   | "cookiecutter"
   | "cpp"
@@ -24,6 +27,8 @@ export type ITechnology =
   | "docker"
   | "git"
   | "github"
+  | "gitlab"
+  | "graphql"
   | "java"
   | "javascript"
   | "jenkins"
@@ -32,7 +37,15 @@ export type ITechnology =
   | "postgresql"
   | "python"
   | "solr"
-  | "sqlalchemy";
+  | "stripe"
+  | "sqlalchemy"
+  | "typescript"
+  | "jestjs"
+  | "paypal"
+  | "cypress"
+  | "babeljs"
+  | "stripe"
+  | "vue";
 
 export interface IProjectFilter {
   name: string;
