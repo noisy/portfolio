@@ -81,3 +81,8 @@ export default defineComponent({
   },
 });
 </script>
+<style scoped>
+blockquote {
+  text-align: left;
+}
+</style>
