@@ -3,6 +3,36 @@ import { IDB } from "./types/IDB";
 const db: IDB = {
   projects: [
     {
+      name: "Progressive Web App for Pitchup.com",
+      slug: "pitchup",
+      companyName: "Pitchup.com Ltd",
+      thumbnail: "pitchup-pwa/thumbnail-1200.png",
+      summaryTitle: "Progressive Web App for Pitchup.com",
+      summary:
+        "An analytics platform that helps companies see how their other software is performing",
+      tags: ["python-django", "angular"],
+      badges: ["Python", "Django", "Angular"],
+      technologies: [
+        "python",
+        "django",
+        // "django-rest-framework",
+        "javascript",
+        "angular",
+        "jenkins",
+        // "cookiecutter",
+        "docker",
+        "postgresql",
+        "jira",
+        "git",
+        "github",
+      ],
+      thumbnailLogo: "logo-pitchup-mini.svg",
+      featured: true,
+      url: "https://www.seerene.com/",
+      archivedUrl: "",
+      type: "Web Application + CLI tool",
+    },
+    {
       name: "Opera Mobile for Android",
       slug: "opera-mobile",
       url: "opera.com/mobile",
