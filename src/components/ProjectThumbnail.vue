@@ -7,14 +7,15 @@
           :src="`/images/projects/${project.thumbnail}`"
           alt=""
         />
-        <div class="card-img-overlay overlay-logo text-center">
-          <div class="project-logo">
-            <img
-              class="img-fluid w-50 white"
-              :src="`/images/logos/${project.thumbnailLogo}`"
-            />
-          </div>
-        </div>
+        <router-link :to="{ name: `project-${project.slug}` }">
+          <div class="card-img-overlay overlay-logo text-center">
+            <div class="project-logo">
+              <img
+                class="img-fluid w-50 white"
+                :src="`/images/logos/${project.thumbnailLogo}`"
+              />
+            </div></div
+        ></router-link>
         <router-link
           class="card-img-overlay overlay-content text-start p-lg-4"
           :to="{ name: `project-${project.slug}` }"
