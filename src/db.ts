@@ -10,7 +10,7 @@ const db: IDB = {
       summaryTitle: "Progressive Web App for Pitchup.com",
       summary:
         "Mobile and off-line friendly web aplication design for Pitchup's users.",
-      tags: ["python-django", "angular"],
+      tags: ["python-django", "js-ts"],
       badges: ["Python", "Django"],
       technologies: [
         "javascript",
@@ -40,7 +40,7 @@ const db: IDB = {
       summaryTitle: "Progressive Web App for Pitchup.com",
       summary:
         "Mobile and off-line friendly web aplication design for Pitchup's users.",
-      tags: ["python-django", "angular"],
+      tags: ["vue", "js-ts"],
       badges: ["Vue", "TypeScript"],
       technologies: [
         "vue",
@@ -72,7 +72,7 @@ const db: IDB = {
       thumbnail: "opera-mobile.png",
       summaryTitle: "Example title",
       summary: "Opera Mobile was a mobile application for",
-      tags: ["python-django", "android", "java", "ccpp"],
+      tags: ["android", "java", "ccpp"],
       badges: ["Java", "C/C++", "Android", "Python"],
       technologies: ["android", "c", "cpp", "java"],
       thumbnailLogo: "logo-opera.svg",
@@ -99,7 +99,7 @@ const db: IDB = {
       thumbnail: "spistresci.png",
       summaryTitle: "Example title",
       summary: "Description of a project",
-      tags: ["python-django"],
+      tags: ["python-django", "js-ts"],
       badges: ["Python", "Django", "jQuery"],
       technologies: ["python", "django", "jquery", "solr", "sqlalchemy"],
       thumbnailLogo: "spistresci.png",
@@ -125,7 +125,7 @@ const db: IDB = {
       summaryTitle: "Seerene",
       summary:
         "An analytics platform that helps companies see how their other software is performing",
-      tags: ["python-django", "angular"],
+      tags: ["python-django", "angular", "js-ts"],
       badges: ["Python", "Django", "Angular"],
       technologies: [
         "python",
@@ -162,9 +162,11 @@ const db: IDB = {
     // },
   ],
   projectFilters: [
+    { name: "Python/Django", tag: ".python-django" },
+    { name: "JS/TS", tag: ".js-ts" },
+    { name: "Vue", tag: ".vue" },
     { name: "Angular", tag: ".angular" },
     { name: "React", tag: ".react" },
-    { name: "Python/Django", tag: ".python-django" },
     { name: "Android", tag: ".android" },
     { name: "C/C++", tag: ".ccpp" },
     { name: "Java", tag: ".java" },

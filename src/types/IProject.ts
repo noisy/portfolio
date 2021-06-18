@@ -1,6 +1,8 @@
 export type IProjectTag =
   | "angular"
+  | "vue"
   | "python-django"
+  | "js-ts"
   | "android"
   | "java"
   | "ccpp";
