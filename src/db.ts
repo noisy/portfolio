@@ -3,6 +3,36 @@ import { IDB } from "./types/IDB";
 const db: IDB = {
   projects: [
     {
+      name: "Campsite and holiday park booking website",
+      slug: "pitchup.com",
+      companyName: "Pitchup.com Ltd",
+      thumbnail: "pitchup.com/thumbnail2.png",
+      summaryTitle: "Progressive Web App for Pitchup.com",
+      summary:
+        "Mobile and off-line friendly web aplication design for Pitchup's users.",
+      tags: ["python-django", "angular"],
+      badges: ["Python", "Django"],
+      technologies: [
+        "javascript",
+        "jquery",
+        "typescript",
+        "python",
+        "django",
+        "postgresql",
+        "docker",
+        "graphql",
+        "stripe",
+        "paypal",
+        "git",
+        "gitlab",
+      ],
+      thumbnailLogo: "logo-pitchup-mini.svg",
+      featured: false,
+      url: "https://pitchup.com/",
+      archivedUrl: "",
+      type: "Website",
+    },
+    {
       name: "Progressive Web App for Pitchup.com",
       slug: "pitchup-pwa",
       companyName: "Pitchup.com Ltd",
