@@ -194,6 +194,16 @@ const db: IDB = {
       relevantForProjects: ["opera-mobile"],
       url: "",
     },
+    {
+      author: "Tomasz Kłoczko",
+      title: "QA, STXNext",
+      type: "linkedin",
+      pictureUrl:
+        "https://media-exp1.licdn.com/dms/image/C4E03AQFLUNlcrSJn2g/profile-displayphoto-shrink_200_200/0/1517625984734?e=1629331200&v=beta&t=guTPmpV1coi0KnO0y9570mHM8lC1O8qATSgLz8We1zo",
+      body: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+      relevantForProjects: ["seerene"],
+      url: "",
+    },
   ],
   links: {
     linkedinProfile: "https://www.linkedin.com/in/krzysztofszumny/",

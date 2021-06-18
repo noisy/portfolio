@@ -181,6 +181,18 @@
       believe thanks to that everyone in the team felt more empowered and cared
       about the outcome even more.
     </p>
+
+    <Testimonial
+      v-for="t in testimonials"
+      :key="t.author"
+      :author="t.author"
+      :body="t.body"
+      :title="t.title"
+      :picture-url="t.pictureUrl"
+      :type="t.type"
+      :url="t.url"
+    >
+    </Testimonial>
   </div>
 
   <div class="section-row">
@@ -199,7 +211,7 @@
 <script lang="ts">
 import { PropType, defineComponent } from "vue";
 import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
-import { CoverImage } from "@/components";
+import { CoverImage, Testimonial } from "@/components";
 import { useDB } from "@/composables";
 import "vue3-carousel/dist/carousel.css";
 import { IProject, ITestimonial } from "@/types";
@@ -210,6 +222,7 @@ export default defineComponent({
     CoverImage,
     Carousel,
     Slide,
+    Testimonial,
     Pagination,
     Navigation,
   },
