@@ -56,6 +56,7 @@ const routes: Array<RouteRecordRaw> = [
   },
 ];
 
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
   return { left: 0, top: 0 };
 };
