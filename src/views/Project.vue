@@ -1,20 +1,22 @@
 <template>
-  <PageHeader :title="project.name">{{ project.summary }}</PageHeader>
+  <div v-if="project">
+    <PageHeader :title="project.name">{{ project.summary }}</PageHeader>
 
-  <div class="project-wrapper container py-5">
-    <div class="row">
-      <section class="col-12 col-lg-8">
-        <router-view></router-view>
-      </section>
-      <ProjectInfo class="col-12 col-lg-4 ps-lg-5" :project="project" />
+    <div class="project-wrapper container py-5">
+      <div class="row">
+        <section class="col-12 col-lg-8">
+          <router-view></router-view>
+        </section>
+        <ProjectInfo class="col-12 col-lg-4 ps-lg-5" :project="project" />
+      </div>
+
+      <OtherProjectCaseStudies :projects="otherProjects" />
     </div>
-
-    <OtherProjectCaseStudies :projects="otherProjects" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onBeforeMount, onBeforeUpdate, ref } from "vue";
 import { useRoute } from "vue-router";
 import { OtherProjectCaseStudies, PageHeader, ProjectInfo } from "@/components";
 import { useDB } from "@/composables";
@@ -28,9 +30,17 @@ export default defineComponent({
   },
   setup() {
     const { projects } = useDB();
-    const route = useRoute();
+    let project = ref();
+
+    const loadProject = () => {
+      const route = useRoute();
+      project.value = projects.find((p) => `project-${p.slug}` == route.name);
+    };
+    onBeforeMount(loadProject);
+    onBeforeUpdate(loadProject);
+
     return {
-      project: projects.find((p) => `project-${p.slug}` == route.name),
+      project,
       otherProjects: projects,
     };
   },
