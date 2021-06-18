@@ -5,7 +5,10 @@
     <div class="project-wrapper container py-5">
       <div class="row">
         <section class="col-12 col-lg-8">
-          <router-view></router-view>
+          <router-view
+            :project="project"
+            :testimonials="testimonials"
+          ></router-view>
         </section>
         <ProjectInfo class="col-12 col-lg-4 ps-lg-5" :project="project" />
       </div>
@@ -29,19 +32,25 @@ export default defineComponent({
     OtherProjectCaseStudies,
   },
   setup() {
-    const { projects } = useDB();
+    const { projects, testimonials } = useDB();
     let project = ref();
+    let projectTestimonials = ref();
 
-    const loadProject = () => {
+    const loadProjectData = () => {
       const route = useRoute();
       project.value = projects.find((p) => `project-${p.slug}` == route.name);
+
+      projectTestimonials.value = testimonials.filter((p) =>
+        p.relevantForProjects.includes(project.value.slug)
+      );
     };
-    onBeforeMount(loadProject);
-    onBeforeUpdate(loadProject);
+    onBeforeMount(loadProjectData);
+    onBeforeUpdate(loadProjectData);
 
     return {
       project,
       otherProjects: projects,
+      testimonials: projectTestimonials,
     };
   },
 });

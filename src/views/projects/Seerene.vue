@@ -197,11 +197,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { PropType, defineComponent } from "vue";
 import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
 import { CoverImage } from "@/components";
 import { useDB } from "@/composables";
 import "vue3-carousel/dist/carousel.css";
+import { IProject, ITestimonial } from "@/types";
 
 export default defineComponent({
   name: "Seerene",
@@ -212,13 +213,21 @@ export default defineComponent({
     Pagination,
     Navigation,
   },
+  props: {
+    project: {
+      type: Object as PropType<IProject>,
+      required: true,
+    },
+    testimonials: {
+      type: Array as PropType<ITestimonial[]>,
+      required: true,
+    },
+  },
   setup() {
     const otherCaseStudies = ["opera-mobile"];
     const { projects } = useDB();
     return {
-      project: projects.find((p) => p.slug == "seerene"),
       projects: projects.filter((p) => otherCaseStudies.includes(p.slug)),
-      testimonials: [],
     };
   },
 });

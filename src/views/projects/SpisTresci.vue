@@ -339,9 +339,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { PropType, defineComponent } from "vue";
 import { CoverImage, OtherProjectCaseStudies, Testimonial } from "@/components";
 import { useDB } from "@/composables";
+import { IProject, ITestimonial } from "@/types";
 
 export default defineComponent({
   name: "SpisTresci",
@@ -350,15 +351,21 @@ export default defineComponent({
     OtherProjectCaseStudies,
     Testimonial,
   },
+  props: {
+    project: {
+      type: Object as PropType<IProject>,
+      required: true,
+    },
+    testimonials: {
+      type: Array as PropType<ITestimonial[]>,
+      required: true,
+    },
+  },
   setup() {
     const otherCaseStudies = ["opera-mobile"];
     const { projects, testimonials } = useDB();
     return {
-      project: projects.find((p) => p.slug == "opera-mobile"),
       projects: projects.filter((p) => otherCaseStudies.includes(p.slug)),
-      testimonials: testimonials.filter((p) =>
-        p.relevantForProjects.includes("opera-mobile")
-      ),
     };
   },
 });
