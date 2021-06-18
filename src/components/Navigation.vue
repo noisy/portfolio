@@ -137,9 +137,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, watch } from "vue";
+import { useRouter } from "vue-router";
+import { useSlideLine } from "@/composables/useSlideLine";
 export default defineComponent({
   name: "Navigation",
+  setup() {
+    const router = useRouter();
+    const { update } = useSlideLine();
+    watch(router.currentRoute, update);
+    return {};
+  },
   data: () => ({
     menuCollapsed: true,
   }),

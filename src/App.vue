@@ -1,5 +1,7 @@
 <template>
-  <Navigation />
+  <keep-alive>
+    <Navigation />
+  </keep-alive>
   <router-view />
   <Footer />
 </template>
