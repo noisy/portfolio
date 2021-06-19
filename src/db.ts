@@ -211,7 +211,7 @@ const db: IDB = {
       pictureUrl:
         "https://media-exp1.licdn.com/dms/image/C5603AQFyS3i3TNANtQ/profile-displayphoto-shrink_200_200/0/1516279081252?e=1629331200&v=beta&t=jVGDWaP78PVqcHpgrMpw_C6jP_Yz30NRhhI74Z3LdUo",
       body: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
-      relevantForProjects: ["seerene"],
+      relevantForProjects: [],
       url: "",
     },
   ],
