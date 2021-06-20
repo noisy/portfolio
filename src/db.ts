@@ -192,7 +192,7 @@ const db: IDB = {
         "https://media-exp1.licdn.com/dms/image/C5603AQG4EuUk13Vf0Q/profile-displayphoto-shrink_100_100/0/1516277136633?e=1626912000&v=beta&t=wFgJg724bKxY4QtqGwk4jLfKmJ_qa_lQkHDhLBcmoz8",
       body: "I've had the pleasure to work with Krzysztof in Opera Software. He is a skilled and hard working developer, who is always full of great, creative ideas. Krzysztof is very energetic and has an endless supply of positive energy which makes him a valuable member of any team.",
       relevantForProjects: ["opera-mobile"],
-      url: "",
+      url: "https://www.linkedin.com/in/krzysztofszumny/",
     },
     {
       author: "Tomasz Kłoczko",
@@ -200,9 +200,9 @@ const db: IDB = {
       type: "linkedin",
       pictureUrl:
         "https://media-exp1.licdn.com/dms/image/C4E03AQFLUNlcrSJn2g/profile-displayphoto-shrink_200_200/0/1517625984734?e=1629331200&v=beta&t=guTPmpV1coi0KnO0y9570mHM8lC1O8qATSgLz8We1zo",
-      body: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+      body: "I remember Krzysztof as a very helpful person with a positive attitude who always shares constructive feedback with others. He was very active during ceremonies/meetings, sharing his knowledge across the whole team. During our work in STXNext, Krzysztof created a cool build system that was very, very helpful in daily work. I always heard from other developers, that Krzysztof writes good, clean, and well-designed code, and his solutions always meet given ACs. He was also supporting less experienced coders. I value Krzysztof's quality highly. in my opinion, he meets all requirements for a full-stack developer. What is most important, Krzysztof always respects the client and the project.",
       relevantForProjects: ["seerene"],
-      url: "",
+      url: "https://www.linkedin.com/in/krzysztofszumny/",
     },
     {
       author: "Piotr Zawiślak",

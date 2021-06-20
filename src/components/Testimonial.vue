@@ -31,7 +31,7 @@
                   ></i>
                   <a
                     class="text-secondary text-link"
-                    href="https://www.linkedin.com/in/krzysztofszumny/"
+                    :href="url"
                     target="_blank"
                   >
                     View on Linkedin
