@@ -204,15 +204,25 @@ const db: IDB = {
       relevantForProjects: ["seerene"],
       url: "https://www.linkedin.com/in/krzysztofszumny/",
     },
+    // {
+    //   author: "Piotr Zawiślak",
+    //   title: "Software Developer, Opera Software",
+    //   type: "linkedin",
+    //   pictureUrl:
+    //     "https://media-exp1.licdn.com/dms/image/C5603AQFyS3i3TNANtQ/profile-displayphoto-shrink_200_200/0/1516279081252?e=1629331200&v=beta&t=jVGDWaP78PVqcHpgrMpw_C6jP_Yz30NRhhI74Z3LdUo",
+    //   body: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
+    //   relevantForProjects: [],
+    //   url: "",
+    // },
     {
-      author: "Piotr Zawiślak",
-      title: "Software Developer, Opera Software",
+      author: "Mateusz Sikora",
+      title: "Software Engineer, SpisTresci.pl",
       type: "linkedin",
       pictureUrl:
-        "https://media-exp1.licdn.com/dms/image/C5603AQFyS3i3TNANtQ/profile-displayphoto-shrink_200_200/0/1516279081252?e=1629331200&v=beta&t=jVGDWaP78PVqcHpgrMpw_C6jP_Yz30NRhhI74Z3LdUo",
-      body: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.",
-      relevantForProjects: [],
-      url: "",
+        "https://media-exp1.licdn.com/dms/image/C4E03AQFODxZmiiR07Q/profile-displayphoto-shrink_200_200/0/1605981091047?e=1629936000&v=beta&t=qGnYML7C5I4eH7QJOOQxkxzS6DyFrOmuJp8ko2mmV3M",
+      body: "Krzysztof is a really smart guy. He learns very fast, always finds time to help others. In his work, he pays a lot of attention to details. I really enjoyed to work with him.",
+      relevantForProjects: ["spistresci-pl"],
+      url: "https://www.linkedin.com/in/krzysztofszumny/",
     },
   ],
   links: {
