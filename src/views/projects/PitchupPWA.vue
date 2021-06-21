@@ -4,27 +4,13 @@
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
     <h3 class="section-title">My role in this project</h3>
-    <carousel :items-to-show="5" :wrap-around="true">
-      <slide v-for="slide in 10" :key="slide">
-        <img
-          class="d-block w-100"
-          :src="`/images/projects/${project.slug}/${slide}.png`"
-          alt=""
-        />
-      </slide>
-
-      <template #addons>
-        <navigation />
-        <pagination />
-      </template>
-    </carousel>
+    <Carousel items-to-show="5" :paths="imagesPaths" />
   </div>
 
   <div class="section-row">
     <h3 class="section-title">Payment Handling</h3>
     <h4 class="section-title">Complex workflow of components</h4>
   </div>
-  <!--//section-row-->
   <div class="section-row">
     <h3 class="section-title">Biggest Lessons Learned</h3>
   </div>
@@ -36,8 +22,7 @@
 
 <script lang="ts">
 import { PropType, defineComponent } from "vue";
-import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
-import { CoverImage } from "@/components";
+import { Carousel, CoverImage } from "@/components";
 import { useDB } from "@/composables";
 import "vue3-carousel/dist/carousel.css";
 import { IProject, ITestimonial } from "@/types";
@@ -47,9 +32,6 @@ export default defineComponent({
   components: {
     CoverImage,
     Carousel,
-    Slide,
-    Pagination,
-    Navigation,
   },
   props: {
     project: {
@@ -61,11 +43,15 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {
+  setup(props) {
     const otherCaseStudies = ["opera-mobile"];
     const { projects } = useDB();
+    const imagesPaths = [...Array(10).keys()].map(
+      (slide) => `/images/projects/${props.project.slug}/${slide + 1}.png`
+    );
     return {
       projects: projects.filter((p) => otherCaseStudies.includes(p.slug)),
+      imagesPaths,
     };
   },
 });
@@ -83,18 +69,5 @@ export default defineComponent({
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.carousel :deep() button {
-  /* Colors */
-  --carousel-color-primary: #41a4f5;
-  --carousel-color-secondary: #0a71c6;
-  --carousel-color-white: #ffffff;
-
-  /* Navigation */
-  --carousel-nav-width: 30px;
-}
-.carousel__slide {
-  margin: 0 5px;
 }
 </style>
