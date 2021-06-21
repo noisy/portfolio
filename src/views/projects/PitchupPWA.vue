@@ -4,11 +4,11 @@
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
     <h3 class="section-title">My role in this project</h3>
-    <!-- <carousel :items-to-show="5" :wrap-around="true">
+    <carousel :items-to-show="5" :wrap-around="true">
       <slide v-for="slide in 10" :key="slide">
         <img
           class="d-block w-100"
-          :src="`/images/projects//${slide}.png`"
+          :src="`/images/projects/${project.slug}/${slide}.png`"
           alt=""
         />
       </slide>
@@ -17,7 +17,7 @@
         <navigation />
         <pagination />
       </template>
-    </carousel> -->
+    </carousel>
   </div>
 
   <div class="section-row">
@@ -36,7 +36,7 @@
 
 <script lang="ts">
 import { PropType, defineComponent } from "vue";
-// import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
+import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
 import { CoverImage } from "@/components";
 import { useDB } from "@/composables";
 import "vue3-carousel/dist/carousel.css";
@@ -46,10 +46,10 @@ export default defineComponent({
   name: "Pitchup",
   components: {
     CoverImage,
-    // Carousel,
-    // Slide,
-    // Pagination,
-    // Navigation,
+    Carousel,
+    Slide,
+    Pagination,
+    Navigation,
   },
   props: {
     project: {
