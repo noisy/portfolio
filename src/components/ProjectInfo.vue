@@ -20,12 +20,20 @@
             <a :href="project.url || project.archivedUrl">{{ project.url }}</a>
             <span v-if="project.archivedUrl">(archive)</span>
           </li>
-          <li>
+          <li class="mb-4">
             <i
               class="fas fa-wrench me-3 text-primary"
               data-fa-transform="grow-6 down-2"
             ></i
             ><strong>Type:</strong> {{ project.type }}
+          </li>
+          <li v-if="project.repositoryUrl">
+            <i
+              class="fab fa-github me-3 text-primary"
+              data-fa-transform="grow-6 down-2"
+            ></i
+            ><strong>Source Code: </strong>
+            <a :href="project.repositoryUrl">{{ project.repositoryUrl }}</a>
           </li>
         </ul>
       </div>

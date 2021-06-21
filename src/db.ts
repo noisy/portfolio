@@ -134,6 +134,7 @@ const db: IDB = {
       technologies: ["python", "django", "jquery", "solr", "sqlalchemy"],
       thumbnailLogo: "spistresci.png",
       featured: true,
+      repositoryUrl: "https://github.com/spistresci/",
     },
     // {
     //   name: "Digital Asset Managment Platform",

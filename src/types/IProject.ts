@@ -69,4 +69,5 @@ export interface IProject {
   technologies: ITechnology[];
   thumbnailLogo: string;
   featured: boolean;
+  repositoryUrl?: string;
 }
