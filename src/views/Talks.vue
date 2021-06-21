@@ -7,16 +7,7 @@
   </PageHeader>
   <section class="section pt-5 px-3 px-lg-0">
     <div class="container">
-      <Talk
-        v-for="talk in talks"
-        :id="talk.id"
-        :key="talk.id"
-        :source="talk.source"
-        :type="talk.type"
-        :title="talk.title"
-        :description="talk.description"
-        :date="talk.date"
-      />
+      <Talk v-for="talk in talks" :key="talk.id" :talk="talk" />
     </div>
   </section>
 </template>

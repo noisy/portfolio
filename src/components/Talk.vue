@@ -2,10 +2,10 @@
   <div class="row mb-5 flex-column flex-lg-row bg-white shadow-sm">
     <div class="col-12 col-auto talk-media-holder ratio ratio-16x9 me-md-3">
       <iframe
-        v-if="source == 'youtube'"
+        v-if="talk.source == 'youtube'"
         width="560"
         height="315"
-        :src="'https://www.youtube.com/embed/' + id"
+        :src="'https://www.youtube.com/embed/' + talk.id"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -15,59 +15,54 @@
     </div>
 
     <div class="col p-4">
-      <h4>{{ title }}</h4>
+      <h4>{{ talk.title }}</h4>
       <ul class="talk-meta list-inline mb-2">
         <li class="list-inline-item me-3">
-          <i class="far fa-clock me-2"></i>{{ date }}
+          <i class="far fa-clock me-2"></i>{{ talk.date }}
         </li>
-        <li class="list-inline-item" style="text-transform: capitalize">
+        <li class="list-inline-item me-3" style="text-transform: capitalize">
           <i
             class="fas me-2"
             :class="{
-              'fa-headphones': type == 'podcast',
-              'fa-video': type == 'video',
+              'fa-headphones': talk.type == 'podcast',
+              'fa-video': talk.type == 'video',
             }"
           >
           </i>
-          {{ type }}
+          {{ talk.type }}
+        </li>
+        <li class="list-inline-item me-3">
+          <span class="flag me-2" style="margin-top: -2px">
+            {{ flags[talk.language] }}
+          </span>
+          <span class="lang">{{ talk.language }}</span>
         </li>
       </ul>
       <div class="talk-content">
-        {{ description }}
+        {{
+          talk.description ||
+          "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus penatibus et magnis dis parturient montes, nascetur ridiculus mus.."
+        }}
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { PropType, defineComponent } from "vue";
+import { useDB } from "@/composables";
+import { ITalk } from "@/types";
 export default defineComponent({
   name: "Talk",
   props: {
-    source: {
-      type: String,
+    talk: {
+      type: Object as PropType<ITalk>,
       required: true,
     },
-    id: {
-      type: String,
-      required: true,
-    },
-    type: {
-      type: String,
-      required: true,
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-    description: {
-      type: String,
-      required: true,
-    },
-    date: {
-      type: String,
-      required: true,
-    },
+  },
+  setup() {
+    const { flags } = useDB();
+    return { flags };
   },
 });
 </script>
