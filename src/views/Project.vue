@@ -1,6 +1,6 @@
 <template>
   <div v-if="project">
-    <PageHeader :title="project.name">{{ project.summary }}</PageHeader>
+    <ProjectHeader :project="project" />
 
     <div class="project-wrapper container py-5">
       <div class="row">
@@ -21,13 +21,17 @@
 <script lang="ts">
 import { defineComponent, onBeforeMount, onBeforeUpdate, ref } from "vue";
 import { useRoute } from "vue-router";
-import { OtherProjectCaseStudies, PageHeader, ProjectInfo } from "@/components";
+import {
+  OtherProjectCaseStudies,
+  ProjectHeader,
+  ProjectInfo,
+} from "@/components";
 import { useDB } from "@/composables";
 
 export default defineComponent({
   name: "Project",
   components: {
-    PageHeader,
+    ProjectHeader,
     ProjectInfo,
     OtherProjectCaseStudies,
   },
