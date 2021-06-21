@@ -4,7 +4,7 @@
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
     <carousel :items-to-show="1" :wrap-around="true">
-      <slide v-for="slide in 6" :key="slide">
+      <slide v-for="slide in 5" :key="slide">
         <img
           class="d-block w-100"
           :src="`/images/projects/${project.slug}/${slide}.png`"

@@ -17,8 +17,8 @@
               data-fa-transform="grow-6 down-2"
             ></i>
             <strong>Site Link: </strong>
-            <a :href="project.url || project.archivedUrl">{{ project.url }}</a>
-            <span v-if="project.archivedUrl">(archive)</span>
+            <a :href="project.archivedUrl || project.url">{{ project.url }}</a>
+            <span v-if="project.archivedUrl"> (archived)</span>
           </li>
           <li class="mb-4">
             <i
