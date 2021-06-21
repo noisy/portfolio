@@ -80,28 +80,31 @@
                 >Talks</router-link
               >
             </li>
-            <li class="nav-item me-lg-3">
+            <!-- <li class="nav-item me-lg-3">
               <router-link
                 class="nav-link"
                 :to="{ name: 'blog' }"
                 @click="closeMenu()"
                 >Blog</router-link
               >
-            </li>
-            <li class="nav-item me-lg-3">
+            </li> -->
+            <!-- <li class="nav-item me-lg-3">
               <router-link
                 class="nav-link"
                 :to="{ name: 'resume' }"
                 @click="closeMenu()"
                 >Resume</router-link
               >
-            </li>
+            </li> -->
             <li class="nav-item me-0">
-              <router-link
+              <!-- <router-link
                 class="nav-link"
                 :to="{ name: 'contact' }"
                 @click="closeMenu()"
                 >Contact</router-link
+              > -->
+              <a class="nav-link" href="#hire-me" @click="closeMenu()"
+                >Contact</a
               >
             </li>
             <!-- <li class="nav-item dropdown me-0">

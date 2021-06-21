@@ -1,5 +1,11 @@
 import { RouteRecordRaw } from "vue-router";
-import { OperaMobile, Pitchup, Seerene, SpisTresci } from "@/views/projects";
+import {
+  OperaMobile,
+  Pitchup,
+  PitchupPWA,
+  Seerene,
+  SpisTresci,
+} from "@/views/projects";
 
 export const projects: RouteRecordRaw[] = [
   {
@@ -18,5 +24,5 @@ export const projects: RouteRecordRaw[] = [
     component: Seerene,
   },
   { path: "pithchup.com", name: "project-pitchup.com", component: Pitchup },
-  { path: "pithchup-pwa", name: "project-pitchup-pwa", component: Pitchup },
+  { path: "pithchup-pwa", name: "project-pitchup-pwa", component: PitchupPWA },
 ];

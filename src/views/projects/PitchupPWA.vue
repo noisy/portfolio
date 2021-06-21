@@ -21,10 +21,8 @@
   </div>
 
   <div class="section-row">
-    <h3 class="section-title">Chalanges</h3>
-    <h4 class="section-title">Complete re-write of whole Payment System</h4>
-    <h4 class="section-title">Non consistent architecture</h4>
-    <h4 class="section-title">Legacy Code</h4>
+    <h3 class="section-title">Payment Handling</h3>
+    <h4 class="section-title">Complex workflow of components</h4>
   </div>
   <!--//section-row-->
   <div class="section-row">
