@@ -23,7 +23,7 @@
 <script lang="ts">
 import { PropType, defineComponent } from "vue";
 import { Carousel, CoverImage } from "@/components";
-import { useDB } from "@/composables";
+import { useDB, useProject } from "@/composables";
 import "vue3-carousel/dist/carousel.css";
 import { IProject, ITestimonial } from "@/types";
 
@@ -46,12 +46,11 @@ export default defineComponent({
   setup(props) {
     const otherCaseStudies = ["opera-mobile"];
     const { projects } = useDB();
-    const imagesPaths = [...Array(10).keys()].map(
-      (slide) => `/images/projects/${props.project.slug}/${slide + 1}.png`
-    );
+    const { getImagesPaths } = useProject();
+
     return {
       projects: projects.filter((p) => otherCaseStudies.includes(p.slug)),
-      imagesPaths,
+      imagesPaths: getImagesPaths(props.project, 10),
     };
   },
 });

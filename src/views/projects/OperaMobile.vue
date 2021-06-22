@@ -4,20 +4,6 @@
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
     <h3 class="section-title">My role in this project</h3>
-    <!-- <carousel :items-to-show="5" :wrap-around="true">
-      <slide v-for="slide in 10" :key="slide">
-        <img
-          class="d-block w-100"
-          :src="`/images/projects//${slide}.png`"
-          alt=""
-        />
-      </slide>
-
-      <template #addons>
-        <navigation />
-        <pagination />
-      </template>
-    </carousel> -->
   </div>
 
   <div class="section-row">

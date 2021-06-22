@@ -41,20 +41,7 @@
       two, with more programmers, QAs and scrum master.
     </p>
 
-    <carousel :items-to-show="1" :wrap-around="true">
-      <slide v-for="slide in [2, 1, 3]" :key="slide">
-        <img
-          class="d-block w-100"
-          :src="`/images/projects/seerene/seerene-${slide}.png`"
-          alt=""
-        />
-      </slide>
-
-      <template #addons>
-        <navigation />
-        <pagination />
-      </template>
-    </carousel>
+    <Carousel items-to-show="1" :paths="imagesPaths" />
   </div>
 
   <div class="section-row">
@@ -210,9 +197,8 @@
 
 <script lang="ts">
 import { PropType, defineComponent } from "vue";
-import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
-import { CoverImage, Testimonial } from "@/components";
-import { useDB } from "@/composables";
+import { Carousel, CoverImage, Testimonial } from "@/components";
+import { useDB, useProject } from "@/composables";
 import "vue3-carousel/dist/carousel.css";
 import { IProject, ITestimonial } from "@/types";
 
@@ -221,10 +207,7 @@ export default defineComponent({
   components: {
     CoverImage,
     Carousel,
-    Slide,
     Testimonial,
-    Pagination,
-    Navigation,
   },
   props: {
     project: {
@@ -236,11 +219,13 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {
+  setup(props) {
     const otherCaseStudies = ["opera-mobile"];
     const { projects } = useDB();
+    const { getImagesPaths } = useProject();
     return {
       projects: projects.filter((p) => otherCaseStudies.includes(p.slug)),
+      imagesPaths: getImagesPaths(props.project, 3),
     };
   },
 });
@@ -258,15 +243,5 @@ export default defineComponent({
   left: 0;
   width: 100%;
   height: 100%;
-}
-
-.carousel :deep() button {
-  /* Colors */
-  --carousel-color-primary: #41a4f5;
-  --carousel-color-secondary: #0a71c6;
-  --carousel-color-white: #ffffff;
-
-  /* Navigation */
-  --carousel-nav-width: 30px;
 }
 </style>

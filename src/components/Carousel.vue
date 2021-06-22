@@ -54,7 +54,4 @@ export default defineComponent({
   /* Navigation */
   --carousel-nav-width: 30px;
 }
-.carousel__slide {
-  margin: 0 5px;
-}
 </style>

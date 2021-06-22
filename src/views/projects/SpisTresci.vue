@@ -3,20 +3,7 @@
 
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
-    <carousel :items-to-show="1" :wrap-around="true">
-      <slide v-for="slide in 5" :key="slide">
-        <img
-          class="d-block w-100"
-          :src="`/images/projects/${project.slug}/${slide}.png`"
-          alt=""
-        />
-      </slide>
-
-      <template #addons>
-        <navigation />
-        <pagination />
-      </template>
-    </carousel>
+    <Carousel items-to-show="1" :paths="imagesPaths" />
   </div>
   <h3 class="section-title">My role in this project</h3>
 
@@ -48,9 +35,13 @@
 
 <script lang="ts">
 import { PropType, defineComponent } from "vue";
-import { Carousel, Navigation, Pagination, Slide } from "vue3-carousel";
-import { CoverImage, OtherProjectCaseStudies, Testimonial } from "@/components";
-import { useDB } from "@/composables";
+import {
+  Carousel,
+  CoverImage,
+  OtherProjectCaseStudies,
+  Testimonial,
+} from "@/components";
+import { useDB, useProject } from "@/composables";
 import { IProject, ITestimonial } from "@/types";
 
 export default defineComponent({
@@ -60,9 +51,6 @@ export default defineComponent({
     OtherProjectCaseStudies,
     Testimonial,
     Carousel,
-    Slide,
-    Pagination,
-    Navigation,
   },
   props: {
     project: {
@@ -74,23 +62,14 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {
+  setup(props) {
     const otherCaseStudies = ["opera-mobile"];
     const { projects } = useDB();
+    const { getImagesPaths } = useProject();
     return {
       projects: projects.filter((p) => otherCaseStudies.includes(p.slug)),
+      imagesPaths: getImagesPaths(props.project, 5),
     };
   },
 });
 </script>
-<style scoped>
-.carousel :deep() button {
-  /* Colors */
-  --carousel-color-primary: #41a4f5;
-  --carousel-color-secondary: #0a71c6;
-  --carousel-color-white: #ffffff;
-
-  /* Navigation */
-  --carousel-nav-width: 30px;
-}
-</style>

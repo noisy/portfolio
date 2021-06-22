@@ -6,7 +6,7 @@ const db: IDB = {
       name: "Seerene",
       slug: "seerene",
       companyName: "Seerene, via STXNext",
-      thumbnail: "seerene/seerene-1.png",
+      thumbnail: "seerene/main.png",
       summaryTitle: "Seerene",
       summary:
         "An analytics platform that helps companies see how their other software is performing",
