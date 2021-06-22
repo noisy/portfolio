@@ -48,7 +48,7 @@ export default defineComponent({
 });
 </script>
 <style scoped>
-.carousel /deep/ button {
+.carousel :deep() button {
   /* Colors */
   --carousel-color-primary: #41a4f5;
   --carousel-color-secondary: #0a71c6;
