@@ -10,7 +10,7 @@ const db: IDB = {
       summaryTitle: "Seerene",
       summary:
         "An analytics platform that helps companies see how their other software is performing",
-      tags: ["python-django", "angular", "js-ts"],
+      filterTags: ["python-django", "angular", "js-ts"],
       badges: ["Python", "Django", "Angular"],
       technologies: [
         "python",
@@ -40,7 +40,7 @@ const db: IDB = {
       summaryTitle: "Progressive Web App for Pitchup.com",
       summary:
         "Mobile and off-line friendly web aplication design for Pitchup's users.",
-      tags: ["python-django", "js-ts"],
+      filterTags: ["python-django", "js-ts"],
       badges: ["Python", "Django"],
       technologies: [
         "javascript",
@@ -70,7 +70,7 @@ const db: IDB = {
       summaryTitle: "Progressive Web App for Pitchup.com",
       summary:
         "Mobile and off-line friendly web aplication design for Pitchup's users.",
-      tags: ["vue", "js-ts"],
+      filterTags: ["vue", "js-ts"],
       badges: ["Vue", "TypeScript"],
       technologies: [
         "vue",
@@ -102,7 +102,7 @@ const db: IDB = {
       thumbnail: "opera-mobile.png",
       summaryTitle: "Example title",
       summary: "Opera Mobile was a mobile application for",
-      tags: ["android", "java", "ccpp"],
+      filterTags: ["android", "java", "ccpp"],
       badges: ["Java", "C/C++", "Android", "Python"],
       technologies: ["android", "c", "cpp", "java"],
       thumbnailLogo: "logo-opera.svg",
@@ -130,7 +130,7 @@ const db: IDB = {
       thumbnail: "spistresci-pl/main.png",
       summaryTitle: "Example title",
       summary: "Description of a project",
-      tags: ["python-django", "js-ts"],
+      filterTags: ["python-django", "js-ts"],
       badges: ["Python", "Django", "jQuery"],
       technologies: ["python", "django", "jquery", "solr", "sqlalchemy"],
       thumbnailLogo: "spistresci.png",
@@ -165,15 +165,15 @@ const db: IDB = {
     // },
   ],
   projectFilters: [
-    { name: "Python/Django", tag: ".python-django" },
-    { name: "JS/TS", tag: ".js-ts" },
-    { name: "Vue", tag: ".vue" },
-    { name: "Angular", tag: ".angular" },
-    { name: "React", tag: ".react" },
-    { name: "Android", tag: ".android" },
-    { name: "C/C++", tag: ".ccpp" },
-    { name: "Java", tag: ".java" },
-    { name: "Blockchain", tag: ".blockchain" },
+    { name: "Python/Django", tag: "python-django" },
+    { name: "JS/TS", tag: "js-ts" },
+    { name: "Vue", tag: "vue" },
+    { name: "Angular", tag: "angular" },
+    { name: "React", tag: "react" },
+    { name: "Android", tag: "android" },
+    { name: "C/C++", tag: "ccpp" },
+    { name: "Java", tag: "java" },
+    { name: "Blockchain", tag: "blockchain" },
   ],
   talks: [
     {
@@ -184,6 +184,7 @@ const db: IDB = {
       title: "How to use and store your Bitcoins in a secure way",
       description: "",
       date: "Jan 4, 2018",
+      filterTags: ["blockchain", "english"],
     },
     {
       source: "youtube",
@@ -193,6 +194,7 @@ const db: IDB = {
       title: "Docker - Easy Containerization",
       description: "",
       date: "Jun 23, 2015",
+      filterTags: ["docker", "polish"],
     },
     {
       source: "youtube",
@@ -202,6 +204,7 @@ const db: IDB = {
       title: "Git workflow",
       description: "",
       date: "Oct 18, 2018",
+      filterTags: ["git", "polish"],
     },
     {
       source: "youtube",
@@ -213,6 +216,7 @@ const db: IDB = {
       title: "Blockchain - how it works",
       description: "",
       date: "Jun 24, 2017",
+      filterTags: ["blockchain", "polish"],
     },
     {
       source: "youtube",
@@ -222,6 +226,7 @@ const db: IDB = {
       title: "Lightning Network",
       description: "",
       date: "Apr 3, 2017",
+      filterTags: ["blockchain", "english"],
     },
     {
       source: "youtube",
@@ -232,6 +237,7 @@ const db: IDB = {
       conference: "9. Crypto@Cracow meetup",
       description: "",
       date: "Feb 5, 2018",
+      filterTags: ["blockchain", "polish"],
     },
     // {
     //   source: "youtube",
@@ -241,6 +247,13 @@ const db: IDB = {
     //   description: "",
     //   date: "",
     // },
+  ],
+  talkFilters: [
+    { name: "English", tag: "english" },
+    { name: "Polish", tag: "polish" },
+    { name: "Git", tag: "git" },
+    { name: "Docker", tag: "docker" },
+    { name: "Blockchain", tag: "blockchain" },
   ],
   testimonials: [
     {

@@ -1,10 +1,12 @@
-export type IProjectTag =
+export type IProjectFilterTag =
   | "angular"
   | "vue"
   | "python-django"
   | "js-ts"
   | "android"
   | "java"
+  | "blockchain"
+  | "react"
   | "ccpp";
 export type IProjectBadge =
   | "Angular"
@@ -51,7 +53,7 @@ export type ITechnology =
 
 export interface IProjectFilter {
   name: string;
-  tag: string;
+  tag: IProjectFilterTag;
 }
 
 export interface IProject {
@@ -64,7 +66,7 @@ export interface IProject {
   thumbnail: string;
   summaryTitle: string;
   summary: string;
-  tags: IProjectTag[];
+  filterTags: IProjectFilterTag[];
   badges: IProjectBadge[];
   technologies: ITechnology[];
   thumbnailLogo: string;

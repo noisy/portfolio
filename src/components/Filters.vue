@@ -6,7 +6,7 @@
         v-for="{ tag, name } in filters"
         :key="tag"
         class="type"
-        :data-filter="tag"
+        :data-filter="`.${tag}`"
       >
         {{ name }}
       </li>

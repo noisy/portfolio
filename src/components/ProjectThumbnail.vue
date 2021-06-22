@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12 col-lg-4" :class="project.tags">
+  <div class="col-12 col-lg-4" :class="project.filterTags">
     <div class="card rounded-0 border-0 shadow-sm mb-5">
       <div class="card-img-container position-relative">
         <img

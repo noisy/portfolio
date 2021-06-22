@@ -1,5 +1,17 @@
 import { ILanguage } from "./ILanguage";
 
+export type ITalkFilterTag =
+  | "polish"
+  | "english"
+  | "git"
+  | "docker"
+  | "blockchain";
+
+export interface ITalkFilter {
+  name: string;
+  tag: ITalkFilterTag;
+}
+
 export interface ITalk {
   source: string;
   conference?: string;
@@ -10,4 +22,5 @@ export interface ITalk {
   title: string;
   description: string;
   date: string;
+  filterTags: ITalkFilterTag[];
 }

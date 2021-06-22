@@ -1,6 +1,6 @@
 import { ILanguage } from "./ILanguage";
 import { IProject, IProjectFilter } from "./IProject";
-import { ITalk } from "./ITalk";
+import { ITalk, ITalkFilter } from "./ITalk";
 import { ITestimonial } from "./ITestimonial";
 
 export interface IDB {
@@ -8,6 +8,7 @@ export interface IDB {
   testimonials: ITestimonial[];
   projectFilters: IProjectFilter[];
   talks: ITalk[];
+  talkFilters: ITalkFilter[];
   links: {
     linkedinProfile: string;
   };
