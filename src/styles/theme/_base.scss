@@ -3,265 +3,252 @@
 /*********** Theme Variables **********/
 $theme-width-restrict: 780px;
 
-
 /*********** Theme Generic **********/
 body {
-    font-family: 'Roboto', sans-serif;
-    background: $theme-bg-light;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    color: $theme-text-color-primary;
+  font-family: "Roboto", sans-serif;
+  background: $theme-bg-light;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: $theme-text-color-primary;
 }
 
-
 a {
-	color: $theme-color-primary;
+  color: $theme-color-primary;
 
-	&:hover {
-		color: darken($theme-color-primary, 15%);
-	}
+  &:hover {
+    color: darken($theme-color-primary, 15%);
+  }
 
-	&.no-text-decoration {
-		text-decoration: none;
-	}
+  &.no-text-decoration {
+    text-decoration: none;
+  }
 }
 
 a.text-link {
-	text-decoration: none;
-	&:hover {
-		text-decoration: underline;
-	}
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
 }
 
 .font-weight-bold {
-	font-weight: 700 !important;
+  font-weight: 700 !important;
 }
-
 
 .btn-primary {
-	color: #fff;
+  color: #fff;
 
-	&:hover, &:focus {
-		color: #fff;
-		background: darken($theme-color-primary, 5%);
-		border-color: darken($theme-color-primary, 5%);
-	}
+  &:hover,
+  &:focus {
+    color: #fff;
+    background: darken($theme-color-primary, 5%);
+    border-color: darken($theme-color-primary, 5%);
+  }
 }
-
 
 .btn {
-	font-weight: 500;
-	padding: .375rem 1rem;
-
+  font-weight: 500;
+  padding: 0.375rem 1rem;
 }
 
-.btn:focus, .btn.focus {
-	box-shadow: none !important;
+.btn:focus,
+.btn.focus {
+  box-shadow: none !important;
 }
 
 .theme-btn-cta {
-	width: 100%;
-	padding: 0.6rem 1.5rem;
+  width: 100%;
+  padding: 0.6rem 1.5rem;
 }
-
 
 .footer {
-	background: $theme-text-color-primary;
+  background: $theme-text-color-primary;
 }
 
-
 .form-control {
-	padding-top: 0.875rem;
-	padding-bottom: 0.875rem;
+  padding-top: 0.875rem;
+  padding-bottom: 0.875rem;
 }
 
 .badge {
-	padding: 0.35em 0.7em;
-	padding-bottom: 0.4em;
-	@include border-radius(10rem);
+  padding: 0.35em 0.7em;
+  padding-bottom: 0.4em;
+  @include border-radius(10rem);
 }
 
 .text-light {
-	color: $theme-text-color-light !important;
+  color: $theme-text-color-light !important;
 }
 
 #back-to-top {
-    @include transition (all 0.4s ease-in-out);
-    background: $theme-text-color-secondary;
+  @include transition(all 0.4s ease-in-out);
+  background: $theme-text-color-secondary;
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  z-index: 30;
+  width: 36px;
+  height: 36px;
+  @include border-radius(0.25rem);
+  @include box-shadow(0 6px 10px 0 rgba(0, 0, 0, 0.3));
+  padding-top: 6px;
+  font-weight: 300;
+  &:hover {
+    background: darken($theme-text-color-secondary, 10%);
     color: #fff;
-    text-align: center;
-    display: inline-block;
-    z-index: 30;
-    width: 36px;
-    height: 36px;
-    @include border-radius(0.25rem);
-    @include box-shadow(0 6px 10px 0 rgba(0,0,0,0.3));
-    padding-top: 6px;
-    font-weight: 300;
-    &:hover {
-        background: darken($theme-text-color-secondary, 10%);
-        color: #fff;
-    }
-    svg {
-	    margin: 0;
-	    padding: 0;
-	    width: 100%;
-    }
+  }
+  svg {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+  }
 }
-
 
 /*********** Theme Utilities **********/
 
 .font-style-normal {
-	font-style: normal !important;
+  font-style: normal !important;
 }
 
-.link-on-bg, a.link-on-bg {
-	color: rgba(0, 0, 0, 0.5);
-	&:hover {
-		color: rgba(0, 0, 0, 0.6);
-	}
+.link-on-bg,
+a.link-on-bg {
+  color: rgba(0, 0, 0, 0.5);
+  &:hover {
+    color: rgba(0, 0, 0, 0.6);
+  }
 }
 
 .presudo-hidden {
-	&:before {
-		display: none !important;
-	}
-	&:after {
-		display: none !important;
-	}
+  &:before {
+    display: none !important;
+  }
+  &:after {
+    display: none !important;
+  }
 }
 
 .theme-bg-primary {
-	background-color: $theme-color-primary;
+  background-color: $theme-color-primary;
 }
 
 .theme-bg-primary-darken {
-	background-color: darken($theme-color-primary, 20%);
+  background-color: darken($theme-color-primary, 20%);
 }
 
-a.theme-btn-on-bg, .theme-btn-on-bg {
-	background: rgba(0, 0, 0, 0.2);
-	color: #fff;
-	border: none;
-	&:hover, &:focus, &:active {
-		background: rgba(0, 0, 0, 0.4);
-		border-color: transparent;border: none;
-		color: #fff;
-	}
-
+a.theme-btn-on-bg,
+.theme-btn-on-bg {
+  background: rgba(0, 0, 0, 0.2);
+  color: #fff;
+  border: none;
+  &:hover,
+  &:focus,
+  &:active {
+    background: rgba(0, 0, 0, 0.4);
+    border-color: transparent;
+    border: none;
+    color: #fff;
+  }
 }
 
 .progress {
-	@include border-radius(2px);
+  @include border-radius(2px);
 }
 
 .theme-progress-bar-dark {
-	background-color: $theme-text-color-secondary;
-
+  background-color: $theme-text-color-secondary;
 }
 
 .single-col-max-width {
-	max-width: 860px;
+  max-width: 640px;
+  box-sizing: content-box;
 }
 
 /* Header */
 .social-list {
-	display: flex;
-	a {
-		width: 36px;
-		height: 36px;
-		padding-top: 7px;
-		display: inline-block;
-		text-align: center;
-		@include border-radius(50%);
-		@include transition(all 0.4s ease-in-out);
-		&:hover {
-			background: rgba(0, 0 ,0, 0.2);
-		}
-
-	}
+  display: flex;
+  a {
+    width: 36px;
+    height: 36px;
+    padding-top: 7px;
+    display: inline-block;
+    text-align: center;
+    @include border-radius(50%);
+    @include transition(all 0.4s ease-in-out);
+    &:hover {
+      background: rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
 .navbar-toggler:focus {
-	box-shadow: none;
+  box-shadow: none;
 }
 
 #navigation {
-	font-size: 0.875rem;
+  font-size: 0.875rem;
 
+  a {
+    @include transition(all 0.4s ease-in-out);
+  }
 
-	a {
-		@include transition(all 0.4s ease-in-out);
+  .active {
+    font-weight: 600;
+  }
 
-	}
+  .dropdown-menu {
+    @include border-radius(2px);
+    &:before {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 8px solid transparent;
+      border-right: 8px solid transparent;
+      border-bottom: 8px solid #fff;
+      position: absolute;
+      right: 32px;
+      top: -8px;
+    }
+  }
+  .dropdown-item {
+    font-size: 0.875rem;
+    padding: 0.5rem 1.25rem;
 
-	.active {
-		font-weight: 600;
-	}
+    &:hover {
+      color: $theme-text-color-primary;
+    }
 
-	.dropdown-menu {
-		@include border-radius(2px);
-		&:before {
-			content: "";
-		    display: block;
-		    width: 0;
-		    height: 0;
-		    border-left: 8px solid transparent;
-		    border-right: 8px solid transparent;
-		    border-bottom: 8px solid #fff;
-		    position: absolute;
-		    right: 32px;
-		    top: -8px;
-		}
-	}
-	.dropdown-item {
-		font-size: 0.875rem;
-		padding: 0.5rem 1.25rem;
-
-		&:hover {
-			color: $theme-text-color-primary;
-		}
-
-		&:active {
-			color: #fff;
-		}
-
-	}
+    &:active {
+      color: #fff;
+    }
+  }
 }
 
 .navbar-dark .navbar-toggler {
-	border: none;
-	padding: 0;
-	font-size: inherit;
-	@include border-radius(0);
+  border: none;
+  padding: 0;
+  font-size: inherit;
+  @include border-radius(0);
 }
 
 .navbar-dark .navbar-toggler-icon {
-	background: url('/images/bars.svg') no-repeat left top;
-	height: 20px;
-	width: 24px;
-
-
+  background: url("/images/bars.svg") no-repeat left top;
+  height: 20px;
+  width: 24px;
 }
 
 .navbar-dark .navbar-nav .nav-link {
-	&:active {
-		color: #fff;
-	}
+  &:active {
+    color: #fff;
+  }
 }
 /* sliding menu underline */
 
-#slide-line{
-    position: absolute;
-    bottom: 0;
-    height: 3px;
-    background-color:rgba(256, 256, 256, 0.8);
-    @include border-radius(2px);
-    @include transition(all 0.4s ease-in-out);
-
+#slide-line {
+  position: absolute;
+  bottom: 0;
+  height: 3px;
+  background-color: rgba(256, 256, 256, 0.8);
+  @include border-radius(2px);
+  @include transition(all 0.4s ease-in-out);
 }
-
-
-
-

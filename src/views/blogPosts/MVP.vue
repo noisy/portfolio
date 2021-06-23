@@ -1,229 +1,494 @@
 <template>
-  <div class="section-row">
+  <div>
     <p>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-      dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-      nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-      Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-      enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.
-    </p>
-
-    <p class="my-5 text-center">
+      3 years ago, I realized that I had a dream - I wanted to build something
+      important and significant on my own. I wasn't sure whether I was ready,
+      but I decided to quit my dream job at
       <a
-        class="btn btn-primary me-lg-3 mb-3"
-        href="https://themes.3rdwavemedia.com/"
-        target="_blank"
-        ><i class="fas fa-desktop me-2"></i> View Live Demo</a
+        href="http://www.opera.com/"
+        rel="noopener"
+        title="This link will take you away from steemit.com"
+        class="keychainify-checked steem-keychain-checked"
+        >Opera Software</a
       >
+      and create
       <a
-        class="btn btn-secondary mb-3"
-        href="https://themes.3rdwavemedia.com/"
-        target="_blank"
-        ><i class="fab fa-github-alt me-2"></i> View on GitHub</a
+        href="http://spistresci.pl/"
+        rel="noopener"
+        title="This link will take you away from steemit.com"
+        class="keychainify-checked steem-keychain-checked"
+        >my own startup</a
       >
+      - a search engine and price comparison website for books and ebooks. I
+      found people who decided to help me.
     </p>
-
-    <blockquote class="blockquote theme-blockquote text-center">
-      <span class="fa-layers fa-fw mb-3">
-        <i class="fas fa-circle text-secondary" data-fa-transform="grow-12"></i>
-        <i
-          class="fa-inverse fas fa-quote-right text-white"
-          data-fa-transform="shrink-4"
-        ></i>
-      </span>
-      <p class="mb-3 font-italic">
-        "Walking on water and developing software from a specification are easy
-        if both are frozen."
-      </p>
-      <footer class="blockquote-footer mt-0">
-        <cite title="Source Title">Edward V Berard</cite>
-      </footer>
-    </blockquote>
-  </div>
-  <!--//section-row-->
-
-  <div class="section-row">
-    <h3 class="section-title">Heading Vestibulum Fringilla</h3>
     <p>
-      Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus
-      orci luctus et ultrices posuere cubilia Curae; Sed aliquam, nisi quis
-      porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis
-      orci. Phasellus consectetuer vestibulum elit. Aenean tellus metus,
-      bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla pede sit
-      amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean
-      posuere, tortor sed cursus feugiat, nunc augue blandit nunc, eu
-      sollicitudin urna dolor sagittis lacus.
+      With the limited resources that we had, I was sure that the effectiveness
+      of our work would be crucial for whole project. I wanted to build
+      something, what at the same time could:
     </p>
-
-    <p>
-      You can
-      <a
-        href="https://help.twitter.com/en/using-twitter/how-to-embed-a-tweet"
-        target="_blank"
-        >embed a tweet</a
-      >
-      on your blog post:
-    </p>
-    <div class="mb-5 text-center">
-      <blockquote class="twitter-tweet" data-lang="en">
-        <p lang="en" dir="ltr">
-          &quot;One of the best programming skills you can have is knowing when
-          to walk away for awhile.&quot; - Oscar Godson
-        </p>
-        &mdash; Programming Wisdom (@CodeWisdom)
-        <a
-          href="https://twitter.com/CodeWisdom/status/841357948542713856?ref_src=twsrc%5Etfw"
-          >March 13, 2017</a
-        >
-      </blockquote>
-      <!-- <script
-            async
-            src="https://platform.twitter.com/widgets.js"
-            charset="utf-8"
-          ></script> -->
-    </div>
-
-    <p>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-      dis parturient montes, nascetur ridiculus mus. Donec quam felis. Nam eget
-      dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus, sem
-      quam semper libero, sit amet adipiscing sem neque sed ipsum.
-    </p>
-
-    <ul class="mb-5 ms-md-5">
-      <li class="mb-4">
-        <strong>Lorem ipsum</strong> dolor sit amet consectetuer.
-      </li>
-      <li class="mb-4"><strong>Aenean</strong> commodo ligula eget dolor.</li>
-      <li class="mb-4">
-        <strong>Aenean</strong> massa cum sociis natoque penatibus.
-      </li>
-      <li class="mb-4"><strong>Pellentesque</strong> auctor neque nec urna.</li>
+    <ul>
+      <li>prove that my product is better than existing solutions</li>
+      <li>persuade a lot of users that this project is cool and useful</li>
+      <li>help me find investors for faster growth</li>
     </ul>
-
     <p>
-      Below are some code examples using the
-      <a class="text-link" href="https://highlightjs.org/" target="_blank"
-        >highlight.js</a
-      >
-      plugin. You can
+      <strong>I was sure</strong> that I understood what
+      <em>Minimum Viable Product</em> is - <strong>I was wrong!</strong>
+    </p>
+    <h1>This seems to be straightforward, right?</h1>
+    <p>Let's start with a definition. The first one is very simple:</p>
+    <blockquote>
+      <p>
+        A Minimum Viable Product is the smallest thing you can build that
+        delivers customer value
+      </p>
+    </blockquote>
+    <p>
+      The second definition is from Eric Ries, an entrepreneur and author of The
+      Lean Startup, which
       <a
-        class="text-link"
-        href="https://highlightjs.org/download/"
-        target="_blank"
-        >customise the script to include more languages</a
+        href="http://www.startuplessonslearned.com/2009/08/minimum-viable-product-guide.html"
+        rel="noopener"
+        title="This link will take you away from steemit.com"
+        class="keychainify-checked steem-keychain-checked"
+        >explains</a
+      >:
+    </p>
+    <blockquote>
+      <p>
+        The minimum viable product is that version of a new product which allows
+        a team to collect the maximum amount of validated learning about
+        customers with the least effort.
+      </p>
+    </blockquote>
+    <p>
+      Those two definitions suggest that your first version of a product - which
+      will help you test your idea - should be as simple as possible and at the
+      same time should provide users maximum customer value. There is some
+      problem with those definitions -
+      <strong>they suggest, that you have to build something</strong>, but the
+      truth is that at the beginning
+      <strong>you should avoid building a product at all</strong>, because you
+      can and you should test your idea without that.
+    </p>
+    <h1>Validation of your idea without building anything</h1>
+    <p>
+      <center>
+        <img
+          src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ"
+          srcset="
+            https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ  1x,
+            https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ 2x
+          "
+        />
+      </center>
+    </p>
+    <p>
+      <a
+        href="https://www.productplan.com/product-managers-12-great-customer-interview-questions/"
+        rel="noopener"
+        title="This link will take you away from steemit.com"
+        class="keychainify-checked steem-keychain-checked"
+        >image credit</a
       >
-      via their website if you need to. The stylesheet used in this template is
-      <code>atom-one-dark.css</code>
     </p>
-    <h4 class="mb-3">HTML Code Example</h4>
-    <div class="mb-5">
-      <pre><code class="html">
-&#x3C;div class=&#x22;card&#x22; style=&#x22;width: 18rem;&#x22;&#x3E;
-  &#x3C;img class=&#x22;card-img-top&#x22; src=&#x22;...&#x22; alt=&#x22;Card image cap&#x22;&#x3E;
-  &#x3C;div class=&#x22;card-body&#x22;&#x3E;
-    &#x3C;h5 class=&#x22;card-title&#x22;&#x3E;Card title&#x3C;/h5&#x3E;
-    &#x3C;p class=&#x22;card-text&#x22;&#x3E;Some quick example text to build on the card title and make up the bulk of the card&#x27;s content.&#x3C;/p&#x3E;
-    &#x3C;a href=&#x22;#&#x22; class=&#x22;btn btn-primary&#x22;&#x3E;Go somewhere&#x3C;/a&#x3E;
-  &#x3C;/div&#x3E;
-&#x3C;/div&#x3E;
-			    </code></pre>
-    </div>
-
-    <h4 class="mb-3">CSS Code Example</h4>
-    <div class="mb-5">
-      <pre><code class="css">
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 1rem;
-  font-weight: 400;
-  line-height: 1.5;
-  color: #212529;
-  text-align: left;
-  background-color: #fff;
-}
-
-		    </code></pre>
-    </div>
-
-    <h4 class="mb-3">JavaScript Code Example</h4>
-    <div class="mb-5">
-      <pre><code class="javascript">
-$(document).ready(function() {
-  $(&#x27;pre code&#x27;).each(function(i, block) {
-    hljs.highlightBlock(block);
-  });
-});
-			    </code></pre>
-    </div>
-
-    <h4 class="mb-3">Responsive Video</h4>
-    <div class="embed-responsive embed-responsive-16by9 mb-5">
-      <iframe
-        class="embed-responsive-item"
-        width="560"
-        height="315"
-        src="https://www.youtube.com/embed/9aVJOg2EB9I?rel=0"
-        frameborder="0"
-        allow="autoplay; encrypted-media"
-        allowfullscreen
-      ></iframe>
-    </div>
-  </div>
-  <!--//section-row-->
-
-  <div class="section-row">
-    <h3 class="section-title">Heading Inventore Veritatis Quasi</h3>
     <p>
-      Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
-      ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
-      dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
-      nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.
-      Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In
-      enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum
-      felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus
-      elementum semper nisi. Aenean vulputate eleifend tellus.
+      If you want to be a business owner, then you should be at the same time
+      very skeptical and very optimistic. You should be prepared for the worse,
+      but you should hope for the best. Skepticism is important because you
+      should test your every assumption that you can make money on something,
+      but optimism is needed to find a way to prove that your skepticism was
+      <strong>in this particular case</strong> unnecessary.
     </p>
-
-    <figure class="figure mb-5">
+    <p>
+      I can recommend you an article
+      <em
+        >"<a
+          href="http://thenextweb.com/dd/2014/11/12/15-ways-test-minimum-viable-product/#gref"
+          rel="noopener"
+          title="This link will take you away from steemit.com"
+          class="keychainify-checked steem-keychain-checked"
+          >15 ways to test your minimum viable product</a
+        >"</em
+      >. There are 8 items from article which could be used in an MVB instead of
+      MVP:
+    </p>
+    <ul>
+      <li>Customer interviews</li>
+      <li>Landing Pages</li>
+      <li>Ad Campaigns</li>
+      <li>Fundraising</li>
+      <li>Explainer videos</li>
+      <li>Manual-first (aka “Wizard of Oz”) MVP</li>
+      <li>Digital &amp; Paper prototypes</li>
+      <li>Pre-order pages</li>
+    </ul>
+    <p>
+      Those techniques can save you months of unnecessary work and tons of
+      money. If you want to build a business, you should first validate your
+      idea with at least one technique described there.
+    </p>
+    <h3>Minimum Viable <strong>Business</strong> - first, MVP - later</h3>
+    <p>
+      MVB is a new term. For me it is helpful because it helps me split the idea
+      of building a company into: "research &amp; planning" - MVB and "actual
+      implementation" - MVP. I am a software developer, and most of the projects
+      I've started because I wanted to learn something about programming in the
+      process of doing that - how to implement this functionality, how to use
+      that library, etc.
+    </p>
+    <p>
+      It would be a great outcome, if one of my projects just took off, and
+      became very successful. But this would assume, that I had really great
+      idea in first place, and that I had implemented this flawlessly - sadly
+      this scenario is very unlikely to happen. You don't know what the market
+      wants.
+    </p>
+    <p>
+      <strong>Businesses are not born <em>automagically</em>.</strong> If you
+      focus on building a product, you can build one, even a great one... but
+      this does not necessarily mean that you will be able to earn anything from
+      that. If at some point you will decide to create a business, then you have
+      to start thinking as a business owner, not like a developer, who loves to
+      learn new things.
+    </p>
+    <p>
+      If you know the product which you want to build, you will need funding or
+      a business to be able to exist and grow. Then before building a product
+      you should focus on building a business. Don't get me wrong - this doesn't
+      mean that you have to create a company. You should focus on validation,
+      whether your business actually has a chance to be a successful business or
+      at least will be able to support the development of a solution which your
+      product is supposed to solve.
+    </p>
+    <h1>Being sure that there is demand for a product like yours</h1>
+    <p>
       <img
-        class="img-fluid figure-img"
-        src="assets/images/blog/blog-post-image-example-1.png"
+        src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmYFS77UHgh1i3MX3LZigt3YK9RhNs6v9BoKNMhS8za8P1"
+        srcset="
+          https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmYFS77UHgh1i3MX3LZigt3YK9RhNs6v9BoKNMhS8za8P1  1x,
+          https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmYFS77UHgh1i3MX3LZigt3YK9RhNs6v9BoKNMhS8za8P1 2x
+        "
       />
-      <figcaption class="figure-caption text-center">
-        A caption for the above image.
-      </figcaption>
-    </figure>
-
-    <p>
-      At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-      praesentium voluptatum deleniti atque corrupti quos dolores et quas
-      molestias excepturi sint occaecati cupiditate non provident, similique
-      sunt in culpa qui officia deserunt mollitia animi, id est laborum et
-      dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio.
-      Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil
-      impedit quo minus id quod maxime.
     </p>
-
-    <ol class="mb-5 ms-md-5">
-      <li class="mb-4">Dolor sit amet consectetuer.</li>
-      <li class="mb-4">Commodo ligula eget dolor.</li>
-      <li class="mb-4">Massa cum sociis natoque penatibus.</li>
-      <li class="mb-4">Auctor neque nec urna.</li>
-      <li class="mb-4">Integer tincidunt.</li>
-      <li class="mb-4">Ut varius tincidunt.</li>
-    </ol>
     <p>
-      Similique sunt in culpa qui officia deserunt mollitia animi, id est
-      laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita
-      distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque
-      nihil impedit quo minus id quod maxime.
+      In the case of our startup I was sure that there is demand a for a price
+      comparison website like ours. Why did I think so? Because just in Poland I
+      already have 4 competitors, which like me, focused on a niche - books and
+      ebooks. According to me, each of them were doing great, but I was sure
+      that I could do something better.
+    </p>
+    <p>
+      I have to admit, I didn't conduct proper research. I didn't check exactly
+      how many customers they have, and I didn't even try to ask them about
+      their profits. I was sure that if someone else is doing this, they have to
+      be earning some money from that. That wouldn't make much sense if that not
+      were true, right?
+    </p>
+    <p>
+      In the 90's a lot of companies were sure that Virtual Reality (VR) is the
+      future. The giants like Nintendo, Atari, Sega invested tons of money in VR
+      because their competitors were doing the same. No one wanted to be left
+      behind. Even right now, we are not 100% sure that there is demand for VR,
+      which companies can offer to customers.
+    </p>
+    <p>
+      So, before you invest most of your assets in the development of your
+      product, check one more time whether there is demand for that, and whether
+      your product will be able to make money for own development.
+    </p>
+    <p>
+      Then and only then, you can start thinking about how to build the first
+      minimal version of your product - which one more time, will confirm that
+      your assumptions wereactually correct. Do you see the pattern?
+    </p>
+    <h1>What MVP is not</h1>
+    <p>
+      <img
+        src="https://steemitimages.com/0x0/https://cloud.githubusercontent.com/assets/201263/17837782/e5b66880-67bc-11e6-91b9-98528f299eff.gif"
+        alt="what MVP is not"
+      />
+    </p>
+    <p>
+      I can agree that it is necessary in the process of creating an MVP to
+      discuss the importance of particular features. Some teams that try to
+      prepare an MVP, after a lot of time spent on arguing about which features
+      are worth to include or exclude from their
+      <em>minimum viable product</em>, having such list defined, finally decide
+      to start building a product.
+    </p>
+    <p>
+      There are a few problems with this approach. First of all, MVP is not a
+      strict plan for the first few months of development. It is also not a list
+      of chopped out features, and for sure it's not a demo with a bunch of cool
+      features which would present how awesome your project is.
+    </p>
+    <h2>MVP is more like a process, which can save your business</h2>
+    <p>
+      With a list of
+      <a
+        href="https://www.cbinsights.com/blog/startup-failure-reasons-top/"
+        rel="noopener"
+        title="This link will take you away from steemit.com"
+        class="keychainify-checked steem-keychain-checked"
+        >top reasons why startups fail</a
+      >
+      I will try explain how MVP could save your project from failing.
+    </p>
+    <p>
+      <img
+        src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmZJujupvcbNUXDY2BSkw6TjM4mXW6CpELbcwubbbojX5i"
+        srcset="
+          https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmZJujupvcbNUXDY2BSkw6TjM4mXW6CpELbcwubbbojX5i  1x,
+          https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmZJujupvcbNUXDY2BSkw6TjM4mXW6CpELbcwubbbojX5i 2x
+        "
+      />
+    </p>
+    <p>But how can one single MVB or MVP do so much? The truth is, it can't!</p>
+    <h4>No Market Need</h4>
+    <p>
+      It is extraordinary that as many as 42% of startups fail because of a
+      wrong assumption at the beginning. Inexperienced founders have a tendency
+      toward wishful thinking. They are so sure that their idea is good that
+      they tend to ignore a need to do a proper research.
+    </p>
+    <blockquote>
+      <p>
+        MVB/MVP tests are designed not just to answer technical questions about
+        the product, but also to test fundamental business hypotheses about the
+        viability of the market it exists in.
+      </p>
+    </blockquote>
+    <p>
+      MVB as a cure for the "no market need" problem should be like a bait - it
+      should check how many users your product will be able to attract. Not only
+      that, you also have to be sure that those users are your target (with
+      specific needs and funds that they are willing to spent on things that
+      your product can provide).
+    </p>
+    <h4>Ran Out of Cash</h4>
+    <p>
+      This also happened to us. Right now I think that
+      <em>running out of cash</em> is always an
+      <em>outcome, not a reason</em> itself.
+    </p>
+    <p>
+      <em
+        >I wanted to build a product for myself, so I started only with my own
+        savings and my own time.</em
+      >
+      I didn't validate whether anyone would be interested in funding my work in
+      advance (investors, crowdfunding,
+      <a
+        href="http://lexicon.ft.com/Term?term=3-Fs"
+        rel="noopener"
+        title="This link will take you away from steemit.com"
+        class="keychainify-checked steem-keychain-checked"
+        >FFF</a
+      >)
+    </p>
+    <p>
+      <em
+        >I consider myself as a customer, so I decided to build a few features,
+        because I thought that they were cool.</em
+      >
+      I wasted too much time on the development of things that were not crucial,
+      and spent too little time on features that could help us monetize a
+      service.
+    </p>
+    <p>
+      <em
+        >I spent too much time and money which was required to implement some
+        features that should not have even existed in the first version of our
+        product.</em
+      >
+      I decided that to outperform our competitors we were going to integrate
+      more bookstores than others. Because of that we needed to spend:
+    </p>
+    <ul>
+      <li>much more time on integration of those bookstores</li>
+      <li>much more time on performance optimization</li>
+      <li>
+        much more money on servers that were needed to handle updates from those
+        bookstores
+      </li>
+    </ul>
+    <h4>Get Outcompeted, Poor product, Ignore Customers</h4>
+    <p>
+      If your startup was outcompeted, probably you did something wrong. Of
+      course, you can always say that your opponent had the "first move
+      advantage", but that would be an excuse only in case that either of you
+      did not make any mistakes.
+    </p>
+    <p>
+      You should not try to build a perfect product just at the beginning. If
+      this is even possible, for sure it is too expensive. Most mistakes can be
+      corrected, so success at the end depends on speed, performance, and good
+      research about things which are not perfect. In all this cases to make
+      progress you need to work closely with your customer. You should make your
+      product iterations as short as possible, and after each iteration, you
+      should check feedback from your users.
+    </p>
+    <p>
+      This means, that you should have a separate MVP of each feature! Even if
+      you think that you already know, that specific feature is needed and
+      desired by customers, you should first implement a small part of it - 20%,
+      and at the same time try to bring 80% of feature value to the table.
+    </p>
+    <h2>MVP is different for each industry</h2>
+    <p>
+      I think one explanation for why there is so much confusion with MVP is
+      that it looks quite different for different companies.
+    </p>
+    <p>
+      <img
+        src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmXzRpm68e3Y8fCtmi1haYp1TCMn2vXtBJnQcDDoe6nJyG"
+        srcset="
+          https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmXzRpm68e3Y8fCtmi1haYp1TCMn2vXtBJnQcDDoe6nJyG  1x,
+          https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmXzRpm68e3Y8fCtmi1haYp1TCMn2vXtBJnQcDDoe6nJyG 2x
+        "
+      />
+    </p>
+    <p>
+      If you want to build a great restaurant, it is obvious that a location in
+      the city center can be too expensive at the beginning. Antique furniture
+      probably will also be out of your reach. It is a better idea, to start
+      with something smaller. In theory, a food truck could be ideal, but I
+      would recommend something smaller, like inviting your friends for a
+      dinner.
+    </p>
+    <p>
+      But if you are a software developer, you don't want to rebuild your
+      product over and over again from scratch. You want to start with a
+      foundation...
+    </p>
+    <h3>MVP for software developers</h3>
+    <p>
+      First of all, if you are a programmer, that means that you are probably a
+      very technical person. Even if your target market is other programmers,
+      who can understand the meaning of returned errors, you should make your
+      MVP reliable and usable.
+    </p>
+    <p>
+      <img
+        src="https://steemitimages.com/640x0/http://panthersoftware.com/2014/11/20/mvp-for-stakeholders-project-managers-and-architects/images/mvp-pyramid.png"
+        srcset="
+          https://steemitimages.com/640x0/http://panthersoftware.com/2014/11/20/mvp-for-stakeholders-project-managers-and-architects/images/mvp-pyramid.png  1x,
+          https://steemitimages.com/1280x0/http://panthersoftware.com/2014/11/20/mvp-for-stakeholders-project-managers-and-architects/images/mvp-pyramid.png 2x
+        "
+      />
+    </p>
+    <p>
+      You have to remember that there is still a very high probability that your
+      users actually need something slightly different than you initially had in
+      mind. This means that you have to be flexible, and, more importantly, your
+      <strong>code also has to be flexible</strong>!
+    </p>
+    <p>
+      I will not argue that each project should be covered by unittest with a
+      100% rate, but if you are wondering
+      <strong>how to build a flexible code</strong>, unittests are the answer.
+    </p>
+    <p>
+      Each software has some kind of core. In most cases this is the most
+      complicated part of the system, where a lot of optimization and tweaks
+      will be added later. Your core does not have to and in fact should not be
+      perfect, but you should cover all cases handled by your code with
+      unittests. Only with a bunch of well-written unittests you will be able to
+      completely rewrite you code to meet new business criteria... without
+      destroying everything in the process.
+    </p>
+    <h1>Don't be afraid to find the right wall</h1>
+    <p>
+      <img
+        src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmZS2gkLqMtMVV3FbjVW98jLmxvZriQbH5JG2KzSr5QAS1"
+        srcset="
+          https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmZS2gkLqMtMVV3FbjVW98jLmxvZriQbH5JG2KzSr5QAS1  1x,
+          https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmZS2gkLqMtMVV3FbjVW98jLmxvZriQbH5JG2KzSr5QAS1 2x
+        "
+      />
+    </p>
+    <p>
+      MVP in theory is an easy concept, but in practice it is extremely
+      difficult to master. We want to take action and build great products! It
+      is very difficult to convince ourselves that we all should inititially
+      research more because we are afraid of giving up on our initial
+      idea...just like all those naysayers saidthat we may end up like all those
+      naysayers said - by giving up an initial idea.
+    </p>
+    <p>
+      But the truth is, your idea didn't came from nothing. You are a deep well
+      of experience and unique knowledge. Even if, by your research, you realize
+      that your idea business is not possible, you gain ever more unique
+      knowledge that your competitors will not have. But if you are able to
+      listen to what smart people say about your product, even if your initial
+      idea was terrible, you will find out what you will have to do to make
+      their life better. Don't be afraid to find the right wall, especially
+      after learning about tool which will help you find it.
+    </p>
+    <hr />
+    <p>
+      During the creation of this article I realized how many things about MVP I
+      want to describe. I decided to split everything into parts. In the next
+      part I will describe a few ways of how you actually can plan and design
+      your own MVP.
+    </p>
+    <p>
+      If you want to learn how to build your own MVP or if you are interested in
+      one of
+      <a
+        href="/trending/programming"
+        class="keychainify-checked steem-keychain-checked"
+      >
+        #programming</a
+      >
+      <a
+        href="/trending/startup"
+        class="keychainify-checked steem-keychain-checked"
+      >
+        #startup</a
+      >
+      <a
+        href="/trending/entrepreneur"
+        class="keychainify-checked steem-keychain-checked"
+      >
+        #entrepreneur</a
+      >, you might want to follow
+      <a
+        href="https://steemit.com/@noisy"
+        class="keychainify-checked steem-keychain-checked"
+        >my account</a
+      >. I post one article on every Monday :)
+    </p>
+    <p>
+      Note: Article was
+      <a
+        href="https://www.livecoding.tv/noisy/videos/"
+        rel="noopener"
+        title="This link will take you away from steemit.com"
+        class="keychainify-checked steem-keychain-checked"
+        >liveblogged</a
+      >
+      and after that was corrected by profesional English teacher hired on
+      italki -
+      <a
+        href="https://www.italki.com/teacher/1359638"
+        rel="noopener"
+        title="This link will take you away from steemit.com"
+        class="keychainify-checked steem-keychain-checked"
+        >Nikki</a
+      >
+      and
+      <a
+        href="https://www.italki.com/teacher/2830764"
+        rel="noopener"
+        title="This link will take you away from steemit.com"
+        class="keychainify-checked steem-keychain-checked"
+        >James</a
+      >.
     </p>
   </div>
-  <!--//section-row-->
 
   <nav class="post-nav d-flex justify-content-between">
     <div class="nav-previous">
