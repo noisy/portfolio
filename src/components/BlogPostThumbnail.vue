@@ -1,7 +1,11 @@
 <template>
   <div class="card rounded-0 border-0 shadow-sm mb-5">
-    <div class="card-img-container position-relative">
-      <img class="card-img-top rounded-0" :src="blogPost.thumbnail" alt="" />
+    <div class="card-img-container position-relative photo-wrapper">
+      <img
+        class="card-img-top rounded-0 object-fit-cover"
+        :src="blogPost.thumbnail"
+        alt=""
+      />
       <div class="card-img-overlay overlay-mask overlay-logo text-center p-0">
         <div class="overlay-mask-content text-center w-100 position-absolute">
           <router-link
@@ -61,4 +65,25 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+.photo-wrapper {
+  position: relative;
+  overflow: hidden;
+  padding-top: calc(100% * 1 / 2);
+}
+.object-fit-cover {
+  object-fit: cover;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+}
+
+.photo-wrapper:hover {
+  .object-fit-cover {
+    transform: translate(-50%, -50%) scale(1.02) !important;
+  }
+}
+</style>

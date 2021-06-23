@@ -1,6 +1,6 @@
 <template>
   <div class="mb-5">
-    <img class="img-fluid" :src="url" alt="" />
+    <img class="img-fluid w-100" :src="url" alt="" />
   </div>
 </template>
 
