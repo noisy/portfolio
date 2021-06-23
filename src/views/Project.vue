@@ -5,10 +5,7 @@
     <div class="project-wrapper container py-5">
       <div class="row">
         <section class="col-12 col-lg-8">
-          <router-view
-            :project="project"
-            :testimonials="testimonials"
-          ></router-view>
+          <router-view :project="project" :testimonials="testimonials" />
         </section>
         <ProjectInfo class="col-12 col-lg-4 ps-lg-5" :project="project" />
       </div>

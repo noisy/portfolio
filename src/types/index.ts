@@ -1,3 +1,4 @@
+export * from "./IBlogPost";
 export * from "./IDB";
 export * from "./ILanguage";
 export * from "./IProject";

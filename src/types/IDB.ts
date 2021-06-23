@@ -1,3 +1,4 @@
+import { IBlogPost } from "./IBlogPost";
 import { ILanguage } from "./ILanguage";
 import { IProject, IProjectFilter } from "./IProject";
 import { ITalk, ITalkFilter } from "./ITalk";
@@ -14,4 +15,5 @@ export interface IDB {
   };
   flags: Record<ILanguage, string>;
   contactEmail: string;
+  blogPosts: IBlogPost[];
 }

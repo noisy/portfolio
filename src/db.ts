@@ -305,6 +305,38 @@ const db: IDB = {
     Polish: "🇵🇱",
     English: "🇬🇧",
   },
+  blogPosts: [
+    {
+      title: "title",
+      author: "author",
+      slug: "mvp",
+      published: true,
+      thumbnail: "/images/blog/blog-post-thumb-2.jpg",
+      publishedAt: new Date(),
+      intro:
+        "Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod. Vivamus sed mi vitae dui iaculis venenatis...",
+    },
+    // {
+    //   title: "title",
+    //   author: "author",
+    //   slug: "spistresci-pl",
+    //   published: true,
+    //   thumbnail: "/images/blog/blog-post-thumb-2.jpg",
+    //   publishedAt: new Date(),
+    //   intro:
+    //     "Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod. Vivamus sed mi vitae dui iaculis venenatis...",
+    // },
+    // {
+    //   title: "title",
+    //   author: "author",
+    //   slug: "seerene",
+    //   published: true,
+    //   thumbnail: "/images/blog/blog-post-thumb-2.jpg",
+    //   publishedAt: new Date(),
+    //   intro:
+    //     "Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod. Vivamus sed mi vitae dui iaculis venenatis...",
+    // },
+  ],
 };
 
 export default db;

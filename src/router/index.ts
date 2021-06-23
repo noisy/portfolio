@@ -4,8 +4,9 @@ import {
   createRouter,
   createWebHistory,
 } from "vue-router";
+import { blogPosts } from "./blogPosts";
 import { projects } from "./projects";
-import { Home, Project, Projects, Talks } from "@/views";
+import { BlogPost, Home, Project, Projects, Talks } from "@/views";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -39,6 +40,12 @@ const routes: Array<RouteRecordRaw> = [
     path: "/blog",
     name: "blog",
     component: Home,
+  },
+  {
+    path: "/post/",
+    name: "post",
+    component: BlogPost,
+    children: blogPosts,
   },
   {
     path: "/contact",
