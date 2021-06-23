@@ -6,4 +6,5 @@ export interface IBlogPost {
   thumbnail: string;
   publishedAt: Date;
   intro: string;
+  tagline: string;
 }

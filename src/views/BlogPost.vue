@@ -1,7 +1,6 @@
 <template>
   <div v-if="blogPost">
-    <PageHeader :title="blogPost.title" />
-    {{ blogPost }}
+    <BlogPostHeader :blog-post="blogPost" />
     <router-view :blog-post="blogPost" />
   </div>
 </template>
@@ -9,12 +8,12 @@
 <script lang="ts">
 import { defineComponent, onBeforeMount, onBeforeUpdate, ref } from "vue";
 import { useRoute } from "vue-router";
-import { PageHeader } from "@/components";
+import { BlogPostHeader } from "@/components";
 import { useDB } from "@/composables";
 
 export default defineComponent({
   name: "BlogPost",
-  components: { PageHeader },
+  components: { BlogPostHeader },
   setup() {
     const { blogPosts } = useDB();
     let blogPost = ref();

@@ -307,14 +307,17 @@ const db: IDB = {
   },
   blogPosts: [
     {
-      title: "title",
-      author: "author",
+      title:
+        "How I bankrupt my first startup by not understanding the definition of MVP - Minimum Viable Product",
+      author: "Krzysztof Szumny",
       slug: "mvp",
       published: true,
-      thumbnail: "/images/blog/blog-post-thumb-2.jpg",
-      publishedAt: new Date(),
+      thumbnail:
+        "https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmYq5xu4N98WUJMjwjaGwaCZpgPWzNyhsrAkLaGvLS3uC1",
+      publishedAt: new Date("2016-08-22 20:51"),
       intro:
         "Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod. Vivamus sed mi vitae dui iaculis venenatis...",
+      tagline: "About how to not make a very costly mistake...",
     },
     // {
     //   title: "title",
