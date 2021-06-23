@@ -5,7 +5,7 @@
 @media (min-width: 576px) {
 	.talk-media-holder {
 		width: 100%;
-		
+
 	}
 }
 
@@ -30,7 +30,7 @@
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
-	
+
 	.talk-media-holder {
 		width: 60%;
 	}
@@ -64,22 +64,22 @@
 			color: #fff;
 		}
 	}
-	
+
 	.project-cards .card {
 		height: auto;
 	}
-	
+
 }
 // Small devices (landscape phones, less than 768px)
 @media (max-width: 767.98px) {
-	
+
 	.author-block {
 		text-align: center;
 		.author-profile, .author-info {
 			margin: 0 auto;
 		}
 	}
-	
+
 	.source-link {
 		position: static !important;
 	}
@@ -91,37 +91,37 @@
 		.quote-source {
 			margin: 0 auto;
 		}
-		
+
 	}
 	.project-wrapper .section-title {
 		font-size: 1.5rem;
 		margin-bottom: 1rem;
-		
+
 	}
-	
+
 	.project-wrapper {
 		font-size: 1.125rem;
 	}
-	
+
 	.project-wrapper p {
 		font-size: 1.125rem;
 	}
-	
+
 	.theme-carousel .carousel-control-prev {
 		left: 0;
 	}
-	
+
 	.theme-carousel .carousel-control-next {
 		right: 0;
 	}
-	
+
 	.testimonial-item {
 		width:80%;
 		.shadow-lg {
 			@include box-shadow($box-shadow-sm !important);
 		}
 	}
-	
+
 	.resume-header {
 		height: auto;
 	}
@@ -129,27 +129,27 @@
 		width: 120px;
 		@include border-radius(4px);
 	}
-	
+
 	.header-intro {
 		text-align: center;
 	}
 	.download-resume {
 		position: static !important;
-		
+
 	}
-	
+
 	.header-intro-resume {
 		height: auto;
 	}
-	
+
 	.resume-wrapper {
 		margin-top: 0;
 	}
-	
+
 	.page-heading-logo {
 		position: static !important;
 	}
-	
+
 	.blog-cards {
 		.featured-card {
 			display: block !important;
@@ -164,10 +164,10 @@
 			width: 100%;
 		}
 	}
-	
-	
 
-	
+
+
+
 }
 
 
@@ -180,17 +180,17 @@
 			@include box-shadow(none !important);
 		}
 	}
-	
+
 	#slide-line {
 		display: none !important;
 	}
-	
+
 }
 
 
 
 // Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { 
+@media (min-width: 768px) {
     .resume-picture-holder {
 		max-width:220px;
 	}

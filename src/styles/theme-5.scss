@@ -1,41 +1,39 @@
 /*************************** Theme Colours****************************/
 // Define theme colour scheme
-$theme-color-primary: #23B1F7; 
+$theme-color-primary: #23b1f7;
 
-
-$theme-text-color-primary: #434E5E;
+$theme-text-color-primary: #434e5e;
 $theme-text-color-secondary: lighten($theme-text-color-primary, 10%);
 $theme-text-color-light: lighten($theme-text-color-primary, 40%);
 
-$theme-bg-light: #F7F8FA;
+$theme-bg-light: #f7f8fa;
 $theme-bg-dark: $theme-text-color-primary;
 
-$theme-border-color:  lighten($theme-text-color-primary, 10%);
+$theme-border-color: lighten($theme-text-color-primary, 10%);
 $theme-divider-color: lighten($theme-text-color-primary, 10%);
 
 $theme-color-new: #5ab66e;
-$theme-error: #EC575B;
+$theme-error: #ec575b;
 
 $smoky-white: #f5f5f5;
 $google-color: #d73d32;
 $facebook-color: #3b5998;
-$twitter-color: #1DA1F2;
-$linkedin-color: #0077B5;
+$twitter-color: #1da1f2;
+$linkedin-color: #0077b5;
 
 $github-color: #576477;
-$stackoverflow-color: #F3A83B;
+$stackoverflow-color: #f3a83b;
 $codepen-color: #000000;
-$medium-color: #02B875;
-$instagram-color: #BC296D;
+$medium-color: #02b875;
+$instagram-color: #bc296d;
 
-$google-plus-color: #DB4437;
-$reddit-color: #EC5428;
-$pinterest-color: #BD081C;
-$tumblr-color: #39465B;
-$stumbleupon-color: #DB5535;
-$digg-color: #3569A3;
+$google-plus-color: #db4437;
+$reddit-color: #ec5428;
+$pinterest-color: #bd081c;
+$tumblr-color: #39465b;
+$stumbleupon-color: #db5535;
+$digg-color: #3569a3;
 $email-color: $theme-color-primary;
-
 
 /*************************** Variables Section. *****************************/
 // Create variables to override the default value for variables used in the Bootstrap SCSS files.
@@ -51,14 +49,12 @@ $gray-800: lighten($theme-text-color-primary, 10%);
 $gray-900: $theme-text-color-primary;
 
 $theme-colors: (
-  "primary":  $theme-color-primary, 
-  "secondary":  $theme-text-color-secondary, 
+  "primary": $theme-color-primary,
+  "secondary": $theme-text-color-secondary,
 );
 
 /*************************** Import Bootstrap  *****************************/
-@import "bootstrap/scss/bootstrap.scss";
-
+@import "node_modules/bootstrap/scss/bootstrap.scss";
 
 /*************************** Theme Styles Section ****************************/
-@import "theme/styles.scss"
-
+@import "theme/styles.scss";
