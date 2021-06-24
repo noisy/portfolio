@@ -6,18 +6,15 @@
 
     Seerene describes own product as:
 
-    <blockquote class="blockquote my-4 bg-white shadow-sm">
-      <i class="mt-3 ms-3 quote-icon fas fa-quote-left fa-lg text-primary"></i>
-      <p class="px-5 pb-4">
-        Seerene’s Digital Boardroom is a software analytics and process mining
-        technology that analyzes and visualizes the software development
-        processes in your company. It reveals weaknesses and turns your
-        organization into a well-oiled machine, delivering software efficiently,
-        cost-effectively, quickly, and with the highest quality. Seerene
-        provides decision-makers with the information needed to actively drive
-        their organization towards 360° software excellence.
-      </p>
-    </blockquote>
+    <Quote>
+      Seerene’s Digital Boardroom is a software analytics and process mining
+      technology that analyzes and visualizes the software development processes
+      in your company. It reveals weaknesses and turns your organization into a
+      well-oiled machine, delivering software efficiently, cost-effectively,
+      quickly, and with the highest quality. Seerene provides decision-makers
+      with the information needed to actively drive their organization towards
+      360° software excellence.
+    </Quote>
 
     <p class="video-container">
       <iframe
@@ -197,7 +194,7 @@
 
 <script lang="ts">
 import { PropType, defineComponent } from "vue";
-import { Carousel, CoverImage, Testimonial } from "@/components";
+import { Carousel, CoverImage, Quote, Testimonial } from "@/components";
 import { useDB, useProject } from "@/composables";
 import "vue3-carousel/dist/carousel.css";
 import { IProject, ITestimonial } from "@/types";
@@ -208,6 +205,7 @@ export default defineComponent({
     CoverImage,
     Carousel,
     Testimonial,
+    Quote,
   },
   props: {
     project: {

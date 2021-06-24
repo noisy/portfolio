@@ -17,6 +17,7 @@ export { default as ProjectHeader } from "./ProjectHeader.vue";
 export { default as ProjectInfo } from "./ProjectInfo.vue";
 export { default as ProjectsGrid } from "./ProjectsGrid.vue";
 export { default as ProjectThumbnail } from "./ProjectThumbnail.vue";
+export { default as Quote } from "./Quote.vue";
 export { default as SkillsOverview } from "./SkillsOverview.vue";
 export { default as Talk } from "./Talk.vue";
 export { default as Testimonial } from "./Testimonial.vue";
