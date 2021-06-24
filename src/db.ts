@@ -128,8 +128,9 @@ const db: IDB = {
         "https://web.archive.org/web/20140924014455/http://spistresci.pl/",
       companyName: "SpisTresci.pl",
       thumbnail: "spistresci-pl/main.png",
-      summaryTitle: "Example title",
-      summary: "Description of a project",
+      summaryTitle: "SpisTresci.pl",
+      summary:
+        "SpisTresci.pl was a price comparison website focused on ebooks, audiobooks, which was targeted towards the Polish market.",
       filterTags: ["python-django", "js-ts"],
       badges: ["Python", "Django", "jQuery"],
       technologies: ["python", "django", "jquery", "solr", "sqlalchemy"],
