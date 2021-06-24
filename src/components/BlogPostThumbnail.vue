@@ -35,10 +35,10 @@
             <i class="far fa-clock me-2"></i
             >{{ blogPost.publishedAt.toDateString() }}
           </li>
-          <li class="list-inline-item">
+          <!-- <li class="list-inline-item">
             <i class="fas fa-comment me-2"></i
             ><a class="text-link" href="#">4 Comments</a>
-          </li>
+          </li> -->
         </ul>
         <div class="excerpt">
           {{ blogPost.intro }}
