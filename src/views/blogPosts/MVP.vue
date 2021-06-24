@@ -12,12 +12,12 @@
         >Opera Software</a
       >
       and create
-      <a
-        href="http://spistresci.pl/"
+      <router-link
+        :to="{ name: 'project-spistresci-pl' }"
         rel="noopener"
         title="This link will take you away from steemit.com"
         class="keychainify-checked steem-keychain-checked"
-        >my own startup</a
+        >my own startup</router-link
       >
       - a search engine and price comparison website for books and ebooks. I
       found people who decided to help me.
@@ -36,14 +36,13 @@
       <strong>I was sure</strong> that I understood what
       <em>Minimum Viable Product</em> is - <strong>I was wrong!</strong>
     </p>
-    <h1>This seems to be straightforward, right?</h1>
+    <h3 class="section-title">This seems to be straightforward, right?</h3>
     <p>Let's start with a definition. The first one is very simple:</p>
-    <blockquote>
-      <p>
-        A Minimum Viable Product is the smallest thing you can build that
-        delivers customer value
-      </p>
-    </blockquote>
+
+    <Quote>
+      A Minimum Viable Product is the smallest thing you can build that delivers
+      customer value
+    </Quote>
     <p>
       The second definition is from Eric Ries, an entrepreneur and author of The
       Lean Startup, which
@@ -55,13 +54,12 @@
         >explains</a
       >:
     </p>
-    <blockquote>
-      <p>
-        The minimum viable product is that version of a new product which allows
-        a team to collect the maximum amount of validated learning about
-        customers with the least effort.
-      </p>
-    </blockquote>
+    <Quote>
+      The minimum viable product is that version of a new product which allows a
+      team to collect the maximum amount of validated learning about customers
+      with the least effort.
+    </Quote>
+
     <p>
       Those two definitions suggest that your first version of a product - which
       will help you test your idea - should be as simple as possible and at the
@@ -72,26 +70,17 @@
       <strong>you should avoid building a product at all</strong>, because you
       can and you should test your idea without that.
     </p>
-    <h1>Validation of your idea without building anything</h1>
+    <h3 class="section-title">
+      Validation of your idea without building anything
+    </h3>
     <p>
-      <center>
-        <img
-          src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ"
-          srcset="
-            https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ  1x,
-            https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ 2x
-          "
-        />
-      </center>
-    </p>
-    <p>
-      <a
-        href="https://www.productplan.com/product-managers-12-great-customer-interview-questions/"
-        rel="noopener"
-        title="This link will take you away from steemit.com"
-        class="keychainify-checked steem-keychain-checked"
-        >image credit</a
-      >
+      <img
+        src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ"
+        srcset="
+          https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ  1x,
+          https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ 2x
+        "
+      />
     </p>
     <p>
       If you want to be a business owner, then you should be at the same time
@@ -162,7 +151,9 @@
       at least will be able to support the development of a solution which your
       product is supposed to solve.
     </p>
-    <h1>Being sure that there is demand for a product like yours</h1>
+    <h3 class="section-title">
+      Being sure that there is demand for a product like yours
+    </h3>
     <p>
       <img
         src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmYFS77UHgh1i3MX3LZigt3YK9RhNs6v9BoKNMhS8za8P1"
@@ -203,7 +194,7 @@
       minimal version of your product - which one more time, will confirm that
       your assumptions wereactually correct. Do you see the pattern?
     </p>
-    <h1>What MVP is not</h1>
+    <h3 class="section-title">What MVP is not</h3>
     <p>
       <img
         src="https://steemitimages.com/0x0/https://cloud.githubusercontent.com/assets/201263/17837782/e5b66880-67bc-11e6-91b9-98528f299eff.gif"
@@ -224,7 +215,9 @@
       of chopped out features, and for sure it's not a demo with a bunch of cool
       features which would present how awesome your project is.
     </p>
-    <h2>MVP is more like a process, which can save your business</h2>
+    <h3 class="section-title">
+      MVP is more like a process, which can save your business
+    </h3>
     <p>
       With a list of
       <a
@@ -238,6 +231,7 @@
     </p>
     <p>
       <img
+        class="w-100"
         src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmZJujupvcbNUXDY2BSkw6TjM4mXW6CpELbcwubbbojX5i"
         srcset="
           https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmZJujupvcbNUXDY2BSkw6TjM4mXW6CpELbcwubbbojX5i  1x,
@@ -246,20 +240,18 @@
       />
     </p>
     <p>But how can one single MVB or MVP do so much? The truth is, it can't!</p>
-    <h4>No Market Need</h4>
+    <h4 class="section-subtitle">No Market Need</h4>
     <p>
       It is extraordinary that as many as 42% of startups fail because of a
       wrong assumption at the beginning. Inexperienced founders have a tendency
       toward wishful thinking. They are so sure that their idea is good that
       they tend to ignore a need to do a proper research.
     </p>
-    <blockquote>
-      <p>
-        MVB/MVP tests are designed not just to answer technical questions about
-        the product, but also to test fundamental business hypotheses about the
-        viability of the market it exists in.
-      </p>
-    </blockquote>
+    <Quote>
+      MVB/MVP tests are designed not just to answer technical questions about
+      the product, but also to test fundamental business hypotheses about the
+      viability of the market it exists in.
+    </Quote>
     <p>
       MVB as a cure for the "no market need" problem should be like a bait - it
       should check how many users your product will be able to attract. Not only
@@ -267,7 +259,7 @@
       specific needs and funds that they are willing to spent on things that
       your product can provide).
     </p>
-    <h4>Ran Out of Cash</h4>
+    <h4 class="section-subtitle">Ran Out of Cash</h4>
     <p>
       This also happened to us. Right now I think that
       <em>running out of cash</em> is always an
@@ -314,7 +306,9 @@
         bookstores
       </li>
     </ul>
-    <h4>Get Outcompeted, Poor product, Ignore Customers</h4>
+    <h4 class="section-subtitle">
+      Get Outcompeted, Poor product, Ignore Customers
+    </h4>
     <p>
       If your startup was outcompeted, probably you did something wrong. Of
       course, you can always say that your opponent had the "first move
@@ -336,7 +330,7 @@
       desired by customers, you should first implement a small part of it - 20%,
       and at the same time try to bring 80% of feature value to the table.
     </p>
-    <h2>MVP is different for each industry</h2>
+    <h3 class="section-title">MVP is different for each industry</h3>
     <p>
       I think one explanation for why there is so much confusion with MVP is
       that it looks quite different for different companies.
@@ -363,7 +357,7 @@
       product over and over again from scratch. You want to start with a
       foundation...
     </p>
-    <h3>MVP for software developers</h3>
+    <h4 class="section-subtitle">MVP for software developers</h4>
     <p>
       First of all, if you are a programmer, that means that you are probably a
       very technical person. Even if your target market is other programmers,
@@ -399,7 +393,7 @@
       completely rewrite you code to meet new business criteria... without
       destroying everything in the process.
     </p>
-    <h1>Don't be afraid to find the right wall</h1>
+    <h3 class="section-title">Don't be afraid to find the right wall</h3>
     <p>
       <img
         src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmZS2gkLqMtMVV3FbjVW98jLmxvZriQbH5JG2KzSr5QAS1"
@@ -410,12 +404,11 @@
       />
     </p>
     <p>
-      MVP in theory is an easy concept, but in practice it is extremely
+      MVP, in theory, is an easy concept, but in practice, it is extremely
       difficult to master. We want to take action and build great products! It
-      is very difficult to convince ourselves that we all should inititially
-      research more because we are afraid of giving up on our initial
-      idea...just like all those naysayers saidthat we may end up like all those
-      naysayers said - by giving up an initial idea.
+      is very hard to convince ourselves that we should initially research more
+      because we are afraid of giving up on our initial idea while admitting to
+      all those naysayers that they were right.
     </p>
     <p>
       But the truth is, your idea didn't came from nothing. You are a deep well
@@ -427,70 +420,9 @@
       their life better. Don't be afraid to find the right wall, especially
       after learning about tool which will help you find it.
     </p>
-    <hr />
-    <p>
-      During the creation of this article I realized how many things about MVP I
-      want to describe. I decided to split everything into parts. In the next
-      part I will describe a few ways of how you actually can plan and design
-      your own MVP.
-    </p>
-    <p>
-      If you want to learn how to build your own MVP or if you are interested in
-      one of
-      <a
-        href="/trending/programming"
-        class="keychainify-checked steem-keychain-checked"
-      >
-        #programming</a
-      >
-      <a
-        href="/trending/startup"
-        class="keychainify-checked steem-keychain-checked"
-      >
-        #startup</a
-      >
-      <a
-        href="/trending/entrepreneur"
-        class="keychainify-checked steem-keychain-checked"
-      >
-        #entrepreneur</a
-      >, you might want to follow
-      <a
-        href="https://steemit.com/@noisy"
-        class="keychainify-checked steem-keychain-checked"
-        >my account</a
-      >. I post one article on every Monday :)
-    </p>
-    <p>
-      Note: Article was
-      <a
-        href="https://www.livecoding.tv/noisy/videos/"
-        rel="noopener"
-        title="This link will take you away from steemit.com"
-        class="keychainify-checked steem-keychain-checked"
-        >liveblogged</a
-      >
-      and after that was corrected by profesional English teacher hired on
-      italki -
-      <a
-        href="https://www.italki.com/teacher/1359638"
-        rel="noopener"
-        title="This link will take you away from steemit.com"
-        class="keychainify-checked steem-keychain-checked"
-        >Nikki</a
-      >
-      and
-      <a
-        href="https://www.italki.com/teacher/2830764"
-        rel="noopener"
-        title="This link will take you away from steemit.com"
-        class="keychainify-checked steem-keychain-checked"
-        >James</a
-      >.
-    </p>
   </div>
 
-  <nav class="post-nav d-flex justify-content-between">
+  <!-- <nav class="post-nav d-flex justify-content-between">
     <div class="nav-previous">
       <a class="text-link" href="#" rel="prev"
         ><i class="fas fa-long-arrow-alt-left me-1"></i>Previous
@@ -503,9 +435,9 @@
         ><i class="fas fa-long-arrow-alt-right ms-1"></i
       ></a>
     </div>
-  </nav>
+  </nav> -->
 
-  <div class="author-block my-5 bg-white p-4 p-l-5 shadow-sm">
+  <!-- <div class="author-block my-5 bg-white p-4 p-l-5 shadow-sm">
     <div class="row">
       <div class="col-12 col-md-auto">
         <img
@@ -514,7 +446,6 @@
           alt=""
         />
       </div>
-      <!--//col-->
 
       <div class="col author-info">
         <h4 class="mb-2 font-weight-bold">Krzysztof Szumny</h4>
@@ -555,55 +486,60 @@
             ></a>
           </li>
 
-          <!--<li class="list-inline-item mb-3"><a class="facebook" href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>-->
+          <li class="list-inline-item mb-3">
+            <a class="facebook" href="#"
+              ><i class="fab fa-facebook-f fa-fw"></i
+            ></a>
+          </li>
 
-          <!--<li class="list-inline-item"><a class="instagram" href="#"><i class="fab fa-instagram fa-fw"></i></a></li>-->
+          <li class="list-inline-item">
+            <a class="instagram" href="#"
+              ><i class="fab fa-instagram fa-fw"></i
+            ></a>
+          </li>
         </ul>
-        <!--//social-list-->
       </div>
     </div>
-  </div>
+  </div> -->
 
-  <div id="comments-block" class="comments-block">
-    <!--//DISQUS script starts-->
+  <!-- <div id="comments-block" class="comments-block">
     <div id="disqus_thread"></div>
-    <!-- <script type="text/javascript">
-          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-          var disqus_shortname = "3wmthemes"; // required: replace example with your forum shortname
+    <script type="text/javascript">
+      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+      var disqus_shortname = "3wmthemes"; // required: replace example with your forum shortname
 
-          /* * * DON'T EDIT BELOW THIS LINE * * */
-          (function () {
-            var dsq = document.createElement("script");
-            dsq.type = "text/javascript";
-            dsq.async = true;
-            dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
-            (
-              document.getElementsByTagName("head")[0] ||
-              document.getElementsByTagName("body")[0]
-            ).appendChild(dsq);
-          })();
-        </script>
-        <noscript
-          >Please enable JavaScript to view the
-          <a href="http://disqus.com/?ref_noscript"
-            >comments powered by Disqus.</a
-          ></noscript
-        > -->
+      /* * * DON'T EDIT BELOW THIS LINE * * */
+      (function () {
+        var dsq = document.createElement("script");
+        dsq.type = "text/javascript";
+        dsq.async = true;
+        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
+        (
+          document.getElementsByTagName("head")[0] ||
+          document.getElementsByTagName("body")[0]
+        ).appendChild(dsq);
+      })();
+    </script>
+    <noscript
+      >Please enable JavaScript to view the
+      <a href="http://disqus.com/?ref_noscript"
+        >comments powered by Disqus.</a
+      ></noscript
+    >
     <a href="http://disqus.com" class="dsq-brlink"
       >comments powered by <span class="logo-disqus">Disqus</span></a
     >
-    <!--//DISQUS script ends-->
-  </div>
-  <!--//comments-block-->
+  </div> -->
 </template>
 
 <script lang="ts">
 import { PropType, defineComponent } from "vue";
+import { Quote } from "@/components";
 import { IBlogPost } from "@/types";
 
 export default defineComponent({
   name: "MVP",
-  components: {},
+  components: { Quote },
   props: {
     blogPost: {
       type: Object as PropType<IBlogPost>,
