@@ -75,11 +75,11 @@
     </h3>
     <p>
       <img
-        src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ"
-        srcset="
-          https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ  1x,
-          https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmdcvYnisfSCfhf8B17Ttj8eGjoyStpLG3zoyQLkJQQ8aZ 2x
-        "
+        :src="img('picture1-640.png')"
+        :srcset="`
+          ${img('picture1-640.png')} 1x,
+          ${img('picture1-800.png')} 2x
+        `"
       />
     </p>
     <p>
@@ -156,11 +156,8 @@
     </h3>
     <p>
       <img
-        src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmYFS77UHgh1i3MX3LZigt3YK9RhNs6v9BoKNMhS8za8P1"
-        srcset="
-          https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmYFS77UHgh1i3MX3LZigt3YK9RhNs6v9BoKNMhS8za8P1  1x,
-          https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmYFS77UHgh1i3MX3LZigt3YK9RhNs6v9BoKNMhS8za8P1 2x
-        "
+        :src="img('vr-640.png')"
+        :srcset="`${img('vr-640.png')} 1x, ${img('vr-700.png')} 2x`"
       />
     </p>
     <p>
@@ -196,10 +193,7 @@
     </p>
     <h3 class="section-title">What MVP is not</h3>
     <p>
-      <img
-        src="https://steemitimages.com/0x0/https://cloud.githubusercontent.com/assets/201263/17837782/e5b66880-67bc-11e6-91b9-98528f299eff.gif"
-        alt="what MVP is not"
-      />
+      <img :src="img('whatMVPisNot.gif')" alt="what MVP is not" />
     </p>
     <p>
       I can agree that it is necessary in the process of creating an MVP to
@@ -230,14 +224,7 @@
       I will try explain how MVP could save your project from failing.
     </p>
     <p>
-      <img
-        class="w-100"
-        src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmZJujupvcbNUXDY2BSkw6TjM4mXW6CpELbcwubbbojX5i"
-        srcset="
-          https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmZJujupvcbNUXDY2BSkw6TjM4mXW6CpELbcwubbbojX5i  1x,
-          https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmZJujupvcbNUXDY2BSkw6TjM4mXW6CpELbcwubbbojX5i 2x
-        "
-      />
+      <img class="w-100" :src="img('top10reasonsStartusFails.png')" />
     </p>
     <p>But how can one single MVB or MVP do so much? The truth is, it can't!</p>
     <h4 class="section-subtitle">No Market Need</h4>
@@ -337,11 +324,10 @@
     </p>
     <p>
       <img
-        src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmXzRpm68e3Y8fCtmi1haYp1TCMn2vXtBJnQcDDoe6nJyG"
-        srcset="
-          https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmXzRpm68e3Y8fCtmi1haYp1TCMn2vXtBJnQcDDoe6nJyG  1x,
-          https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmXzRpm68e3Y8fCtmi1haYp1TCMn2vXtBJnQcDDoe6nJyG 2x
-        "
+        :src="img('howToNotBuildMVP-640.png')"
+        :srcset="`
+          ${img('howToNotBuildMVP-640.png')} 1x,
+          ${img('howToNotBuildMVP-800.png')} 2x`"
       />
     </p>
     <p>
@@ -366,11 +352,11 @@
     </p>
     <p>
       <img
-        src="https://steemitimages.com/640x0/http://panthersoftware.com/2014/11/20/mvp-for-stakeholders-project-managers-and-architects/images/mvp-pyramid.png"
-        srcset="
-          https://steemitimages.com/640x0/http://panthersoftware.com/2014/11/20/mvp-for-stakeholders-project-managers-and-architects/images/mvp-pyramid.png  1x,
-          https://steemitimages.com/1280x0/http://panthersoftware.com/2014/11/20/mvp-for-stakeholders-project-managers-and-architects/images/mvp-pyramid.png 2x
-        "
+        :src="img('mvp-pyramid-640.png')"
+        :srcset="`
+          ${img('mvp-pyramid-640.png')} 1x,
+          ${img('mvp-pyramid-1000.png')} 2x
+        `"
       />
     </p>
     <p>
@@ -396,11 +382,11 @@
     <h3 class="section-title">Don't be afraid to find the right wall</h3>
     <p>
       <img
-        src="https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmZS2gkLqMtMVV3FbjVW98jLmxvZriQbH5JG2KzSr5QAS1"
-        srcset="
-          https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmZS2gkLqMtMVV3FbjVW98jLmxvZriQbH5JG2KzSr5QAS1  1x,
-          https://steemitimages.com/1280x0/https://ipfs.pics/ipfs/QmZS2gkLqMtMVV3FbjVW98jLmxvZriQbH5JG2KzSr5QAS1 2x
-        "
+        :src="img('ladder-640.png')"
+        :srcset="`
+          ${img('ladder-640.png')} 1x,
+          ${img('ladder-736.png')} 2x
+        `"
       />
     </p>
     <p>
@@ -546,8 +532,11 @@ export default defineComponent({
       required: true,
     },
   },
-  setup() {
-    return {};
+  setup(props) {
+    return {
+      img: (filename: string) =>
+        `/images/blog/${props.blogPost.slug}/${filename}`,
+    };
   },
 });
 </script>
