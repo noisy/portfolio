@@ -13,4 +13,4 @@ jobs:
       - run: mv dist docs
       - run: git config --global user.email "`git log -1 --pretty=format:'%ae'`"
       - run: git config --global user.name "`git log -1 --pretty=format:'%an'`"
-      - run: git commit -m "deploy" && git push --force git@github.com:noisy/personal.git master:gh-pages
+      - run: git add . && git commit -m "deploy" && git push --force git@github.com:noisy/personal.git master:gh-pages
