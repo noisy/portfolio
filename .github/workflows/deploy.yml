@@ -8,13 +8,10 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v2
       - name: Build
+        run: npm ci
+        run: npm run build
+        run: mv dist/index.html dist/404.html
         run: |
-          echo "reksio - 1"
-          npm ci
-          echo "reksio - 2"
-          npm run build
-          echo "reksio - 3"
-          mv dist/index.html dist/404.html
           echo "reksio - 4"
           git config --global user.email "`git log -1 --pretty=format:'%ae'`"
           echo "reksio - 5"
