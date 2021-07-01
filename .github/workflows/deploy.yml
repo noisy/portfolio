@@ -12,4 +12,4 @@ jobs:
       - run: mv dist/index.html dist/404.html
       - run: git config --global user.email "`git log -1 --pretty=format:'%ae'`"
       - run: git config --global user.name "`git log -1 --pretty=format:'%an'`"
-      - run: cd dist && git init && git add . && git commit -m "deploy" && git push --force git@github.com:noisy/personal.git gh-pages
+      - run: cd dist && git init && git add . && git commit -m "deploy" && git remote add origin push --force git@github.com:noisy/personal.git master:gh-pages
