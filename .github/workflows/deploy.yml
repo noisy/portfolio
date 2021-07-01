@@ -12,7 +12,7 @@ jobs:
           npm ci
           npm run build
           mv dist/index.html dist/404.html
-          REMOTE=`git config --get remote.origin.url
+          REMOTE=`git config --get remote.origin.url`
           git config --global user.email "`git log -1 --pretty=format:'%ae'`"
           git config --global user.name "`git log -1 --pretty=format:'%an'`"
           cd dist
