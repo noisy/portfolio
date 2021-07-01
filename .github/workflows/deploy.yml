@@ -9,13 +9,23 @@ jobs:
         uses: actions/checkout@v2
       - name: Build
         run: |
+          echo "reksio - 1"
           npm ci
+          echo "reksio - 2"
           npm run build
+          echo "reksio - 3"
           mv dist/index.html dist/404.html
+          echo "reksio - 4"
           git config --global user.email "`git log -1 --pretty=format:'%ae'`"
+          echo "reksio - 5"
           git config --global user.name "`git log -1 --pretty=format:'%an'`"
+          echo "reksio - 6"
           cd dist
+          echo "reksio - 7"
           git init
+          echo "reksio - 8"
           git add .
+          echo "reksio - 9"
           git commit -m "deploy"
+          echo "reksio - 10"
           git push --force git@github.com:noisy/personal.git gh-pages
