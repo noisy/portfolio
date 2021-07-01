@@ -13,6 +13,8 @@ jobs:
           npm run build
           git config --global user.email "`git log -1 --pretty=format:'%ae'`"
           git config --global user.name "`git log -1 --pretty=format:'%an'`"
-          git add dist -f
+          cd dist
+          mv index.html 404.html
+          git add . -f
           git commit -m "deploy"
           git subtree push --prefix dist origin gh-pages
