@@ -10,6 +10,7 @@ jobs:
       - run: npm ci
       - run: npm run build
       - run: mv dist/index.html dist/404.html
+      - run: git remote -v
       - run: git config --global user.email "`git log -1 --pretty=format:'%ae'`"
       - run: git config --global user.name "`git log -1 --pretty=format:'%an'`"
       - run: cd dist && git init && git add . && git commit -m "deploy" && git push --force git@github.com:noisy/personal.git master:gh-pages
