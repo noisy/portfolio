@@ -15,4 +15,4 @@ jobs:
       - run: git config --global user.name "`git log -1 --pretty=format:'%an'`"
       - run: git add .
       - run: git commit -m "deploy"
-      - run: git push --force master:gh-pages
+      - run: git push origin master:gh-pages -f
