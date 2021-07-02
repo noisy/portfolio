@@ -237,16 +237,17 @@ $(document).ready(function() {
 
   <nav class="post-nav d-flex justify-content-between">
     <div class="nav-previous">
-      <a class="text-link" href="#" rel="prev"
-        ><i class="fas fa-long-arrow-alt-left me-1"></i>Previous
+      <a class="text-link" href="#" rel="prev">
+        <font-awesome-icon icon="long-arrow-alt-left" class="me-1" />
+        Previous
         <span class="d-none d-md-inline">Post</span></a
       >
     </div>
     <div class="nav-next">
-      <a class="text-link" href="#" rel="next"
-        >Next <span class="d-none d-md-inline">Post</span
-        ><i class="fas fa-long-arrow-alt-right ms-1"></i
-      ></a>
+      <a class="text-link" href="#" rel="next">
+        Next <span class="d-none d-md-inline">Post</span>
+        <font-awesome-icon icon="long-arrow-alt-right" class="ms-1" />
+      </a>
     </div>
   </nav>
 
@@ -269,40 +270,51 @@ $(document).ready(function() {
         </div>
         <ul class="social-list-color list-inline mb-0">
           <li class="list-inline-item mb-3">
-            <a class="twitter rounded-circle" href="#"
-              ><i class="fab fa-twitter fa-fw"></i
-            ></a>
+            <a class="twitter rounded-circle" href="#">
+              <font-awesome-icon :icon="['fab', 'twitter']" class="fa-fw" />
+            </a>
           </li>
 
           <li class="list-inline-item mb-3">
-            <a class="linkedin rounded-circle" href="#"
-              ><i class="fab fa-linkedin-in fa-fw"></i
-            ></a>
+            <a class="linkedin rounded-circle" href="#">
+              <font-awesome-icon :icon="['fab', 'linkedin']" class="fa-fw" />
+            </a>
           </li>
           <li class="list-inline-item mb-3">
-            <a class="github rounded-circle" href="#"
-              ><i class="fab fa-github-alt fa-fw"></i
-            ></a>
+            <a class="github rounded-circle" href="#">
+              <font-awesome-icon :icon="['fab', 'github-alt']" class="fa-fw" />
+            </a>
           </li>
           <li class="list-inline-item mb-3">
-            <a class="stack-overflow rounded-circle" href="#"
-              ><i class="fab fa-stack-overflow fa-fw"></i
-            ></a>
+            <a class="stack-overflow rounded-circle" href="#">
+              <font-awesome-icon
+                :icon="['fab', 'stack-overflow']"
+                class="fa-fw"
+              />
+            </a>
           </li>
           <li class="list-inline-item mb-3">
-            <a class="medium rounded-circle" href="#"
-              ><i class="fab fa-medium-m fa-fw"></i
-            ></a>
+            <a class="medium rounded-circle" href="#">
+              <font-awesome-icon :icon="['fab', 'medium-m']" class="fa-fw" />
+            </a>
           </li>
           <li class="list-inline-item mb-3">
-            <a class="codepen rounded-circle" href="#"
-              ><i class="fab fa-codepen fa-fw"></i
-            ></a>
+            <a class="codepen rounded-circle" href="#">
+              <font-awesome-icon :icon="['fab', 'codepen']" class="fa-fw" />
+            </a>
           </li>
 
-          <!--<li class="list-inline-item mb-3"><a class="facebook" href="#"><i class="fab fa-facebook-f fa-fw"></i></a></li>-->
+          <li class="list-inline-item mb-3">
+            <a class="facebook rounded-circle" href="#">
+              <font-awesome-icon :icon="['fab', 'facebook-f']" class="fa-fw" />
+            </a>
+          </li>
 
-          <!--<li class="list-inline-item"><a class="instagram" href="#"><i class="fab fa-instagram fa-fw"></i></a></li>-->
+          <li class="list-inline-item">
+            <a class="instagram rounded-circle" href="#">
+              <font-awesome-icon :icon="['fab', 'instagram']" class="fa-fw" />
+            </a>
+          </li>
         </ul>
         <!--//social-list-->
       </div>

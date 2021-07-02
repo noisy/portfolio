@@ -1,9 +1,12 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import {
   faCodepen,
+  faFacebookF,
   faGithub,
   faGithubAlt,
+  faInstagram,
   faLinkedin,
+  faMediumM,
   faStackOverflow,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
@@ -16,6 +19,8 @@ import {
   faDesktop,
   faExternalLinkAlt,
   faHeadphones,
+  faLongArrowAltLeft,
+  faLongArrowAltRight,
   faQuoteRight,
   faVideo,
   faWrench,
@@ -34,15 +39,20 @@ const fas = [
   faDesktop,
   faExternalLinkAlt,
   faHeadphones,
+  faLongArrowAltLeft,
+  faLongArrowAltRight,
   faQuoteRight,
   faVideo,
   faWrench,
 ];
 const fab = [
   faCodepen,
+  faFacebookF,
   faGithub,
   faGithubAlt,
+  faInstagram,
   faLinkedin,
+  faMediumM,
   faStackOverflow,
   faTwitter,
 ];
