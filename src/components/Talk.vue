@@ -26,14 +26,16 @@
           }}
         </li>
         <li class="list-inline-item me-3" style="text-transform: capitalize">
-          <i
-            class="fas me-2"
-            :class="{
-              'fa-headphones': talk.type == 'podcast',
-              'fa-video': talk.type == 'video',
-            }"
-          >
-          </i>
+          <font-awesome-icon
+            v-if="talk.type == 'podcast'"
+            class="me-2"
+            icon="headphones"
+          />
+          <font-awesome-icon
+            v-else-if="talk.type == 'video'"
+            class="me-2"
+            icon="video"
+          />
           {{ talk.type }}
         </li>
         <li class="list-inline-item me-3">

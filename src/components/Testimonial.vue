@@ -25,20 +25,22 @@
               <span class="d-block">{{ title }}</span>
               <template v-if="type == 'linkedin'">
                 <span class="d-block position-absolute source-link">
-                  <i
-                    class="fab fa-linkedin fa-2x me-1"
-                    data-fa-transform="down-3"
-                  ></i>
+                  <font-awesome-icon
+                    :icon="['fab', 'linkedin']"
+                    class="fa-2x me-1"
+                    transform="down-3"
+                  />
                   <a
                     class="text-secondary text-link"
                     :href="url"
                     target="_blank"
                   >
                     View on Linkedin
-                    <i
-                      class="fas fa-external-link-alt ms-1"
-                      data-fa-transform="up-1"
-                    ></i>
+                    <font-awesome-icon
+                      icon="external-link-alt"
+                      class="ms-1"
+                      transform="up-1"
+                    />
                   </a>
                 </span>
               </template>
