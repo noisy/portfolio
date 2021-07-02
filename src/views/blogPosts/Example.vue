@@ -14,24 +14,34 @@
         class="btn btn-primary me-lg-3 mb-3"
         href="https://themes.3rdwavemedia.com/"
         target="_blank"
-        ><i class="fas fa-desktop me-2"></i> View Live Demo</a
+      >
+        <font-awesome-icon icon="desktop" class="me-2" />
+        View Live Demo</a
       >
       <a
         class="btn btn-secondary mb-3"
         href="https://themes.3rdwavemedia.com/"
         target="_blank"
-        ><i class="fab fa-github-alt me-2"></i> View on GitHub</a
+      >
+        <font-awesome-icon :icon="['fab', 'github-alt']" class="me-2" />
+        View on GitHub</a
       >
     </p>
 
     <blockquote class="blockquote theme-blockquote text-center">
-      <span class="fa-layers fa-fw mb-3">
-        <i class="fas fa-circle text-secondary" data-fa-transform="grow-12"></i>
-        <i
-          class="fa-inverse fas fa-quote-right text-white"
-          data-fa-transform="shrink-4"
-        ></i>
-      </span>
+      <font-awesome-layers class="fa-fw mb-3">
+        <font-awesome-icon
+          icon="circle"
+          class="text-secondary"
+          transform="grow-12"
+        />
+        <font-awesome-icon
+          icon="quote-right"
+          class="text-white"
+          transform="shrink-4"
+        />
+      </font-awesome-layers>
+
       <p class="mb-3 font-italic">
         "Walking on water and developing software from a specification are easy
         if both are frozen."
