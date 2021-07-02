@@ -16,144 +16,47 @@
 
       <div class="skills-blocks mx-auto pt-5">
         <div class="row">
-          <div class="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
-            <div
-              class="
-                skills-block-inner
-                bg-white
-                shadow-sm
-                py-4
-                px-5
-                position-relative
-              "
-            >
-              <h4 class="skills-cat text-center mb-3 mt-5">Frontend</h4>
-              <div
-                class="
-                  skills-icon-holder
-                  position-absolute
-                  d-inline-block
-                  rounded-circle
-                  text-center
-                "
-              >
-                <img class="skills-icon" src="images/frontend-icon.svg" />
-              </div>
-              <ul class="skills-list list-unstyled text-secondary">
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i
-                  >Vue.js/Angular/React
-                </li>
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i
-                  >Javascript/Typescript
-                </li>
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i>Node.js
-                </li>
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i
-                  >HTML/CSS/SASS/LESS
-                </li>
-              </ul>
-            </div>
-            <!--//skills-block-inner-->
-          </div>
-          <!--//skills-block-->
+          <SkillsBlock
+            group-name="Frontend"
+            :skills="[
+              'Vue.js/Angular/React',
+              'Javascript/Typescript',
+              'Node.js',
+              'HTML/CSS/SASS/LESS',
+            ]"
+            icon="/images/frontend-icon.svg"
+          />
 
-          <div class="skills-block col-12 col-lg-4 mb-5 mb-3 mb-lg-0">
-            <div
-              class="
-                skills-block-inner
-                bg-white
-                shadow-sm
-                py-4
-                px-5
-                position-relative
-              "
-            >
-              <h4 class="skills-cat text-center mb-3 mt-5">Backend</h4>
-              <div
-                class="
-                  skills-icon-holder
-                  position-absolute
-                  d-inline-block
-                  rounded-circle
-                  text-center
-                "
-              >
-                <img
-                  class="skills-icon"
-                  src="images/backend-icon.png"
-                  style="margin: -5px"
-                />
-              </div>
-              <ul class="skills-list list-unstyled text-secondary">
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i>Python/Django
-                </li>
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i>C/C++
-                </li>
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i>Java
-                </li>
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i
-                  >PostgresSQL/MySQL
-                </li>
-              </ul>
-            </div>
-            <!--//skills-block-inner-->
-          </div>
-          <!--//skills-block-->
+          <SkillsBlock
+            group-name="Backend"
+            :skills="['Python/Django', 'C/C++', 'Java', 'PostgresSQL/MySQL']"
+            icon="/images/backend-icon.png"
+          />
 
-          <div class="skills-block col-12 col-lg-4">
-            <div
-              class="
-                skills-block-inner
-                bg-white
-                shadow-sm
-                py-4
-                px-5
-                position-relative
-              "
-            >
-              <h4 class="skills-cat text-center mb-3 mt-5">Others</h4>
-              <div
-                class="
-                  skills-icon-holder
-                  position-absolute
-                  d-inline-block
-                  rounded-circle
-                  text-center
-                "
-              >
-                <img class="skills-icon" src="images/other-skills-icon.svg" />
-              </div>
-              <ul class="skills-list list-unstyled text-secondary">
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i>DevOps
-                </li>
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i>Unit Testing
-                </li>
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i>Docker
-                </li>
-                <li class="mb-2">
-                  <i class="fas fa-check me-2 text-primary"></i>Stripe
-                </li>
-              </ul>
-            </div>
-            <!--//skills-block-inner-->
-          </div>
-          <!--//skills-block-->
+          <SkillsBlock
+            group-name="Frontend"
+            :skills="['DevOps', 'Unit Testing', 'Docker', 'Stripe']"
+            icon="/images/other-skills-icon.svg"
+          />
         </div>
-        <!--//row-->
       </div>
     </div>
-    <!--//container-->
   </section>
-  <!--//skills-section-->
 </template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+import SkillsBlock from "./SkillsBlock.vue";
+
+export default defineComponent({
+  name: "SkillsOverview",
+  components: {
+    SkillsBlock,
+  },
+  setup() {
+    return {};
+  },
+});
+</script>
+
+<style lang="scss"></style>
