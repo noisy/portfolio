@@ -4,7 +4,7 @@
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
 
-    Seerene describes own product as:
+    Seerene describes their product as:
 
     <Quote>
       Seerene’s Digital Boardroom is a software analytics and process mining
@@ -34,7 +34,7 @@
       project of a German company of the same name. STXnext offered me the
       possibility to be a part of a small team of 3 developers, which goal was
       to show STXnext's ability to work on the development of this product, and
-      thanks to that convince the client to build with STXNext a bigger team or
+      thanks to that, convince the client to build with STXNext a bigger team or
       two, with more programmers, QAs and scrum master.
     </p>
 
@@ -42,7 +42,7 @@
   </div>
 
   <div class="section-row">
-    <h3 class="section-title">Chalanges</h3>
+    <h3 class="section-title">Challenges</h3>
     <h4 class="section-title">New frontend framework</h4>
     <p>
       In 2015, I had a lot of experience with Django&amp;Python, only some
@@ -50,34 +50,34 @@
       Angular JS. That was a challenge of its own for me.
     </p>
     <p>
-      Fortunately, instead of focusing just on things which I knew better -
-      backend, we were able to organize our work in a way, which give everyone
-      in a team possibility to contribute in areas where everyone felt the
-      strongest... but leaving the opportunity to contribute smaller things also
-      in other areas. That helped everyone in the team learn a lot of new
-      things.
+      Fortunately, our client and our team were long-term oriented, so we were
+      embracing opportunities to learn new things if particular tasks were not
+      critical. Everyone in a group was contributing the most in areas where he
+      felt the strongest, but we created a culture of working on things outside
+      of our area of expertise. That helped everyone in the team learn a lot of
+      new things.
     </p>
 
     <h4 class="section-title">
       Bootstrapping new team for a client, new code base, no know-how
     </h4>
     <p>
-      Because we formed a new independent team, at the beginning we started with
-      a very narrow understanding of the codebase, with limited know-how about
-      the whole project. We had contact with all in-house developers and a
-      Product Owner from Seerene, however as you can imagine it was more
-      difficult, to learn about all nitty-gritty details when without having
-      people with the knowledge inside the same room. To deal with that we
-      needed to spend a lot of time on talks via slack or on video calls.
+      Because we formed a new independent team, we started with a very narrow
+      understanding of the codebase, with limited know-how about the whole
+      project. We had contact with all in-house developers and a Product Owner
+      from Seerene. As you can imagine, it was more challenging to learn about
+      all the nitty-gritty details without having people with the knowledge
+      inside the same room. To deal with that, we needed to spend a lot of time
+      on talks via slack or video calls.
     </p>
     <p>
-      The important part was to focus on asking the right questions, to learn
-      things that were truly necessary to develop scoped tasks.
+      The critical part was to focus on asking the right questions, to
+      understand things that were truly necessary to develop scoped tasks.
     </p>
     <p>
-      I believe the key to doing well all of that was in really good Planning
-      and Estimation meetings, during which we together dissected all problems
-      while trying to identify risks.
+      I believe the key to good performance was Planning and Estimation
+      meetings, during which we together dissected all problems while trying to
+      identify risks.
     </p>
 
     <h4 class="section-title">
