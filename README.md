@@ -1,4 +1,7 @@
-# portfolio
+# Portfolio
+
+[![Deploy](https://github.com/noisy/personal/actions/workflows/deploy.yml/badge.svg)](https://github.com/noisy/personal/actions/workflows/deploy.yml)
+
 
 ## Project setup
 ```
