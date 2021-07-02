@@ -21,7 +21,9 @@
       <h4>{{ talk.title }}</h4>
       <ul class="talk-meta list-inline mb-2">
         <li class="list-inline-item me-3">
-          <i class="far fa-clock me-2"></i>{{ talk.date }}
+          <font-awesome-icon :icon="['far', 'clock']" class="me-2" />{{
+            talk.date
+          }}
         </li>
         <li class="list-inline-item me-3" style="text-transform: capitalize">
           <i

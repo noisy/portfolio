@@ -10,6 +10,10 @@
     "deploy": "npm run build && git add . && git commit -m 'new deploy' && git push origin gh-pages"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.35",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
+    "@fortawesome/free-solid-svg-icons": "^5.15.3",
+    "@fortawesome/vue-fontawesome": "^3.0.0-4",
     "bootstrap": "^5.0.2",
     "core-js": "^3.6.5",
     "imagesloaded": "^4.1.4",

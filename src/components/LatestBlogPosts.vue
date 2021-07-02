@@ -50,7 +50,10 @@
               <div class="card-text">
                 <ul class="meta list-inline mb-1">
                   <li class="list-inline-item me-3">
-                    <i class="far fa-clock me-2"></i>June 18, 2021
+                    <font-awesome-icon
+                      :icon="['far', 'clock']"
+                      class="me-2"
+                    />June 18, 2021
                   </li>
                   <li class="list-inline-item">
                     <i class="fas fa-comment me-2"></i
@@ -109,7 +112,10 @@
               <div class="card-text">
                 <ul class="meta list-inline mb-1">
                   <li class="list-inline-item me-3">
-                    <i class="far fa-clock me-2"></i>May 7, 2021
+                    <font-awesome-icon
+                      :icon="['far', 'clock']"
+                      class="me-2"
+                    />May 7, 2021
                   </li>
                   <li class="list-inline-item">
                     <i class="fas fa-comment me-2"></i
@@ -168,7 +174,10 @@
               <div class="card-text">
                 <ul class="meta list-inline mb-1">
                   <li class="list-inline-item me-3">
-                    <i class="far fa-clock me-2"></i>Apr 25, 2021
+                    <font-awesome-icon
+                      :icon="['far', 'clock']"
+                      class="me-2"
+                    />Apr 25, 2021
                   </li>
                   <li class="list-inline-item">
                     <i class="fas fa-comment me-2"></i
