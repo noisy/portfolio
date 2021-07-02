@@ -32,12 +32,12 @@
       <div class="card-text">
         <ul class="meta list-inline mb-1">
           <li class="list-inline-item me-3">
-            <i class="far fa-clock me-2"></i
-            >{{ blogPost.publishedAt.toDateString() }}
+            <font-awesome-icon :icon="['far', 'clock']" class="me-2" />
+            {{ blogPost.publishedAt.toDateString() }}
           </li>
           <!-- <li class="list-inline-item">
-            <i class="fas fa-comment me-2"></i
-            ><a class="text-link" href="#">4 Comments</a>
+            <font-awesome-icon icon="comment" class="me-2" />
+            <a class="text-link" href="#">4 Comments</a>
           </li> -->
         </ul>
         <div class="excerpt">

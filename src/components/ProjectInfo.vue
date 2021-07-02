@@ -29,11 +29,11 @@
             /><strong>Type:</strong> {{ project.type }}
           </li>
           <li v-if="project.repositoryUrl">
-            <i
-              class="fab fa-github me-3 text-primary"
-              data-fa-transform="grow-6 down-2"
-            ></i
-            ><strong>Source Code: </strong>
+            <font-awesome-icon
+              :icon="['fab', 'github']"
+              class="me-3 text-primary"
+              transform="grow-6 down-2"
+            /><strong>Source Code: </strong>
             <a :href="project.repositoryUrl">{{ project.repositoryUrl }}</a>
           </li>
         </ul>

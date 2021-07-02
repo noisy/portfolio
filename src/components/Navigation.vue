@@ -4,33 +4,38 @@
       <nav class="navbar navbar-expand-lg navbar-dark position-relative">
         <!-- <ul class="social-list list-inline mb-0">
           <li class="list-inline-item">
-            <a class="text-white" href="#"
-              ><i class="fab fa-twitter fa-fw"></i
-            ></a>
+            <a class="text-white" href="#">
+              <font-awesome-icon :icon="['fab', 'twitter']" class="fa-fw" />
+            </a>
           </li>
           <li class="list-inline-item">
             <a
               class="text-white"
               href="https://www.linkedin.com/in/krzysztofszumny/"
-              ><i class="fab fa-linkedin-in fa-fw"></i
-            ></a>
+            >
+              <font-awesome-icon :icon="['fab', 'linkedin']" class="fa-fw" />
+            </a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white" href="https://github.com/noisy/"
-              ><i class="fab fa-github-alt fa-fw"></i
-            ></a>
+            <a class="text-white" href="https://github.com/noisy/">
+              <font-awesome-icon :icon="['fab', 'github-alt']" class="fa-fw" />
+            </a>
           </li>
           <li class="list-inline-item">
             <a
               class="text-white"
               href="https://stackoverflow.com/users/338581/noisy"
-              ><i class="fab fa-stack-overflow fa-fw"></i
-            ></a>
+            >
+              <font-awesome-icon
+                :icon="['fab', 'stack-overflow']"
+                class="fa-fw"
+              />
+            </a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white" href="#"
-              ><i class="fab fa-codepen fa-fw"></i
-            ></a>
+            <a class="text-white" href="#">
+              <font-awesome-icon :icon="['fab', 'codepen']" class="fa-fw" />
+            </a>
           </li>
         </ul> -->
         <!--//social-list-->

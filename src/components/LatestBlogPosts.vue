@@ -56,8 +56,8 @@
                     />June 18, 2021
                   </li>
                   <li class="list-inline-item">
-                    <i class="fas fa-comment me-2"></i
-                    ><a class="text-link" href="#">8 Comments</a>
+                    <font-awesome-icon icon="comment" class="me-2" />
+                    <a class="text-link" href="#">8 Comments</a>
                   </li>
                 </ul>
                 <div class="excerpt">
@@ -118,8 +118,8 @@
                     />May 7, 2021
                   </li>
                   <li class="list-inline-item">
-                    <i class="fas fa-comment me-2"></i
-                    ><a class="text-link" href="#">23 Comments</a>
+                    <font-awesome-icon icon="comment" class="me-2" />
+                    <a class="text-link" href="#">23 Comments</a>
                   </li>
                 </ul>
                 <div class="excerpt">
@@ -180,8 +180,8 @@
                     />Apr 25, 2021
                   </li>
                   <li class="list-inline-item">
-                    <i class="fas fa-comment me-2"></i
-                    ><a class="text-link" href="#">18 Comments</a>
+                    <font-awesome-icon icon="comment" class="me-2" />
+                    <a class="text-link" href="#">18 Comments</a>
                   </li>
                 </ul>
                 <div class="excerpt">
