@@ -4,6 +4,7 @@ jobs:
   deploy_prod:
     if: contains( github.ref, 'master')
     runs-on: ubuntu-latest
+    name: Deploy to production
     steps:
       - name: Checkout
         uses: actions/checkout@v2
