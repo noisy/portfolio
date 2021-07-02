@@ -5,27 +5,28 @@
         <h3 class="sidebar-title mb-4">Project Info</h3>
         <ul class="list-unstyled ps-2">
           <li class="mb-4">
-            <i
-              class="fas fa-building me-3 text-primary"
-              data-fa-transform="grow-6 down-2"
-            ></i
-            ><strong>Company:</strong> {{ project.companyName }}
+            <font-awesome-icon
+              icon="building"
+              class="me-3 text-primary"
+              transform="grow-6 down-2"
+            /><strong>Company:</strong> {{ project.companyName }}
           </li>
           <li class="mb-4">
-            <i
-              class="fas fa-external-link-alt me-3 text-primary"
-              data-fa-transform="grow-6 down-2"
-            ></i>
+            <font-awesome-icon
+              icon="external-link-alt"
+              class="me-3 text-primary"
+              transform="grow-6 down-2"
+            />
             <strong>Site Link: </strong>
             <a :href="project.archivedUrl || project.url">{{ project.url }}</a>
             <span v-if="project.archivedUrl"> (archived)</span>
           </li>
           <li class="mb-4">
-            <i
-              class="fas fa-wrench me-3 text-primary"
-              data-fa-transform="grow-6 down-2"
-            ></i
-            ><strong>Type:</strong> {{ project.type }}
+            <font-awesome-icon
+              icon="wrench"
+              class="me-3 text-primary"
+              transform="grow-6 down-2"
+            /><strong>Type:</strong> {{ project.type }}
           </li>
           <li v-if="project.repositoryUrl">
             <i
