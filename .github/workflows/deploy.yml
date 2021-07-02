@@ -5,14 +5,18 @@ jobs:
     if: contains( github.ref, 'master')
     runs-on: ubuntu-latest
     steps:
-      - name: Build
+      - name: Checkout
         uses: actions/checkout@v2
-      - run: npm ci
-      - run: npm run build
-      - run: mv dist/index.html dist/404.html
-      - run: mv dist docs
-      - run: git config --global user.email "`git log -1 --pretty=format:'%ae'`"
-      - run: git config --global user.name "`git log -1 --pretty=format:'%an'`"
-      - run: git add .
-      - run: git commit -m "deploy"
-      - run: git push origin master:gh-pages -f
+      - name: Build
+        run: |
+          npm ci
+          npm run build
+          mv dist/index.html dist/404.html
+          mv dist docs
+      - name: Publish
+        run: |
+          git config --global user.email "`git log -1 --pretty=format:'%ae'`"
+          git config --global user.name "`git log -1 --pretty=format:'%an'`"
+          git add .
+          git commit -m "deploy"
+          git push origin master:gh-pages -f
