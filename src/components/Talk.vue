@@ -59,6 +59,7 @@
 import { PropType, defineComponent } from "vue";
 import { useDB } from "@/composables";
 import { ITalk } from "@/types";
+
 export default defineComponent({
   name: "Talk",
   props: {

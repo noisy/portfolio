@@ -35,6 +35,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { useDB } from "@/composables/useDB";
+
 export default defineComponent({
   name: "HireMeFooter",
   setup() {

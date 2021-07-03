@@ -51,6 +51,7 @@
 <script lang="ts">
 import { PropType, defineComponent } from "vue";
 import { IBlogPost } from "@/types";
+
 export default defineComponent({
   name: "BlogPostThumbnail",
   props: {

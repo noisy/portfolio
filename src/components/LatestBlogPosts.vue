@@ -210,6 +210,7 @@
 import { defineComponent } from "vue";
 import { BlogPostThumbnail } from "@/components";
 import { useDB } from "@/composables";
+
 export default defineComponent({
   name: "LatestBlogPosts",
   components: { BlogPostThumbnail },
