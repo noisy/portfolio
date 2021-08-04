@@ -300,6 +300,9 @@ const db: IDB = {
   ],
   links: {
     linkedinProfile: "https://www.linkedin.com/in/krzysztofszumny/",
+    twitterProfile: "https://twitter.com/noisypl",
+    githubProfile: "https://github.com/noisy",
+    stackOverflowProfile: "https://stackoverflow.com/users/338581/noisy",
   },
   contactEmail: "hello@krzysztofszumny.com",
   flags: {

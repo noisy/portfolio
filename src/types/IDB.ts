@@ -11,7 +11,10 @@ export interface IDB {
   talks: ITalk[];
   talkFilters: ITalkFilter[];
   links: {
-    linkedinProfile: string;
+    linkedinProfile?: string;
+    twitterProfile?: string;
+    githubProfile?: string;
+    stackOverflowProfile?: string;
   };
   flags: Record<ILanguage, string>;
   contactEmail: string;
