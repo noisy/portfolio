@@ -1,4 +1,5 @@
 export { default as Bio } from "./Bio.vue";
+export { default as BlogHeader } from "./BlogHeader.vue";
 export { default as BlogPostHeader } from "./BlogPostHeader.vue";
 export { default as BlogPostThumbnail } from "./BlogPostThumbnail.vue";
 export { default as Carousel } from "./Carousel.vue";

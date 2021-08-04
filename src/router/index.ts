@@ -6,7 +6,7 @@ import {
 } from "vue-router";
 import { blogPosts } from "./blogPosts";
 import { projects } from "./projects";
-import { BlogPost, Home, Project, Projects, Talks } from "@/views";
+import { Blog, BlogPost, Home, Project, Projects, Talks } from "@/views";
 
 const routes: Array<RouteRecordRaw> = [
   {
@@ -39,7 +39,7 @@ const routes: Array<RouteRecordRaw> = [
   {
     path: "/blog",
     name: "blog",
-    component: Home,
+    component: Blog,
   },
   {
     path: "/post/",
