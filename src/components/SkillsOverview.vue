@@ -21,20 +21,26 @@
             :skills="[
               'Vue.js/Angular/React',
               'Javascript/Typescript',
-              'Node.js',
               'HTML/CSS/SASS/LESS',
+              'Bootstrap',
             ]"
             icon="/images/frontend-icon.svg"
           />
 
           <SkillsBlock
             group-name="Backend"
-            :skills="['Python/Django', 'C/C++', 'Java', 'PostgresSQL/MySQL']"
+            :skills="[
+              'Python/Django',
+              'C/C++',
+              'Java',
+              'Node.js',
+              'PostgresSQL/MySQL',
+            ]"
             icon="/images/backend-icon.png"
           />
 
           <SkillsBlock
-            group-name="Frontend"
+            group-name="Other"
             :skills="['DevOps', 'Unit Testing', 'Docker', 'Stripe']"
             icon="/images/other-skills-icon.svg"
           />
