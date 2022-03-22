@@ -1,6 +1,6 @@
 # Portfolio
 
-[![Deploy](https://github.com/noisy/portfolio/actions/workflows/deploy.yml/badge.svg)](https://github.com/noisy/portfolio/actions/workflows/deploy.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2e7e8fbe-a8c3-4773-915f-55a36210e6a1/deploy-status)](https://app.netlify.com/sites/krzysztofszumny/deploys)
 
 ## Project setup
 
