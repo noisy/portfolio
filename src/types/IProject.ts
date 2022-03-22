@@ -61,9 +61,9 @@ export interface IProject {
   name: string;
   slug: string;
   url: string;
-  archivedUrl: string;
+  archivedUrl?: string;
   type: string;
-  companyName: string;
+  companyName?: string;
   thumbnail: string;
   summaryTitle: string;
   summary: string;

@@ -4,7 +4,7 @@
       <div class="sidebar-row mb-5">
         <h3 class="sidebar-title mb-4">Project Info</h3>
         <ul class="list-unstyled ps-2">
-          <li class="mb-4">
+          <li v-if="project.companyName" class="mb-4">
             <font-awesome-icon
               icon="building"
               class="me-3 text-primary"
