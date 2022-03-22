@@ -29,7 +29,6 @@ const db: IDB = {
       thumbnailLogo: "logo-seerene.svg",
       featured: true,
       url: "https://www.seerene.com/",
-      archivedUrl: "",
       type: "Web Application + CLI tool",
     },
     {
@@ -59,7 +58,6 @@ const db: IDB = {
       thumbnailLogo: "logo-pitchup-mini.svg",
       featured: false,
       url: "https://pitchup.com/",
-      archivedUrl: "",
       type: "Website",
     },
     {
@@ -88,7 +86,6 @@ const db: IDB = {
       thumbnailLogo: "logo-pitchup-mini.svg",
       featured: true,
       url: "https://alfred.pitchup.dev/",
-      archivedUrl: "",
       type: "Progressive Web Application",
     },
     {
@@ -165,8 +162,6 @@ const db: IDB = {
       thumbnailLogo: "hiveprojects.png",
       featured: false,
       repositoryUrl: "https://github.com/wise-team/hiveprojects.io",
-      archivedUrl: "",
-      companyName: "",
     },
   ],
   projectFilters: [
