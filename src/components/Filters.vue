@@ -1,14 +1,14 @@
 <template>
   <div class="text-center">
-    <ul id="filters" class="filters mb-5 mx-auto ps-0">
+    <ul :id="name" class="filters mb-5 mx-auto ps-0">
       <li class="type active" data-filter="*">All</li>
       <li
-        v-for="{ tag, name } in filters"
+        v-for="{ tag, name: filterName } in filters"
         :key="tag"
         class="type"
-        :data-filter="`.${tag}`"
+        :data-filter="tag"
       >
-        {{ name }}
+        {{ filterName }}
       </li>
     </ul>
   </div>
@@ -20,6 +20,10 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "Filters",
   props: {
+    name: {
+      type: String,
+      required: true,
+    },
     filters: {
       type: Object,
       required: true,

@@ -8,7 +8,8 @@
     </template>
   </PageHeader>
   <section class="section pt-5 px-3 px-lg-0">
-    <Filters :filters="talkFilters" />
+    <Filters name="talk-filters" :filters="talkFilters" />
+    <Filters name="language-filters" :filters="languageFilters" />
     <div class="container isotope">
       <div class="container position-relative">
         <Talk
@@ -36,9 +37,9 @@ export default defineComponent({
     Filters,
   },
   setup() {
-    const { talks, talkFilters } = useDB();
+    const { talks, talkFilters, languageFilters } = useDB();
     onMounted(() => setupIsotopeFilters());
-    return { talks, talkFilters };
+    return { talks, talkFilters, languageFilters };
   },
 });
 </script>

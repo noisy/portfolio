@@ -13,7 +13,10 @@ export function setupIsotopeFilters(): void {
 
   isotopeContainer &&
     imagesLoaded(isotopeContainer, function () {
-      const filterItems = document.querySelectorAll("#filters .type");
+      const filterItems = document.querySelectorAll("#talk-filters .type");
+      const languageItems = document.querySelectorAll(
+        "#language-filters .type"
+      );
 
       const iso = new Isotope(isotopeContainer, {
         // options
@@ -22,19 +25,37 @@ export function setupIsotopeFilters(): void {
       });
 
       // filter items on click
-      filterItems.forEach((filterItem) => {
+      [...filterItems, ...languageItems].forEach((filterItem) => {
         filterItem.addEventListener("click", () => {
-          const filterValue = filterItem.getAttribute("data-filter");
-
-          // arrange - https://isotope.metafizzy.co/methods.html
-          filterValue && iso.arrange({ filter: filterValue });
-
           //toggle active class
           for (const siblingFilterItem of filterItem?.parentNode?.children ||
             []) {
             siblingFilterItem.classList.remove("active");
           }
           filterItem.classList.add("active");
+
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+          const talkActiveFilter = document
+            .querySelector("#talk-filters .type.active")!
+            .getAttribute("data-filter")!;
+
+          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+          const languageActiveFilter = document
+            .querySelector("#language-filters .type.active")!
+            .getAttribute("data-filter")!;
+
+          // arrange - https://isotope.metafizzy.co/methods.html
+
+          iso.arrange({
+            filter: function (item) {
+              const result =
+                (talkActiveFilter === "*" ||
+                  item.classList.contains(talkActiveFilter)) &&
+                (languageActiveFilter === "*" ||
+                  item.classList.contains(languageActiveFilter));
+              return result;
+            },
+          });
         });
       });
     });
