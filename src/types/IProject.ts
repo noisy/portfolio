@@ -17,6 +17,7 @@ export type IProjectBadge =
   | "Django"
   | "Vue"
   | "TypeScript"
+  | "Blockchain"
   | "jQuery";
 
 export type ITechnology =

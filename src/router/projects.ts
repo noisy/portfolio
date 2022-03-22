@@ -1,5 +1,6 @@
 import { RouteRecordRaw } from "vue-router";
 import {
+  HiveProjects,
   OperaMobile,
   Pitchup,
   PitchupPWA,
@@ -25,4 +26,9 @@ export const projects: RouteRecordRaw[] = [
   },
   { path: "pithchup.com", name: "project-pitchup.com", component: Pitchup },
   { path: "pithchup-pwa", name: "project-pitchup-pwa", component: PitchupPWA },
+  {
+    path: "hiveprojects.io",
+    name: "project-hiveprojects.io",
+    component: HiveProjects,
+  },
 ];

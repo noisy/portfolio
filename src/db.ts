@@ -150,20 +150,24 @@ const db: IDB = {
     //   badges: ["Python", "Django", "Backbone.js"],
     //   thumbnailLogo: "logo-zonza.png",
     // },
-
-    // {
-    //   name: "HiveProjects",
-    //   slug: "hiveprojects",
-    //   companyName: "HiveProjects",
-    //   thumbnail: "hiveprojects.png",
-    //   summaryTitle: "HiveProjects",
-    //   summary:
-    //     "Hive Projects is a directory of over a hundred apps, sites and tools built by Hive community. Your project is not listed here? You can add it on your own!",
-    //   tags: ["python-django", "blockchain"],
-    //   badges: ["Python", "Django", "blockchain"],
-    //   thumbnailLogo: "hiveprojects.png",
-    //   featured: true,
-    // },
+    {
+      name: "HiveProjects",
+      slug: "hiveprojects.io",
+      type: "Web Application",
+      url: "https://hiveprojects.io/",
+      thumbnail: "hiveprojects.png",
+      summaryTitle: "HiveProjects",
+      summary:
+        "Hive Projects is a directory of over a hundred apps, sites and tools built by Hive community. Your project is not listed here? You can add it on your own!",
+      filterTags: ["python-django", "blockchain"],
+      badges: ["Python", "Django", "Blockchain"],
+      technologies: ["python", "django"],
+      thumbnailLogo: "hiveprojects.png",
+      featured: false,
+      repositoryUrl: "https://github.com/wise-team/hiveprojects.io",
+      archivedUrl: "",
+      companyName: "",
+    },
   ],
   projectFilters: [
     { name: "Python/Django", tag: "python-django" },
