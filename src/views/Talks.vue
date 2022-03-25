@@ -38,7 +38,7 @@ export default defineComponent({
   },
   setup() {
     const { talks, talkFilters, languageFilters } = useDB();
-    onMounted(() => setupIsotopeFilters());
+    onMounted(() => setupIsotopeFilters(["talk-filters", "language-filters"]));
     return { talks, talkFilters, languageFilters };
   },
 });

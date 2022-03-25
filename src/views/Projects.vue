@@ -5,16 +5,17 @@
   >
   <section class="section pt-5">
     <div class="container">
-      <Filters :filters="projectFilters" />
+      <Filters name="project-filters" :filters="projectFilters" />
       <ProjectsGrid :projects="projects" />
     </div>
   </section>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent, onMounted } from "vue";
 import { Filters, PageHeader, ProjectsGrid } from "@/components";
 import { useDB } from "@/composables";
+import { setupIsotopeFilters } from "@/libs/isotope-custom";
 
 export default defineComponent({
   name: "Projects",
@@ -25,6 +26,7 @@ export default defineComponent({
   },
   setup() {
     const { projects, projectFilters } = useDB();
+    onMounted(() => setupIsotopeFilters(["project-filters"]));
     return { projects, projectFilters };
   },
 });

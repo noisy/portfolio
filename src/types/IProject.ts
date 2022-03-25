@@ -1,3 +1,5 @@
+import { AllFilterTag } from ".";
+
 export type IProjectFilterTag =
   | "angular"
   | "vue"
@@ -54,7 +56,7 @@ export type ITechnology =
 
 export interface IProjectFilter {
   name: string;
-  tag: IProjectFilterTag;
+  tag: IProjectFilterTag | AllFilterTag;
 }
 
 export interface IProject {

@@ -12,9 +12,8 @@
 </template>
 
 <script lang="ts">
-import { PropType, defineComponent, onMounted } from "vue";
+import { PropType, defineComponent } from "vue";
 import ProjectThumbnail from "./ProjectThumbnail.vue";
-import { setupIsotopeFilters } from "@/libs/isotope-custom";
 import { IProject } from "@/types";
 
 export default defineComponent({
@@ -25,9 +24,6 @@ export default defineComponent({
       required: true,
       type: Array as PropType<IProject[]>,
     },
-  },
-  setup() {
-    onMounted(() => setupIsotopeFilters());
   },
 });
 </script>

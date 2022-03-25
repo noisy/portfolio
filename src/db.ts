@@ -1,3 +1,4 @@
+import { allFilterTag } from "./types";
 import { IDB } from "./types/IDB";
 
 const db: IDB = {
@@ -165,6 +166,7 @@ const db: IDB = {
     },
   ],
   projectFilters: [
+    { name: "All", tag: allFilterTag },
     { name: "Python/Django", tag: "python-django" },
     { name: "JS/TS", tag: "js-ts" },
     { name: "Vue", tag: "vue" },
@@ -249,13 +251,15 @@ const db: IDB = {
     // },
   ],
   talkFilters: [
+    { name: "All", tag: allFilterTag },
     { name: "Git", tag: "git" },
     { name: "Docker", tag: "docker" },
     { name: "Blockchain", tag: "blockchain" },
   ],
   languageFilters: [
-    { name: "English", tag: "English" },
-    { name: "Polish", tag: "Polish" },
+    { name: "🌎", tag: allFilterTag },
+    { name: "🇬🇧", tag: "English" },
+    { name: "🇵🇱", tag: "Polish" },
   ],
   testimonials: [
     {

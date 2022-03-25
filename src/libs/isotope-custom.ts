@@ -7,54 +7,47 @@
 import imagesLoaded from "imagesloaded";
 import Isotope from "isotope-layout";
 
-export function setupIsotopeFilters(): void {
+export function setupIsotopeFilters(filterNames: string[]): void {
   const isotopeContainer: HTMLElement | null =
     document.querySelector(".isotope");
 
   isotopeContainer &&
     imagesLoaded(isotopeContainer, function () {
-      const filterItems = document.querySelectorAll("#talk-filters .type");
-      const languageItems = document.querySelectorAll(
-        "#language-filters .type"
-      );
+      filterNames.forEach((filterName: string) => {
+        const filterItems = document.querySelectorAll(`#${filterName} .type`);
 
-      const iso = new Isotope(isotopeContainer, {
-        // options
-        itemSelector: ".isotope-item",
-        layoutMode: "fitRows",
-      });
+        const iso = new Isotope(isotopeContainer, {
+          // options
+          itemSelector: ".isotope-item",
+          layoutMode: "fitRows",
+        });
 
-      // filter items on click
-      [...filterItems, ...languageItems].forEach((filterItem) => {
-        filterItem.addEventListener("click", () => {
-          //toggle active class
-          for (const siblingFilterItem of filterItem?.parentNode?.children ||
-            []) {
-            siblingFilterItem.classList.remove("active");
-          }
-          filterItem.classList.add("active");
+        // filter items on click
+        filterItems.forEach((filterItem) => {
+          filterItem.addEventListener("click", () => {
+            //toggle active class
+            for (const siblingFilterItem of filterItem?.parentNode?.children ||
+              []) {
+              siblingFilterItem.classList.remove("active");
+            }
+            filterItem.classList.add("active");
 
-          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-          const talkActiveFilter = document
-            .querySelector("#talk-filters .type.active")!
-            .getAttribute("data-filter")!;
+            const activeFilters = filterNames.map(
+              (filterName) =>
+                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+                document
+                  .querySelector(`#${filterName} .type.active`)!
+                  .getAttribute("data-filter")!
+            );
 
-          // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-          const languageActiveFilter = document
-            .querySelector("#language-filters .type.active")!
-            .getAttribute("data-filter")!;
+            iso.arrange({
+              filter: function (item) {
+                const matchFilter = (filter: string) =>
+                  filter === "*" || item.classList.contains(filter);
 
-          // arrange - https://isotope.metafizzy.co/methods.html
-
-          iso.arrange({
-            filter: function (item) {
-              const result =
-                (talkActiveFilter === "*" ||
-                  item.classList.contains(talkActiveFilter)) &&
-                (languageActiveFilter === "*" ||
-                  item.classList.contains(languageActiveFilter));
-              return result;
-            },
+                return activeFilters.every(matchFilter);
+              },
+            });
           });
         });
       });
