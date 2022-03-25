@@ -6,8 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "test:unit": "vue-cli-service test:unit",
-    "lint": "vue-cli-service lint",
-    "deploy": "npm run build && git add . && git commit -m 'new deploy' && git push origin gh-pages"
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
@@ -19,13 +18,13 @@
     "core-js": "^3.6.5",
     "imagesloaded": "^4.1.4",
     "isotope-layout": "3.0.6",
-    "vue": "^3.0.0",
+    "vue": "3.2.31",
     "vue-router": "^4.0.0-0",
     "vue3-carousel": "^0.1.21"
   },
   "devDependencies": {
     "@types/imagesloaded": "^4.1.2",
-    "@types/isotope-layout": "^3.0.8",
+    "@types/isotope-layout": "3.0.9",
     "@types/jest": "^24.0.19",
     "@typescript-eslint/eslint-plugin": "^4.18.0",
     "@typescript-eslint/parser": "^4.26.1",
