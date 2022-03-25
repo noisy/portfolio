@@ -3,7 +3,6 @@
     class="row mb-5 flex-column flex-lg-row bg-white shadow-sm"
     :class="[...talk.filterTags, talk.language]"
   >
-    <!-- filters: {{ JSON.stringify([...talk.filterTags, talk.language]) }} -->
     <div class="col-12 col-auto talk-media-holder ratio ratio-16x9 me-md-3">
       <iframe
         v-if="talk.source == 'youtube'"
