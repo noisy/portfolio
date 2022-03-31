@@ -11,23 +11,12 @@
   </section>
 </template>
 
-<script lang="ts">
-import { defineComponent, onMounted } from "vue";
+<script setup lang="ts">
 import { Filters, PageHeader, ProjectsGrid } from "@/components";
 import { useDB } from "@/composables";
 import { setupIsotopeFilters } from "@/libs/isotope-custom";
+import { onMounted } from "vue";
 
-export default defineComponent({
-  name: "Projects",
-  components: {
-    Filters,
-    PageHeader,
-    ProjectsGrid,
-  },
-  setup() {
-    const { projects, projectFilters } = useDB();
-    onMounted(() => setupIsotopeFilters(["project-filters"]));
-    return { projects, projectFilters };
-  },
-});
+const { projects, projectFilters } = useDB();
+onMounted(() => setupIsotopeFilters(["project-filters"]));
 </script>
