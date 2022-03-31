@@ -17,7 +17,8 @@
 </template>
 
 <script lang="ts">
-import { allFilterTag, IFilter } from "@/types";
+import type { IFilter } from "@/types";
+import { allFilterTag } from "@/types";
 import type { PropType } from "vue";
 import { defineComponent } from "vue";
 
