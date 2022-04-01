@@ -48,23 +48,9 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import type { IBlogPost } from "@/types";
-import type { PropType } from "vue";
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "BlogPostThumbnail",
-  props: {
-    blogPost: {
-      type: Object as PropType<IBlogPost>,
-      required: true,
-    },
-  },
-  setup() {
-    return {};
-  },
-});
+defineProps<{ blogPost: IBlogPost }>();
 </script>
 
 <style lang="scss">

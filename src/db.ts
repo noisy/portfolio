@@ -139,7 +139,7 @@ const db: IDB = {
     // {
     //   name: "Digital Asset Managment Platform",
     //   slug: "myzonza",
-    //   companyName: "Hogarthww, through STXNext",
+    //   companyName: "Hogarth, through STXNext",
     //   thumbnail: "myzonza.png",
     //   summaryTitle: "Zonza & MyZonza",
     //   summary:
@@ -176,6 +176,38 @@ const db: IDB = {
     { name: "C/C++", tag: "ccpp" },
     { name: "Java", tag: "java" },
     { name: "Blockchain", tag: "blockchain" },
+  ],
+  companies: [
+    {
+      name: "Opera",
+      url: "https://www.opera.com/",
+      logo: "logos/logo-opera.svg",
+    },
+    {
+      name: "Pitchup",
+      url: "https://pitchup.com",
+      logo: "logos/logo-pitchup.svg",
+    },
+    {
+      name: "Stxnext",
+      url: "https://www.stxnext.com/",
+      logo: "logos/logo-stxnext.svg",
+    },
+    {
+      name: "Seerene",
+      url: "https://www.seerene.com/",
+      logo: "logos/logo-seerene.svg",
+    },
+    {
+      name: "Steem",
+      url: "https://steem.com/",
+      logo: "logos/logo-steem.svg",
+    },
+    {
+      name: "Hogarth",
+      url: "https://www.hogarthww.com/",
+      logo: "logos/logo-hogarth.svg",
+    },
   ],
   talks: [
     {

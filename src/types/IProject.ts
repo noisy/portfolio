@@ -76,3 +76,8 @@ export interface IProject {
   featured: boolean;
   repositoryUrl?: string;
 }
+export interface ICompany {
+  name: string;
+  url: string;
+  logo: string;
+}

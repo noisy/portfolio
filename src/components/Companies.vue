@@ -5,51 +5,16 @@
         Great companies I've worked with
       </h3>
       <div class="logos row mb-5">
-        <div class="logo px-3 col-6 col-md-4 col-lg-2 me-0 px-md-5 px-lg-4">
-          <a class="logo-link" href="https://www.opera.com/">
+        <div
+          v-for="company of companies"
+          :key="company.name"
+          class="logo px-3 col-6 col-md-4 col-lg-2 me-0 px-md-5 px-lg-4"
+        >
+          <a class="logo-link" :href="company.url">
             <img
               class="grayscale img-fluid svg-ie-fix"
-              src="@/images/logos/logo-opera.svg"
-            />
-          </a>
-        </div>
-        <div class="logo px-3 col-6 col-md-4 col-lg-2 me-0 px-md-5 px-lg-4">
-          <a class="logo-link" href="https://pitchup.com">
-            <img
-              class="grayscale img-fluid svg-ie-fix"
-              src="@/images/logos/logo-pitchup.svg"
-            />
-          </a>
-        </div>
-        <div class="logo px-3 col-6 col-md-4 col-lg-2 me-0 px-md-5 px-lg-4">
-          <a class="logo-link" href="https://www.stxnext.com/">
-            <img
-              class="grayscale img-fluid svg-ie-fix"
-              src="@/images/logos/logo-stxnext.svg"
-            />
-          </a>
-        </div>
-        <div class="logo px-3 col-6 col-md-4 col-lg-2 me-0 px-md-5 px-lg-4">
-          <a class="logo-link" href="https://www.seerene.com/">
-            <img
-              class="grayscale img-fluid svg-ie-fix"
-              src="@/images/logos/logo-seerene.svg"
-            />
-          </a>
-        </div>
-        <div class="logo px-3 col-6 col-md-4 col-lg-2 me-0 px-md-5 px-lg-4">
-          <a class="logo-link" href="https://steem.com/">
-            <img
-              class="grayscale img-fluid svg-ie-fix"
-              src="@/images/logos/logo-steem.svg"
-            />
-          </a>
-        </div>
-        <div class="logo px-3 col-6 col-md-4 col-lg-2 me-0 px-md-5 px-lg-4">
-          <a class="logo-link" href="https://www.hogarthww.com/">
-            <img
-              class="grayscale img-fluid svg-ie-fix"
-              src="@/images/logos/logo-zonza.png"
+              :src="getAsset(`@/images/${company.logo}`)"
+              :title="company.name"
             />
           </a>
         </div>
@@ -57,3 +22,10 @@
     </div>
   </section>
 </template>
+<script setup lang="ts">
+import { useAssets, useDB } from "@/composables";
+import type { ICompany } from "@/types";
+defineProps<{ companies: ICompany[] }>();
+const { getAsset } = useAssets();
+const { companies } = useDB();
+</script>

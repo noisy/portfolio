@@ -4,21 +4,8 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { useAssets } from "@/composables";
-import { defineComponent } from "vue";
-
-export default defineComponent({
-  name: "CoverImage",
-  props: {
-    url: {
-      required: true,
-      type: String,
-    },
-  },
-  setup() {
-    const { getAsset } = useAssets();
-    return { getAsset };
-  },
-});
+const { getAsset } = useAssets();
+defineProps<{ url: string }>();
 </script>
