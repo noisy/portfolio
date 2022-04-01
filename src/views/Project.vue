@@ -56,6 +56,7 @@ export default defineComponent({
   },
 });
 </script>
+
 <style lang="scss">
 .project-wrapper {
   p {

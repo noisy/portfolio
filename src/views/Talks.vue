@@ -23,23 +23,12 @@
   </section>
 </template>
 
-<script lang="ts">
-import { defineComponent, onMounted } from "vue";
+<script setup lang="ts">
 import { Filters, PageHeader, Talk } from "@/components";
 import { useDB } from "@/composables";
 import { setupIsotopeFilters } from "@/libs/isotope-custom";
+import { onMounted } from "vue";
 
-export default defineComponent({
-  name: "Talks",
-  components: {
-    PageHeader,
-    Talk,
-    Filters,
-  },
-  setup() {
-    const { talks, talkFilters, languageFilters } = useDB();
-    onMounted(() => setupIsotopeFilters(["talk-filters", "language-filters"]));
-    return { talks, talkFilters, languageFilters };
-  },
-});
+const { talks, talkFilters, languageFilters } = useDB();
+onMounted(() => setupIsotopeFilters(["talk-filters", "language-filters"]));
 </script>

@@ -524,7 +524,7 @@
 
 <script lang="ts">
 import { Quote } from "@/components";
-import { IBlogPost } from "@/types";
+import type { IBlogPost } from "@/types";
 import type { PropType } from "vue";
 import { defineComponent } from "vue";
 

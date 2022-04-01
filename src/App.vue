@@ -6,18 +6,10 @@
   <Footer />
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
 import { Footer, Navigation } from "@/components";
-
-export default defineComponent({
-  name: "App",
-  components: {
-    Footer,
-    Navigation,
-  },
-});
 </script>
+
 <style lang="scss">
 @import "./styles/theme-1.scss";
 </style>
