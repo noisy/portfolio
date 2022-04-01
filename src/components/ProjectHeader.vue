@@ -20,28 +20,15 @@
   </PageHeader>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { PageHeader } from "@/components";
 import { useAssets } from "@/composables";
 import type { IProject } from "@/types";
-import type { PropType } from "vue";
-import { defineComponent } from "vue";
 
-export default defineComponent({
-  name: "ProjectHeader",
-  components: { PageHeader },
-  props: {
-    project: {
-      type: Object as PropType<IProject>,
-      required: true,
-    },
-  },
-  setup() {
-    const { getAsset } = useAssets();
-    return { getAsset };
-  },
-});
+const { getAsset } = useAssets();
+defineProps<{ project: IProject }>();
 </script>
+
 <style scoped lang="scss">
 // .client-logo.color {
 //   opacity: 0;

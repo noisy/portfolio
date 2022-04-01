@@ -6,6 +6,7 @@
 
 <script setup lang="ts">
 import { useAssets } from "@/composables";
+
 const { getAsset } = useAssets();
 defineProps<{ url: string }>();
 </script>

@@ -9,20 +9,9 @@
   </section>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import type { IProject } from "@/types";
-import type { PropType } from "vue";
-import { defineComponent } from "vue";
 import ProjectsGrid from "./ProjectsGrid.vue";
 
-export default defineComponent({
-  name: "OtherProjectCaseStudies",
-  components: { ProjectsGrid },
-  props: {
-    projects: {
-      type: Array as PropType<IProject[]>,
-      required: true,
-    },
-  },
-});
+defineProps<{ projects: IProject[] }>();
 </script>

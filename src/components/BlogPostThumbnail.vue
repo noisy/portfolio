@@ -50,6 +50,7 @@
 
 <script setup lang="ts">
 import type { IBlogPost } from "@/types";
+
 defineProps<{ blogPost: IBlogPost }>();
 </script>
 

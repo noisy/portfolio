@@ -81,3 +81,8 @@ export interface ICompany {
   url: string;
   logo: string;
 }
+export interface ISkillGroup {
+  name: string;
+  skills: string[];
+  icon: string;
+}

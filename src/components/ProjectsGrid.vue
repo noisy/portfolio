@@ -14,5 +14,6 @@
 <script setup lang="ts">
 import type { IProject } from "@/types";
 import ProjectThumbnail from "./ProjectThumbnail.vue";
+
 defineProps<{ projects: IProject[] }>();
 </script>

@@ -26,28 +26,15 @@
     </div>
   </section>
 </template>
-<script lang="ts">
+
+<script setup lang="ts">
 import type { ITestimonial } from "@/types";
-import type { PropType } from "vue";
-import { defineComponent } from "vue";
 import { Carousel, Pagination, Slide } from "vue3-carousel";
 import Testimonial from "./Testimonial.vue";
 
-export default defineComponent({
-  components: {
-    Testimonial,
-    Carousel,
-    Slide,
-    Pagination,
-  },
-  props: {
-    testimonials: {
-      required: true,
-      type: Array as PropType<ITestimonial[]>,
-    },
-  },
-});
+defineProps<{ testimonials: ITestimonial[] }>();
 </script>
+
 <style scoped>
 .carousel :deep() button {
   /* Colors */

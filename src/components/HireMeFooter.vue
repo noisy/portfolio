@@ -32,15 +32,8 @@
   </section>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { useDB } from "@/composables/useDB";
-import { defineComponent } from "vue";
 
-export default defineComponent({
-  name: "HireMeFooter",
-  setup() {
-    const { contactEmail } = useDB();
-    return { contactEmail };
-  },
-});
+const { contactEmail } = useDB();
 </script>

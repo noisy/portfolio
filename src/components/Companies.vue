@@ -24,8 +24,7 @@
 </template>
 <script setup lang="ts">
 import { useAssets, useDB } from "@/composables";
-import type { ICompany } from "@/types";
-defineProps<{ companies: ICompany[] }>();
+
 const { getAsset } = useAssets();
 const { companies } = useDB();
 </script>

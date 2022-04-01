@@ -1,7 +1,12 @@
 import type { ILanguageFilter } from ".";
 import type { IBlogPost } from "./IBlogPost";
 import type { ILanguage } from "./ILanguage";
-import type { ICompany, IProject, IProjectFilter } from "./IProject";
+import type {
+  ICompany,
+  IProject,
+  IProjectFilter,
+  ISkillGroup,
+} from "./IProject";
 import type { ITalk, ITalkFilter } from "./ITalk";
 import type { ITestimonial } from "./ITestimonial";
 
@@ -22,4 +27,5 @@ export interface IDB {
   flags: Record<ILanguage, string>;
   contactEmail: string;
   blogPosts: IBlogPost[];
+  skillsGroups: ISkillGroup[];
 }

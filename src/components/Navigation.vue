@@ -74,8 +74,9 @@
                 class="nav-link"
                 :to="{ name: 'projects' }"
                 @click="closeMenu()"
-                >Projects</router-link
               >
+                Projects
+              </router-link>
             </li>
             <li class="nav-item me-lg-3">
               <router-link
@@ -144,29 +145,21 @@
   </nav>
 </template>
 
-<script lang="ts">
-import { defineComponent, watch } from "vue";
-import { useRouter } from "vue-router";
+<script setup lang="ts">
 import { useNavigation } from "@/composables";
+import { ref, watch } from "vue";
+import { useRouter } from "vue-router";
 
-export default defineComponent({
-  name: "Navigation",
-  setup() {
-    const router = useRouter();
-    const { updateSlideLine } = useNavigation();
-    watch(router.currentRoute, updateSlideLine);
-    return {};
-  },
-  data: () => ({
-    menuCollapsed: true,
-  }),
-  methods: {
-    toggleMenu() {
-      this.menuCollapsed = !this.menuCollapsed;
-    },
-    closeMenu() {
-      this.menuCollapsed = true;
-    },
-  },
-});
+const router = useRouter();
+const { updateSlideLine } = useNavigation();
+const menuCollapsed = ref(true);
+
+watch(router.currentRoute, updateSlideLine);
+
+function toggleMenu() {
+  menuCollapsed.value = !menuCollapsed.value;
+}
+function closeMenu() {
+  menuCollapsed.value = true;
+}
 </script>

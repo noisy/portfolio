@@ -379,6 +379,34 @@ const db: IDB = {
     //     "Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod. Vivamus sed mi vitae dui iaculis venenatis...",
     // },
   ],
+  skillsGroups: [
+    {
+      name: "Frontend",
+      skills: [
+        "Vue.js/Angular/React",
+        "Javascript/Typescript",
+        "HTML/CSS/SASS/LESS",
+        "Bootstrap",
+      ],
+      icon: "@/images/frontend-icon.svg",
+    },
+    {
+      name: "Backend",
+      skills: [
+        "Python/Django",
+        "C/C++",
+        "Java",
+        "Node.js",
+        "PostgresSQL/MySQL",
+      ],
+      icon: "@/images/backend-icon.png",
+    },
+    {
+      name: "Other",
+      skills: ["DevOps", "Unit Testing", "Docker", "Stripe"],
+      icon: "@/images/other-skills-icon.svg",
+    },
+  ],
 };
 
 export default db;

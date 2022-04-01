@@ -45,43 +45,20 @@
     </blockquote>
   </div>
 </template>
-<script lang="ts">
+<script setup lang="ts">
 import { useAssets } from "@/composables";
-import { defineComponent } from "vue";
 
-export default defineComponent({
-  props: {
-    author: {
-      type: String,
-      required: true,
-    },
-    title: {
-      type: String,
-      required: true,
-    },
-    body: {
-      type: String,
-      required: true,
-    },
-    pictureUrl: {
-      type: String,
-      required: true,
-    },
-    url: {
-      type: String,
-      required: true,
-    },
-    type: {
-      type: String,
-      required: true,
-    },
-  },
-  setup() {
-    const { getAsset } = useAssets();
-    return { getAsset };
-  },
-});
+const { getAsset } = useAssets();
+defineProps<{
+  author: string;
+  title: string;
+  body: string;
+  pictureUrl: string;
+  url: string;
+  type: string;
+}>();
 </script>
+
 <style scoped>
 blockquote {
   text-align: left;

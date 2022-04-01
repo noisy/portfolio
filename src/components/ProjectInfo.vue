@@ -61,23 +61,10 @@
   </aside>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { useAssets } from "@/composables";
 import type { IProject } from "@/types";
-import type { PropType } from "vue";
-import { defineComponent } from "vue";
 
-export default defineComponent({
-  name: "ProjectInfo",
-  props: {
-    project: {
-      required: true,
-      type: Object as PropType<IProject>,
-    },
-  },
-  setup() {
-    const { getAsset } = useAssets();
-    return { getAsset };
-  },
-});
+const { getAsset } = useAssets();
+defineProps<{ project: IProject }>();
 </script>

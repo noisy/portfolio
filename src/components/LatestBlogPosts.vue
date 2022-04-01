@@ -8,7 +8,7 @@
       <div class="blog-cards row">
         <div v-for="post in blogPosts" :key="post.slug" class="col-12 col-lg-6">
           <BlogPostThumbnail :blog-post="post" />
-        </div>  
+        </div>
         <div class="col-12 col-lg-6">
           <div class="card rounded-0 border-0 shadow-sm mb-5">
             <div class="card-img-container position-relative">
@@ -113,7 +113,6 @@
           <!--//card-->
         </div>
       </div>
-      <!--//blog-cards-->
     </div>
 
     <div class="text-center">
@@ -124,17 +123,9 @@
   </section>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { BlogPostThumbnail } from "@/components";
 import { useDB } from "@/composables";
-import { defineComponent } from "vue";
 
-export default defineComponent({
-  name: "LatestBlogPosts",
-  components: { BlogPostThumbnail },
-  setup() {
-    const { blogPosts } = useDB();
-    return { blogPosts };
-  },
-});
+const { blogPosts } = useDB();
 </script>

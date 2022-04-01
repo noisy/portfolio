@@ -20,30 +20,13 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { useAssets } from "@/composables";
-import type { PropType } from "vue";
-import { defineComponent } from "vue";
 
-export default defineComponent({
-  name: "SkillsBlock",
-  props: {
-    groupName: {
-      required: true,
-      type: String,
-    },
-    icon: {
-      required: true,
-      type: String,
-    },
-    skills: {
-      required: true,
-      type: Array as PropType<string[]>,
-    },
-  },
-  setup() {
-    const { getAsset } = useAssets();
-    return { getAsset };
-  },
-});
+const { getAsset } = useAssets();
+defineProps<{
+  groupName: string;
+  icon: string;
+  skills: string[];
+}>();
 </script>

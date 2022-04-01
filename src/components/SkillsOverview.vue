@@ -17,32 +17,11 @@
       <div class="skills-blocks mx-auto pt-5">
         <div class="row">
           <SkillsBlock
-            group-name="Frontend"
-            :skills="[
-              'Vue.js/Angular/React',
-              'Javascript/Typescript',
-              'HTML/CSS/SASS/LESS',
-              'Bootstrap',
-            ]"
-            icon="@/images/frontend-icon.svg"
-          />
-
-          <SkillsBlock
-            group-name="Backend"
-            :skills="[
-              'Python/Django',
-              'C/C++',
-              'Java',
-              'Node.js',
-              'PostgresSQL/MySQL',
-            ]"
-            icon="@/images/backend-icon.png"
-          />
-
-          <SkillsBlock
-            group-name="Other"
-            :skills="['DevOps', 'Unit Testing', 'Docker', 'Stripe']"
-            icon="@/images/other-skills-icon.svg"
+            v-for="group of skillsGroups"
+            :key="group.name"
+            :group-name="group.name"
+            :skills="group.skills"
+            :icon="group.icon"
           />
         </div>
       </div>
@@ -50,19 +29,9 @@
   </section>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
+<script setup lang="ts">
+import { useDB } from "@/composables";
 import SkillsBlock from "./SkillsBlock.vue";
 
-export default defineComponent({
-  name: "SkillsOverview",
-  components: {
-    SkillsBlock,
-  },
-  setup() {
-    return {};
-  },
-});
+const { skillsGroups } = useDB();
 </script>
-
-<style lang="scss"></style>

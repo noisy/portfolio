@@ -55,23 +55,10 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { useDB } from "@/composables";
-import { ITalk } from "@/types";
-import type { PropType } from "vue";
-import { defineComponent } from "vue";
+import type { ITalk } from "@/types";
 
-export default defineComponent({
-  name: "Talk",
-  props: {
-    talk: {
-      type: Object as PropType<ITalk>,
-      required: true,
-    },
-  },
-  setup() {
-    const { flags } = useDB();
-    return { flags };
-  },
-});
+const { flags } = useDB();
+defineProps<{ talk: ITalk }>();
 </script>
