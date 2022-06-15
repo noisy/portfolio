@@ -273,6 +273,17 @@ const db: IDB = {
       date: "Feb 5, 2018",
       filterTags: ["blockchain"],
     },
+    {
+      source: "youtube",
+      id: "ryJSCBsYo1I",
+      type: "video",
+      language: "Polish",
+      title: "Blockchain - czym jest i jak działa",
+      conference: "#6 Wrocław Blockchain Meetup",
+      description: "",
+      date: "Feb 5, 2018",
+      filterTags: ["blockchain"],
+    }
     // {
     //   source: "youtube",
     //   id: "",
