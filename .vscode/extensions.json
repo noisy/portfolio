@@ -1,8 +1,8 @@
 {
   // List of extensions which should be recommended for users of this workspace.
   "recommendations": [
-    "johnsoncodehk.volar",
-    "johnsoncodehk.vscode-typescript-vue-plugin",
+    "Vue.volar",                        // Vue 3 Language Features
+    "Vue.vscode-typescript-vue-plugin", // Typescript Vue Plugin (Volar)
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
   ],
