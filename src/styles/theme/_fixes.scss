@@ -31,3 +31,21 @@ img.white {
 .testimonial-item::after {
   all: unset;
 }
+
+html,
+body,
+div#app {
+  height: 100%;
+}
+
+div#app {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  margin-top: auto;
+  .copyright {
+    display: inline-block;
+  }
+}
