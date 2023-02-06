@@ -2,9 +2,7 @@
   <BlogHeader />
   <div class="section pt-5">
     <div class="container">
-      <BlogPostsGrid
-        :blog-posts="[...blogPosts, ...blogPosts, ...blogPosts, ...blogPosts]"
-      />
+      <BlogPostsGrid :blog-posts="blogPosts" />
     </div>
   </div>
 </template>

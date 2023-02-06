@@ -13,6 +13,19 @@
       goal was to help with that.
     </p>
     <Carousel :items-to-show="1" :paths="imagesPaths" />
+
+    <div class="ratio ratio-4x3 me-md-3">
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/d0AzGJ0slXE"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
+      </iframe>
+    </div>
   </div>
   <h3 class="section-title">My role in this project &amp; our team</h3>
   <p>
