@@ -10,7 +10,7 @@
           :key="company.name"
           class="logo px-3 col-6 col-md-4 col-lg-2 me-0 px-md-5 px-lg-4"
         >
-          <a class="logo-link" :href="company.url">
+          <a class="logo-link" :href="company.url" target="_blank">
             <img
               class="grayscale img-fluid svg-ie-fix"
               :src="getAsset(`@/images/${company.logo}`)"
