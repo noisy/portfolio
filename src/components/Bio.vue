@@ -30,10 +30,6 @@
                 class="link-on-bg text-link"
                 :to="{ name: 'projects' }"
                 >case studies</router-link
-              >
-              and
-              <router-link class="link-on-bg text-link" :to="{ name: 'resume' }"
-                >resume</router-link
               >.
             </div>
             <router-link
