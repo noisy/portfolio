@@ -26,12 +26,6 @@ const routes: Array<RouteRecordRaw> = [
     name: "talks",
     component: Talks,
   },
-  // TO IMPLEMENT:
-  {
-    path: "/resume",
-    name: "resume",
-    component: Home,
-  },
   {
     path: "/blog",
     name: "blog",
