@@ -1,4 +1,4 @@
-import { allFilterTag } from "./types";
+import { allFilterTag, type IProjectFilter } from "./types";
 import type { IDB } from "./types/IDB";
 
 const db: IDB = {
@@ -100,7 +100,7 @@ const db: IDB = {
       thumbnail: "opera-mobile.png",
       summaryTitle: "Example title",
       summary: "Opera Mobile was a mobile application for",
-      filterTags: ["android", "java", "ccpp"],
+      filterTags: ["android", "java", "c-cpp"],
       badges: ["Java", "C/C++", "Android", "Python"],
       technologies: ["android", "c", "cpp", "java"],
       thumbnailLogo: "logo-opera.svg",
@@ -173,7 +173,7 @@ const db: IDB = {
     { name: "Angular", tag: "angular" },
     { name: "React", tag: "react" },
     { name: "Android", tag: "android" },
-    { name: "C/C++", tag: "ccpp" },
+    { name: "C/C++", tag: "c-cpp" },
     { name: "Java", tag: "java" },
     { name: "Blockchain", tag: "blockchain" },
   ],
@@ -283,7 +283,7 @@ const db: IDB = {
       description: "",
       date: "Feb 5, 2018",
       filterTags: ["blockchain"],
-    }
+    },
     // {
     //   source: "youtube",
     //   id: "",

@@ -9,7 +9,8 @@ export type IProjectFilterTag =
   | "java"
   | "blockchain"
   | "react"
-  | "ccpp";
+  | "c-cpp";
+
 export type IProjectBadge =
   | "Angular"
   | "Java"
