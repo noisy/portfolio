@@ -1,4 +1,4 @@
-import { allFilterTag, type IProjectFilter } from "./types";
+import { allFilterTag } from "./types";
 import type { IDB } from "./types/IDB";
 
 const db: IDB = {
