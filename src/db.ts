@@ -351,8 +351,8 @@ const db: IDB = {
   },
   contactEmail: "hello@krzysztofszumny.com",
   flags: {
-    Polish: "🇵🇱",
-    English: "🇬🇧",
+    polish: "🇵🇱",
+    english: "🇬🇧",
   },
   blogPosts: [
     {
