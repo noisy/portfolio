@@ -28,14 +28,12 @@
     :url="t.url"
   >
   </Testimonial>
-
-  <OtherProjectCaseStudies :projects="projects" />
 </template>
 
 <script lang="ts">
-import { CoverImage, OtherProjectCaseStudies, Testimonial } from "@/components";
+import { CoverImage, Testimonial } from "@/components";
 import { useDB } from "@/composables";
-import { IProject, ITestimonial } from "@/types";
+import type { IProject, ITestimonial } from "@/types";
 import type { PropType } from "vue";
 import { defineComponent } from "vue";
 
@@ -43,7 +41,6 @@ export default defineComponent({
   name: "HiveProjects",
   components: {
     CoverImage,
-    OtherProjectCaseStudies,
     Testimonial,
   },
   props: {
