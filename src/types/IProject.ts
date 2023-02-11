@@ -1,15 +1,4 @@
-import type { AllFilterTag } from ".";
-
-export type IProjectFilterTag =
-  | "angular"
-  | "vue"
-  | "python-django"
-  | "js-ts"
-  | "android"
-  | "java"
-  | "blockchain"
-  | "react"
-  | "c-cpp";
+import type { IFilter } from ".";
 
 export type IProjectBadge =
   | "Angular"
@@ -55,9 +44,20 @@ export type ITechnology =
   | "stripe"
   | "vue";
 
-export interface IProjectFilter {
+export type IProjectFilterTag =
+  | "angular"
+  | "vue"
+  | "python-django"
+  | "js-ts"
+  | "android"
+  | "java"
+  | "blockchain"
+  | "react"
+  | "c-cpp";
+
+export interface IProjectFilter extends IFilter {
   name: string;
-  tag: IProjectFilterTag | AllFilterTag;
+  tag: IProjectFilterTag;
 }
 
 export interface IProject {

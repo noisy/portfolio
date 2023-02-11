@@ -13,13 +13,7 @@
 
 <script setup lang="ts">
 import { Filters, PageHeader, ProjectsGrid } from "@/components";
-import { useDB } from "@/composables";
-import { useProjectFilters } from "@/composables/useProjectFilters";
-import { setupIsotopeFilters } from "@/libs/isotope-custom";
-import { onMounted } from "vue";
+import { useProjects } from "@/composables";
 
-const { projects } = useDB();
-const { projectFilters } = useProjectFilters();
-
-onMounted(() => setupIsotopeFilters(["project-filters"]));
+const { projects, projectFilters } = useProjects();
 </script>

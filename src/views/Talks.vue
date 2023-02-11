@@ -25,10 +25,7 @@
 
 <script setup lang="ts">
 import { Filters, PageHeader, Talk } from "@/components";
-import { useDB } from "@/composables";
-import { setupIsotopeFilters } from "@/libs/isotope-custom";
-import { onMounted } from "vue";
+import { useTalks } from "@/composables";
 
-const { talks, talkFilters, languageFilters } = useDB();
-onMounted(() => setupIsotopeFilters(["talk-filters", "language-filters"]));
+const { talks, talkFilters, languageFilters } = useTalks();
 </script>
