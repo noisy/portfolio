@@ -1,7 +1,10 @@
-import type { IFilter } from "./IFilters";
+import type { AllFilterTag, IFilter } from "./IFilters";
 
-export type ILanguage = "Polish" | "English";
+export type ILanguage = "polish" | "english";
+
+export type ILanguageFilterTag = ILanguage;
+
 export interface ILanguageFilter extends IFilter {
   name: string;
-  tag: ILanguage;
+  tag: ILanguageFilterTag | AllFilterTag;
 }
