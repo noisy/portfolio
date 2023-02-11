@@ -3,15 +3,11 @@ export type ArrayElement<ArrayType> = ArrayType extends (infer ElementType)[]
   : ArrayType;
 
 export function extractUsedFilterTags<
-  ItemsToFilter,
-  FilterAttributeName extends keyof ItemsToFilter
->(
-  items: ItemsToFilter[],
-  filterAttributeName: FilterAttributeName
-): ArrayElement<ItemsToFilter[FilterAttributeName]>[] {
-  const usedFilterTags = new Set<
-    ArrayElement<ItemsToFilter[FilterAttributeName]>
-  >();
+  Items,
+  FilterAttributeName extends keyof Items,
+  Item extends ArrayElement<Items[FilterAttributeName]>
+>(items: Items[], filterAttributeName: FilterAttributeName): Item[] {
+  const usedFilterTags = new Set<Item>();
 
   items.forEach((item) => {
     const tags = item[filterAttributeName];
@@ -20,11 +16,7 @@ export function extractUsedFilterTags<
         usedFilterTags.add(tag);
       });
     } else {
-      throw new Error(
-        `item.${String(filterAttributeName)} seems to be not an array: ${String(
-          tags
-        )}`
-      );
+      usedFilterTags.add(tags as Item);
     }
   });
   return [...usedFilterTags];
@@ -32,7 +24,7 @@ export function extractUsedFilterTags<
 
 import { allFilterTag, type IFilter } from "@/types/IFilters";
 
-export function getFilters<Filter extends IFilter, FilterTag>(
+export function getFiltersBasedOnUsedTags<Filter extends IFilter, FilterTag>(
   filters: Filter[],
   filterTags: FilterTag[]
 ): Filter[] {

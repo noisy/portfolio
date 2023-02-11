@@ -1,13 +1,29 @@
-import { extractUsedFilterTags, getFilters } from "@/modules/filters/filters";
-import type { ITalk, ITalkFilter } from "@/types";
+import { setupIsotopeFilters } from "@/libs/isotope-custom";
+import {
+  extractUsedFilterTags,
+  getFiltersBasedOnUsedTags,
+} from "@/modules/filters/filters";
+import type { ILanguageFilter, ITalk, ITalkFilter } from "@/types";
+import { onMounted } from "vue";
 import { useDB } from "./useDB";
 
-const { talks, talkFilters } = useDB();
-
-export function useTalks(): { talks: ITalk[]; talkFilters: ITalkFilter[] } {
+export function useTalks(): {
+  talks: ITalk[];
+  talkFilters: ITalkFilter[];
+  languageFilters: ILanguageFilter[];
+} {
+  const { talks, talkFilters, languageFilters } = useDB();
   const usedFilterTags = extractUsedFilterTags(talks, "filterTags");
+  const usedLanguageFilterTags = extractUsedFilterTags(talks, "language");
+
+  onMounted(() => setupIsotopeFilters(["talk-filters", "language-filters"]));
+
   return {
     talks,
-    talkFilters: getFilters(talkFilters, usedFilterTags),
+    talkFilters: getFiltersBasedOnUsedTags(talkFilters, usedFilterTags),
+    languageFilters: getFiltersBasedOnUsedTags(
+      languageFilters,
+      usedLanguageFilterTags
+    ),
   };
 }
