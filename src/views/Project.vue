@@ -16,14 +16,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, onBeforeMount, onBeforeUpdate, ref } from "vue";
-import { useRoute } from "vue-router";
 import {
   OtherProjectCaseStudies,
   ProjectHeader,
   ProjectInfo,
 } from "@/components";
 import { useDB } from "@/composables";
+import type { IProject } from "@/types";
+import {
+  computed,
+  defineComponent,
+  onBeforeMount,
+  onBeforeUpdate,
+  ref,
+} from "vue";
+import { useRoute } from "vue-router";
 
 export default defineComponent({
   name: "Project",
@@ -34,23 +41,28 @@ export default defineComponent({
   },
   setup() {
     const { projects, testimonials } = useDB();
-    let project = ref();
-    let projectTestimonials = ref();
+    const project = ref<IProject>();
 
     const loadProjectData = () => {
       const route = useRoute();
       project.value = projects.find((p) => `project-${p.slug}` == route.name);
-
-      projectTestimonials.value = testimonials.filter((p) =>
-        p.relevantForProjects.includes(project.value.slug)
-      );
     };
     onBeforeMount(loadProjectData);
     onBeforeUpdate(loadProjectData);
 
+    const otherProjects = computed(() => {
+      return projects.filter((p) => p.slug != project.value?.slug);
+    });
+
+    const projectTestimonials = computed(() => {
+      return testimonials.filter((p) =>
+        p.relevantForProjects.includes(project.value?.slug || "")
+      );
+    });
+
     return {
       project,
-      otherProjects: projects,
+      otherProjects,
       testimonials: projectTestimonials,
     };
   },
