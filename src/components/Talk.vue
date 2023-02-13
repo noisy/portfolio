@@ -25,7 +25,7 @@
             talk.date
           }}
         </li>
-        <li class="list-inline-item me-3" style="text-transform: capitalize">
+        <li class="list-inline-item me-3 talk-type">
           <font-awesome-icon
             v-if="talk.type == 'podcast'"
             class="me-2"
@@ -62,3 +62,10 @@ import type { ITalk } from "@/types";
 const { flags } = useDB();
 defineProps<{ talk: ITalk }>();
 </script>
+
+<style scoped>
+.talk-type,
+.lang {
+  text-transform: capitalize;
+}
+</style>

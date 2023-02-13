@@ -3,5 +3,5 @@ export const allFilterTag: AllFilterTag = "*";
 
 export interface IFilter {
   name: string;
-  tag: string | AllFilterTag;
+  tag: string;
 }

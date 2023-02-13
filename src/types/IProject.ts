@@ -1,4 +1,4 @@
-import type { IFilter } from ".";
+import type { AllFilterTag, IFilter } from ".";
 
 export type IProjectBadge =
   | "Angular"
@@ -57,7 +57,7 @@ export type IProjectFilterTag =
 
 export interface IProjectFilter extends IFilter {
   name: string;
-  tag: IProjectFilterTag;
+  tag: IProjectFilterTag | AllFilterTag;
 }
 
 export interface IProject {
