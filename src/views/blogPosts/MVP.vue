@@ -524,6 +524,7 @@
 
 <script lang="ts">
 import { Quote } from "@/components";
+import { useAssets } from "@/composables";
 import type { IBlogPost } from "@/types";
 import type { PropType } from "vue";
 import { defineComponent } from "vue";
@@ -538,9 +539,10 @@ export default defineComponent({
     },
   },
   setup(props) {
+    const { getAsset } = useAssets();
     return {
       img: (filename: string) =>
-        `/images/blog/${props.blogPost.slug}/${filename}`,
+        getAsset(`@/images/blog/${props.blogPost.slug}/${filename}`),
     };
   },
 });
