@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import {
   OtherProjectCaseStudies,
   ProjectHeader,
@@ -23,49 +23,28 @@ import {
 } from "@/components";
 import { useDB } from "@/composables";
 import type { IProject } from "@/types";
-import {
-  computed,
-  defineComponent,
-  onBeforeMount,
-  onBeforeUpdate,
-  ref,
-} from "vue";
+import { computed, onBeforeMount, onBeforeUpdate, ref } from "vue";
 import { useRoute } from "vue-router";
 
-export default defineComponent({
-  name: "Project",
-  components: {
-    ProjectHeader,
-    ProjectInfo,
-    OtherProjectCaseStudies,
-  },
-  setup() {
-    const { projects, testimonials } = useDB();
-    const project = ref<IProject>();
+const { projects, testimonials: testimonialsDB } = useDB();
+const project = ref<IProject>();
 
-    const loadProjectData = () => {
-      const route = useRoute();
-      project.value = projects.find((p) => `project-${p.slug}` == route.name);
-    };
-    onBeforeMount(loadProjectData);
-    onBeforeUpdate(loadProjectData);
+const loadProjectData = () => {
+  const route = useRoute();
+  project.value = projects.find((p) => `project-${p.slug}` == route.name);
+};
 
-    const otherProjects = computed(() => {
-      return projects.filter((p) => p.slug != project.value?.slug);
-    });
+onBeforeMount(loadProjectData);
+onBeforeUpdate(loadProjectData);
 
-    const projectTestimonials = computed(() => {
-      return testimonials.filter((p) =>
-        p.relevantForProjects.includes(project.value?.slug || "")
-      );
-    });
+const otherProjects = computed(() => {
+  return projects.filter((p) => p.slug != project.value?.slug);
+});
 
-    return {
-      project,
-      otherProjects,
-      testimonials: projectTestimonials,
-    };
-  },
+const testimonials = computed(() => {
+  return testimonialsDB.filter((p) =>
+    p.relevantForProjects.includes(project.value?.slug || "")
+  );
 });
 </script>
 
