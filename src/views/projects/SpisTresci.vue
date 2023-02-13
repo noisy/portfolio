@@ -247,7 +247,7 @@ import {
   Quote,
   Testimonial,
 } from "@/components";
-import { useDB, useProject } from "@/composables";
+import { useAssets, useDB, useProject } from "@/composables";
 import type { IProject, ITestimonial } from "@/types";
 import type { PropType } from "vue";
 import { defineComponent } from "vue";
@@ -274,12 +274,12 @@ export default defineComponent({
   setup(props) {
     const { blogPosts } = useDB();
     const { getImagesPaths } = useProject();
+    const { getAsset } = useAssets();
     return {
       imagesPaths: getImagesPaths(props.project, 4),
       mvpBlogPost: blogPosts.find((post) => post.slug == "mvp"),
       img: (filename: string) =>
-        new URL(`/images/projects/spistresci-pl/${filename}`, import.meta.url)
-          .href,
+        getAsset(`@/images/projects/spistresci-pl/${filename}`),
     };
   },
 });

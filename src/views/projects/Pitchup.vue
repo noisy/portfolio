@@ -25,7 +25,7 @@
 <script lang="ts">
 import { CoverImage } from "@/components";
 import { useDB } from "@/composables";
-import { IProject, ITestimonial } from "@/types";
+import type { IProject, ITestimonial } from "@/types";
 import type { PropType } from "vue";
 import { defineComponent } from "vue";
 import "vue3-carousel/dist/carousel.css";

@@ -8,27 +8,16 @@
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, onBeforeMount, onBeforeUpdate, ref } from "vue";
-import { useRoute } from "vue-router";
+<script setup lang="ts">
 import { BlogPostHeader, CoverImage } from "@/components";
 import { useDB } from "@/composables";
+import { computed } from "vue";
+import { useRoute } from "vue-router";
 
-export default defineComponent({
-  name: "BlogPost",
-  components: { BlogPostHeader, CoverImage },
-  setup() {
-    const { blogPosts } = useDB();
-    let blogPost = ref();
+const { blogPosts } = useDB();
 
-    const loadBlogPostData = () => {
-      const route = useRoute();
-      blogPost.value = blogPosts.find((p) => `blog-${p.slug}` == route.name);
-    };
-    onBeforeMount(loadBlogPostData);
-    onBeforeUpdate(loadBlogPostData);
-
-    return { blogPost };
-  },
+const blogPost = computed(() => {
+  const route = useRoute();
+  return blogPosts.find((p) => `blog-${p.slug}` == route.name);
 });
 </script>
