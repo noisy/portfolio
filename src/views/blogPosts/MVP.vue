@@ -522,28 +522,14 @@
   </div> -->
 </template>
 
-<script lang="ts">
+<script setup lang="ts">
 import { Quote } from "@/components";
 import { useAssets } from "@/composables";
 import type { IBlogPost } from "@/types";
-import type { PropType } from "vue";
-import { defineComponent } from "vue";
 
-export default defineComponent({
-  name: "MVP",
-  components: { Quote },
-  props: {
-    blogPost: {
-      type: Object as PropType<IBlogPost>,
-      required: true,
-    },
-  },
-  setup(props) {
-    const { getAsset } = useAssets();
-    return {
-      img: (filename: string) =>
-        getAsset(`@/images/blog/${props.blogPost.slug}/${filename}`),
-    };
-  },
-});
+const { getAsset } = useAssets();
+const props = defineProps<{ blogPost: IBlogPost }>();
+
+const img = (filename: string) =>
+  getAsset(`@/images/blog/${props.blogPost.slug}/${filename}`);
 </script>
