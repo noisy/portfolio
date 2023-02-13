@@ -22,30 +22,24 @@ import {
   ProjectInfo,
 } from "@/components";
 import { useDB } from "@/composables";
-import type { IProject } from "@/types";
-import { computed, onBeforeMount, onBeforeUpdate, ref } from "vue";
+import { computed } from "vue";
 import { useRoute } from "vue-router";
 
 const { projects, testimonials: testimonialsDB } = useDB();
-const project = ref<IProject>();
 
-const loadProjectData = () => {
-  const route = useRoute();
-  project.value = projects.find((p) => `project-${p.slug}` == route.name);
-};
+const project = computed(() =>
+  projects.find((p) => `project-${p.slug}` == useRoute().name)
+);
 
-onBeforeMount(loadProjectData);
-onBeforeUpdate(loadProjectData);
+const otherProjects = computed(() =>
+  projects.filter((p) => p.slug != project.value?.slug)
+);
 
-const otherProjects = computed(() => {
-  return projects.filter((p) => p.slug != project.value?.slug);
-});
-
-const testimonials = computed(() => {
-  return testimonialsDB.filter((p) =>
+const testimonials = computed(() =>
+  testimonialsDB.filter((p) =>
     p.relevantForProjects.includes(project.value?.slug || "")
-  );
-});
+  )
+);
 </script>
 
 <style lang="scss">
