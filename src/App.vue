@@ -11,5 +11,6 @@ import { Footer, Navigation } from "@/components";
 </script>
 
 <style lang="scss">
+@import "./styles/variables.scss";
 @import "./styles/theme-1.scss";
 </style>
