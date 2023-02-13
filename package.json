@@ -1,6 +1,10 @@
 {
   "name": "portfolio",
   "version": "0.2.0",
+  "engines": {
+    "npm": "6.14.16",
+    "node": "14.19.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
