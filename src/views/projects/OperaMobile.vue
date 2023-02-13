@@ -32,40 +32,11 @@
     :url="t.url"
   >
   </Testimonial>
-
-  <OtherProjectCaseStudies :projects="projects" />
 </template>
 
-<script lang="ts">
-import { CoverImage, OtherProjectCaseStudies, Testimonial } from "@/components";
-import { useDB } from "@/composables";
-import { IProject, ITestimonial } from "@/types";
-import type { PropType } from "vue";
-import { defineComponent } from "vue";
+<script setup lang="ts">
+import { CoverImage, Testimonial } from "@/components";
+import type { IProject, ITestimonial } from "@/types";
 
-export default defineComponent({
-  name: "OperaMobile",
-  components: {
-    CoverImage,
-    OtherProjectCaseStudies,
-    Testimonial,
-  },
-  props: {
-    project: {
-      type: Object as PropType<IProject>,
-      required: true,
-    },
-    testimonials: {
-      type: Array as PropType<ITestimonial[]>,
-      required: true,
-    },
-  },
-  setup() {
-    const otherCaseStudies = ["opera-mobile"];
-    const { projects } = useDB();
-    return {
-      projects: projects.filter((p) => otherCaseStudies.includes(p.slug)),
-    };
-  },
-});
+defineProps<{ project: IProject; testimonials: ITestimonial[] }>();
 </script>
