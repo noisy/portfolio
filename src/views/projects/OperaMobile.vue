@@ -32,8 +32,6 @@
     :url="t.url"
   >
   </Testimonial>
-
-  <OtherProjectCaseStudies :projects="projects" />
 </template>
 
 <script lang="ts">
