@@ -1,5 +1,5 @@
 import { Blog, BlogPost, Home, Project, Projects, Talks } from "@/views";
-import type { RouteRecordRaw } from "vue-router";
+import type { RouteRecordRaw, RouterScrollBehavior } from "vue-router";
 import { createRouter, createWebHistory } from "vue-router";
 import { blogPosts } from "./blogPosts";
 import { projects } from "./projects";
@@ -53,15 +53,14 @@ const routes: Array<RouteRecordRaw> = [
   // },
 ];
 
-// // eslint-disable-next-line @typescript-eslint/no-unused-vars
-// const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
-//   return { left: 0, top: 0 };
-// };
+const scrollBehavior: RouterScrollBehavior = (to, from, savedPosition) => {
+  return savedPosition || { top: 0, behavior: "auto" };
+};
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes,
-  // scrollBehavior,
+  scrollBehavior,
 });
 
 export default router;
