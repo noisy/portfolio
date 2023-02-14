@@ -1,4 +1,4 @@
-import type { IProject, ITalk } from "@/types";
+import { allFilterTag, type IProject, type ITalk } from "@/types";
 import { describe, expect, it } from "vitest";
 import { forTestingsOnly, getDynamicFilters } from "./filters";
 
@@ -60,7 +60,7 @@ describe("getDynamicFilters", () => {
 
       expect(() =>
         getDynamicFilters(projects, "filterTags", [
-          { name: "All", tag: "*" },
+          { name: "All", tag: allFilterTag },
           { name: "AAA", tag: "a" },
           { name: "BBB", tag: "b" },
         ])
@@ -89,14 +89,14 @@ describe("getDynamicFilters", () => {
       ] as unknown as IProject[];
 
       const filters = getDynamicFilters(projects, "filterTags", [
-        { name: "All", tag: "*" },
+        { name: "All", tag: allFilterTag },
         { name: "AAA", tag: "a" },
         { name: "BBB", tag: "b" },
         { name: "CCC", tag: "c" },
       ]);
 
       expect(filters).toEqual([
-        { name: "All", tag: "*" },
+        { name: "All", tag: allFilterTag },
         { name: "AAA", tag: "a" },
         { name: "BBB", tag: "b" },
         { name: "CCC", tag: "c" },
@@ -107,13 +107,13 @@ describe("getDynamicFilters", () => {
       const projects = [{ filterTags: ["a", "b"] }] as unknown as IProject[];
 
       const filters = getDynamicFilters(projects, "filterTags", [
-        { name: "Everything", tag: "*" },
+        { name: "Everything", tag: allFilterTag },
         { name: "AAA", tag: "a" },
         { name: "BBB", tag: "b" },
       ]);
 
       expect(filters).toEqual([
-        { name: "Everything", tag: "*" },
+        { name: "Everything", tag: allFilterTag },
         { name: "AAA", tag: "a" },
         { name: "BBB", tag: "b" },
       ]);
@@ -125,7 +125,7 @@ describe("getDynamicFilters", () => {
       const projects = [{ filterTags: ["a", "b"] }] as unknown as IProject[];
 
       const filters = getDynamicFilters(projects, "filterTags", [
-        { name: "All", tag: "*" },
+        { name: "All", tag: allFilterTag },
         { name: "AAA", tag: "a" },
         { name: "BBB", tag: "b" },
         { name: "CCC", tag: "c" },
@@ -133,7 +133,7 @@ describe("getDynamicFilters", () => {
       ]);
 
       expect(filters).toEqual([
-        { name: "All", tag: "*" },
+        { name: "All", tag: allFilterTag },
         { name: "AAA", tag: "a" },
         { name: "BBB", tag: "b" },
       ]);
@@ -151,14 +151,14 @@ describe("getDynamicFilters", () => {
       const filters = getDynamicFilters(talks, "language", [
         { name: "🇬🇧", tag: "english" },
         { name: "🇵🇱", tag: "polish" },
-        { name: "🌎", tag: "*" },
+        { name: "🌎", tag: allFilterTag },
         { name: "🇪🇸", tag: "spanish" },
       ]);
 
       expect(filters).toEqual([
         { name: "🇬🇧", tag: "english" },
         { name: "🇵🇱", tag: "polish" },
-        { name: "🌎", tag: "*" },
+        { name: "🌎", tag: allFilterTag },
         { name: "🇪🇸", tag: "spanish" },
       ]);
     });
