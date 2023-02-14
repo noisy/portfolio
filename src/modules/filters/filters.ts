@@ -1,4 +1,4 @@
-import { allFilterTag, type IFilter } from "@/types/IFilters";
+import { allFilterName, allFilterTag, type IFilter } from "@/types/IFilters";
 
 export function getDynamicFilters<
   Items,
@@ -24,7 +24,13 @@ export function getDynamicFilters<
       } as unknown as Filter)
   );
 
-  dynamiclyCalculatedFilters.push({ name: "All", tag: allFilterTag } as Filter);
+  dynamiclyCalculatedFilters.push(
+    filters.find((f) => f.tag === allFilterTag) ||
+      ({
+        name: allFilterName,
+        tag: allFilterTag,
+      } as unknown as Filter)
+  );
   return dynamiclyCalculatedFilters;
 }
 
@@ -41,6 +47,7 @@ function extractUsedFilterTags<
 
   items.forEach((item) => {
     const tags = item[filterAttributeName];
+    if (!tags) return;
     if (Array.isArray(tags)) {
       tags.forEach((tag) => {
         usedFilterTags.add(tag);
@@ -51,3 +58,7 @@ function extractUsedFilterTags<
   });
   return [...usedFilterTags];
 }
+
+export const forTestingsOnly = {
+  extractUsedFilterTags,
+};
