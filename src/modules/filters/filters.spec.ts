@@ -57,10 +57,10 @@ describe("getDynamicFilters", () => {
 
     const filters = getDynamicFilters(projects, "filterTags", []);
     expect(filters).toEqual([
+      { name: "All", tag: "*" },
       { name: "a", tag: "a" },
       { name: "b", tag: "b" },
       { name: "c", tag: "c" },
-      { name: "All", tag: "*" },
     ]);
   });
 
@@ -71,17 +71,17 @@ describe("getDynamicFilters", () => {
     ] as unknown as IProject[];
 
     const filters = getDynamicFilters(projects, "filterTags", [
+      { name: "All", tag: "*" },
       { name: "AAA", tag: "a" },
       { name: "BBB", tag: "b" },
-      { name: "All", tag: "*" },
     ]);
 
     expect(filters).toEqual([
+      { name: "All", tag: "*" },
       { name: "AAA", tag: "a" },
       { name: "BBB", tag: "b" },
       { name: "c", tag: "c" },
       { name: "d", tag: "d" },
-      { name: "All", tag: "*" },
     ]);
   });
 
@@ -89,15 +89,15 @@ describe("getDynamicFilters", () => {
     const projects = [{ filterTags: ["a", "b"] }] as unknown as IProject[];
 
     const filters = getDynamicFilters(projects, "filterTags", [
+      { name: "Everything", tag: "*" },
       { name: "AAA", tag: "a" },
       { name: "BBB", tag: "b" },
-      { name: "Everything", tag: "*" },
     ]);
 
     expect(filters).toEqual([
+      { name: "Everything", tag: "*" },
       { name: "AAA", tag: "a" },
       { name: "BBB", tag: "b" },
-      { name: "Everything", tag: "*" },
     ]);
   });
 

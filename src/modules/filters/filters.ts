@@ -23,15 +23,18 @@ export function getDynamicFilters<
         tag,
       } as unknown as Filter)
   );
+  return [findOrCreateAllFilter(filters), ...dynamiclyCalculatedFilters];
+}
 
-  dynamiclyCalculatedFilters.push(
-    filters.find((f) => f.tag === allFilterTag) ||
-      ({
-        name: allFilterName,
-        tag: allFilterTag,
-      } as unknown as Filter)
-  );
-  return dynamiclyCalculatedFilters;
+function findOrCreateAllFilter<Filter extends IFilter>(
+  filters: Filter[]
+): Filter {
+  const allFilter = filters.find((f) => f.tag === allFilterTag);
+  if (allFilter) return allFilter;
+  return {
+    name: allFilterName,
+    tag: allFilterTag,
+  } as unknown as Filter;
 }
 
 type ArrayElement<ArrayType> = ArrayType extends (infer ElementType)[]
