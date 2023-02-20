@@ -31,6 +31,8 @@
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "1.1.1",
+    "@types/imagesloaded": "4.1.2",
+    "@types/isotope-layout": "3.0.9",
     "@types/jsdom": "16.2.14",
     "@types/node": "^16.11.25",
     "@vitejs/plugin-vue": "2.2.4",
