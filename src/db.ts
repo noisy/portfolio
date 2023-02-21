@@ -399,30 +399,30 @@ const db: IDB = {
   ],
   skillsGroups: [
     {
-      name: "Frontend",
-      skills: [
-        "Vue.js/Angular/React",
-        "Javascript/Typescript",
-        "HTML/CSS/SASS/LESS",
-        "Bootstrap",
-      ],
-      icon: "@/images/frontend-icon.svg",
+      name: "Manual Testing",
+      skills: ["Bugs raporting", "Creating scenarios"],
+      icon: "@/images/manual-testing-icon.svg",
     },
     {
-      name: "Backend",
+      name: "Automated Testing",
       skills: [
-        "Python/Django",
-        "C/C++",
-        "Java",
-        "Node.js",
-        "PostgresSQL/MySQL",
+        "Cypress",
+        "BrowserStack / Sauce Labs",
+        "Page Object Pattern",
+        "Cucumber / BDD",
       ],
-      icon: "@/images/backend-icon.png",
+      icon: "@/images/automated-testing-icon.svg",
     },
     {
-      name: "Other",
-      skills: ["DevOps", "Unit Testing", "Docker", "Stripe"],
-      icon: "@/images/other-skills-icon.svg",
+      name: "Tools",
+      skills: [
+        "Git CLI / GitHub",
+        "Chrome Dev Tools / XPath",
+        "Postman / cURL",
+        "HTML / CSS",
+        "Linux",
+      ],
+      icon: "@/images/tools-icon.svg",
     },
   ],
 };
