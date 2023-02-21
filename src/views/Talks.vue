@@ -13,7 +13,7 @@
     <div class="container isotope">
       <div class="container position-relative">
         <Talk
-          v-for="talk in talks"
+          v-for="talk in filteredTalks"
           :key="talk.id"
           class="isotope-item"
           :talk="talk"
@@ -26,6 +26,25 @@
 <script setup lang="ts">
 import { Filters, PageHeader, Talk } from "@/components";
 import { useTalks } from "@/composables";
+import { allFilterTag } from "@/types";
+import { computed } from "vue";
 
 const { talks, talkFilters, languageFilters } = useTalks();
+
+const filteredTalks = computed(() => {
+  const result = talks.map((talk) => {
+    const talkTags = talk.filterTags.map((tag) => tag.toLowerCase());
+    const talkFilter = talkFilters.value.find(
+      (filter) => filter.isActive && filter.tag !== allFilterTag
+    );
+    const languageFilter = languageFilters.value.find(
+      (filter) => filter.isActive && filter.tag !== allFilterTag
+    );
+    const isActive =
+      (talkFilter ? talkTags.includes(talkFilter.tag) : true) &&
+      (languageFilter ? talk.language == languageFilter.tag : true);
+    return { ...talk, isActive };
+  });
+  return result;
+});
 </script>
