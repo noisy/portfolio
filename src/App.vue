@@ -15,5 +15,5 @@ animateFavicon();
 
 <style lang="scss">
 @import "./styles/variables.scss";
-@import "./styles/theme-1.scss";
+@import "./styles/theme-6.scss";
 </style>
