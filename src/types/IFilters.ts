@@ -4,4 +4,5 @@ export const allFilterTag: AllFilterTag = "*";
 export interface IFilter {
   name: string;
   tag: string;
+  isActive: boolean;
 }

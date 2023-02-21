@@ -8,8 +8,8 @@
     </template>
   </PageHeader>
   <section class="section pt-5 px-3 px-lg-0">
-    <Filters name="talk-filters" :filters="talkFilters" />
-    <Filters name="language-filters" :filters="languageFilters" />
+    <Filters name="talk-filters" v-model="talkFilters" />
+    <Filters name="language-filters" v-model="languageFilters" />
     <div class="container isotope">
       <div class="container position-relative">
         <Talk
