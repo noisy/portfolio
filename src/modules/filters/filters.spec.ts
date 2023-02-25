@@ -60,9 +60,9 @@ describe("getDynamicFilters", () => {
 
       expect(() =>
         getDynamicFilters(projects, "filterTags", [
-          { name: "All", tag: allFilterTag },
-          { name: "AAA", tag: "a" },
-          { name: "BBB", tag: "b" },
+          { name: "All", tag: allFilterTag, isActive: false },
+          { name: "AAA", tag: "a", isActive: false },
+          { name: "BBB", tag: "b", isActive: false },
         ])
       ).toThrowError("Some tags do not have pair in filters: c");
     });
@@ -73,9 +73,9 @@ describe("getDynamicFilters", () => {
       ] as unknown as IProject[];
       expect(() =>
         getDynamicFilters(projects, "filterTags", [
-          { name: "AAA", tag: "a" },
-          { name: "BBB", tag: "b" },
-          { name: "CCC", tag: "c" },
+          { name: "AAA", tag: "a", isActive: false },
+          { name: "BBB", tag: "b", isActive: false },
+          { name: "CCC", tag: "c", isActive: false },
         ])
       ).toThrowError("Some tags do not have pair in filters: *");
     });
@@ -89,17 +89,17 @@ describe("getDynamicFilters", () => {
       ] as unknown as IProject[];
 
       const filters = getDynamicFilters(projects, "filterTags", [
-        { name: "All", tag: allFilterTag },
-        { name: "AAA", tag: "a" },
-        { name: "BBB", tag: "b" },
-        { name: "CCC", tag: "c" },
+        { name: "All", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+        { name: "CCC", tag: "c", isActive: false },
       ]);
 
       expect(filters).toEqual([
-        { name: "All", tag: allFilterTag },
-        { name: "AAA", tag: "a" },
-        { name: "BBB", tag: "b" },
-        { name: "CCC", tag: "c" },
+        { name: "All", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+        { name: "CCC", tag: "c", isActive: false },
       ]);
     });
 
@@ -107,15 +107,15 @@ describe("getDynamicFilters", () => {
       const projects = [{ filterTags: ["a", "b"] }] as unknown as IProject[];
 
       const filters = getDynamicFilters(projects, "filterTags", [
-        { name: "Everything", tag: allFilterTag },
-        { name: "AAA", tag: "a" },
-        { name: "BBB", tag: "b" },
+        { name: "Everything", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
       ]);
 
       expect(filters).toEqual([
-        { name: "Everything", tag: allFilterTag },
-        { name: "AAA", tag: "a" },
-        { name: "BBB", tag: "b" },
+        { name: "Everything", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
       ]);
     });
   });
@@ -125,17 +125,17 @@ describe("getDynamicFilters", () => {
       const projects = [{ filterTags: ["a", "b"] }] as unknown as IProject[];
 
       const filters = getDynamicFilters(projects, "filterTags", [
-        { name: "All", tag: allFilterTag },
-        { name: "AAA", tag: "a" },
-        { name: "BBB", tag: "b" },
-        { name: "CCC", tag: "c" },
-        { name: "DDD", tag: "d" },
+        { name: "All", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+        { name: "CCC", tag: "c", isActive: false },
+        { name: "DDD", tag: "d", isActive: false },
       ]);
 
       expect(filters).toEqual([
-        { name: "All", tag: allFilterTag },
-        { name: "AAA", tag: "a" },
-        { name: "BBB", tag: "b" },
+        { name: "All", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
       ]);
     });
   });
@@ -149,17 +149,17 @@ describe("getDynamicFilters", () => {
       ] as unknown as ITalk[];
 
       const filters = getDynamicFilters(talks, "language", [
-        { name: "🇬🇧", tag: "english" },
-        { name: "🇵🇱", tag: "polish" },
-        { name: "🌎", tag: allFilterTag },
-        { name: "🇪🇸", tag: "spanish" },
+        { name: "🇬🇧", tag: "english", isActive: false },
+        { name: "🇵🇱", tag: "polish", isActive: false },
+        { name: "🌎", tag: allFilterTag, isActive: false },
+        { name: "🇪🇸", tag: "spanish", isActive: false },
       ]);
 
       expect(filters).toEqual([
-        { name: "🇬🇧", tag: "english" },
-        { name: "🇵🇱", tag: "polish" },
-        { name: "🌎", tag: allFilterTag },
-        { name: "🇪🇸", tag: "spanish" },
+        { name: "🇬🇧", tag: "english", isActive: false },
+        { name: "🇵🇱", tag: "polish", isActive: false },
+        { name: "🌎", tag: allFilterTag, isActive: false },
+        { name: "🇪🇸", tag: "spanish", isActive: false },
       ]);
     });
   });

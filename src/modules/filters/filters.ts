@@ -58,15 +58,6 @@ function extractUsedFilterTags<
   return [...usedFilterTags];
 }
 
-export function setAllFilterTagAsActive<Filter extends IFilter>(
-  filters: Filter[]
-): Required<IFilter>[] {
-  return filters.map((filter) => ({
-    ...filter,
-    isActive: filter.tag === allFilterTag,
-  }));
-}
-
 export const forTestingsOnly = {
   extractUsedFilterTags,
 };
