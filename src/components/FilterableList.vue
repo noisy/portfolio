@@ -18,14 +18,9 @@ function updateItemHeights() {
   const items = document.querySelectorAll(".item") as unknown as any[];
   items.forEach((item) => {
     item.style.maxHeight = "none";
-    item.style.maxWidth = "none";
 
     if (item.offsetHeight > 0) {
       item.style.maxHeight = `${item.offsetHeight}px`;
-    }
-
-    if (item.offsetWidth > 0) {
-      item.style.maxWidth = `${item.offsetWidth}px`;
     }
   });
 }
@@ -35,14 +30,12 @@ function updateItemHeights() {
   0% {
     opacity: 1;
     max-height: auto;
-    max-width: auto;
     margin-bottom: 50px;
   }
   100% {
     opacity: 0;
     scale: 0;
     max-height: 0;
-    max-width: 0;
     margin: 0;
     padding: 0;
     overflow: hidden;
@@ -53,7 +46,6 @@ function updateItemHeights() {
   0% {
     opacity: 0;
     max-height: 0;
-    max-width: 0;
     margin: 0;
     padding: 0;
     scale: 0;
@@ -62,7 +54,6 @@ function updateItemHeights() {
   100% {
     opacity: 1;
     max-height: auto;
-    max-width: auto;
     margin-bottom: 50px;
   }
 }
