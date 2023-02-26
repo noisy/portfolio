@@ -1,6 +1,6 @@
-import { allFilterName, allFilterTag, type IFilter } from "@/types/IFilters";
+import { allFilterTag, type IFilter } from "@/types/IFilters";
 
-export function getDynamicFilters<
+export function getNeededFilters<
   Items,
   FilterAttributeName extends keyof Items,
   Filter extends IFilter,
@@ -14,24 +14,23 @@ export function getDynamicFilters<
     items,
     filterAttributeName
   );
-
-  const dynamiclyCalculatedFilters = usedFilterTags.map(
-    (tag) =>
-      filters.find((f) => f.tag === tag) ||
-      ({
-        name: tag,
-        tag,
-      } as unknown as Filter)
+  const neededFilterTags = [allFilterTag as FilterTag, ...usedFilterTags];
+  const usedFilters = filters.filter(({ tag }) =>
+    neededFilterTags.includes(tag as FilterTag)
+  );
+  const tagsWhichDoNotHavePairInFilters = neededFilterTags.filter(
+    (tag) => !usedFilters.map(({ tag }) => tag as FilterTag).includes(tag)
   );
 
-  dynamiclyCalculatedFilters.push(
-    filters.find((f) => f.tag === allFilterTag) ||
-      ({
-        name: allFilterName,
-        tag: allFilterTag,
-      } as unknown as Filter)
-  );
-  return dynamiclyCalculatedFilters;
+  if (tagsWhichDoNotHavePairInFilters.length > 0) {
+    throw new Error(
+      `Some tags do not have pair in filters: ${tagsWhichDoNotHavePairInFilters.join(
+        ", "
+      )}`
+    );
+  }
+
+  return usedFilters;
 }
 
 type ArrayElement<ArrayType> = ArrayType extends (infer ElementType)[]

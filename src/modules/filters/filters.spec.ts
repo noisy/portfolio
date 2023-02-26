@@ -1,6 +1,6 @@
-import type { IProject, ITalk } from "@/types";
+import { allFilterTag, type IProject, type ITalk } from "@/types";
 import { describe, expect, it } from "vitest";
-import { forTestingsOnly, getDynamicFilters } from "./filters";
+import { forTestingsOnly, getNeededFilters } from "./filters";
 
 const { extractUsedFilterTags } = forTestingsOnly;
 
@@ -51,78 +51,129 @@ describe("extractUsedFilterTags", () => {
   });
 });
 
-describe("getDynamicFilters", () => {
-  it("getDynamicFilters for not filters provided, uses tags as names for filters, and add one more filter with 'All' name and '*' tag", () => {
-    const projects = [{ filterTags: ["a", "b", "c"] }] as unknown as IProject[];
+describe("getNeededFiltersBasedOnUsedTags", () => {
+  describe("Missing filters", () => {
+    it("getNeededFiltersBasedOnUsedTags for tags which do not have a pair in provided filters, throws an error", () => {
+      const projects = [
+        { filterTags: ["a", "b", "c"] },
+      ] as unknown as IProject[];
 
-    const filters = getDynamicFilters(projects, "filterTags", []);
-    expect(filters).toEqual([
-      { name: "a", tag: "a" },
-      { name: "b", tag: "b" },
-      { name: "c", tag: "c" },
-      { name: "All", tag: "*" },
-    ]);
+      const filters = [
+        { name: "All", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+      ];
+
+      expect(() =>
+        getNeededFilters(projects, "filterTags", filters)
+      ).toThrowError("Some tags do not have pair in filters: c");
+    });
+
+    it("getNeededFiltersBasedOnUsedTags for missing filter with tag *, throws an error", () => {
+      const projects = [
+        { filterTags: ["a", "b", "c"] },
+      ] as unknown as IProject[];
+
+      const filters = [
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+        { name: "CCC", tag: "c", isActive: false },
+      ];
+
+      expect(() =>
+        getNeededFilters(projects, "filterTags", filters)
+      ).toThrowError("Some tags do not have pair in filters: *");
+    });
   });
 
-  it("getDynamicFilters uses defined filters names for specific tags. For other tags, tag is used as a name. All(*) filter is added", () => {
-    const projects = [
-      { filterTags: ["a", "b"] },
-      { filterTags: ["c", "d"] },
-    ] as unknown as IProject[];
+  describe("Pairing tags with filters", () => {
+    it("getNeededFiltersBasedOnUsedTags uses defined filters names for specific tags", () => {
+      const projects = [
+        { filterTags: ["a", "b"] },
+        { filterTags: ["c"] },
+      ] as unknown as IProject[];
 
-    const filters = getDynamicFilters(projects, "filterTags", [
-      { name: "AAA", tag: "a" },
-      { name: "BBB", tag: "b" },
-      { name: "All", tag: "*" },
-    ]);
+      const filters = [
+        { name: "All", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+        { name: "CCC", tag: "c", isActive: false },
+      ];
 
-    expect(filters).toEqual([
-      { name: "AAA", tag: "a" },
-      { name: "BBB", tag: "b" },
-      { name: "c", tag: "c" },
-      { name: "d", tag: "d" },
-      { name: "All", tag: "*" },
-    ]);
+      const neededFilters = getNeededFilters(projects, "filterTags", filters);
+
+      expect(neededFilters).toEqual([
+        { name: "All", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+        { name: "CCC", tag: "c", isActive: false },
+      ]);
+    });
+
+    it("getNeededFiltersBasedOnUsedTags allows to set a name for default All(*) filter", () => {
+      const projects = [{ filterTags: ["a", "b"] }] as unknown as IProject[];
+
+      const filters = [
+        { name: "Everything", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+      ];
+
+      const neededFilters = getNeededFilters(projects, "filterTags", filters);
+
+      expect(neededFilters).toEqual([
+        { name: "Everything", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+      ]);
+    });
   });
 
-  it("getDynamicFilters allows to set a name for default All(*) filter", () => {
-    const projects = [{ filterTags: ["a", "b"] }] as unknown as IProject[];
+  describe("Skipping not needed filters", () => {
+    it("getNeededFiltersBasedOnUsedTags skips filters which are not needed", () => {
+      const projects = [{ filterTags: ["a", "b"] }] as unknown as IProject[];
 
-    const filters = getDynamicFilters(projects, "filterTags", [
-      { name: "AAA", tag: "a" },
-      { name: "BBB", tag: "b" },
-      { name: "Everything", tag: "*" },
-    ]);
+      const filters = [
+        { name: "All", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+        { name: "CCC", tag: "c", isActive: false },
+        { name: "DDD", tag: "d", isActive: false },
+      ];
 
-    expect(filters).toEqual([
-      { name: "AAA", tag: "a" },
-      { name: "BBB", tag: "b" },
-      { name: "Everything", tag: "*" },
-    ]);
+      const neededFilters = getNeededFilters(projects, "filterTags", filters);
+
+      expect(neededFilters).toEqual([
+        { name: "All", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+      ]);
+    });
   });
 
-  it.skip('order of filters determines the order of returned filters. "All" if not specified otherwise, should be always the first one', () => {
-    const projects = [
-      { filterTags: ["d", "b"] },
-      { filterTags: ["c", "a"] },
-    ] as unknown as IProject[];
+  describe("Order of filters", () => {
+    it('order of filters determines the order of returned filters. "All" if not specified otherwise, should be always the first one', () => {
+      const talks = [
+        { language: "polish" },
+        { language: "english" },
+        { language: "spanish" },
+      ] as unknown as ITalk[];
 
-    const filters = getDynamicFilters(projects, "filterTags", [
-      { name: "CCC", tag: "c" },
-      { name: "DDD", tag: "d" },
-      { name: "AAA", tag: "a" },
-      { name: "BBB", tag: "b" },
-      { name: "All", tag: "*" },
-    ]);
+      const filters = [
+        { name: "🇬🇧", tag: "english", isActive: false },
+        { name: "🇵🇱", tag: "polish", isActive: false },
+        { name: "🌎", tag: allFilterTag, isActive: false },
+        { name: "🇪🇸", tag: "spanish", isActive: false },
+      ];
 
-    console.log(filters);
+      const neededFilters = getNeededFilters(talks, "language", filters);
 
-    expect(filters).toEqual([
-      { name: "CCC", tag: "c" },
-      { name: "DDD", tag: "d" },
-      { name: "AAA", tag: "a" },
-      { name: "BBB", tag: "b" },
-      { name: "All", tag: "*" },
-    ]);
+      expect(neededFilters).toEqual([
+        { name: "🇬🇧", tag: "english", isActive: false },
+        { name: "🇵🇱", tag: "polish", isActive: false },
+        { name: "🌎", tag: allFilterTag, isActive: false },
+        { name: "🇪🇸", tag: "spanish", isActive: false },
+      ]);
+    });
   });
 });

@@ -8,6 +8,7 @@ export { default as Companies } from "./Companies.vue";
 export { default as CoverImage } from "./CoverImage.vue";
 export { default as FeaturedIn } from "./FeaturedIn.vue";
 export { default as FeaturedProjects } from "./FeaturedProjects.vue";
+export { default as Filterable } from "./Filterable.vue";
 export { default as Filters } from "./Filters.vue";
 export { default as Footer } from "./Footer.vue";
 export { default as HireMeFooter } from "./HireMeFooter.vue";

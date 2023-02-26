@@ -4,6 +4,7 @@
 /* Ref: http://isotope.metafizzy.co/ */
 // init Isotope
 
+import { allFilterTag } from "@/types";
 import imagesLoaded from "imagesloaded";
 import Isotope from "isotope-layout";
 
@@ -25,31 +26,26 @@ export function setupIsotopeFilters(filterNames: string[]): void {
         // filter items on click
         filterItems.forEach((filterItem) => {
           filterItem.addEventListener("click", () => {
-            //toggle active class
-            for (const siblingFilterItem of filterItem?.parentNode?.children ||
-              []) {
-              siblingFilterItem.classList.remove("active");
-            }
-            filterItem.classList.add("active");
-
-            const activeFilters = filterNames.map(
-              (filterName) =>
-                // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-                document
-                  .querySelector(`#${filterName} .type.active`)!
-                  .getAttribute("data-filter")!
-            );
-
             iso.arrange({
               filter: function (item) {
                 const matchFilter = (filter: string) =>
-                  filter === "*" || item.classList.contains(filter);
+                  filter === allFilterTag || item.classList.contains(filter);
 
-                return activeFilters.every(matchFilter);
+                return getActiveFilters(filterNames).every(matchFilter);
               },
             });
           });
         });
       });
     });
+}
+
+function getActiveFilters(filterNames: string[]): string[] {
+  return filterNames.map(
+    (filterName) =>
+      // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+      document
+        .querySelector(`#${filterName} .type.active`)!
+        .getAttribute("data-filter")!
+  );
 }

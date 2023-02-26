@@ -1,14 +1,13 @@
 <template>
   <div class="text-center">
     <ul :id="name" class="filters mb-5 mx-auto ps-0">
-      <li class="type active" :data-filter="allFilterTag">
-        {{ allFilterName }}
-      </li>
       <li
-        v-for="{ tag, name: filterName } in nonAllFilters"
+        v-for="{ tag, name: filterName, isActive } in modelValue"
         :key="tag"
         class="type"
+        :class="{ active: isActive }"
         :data-filter="tag"
+        @click="updateFilter(tag)"
       >
         {{ filterName }}
       </li>
@@ -18,12 +17,15 @@
 
 <script setup lang="ts">
 import type { IFilter } from "@/types";
-import { allFilterTag } from "@/types";
+const props = defineProps<{ name: string; modelValue: IFilter[] }>();
+const emit = defineEmits(["update:modelValue"]);
 
-const props = defineProps<{ name: string; filters: IFilter[] }>();
-const nonAllFilters = props.filters.filter(
-  (f: { tag: string }) => f.tag !== "*"
-);
-// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
-const allFilterName = props.filters.find((f) => f.tag === allFilterTag)!.name;
+function updateFilter(tag: string): void {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const filters = props.modelValue.map(({ isActive: _, ...filter }) => ({
+    ...filter,
+    isActive: filter.tag === tag,
+  }));
+  emit("update:modelValue", filters);
+}
 </script>

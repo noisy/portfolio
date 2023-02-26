@@ -8,24 +8,48 @@
     </template>
   </PageHeader>
   <section class="section pt-5 px-3 px-lg-0">
-    <Filters name="talk-filters" :filters="talkFilters" />
-    <Filters name="language-filters" :filters="languageFilters" />
-    <div class="container isotope">
-      <div class="container position-relative">
-        <Talk
-          v-for="talk in talks"
-          :key="talk.id"
-          class="isotope-item"
-          :talk="talk"
-        />
-      </div>
-    </div>
+    <Filterable>
+      <template #filters>
+        <Filters name="talk-filters" v-model="talkFilters" />
+        <Filters name="language-filters" v-model="languageFilters" />
+      </template>
+      <template #items>
+        <div class="container position-relative">
+          <Talk
+            v-for="talk in filteredTalks"
+            :key="talk.id"
+            class="item"
+            :class="{ hidden: talk.hidden }"
+            :talk="talk"
+          />
+        </div>
+      </template>
+    </Filterable>
   </section>
 </template>
 
 <script setup lang="ts">
-import { Filters, PageHeader, Talk } from "@/components";
+import { Filterable, Filters, PageHeader, Talk } from "@/components";
 import { useTalks } from "@/composables";
+import { allFilterTag } from "@/types";
+import { computed } from "vue";
 
 const { talks, talkFilters, languageFilters } = useTalks();
+
+const filteredTalks = computed(() => {
+  const result = talks.map((talk) => {
+    const talkTags = talk.filterTags.map((tag) => tag.toLowerCase());
+    const talkFilter = talkFilters.value.find(
+      (filter) => filter.isActive && filter.tag !== allFilterTag
+    );
+    const languageFilter = languageFilters.value.find(
+      (filter) => filter.isActive && filter.tag !== allFilterTag
+    );
+    const show =
+      (talkFilter ? talkTags.includes(talkFilter.tag) : true) &&
+      (languageFilter ? talk.language == languageFilter.tag : true);
+    return { ...talk, hidden: !show };
+  });
+  return result;
+});
 </script>
