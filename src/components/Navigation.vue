@@ -148,6 +148,10 @@ const menuCollapsed = ref(true);
 
 watch(router.currentRoute, updateSlideLine);
 
+window.addEventListener("resize", () => {
+  updateSlideLine(router.currentRoute.value);
+});
+
 function toggleMenu() {
   menuCollapsed.value = !menuCollapsed.value;
 }
