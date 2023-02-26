@@ -1,6 +1,6 @@
 import { allFilterTag, type IFilter } from "@/types/IFilters";
 
-export function getDynamicFilters<
+export function getNeededFilters<
   Items,
   FilterAttributeName extends keyof Items,
   Filter extends IFilter,

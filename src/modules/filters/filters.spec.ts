@@ -1,6 +1,6 @@
 import { allFilterTag, type IProject, type ITalk } from "@/types";
 import { describe, expect, it } from "vitest";
-import { forTestingsOnly, getDynamicFilters } from "./filters";
+import { forTestingsOnly, getNeededFilters } from "./filters";
 
 const { extractUsedFilterTags } = forTestingsOnly;
 
@@ -51,51 +51,58 @@ describe("extractUsedFilterTags", () => {
   });
 });
 
-describe("getDynamicFilters", () => {
+describe("getNeededFiltersBasedOnUsedTags", () => {
   describe("Missing filters", () => {
-    it("getDynamicFilters for tags which do not have a pair in provided filters, throws an error", () => {
+    it("getNeededFiltersBasedOnUsedTags for tags which do not have a pair in provided filters, throws an error", () => {
       const projects = [
         { filterTags: ["a", "b", "c"] },
       ] as unknown as IProject[];
 
+      const filters = [
+        { name: "All", tag: allFilterTag, isActive: false },
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+      ];
+
       expect(() =>
-        getDynamicFilters(projects, "filterTags", [
-          { name: "All", tag: allFilterTag, isActive: false },
-          { name: "AAA", tag: "a", isActive: false },
-          { name: "BBB", tag: "b", isActive: false },
-        ])
+        getNeededFilters(projects, "filterTags", filters)
       ).toThrowError("Some tags do not have pair in filters: c");
     });
 
-    it("getDynamicFilters for missing filter with tag *, throws an error", () => {
+    it("getNeededFiltersBasedOnUsedTags for missing filter with tag *, throws an error", () => {
       const projects = [
         { filterTags: ["a", "b", "c"] },
       ] as unknown as IProject[];
+
+      const filters = [
+        { name: "AAA", tag: "a", isActive: false },
+        { name: "BBB", tag: "b", isActive: false },
+        { name: "CCC", tag: "c", isActive: false },
+      ];
+
       expect(() =>
-        getDynamicFilters(projects, "filterTags", [
-          { name: "AAA", tag: "a", isActive: false },
-          { name: "BBB", tag: "b", isActive: false },
-          { name: "CCC", tag: "c", isActive: false },
-        ])
+        getNeededFilters(projects, "filterTags", filters)
       ).toThrowError("Some tags do not have pair in filters: *");
     });
   });
 
   describe("Pairing tags with filters", () => {
-    it("getDynamicFilters uses defined filters names for specific tags", () => {
+    it("getNeededFiltersBasedOnUsedTags uses defined filters names for specific tags", () => {
       const projects = [
         { filterTags: ["a", "b"] },
         { filterTags: ["c"] },
       ] as unknown as IProject[];
 
-      const filters = getDynamicFilters(projects, "filterTags", [
+      const filters = [
         { name: "All", tag: allFilterTag, isActive: false },
         { name: "AAA", tag: "a", isActive: false },
         { name: "BBB", tag: "b", isActive: false },
         { name: "CCC", tag: "c", isActive: false },
-      ]);
+      ];
 
-      expect(filters).toEqual([
+      const neededFilters = getNeededFilters(projects, "filterTags", filters);
+
+      expect(neededFilters).toEqual([
         { name: "All", tag: allFilterTag, isActive: false },
         { name: "AAA", tag: "a", isActive: false },
         { name: "BBB", tag: "b", isActive: false },
@@ -103,16 +110,18 @@ describe("getDynamicFilters", () => {
       ]);
     });
 
-    it("getDynamicFilters allows to set a name for default All(*) filter", () => {
+    it("getNeededFiltersBasedOnUsedTags allows to set a name for default All(*) filter", () => {
       const projects = [{ filterTags: ["a", "b"] }] as unknown as IProject[];
 
-      const filters = getDynamicFilters(projects, "filterTags", [
+      const filters = [
         { name: "Everything", tag: allFilterTag, isActive: false },
         { name: "AAA", tag: "a", isActive: false },
         { name: "BBB", tag: "b", isActive: false },
-      ]);
+      ];
 
-      expect(filters).toEqual([
+      const neededFilters = getNeededFilters(projects, "filterTags", filters);
+
+      expect(neededFilters).toEqual([
         { name: "Everything", tag: allFilterTag, isActive: false },
         { name: "AAA", tag: "a", isActive: false },
         { name: "BBB", tag: "b", isActive: false },
@@ -121,18 +130,20 @@ describe("getDynamicFilters", () => {
   });
 
   describe("Skipping not needed filters", () => {
-    it("getDynamicFilters skips filters which are not needed", () => {
+    it("getNeededFiltersBasedOnUsedTags skips filters which are not needed", () => {
       const projects = [{ filterTags: ["a", "b"] }] as unknown as IProject[];
 
-      const filters = getDynamicFilters(projects, "filterTags", [
+      const filters = [
         { name: "All", tag: allFilterTag, isActive: false },
         { name: "AAA", tag: "a", isActive: false },
         { name: "BBB", tag: "b", isActive: false },
         { name: "CCC", tag: "c", isActive: false },
         { name: "DDD", tag: "d", isActive: false },
-      ]);
+      ];
 
-      expect(filters).toEqual([
+      const neededFilters = getNeededFilters(projects, "filterTags", filters);
+
+      expect(neededFilters).toEqual([
         { name: "All", tag: allFilterTag, isActive: false },
         { name: "AAA", tag: "a", isActive: false },
         { name: "BBB", tag: "b", isActive: false },
@@ -148,14 +159,16 @@ describe("getDynamicFilters", () => {
         { language: "spanish" },
       ] as unknown as ITalk[];
 
-      const filters = getDynamicFilters(talks, "language", [
+      const filters = [
         { name: "🇬🇧", tag: "english", isActive: false },
         { name: "🇵🇱", tag: "polish", isActive: false },
         { name: "🌎", tag: allFilterTag, isActive: false },
         { name: "🇪🇸", tag: "spanish", isActive: false },
-      ]);
+      ];
 
-      expect(filters).toEqual([
+      const neededFilters = getNeededFilters(talks, "language", filters);
+
+      expect(neededFilters).toEqual([
         { name: "🇬🇧", tag: "english", isActive: false },
         { name: "🇵🇱", tag: "polish", isActive: false },
         { name: "🌎", tag: allFilterTag, isActive: false },

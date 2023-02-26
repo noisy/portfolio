@@ -1,4 +1,4 @@
-import { getDynamicFilters } from "@/modules/filters/filters";
+import { getNeededFilters } from "@/modules/filters/filters";
 import type { ILanguageFilter, ITalk, ITalkFilter } from "@/types";
 import { ref, type Ref } from "vue";
 import { useDB } from "./useDB";
@@ -12,7 +12,7 @@ export function useTalks(): {
 
   return {
     talks,
-    talkFilters: ref(getDynamicFilters(talks, "filterTags", talkFilters)),
-    languageFilters: ref(getDynamicFilters(talks, "language", languageFilters)),
+    talkFilters: ref(getNeededFilters(talks, "filterTags", talkFilters)),
+    languageFilters: ref(getNeededFilters(talks, "language", languageFilters)),
   };
 }
