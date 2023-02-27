@@ -8,7 +8,7 @@ function animateFavicon() {
 
 function updateFavicon() {
   if (favicon) {
-    favicon.href = `favicon_frame${frame++ % frameCount}.png`;
+    favicon.href = `/favicon_frame${frame++ % frameCount}.png`;
   }
 }
 
