@@ -8,6 +8,9 @@
 
 <script setup lang="ts">
 import { Footer, Navigation } from "@/components";
+import { useFavicon } from "@/composables";
+const { animateFavicon } = useFavicon();
+animateFavicon();
 </script>
 
 <style lang="scss">
