@@ -18,7 +18,9 @@
         </li>
         <li class="list-inline-item">
           <font-awesome-icon icon="comment" class="me-2" />
-          <a class="text-link" href="#comments-block">8 Comments</a>
+          <a class="text-link" target="_self" href="#comments-block"
+            >8 Comments</a
+          >
         </li>
       </ul>
     </div>

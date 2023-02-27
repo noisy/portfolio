@@ -101,7 +101,11 @@
                 @click="closeMenu()"
                 >Contact</router-link
               > -->
-              <a class="nav-link" href="#hire-me" @click="closeMenu()"
+              <a
+                class="nav-link"
+                target="_self"
+                href="#hire-me"
+                @click="closeMenu()"
                 >Contact</a
               >
             </li>
