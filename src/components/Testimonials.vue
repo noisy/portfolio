@@ -5,7 +5,11 @@
   >
     <div class="container-fluid">
       <div class="testimonials container">
-        <Carousel :items-to-show="1.5" :wrap-around="true">
+        <Carousel
+          :items-to-show="itemsToShow"
+          :wrap-around="true"
+          :key="itemsToShow"
+        >
           <Slide v-for="t in testimonials" :key="t.author">
             <Testimonial
               class="testimonial"
@@ -29,8 +33,25 @@
 
 <script setup lang="ts">
 import type { ITestimonial } from "@/types";
+import { computed } from "vue";
+import { useBreakpoint } from "vue-composable";
 import { Carousel, Pagination, Slide } from "vue3-carousel";
 import Testimonial from "./Testimonial.vue";
+
+const { XL, XXL } = useBreakpoint({
+  XS: 0,
+  SM: 576,
+  MD: 768,
+  LG: 992,
+  XL: 1200,
+  XXL: 1400,
+});
+
+const itemsToShow = computed(() => {
+  if (XXL.value) return 1.6;
+  if (XL.value) return 1.4;
+  return 1;
+});
 
 defineProps<{ testimonials: ITestimonial[] }>();
 </script>

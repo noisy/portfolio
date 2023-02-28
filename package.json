@@ -16,8 +16,6 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore"
   },
   "dependencies": {
-    "vue": "3.2.31",
-    "vue-router": "4.0.14",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
@@ -27,6 +25,9 @@
     "core-js": "^3.6.5",
     "imagesloaded": "^4.1.4",
     "isotope-layout": "3.0.6",
+    "vue": "3.2.31",
+    "vue-composable": "1.0.0-beta.24",
+    "vue-router": "4.0.14",
     "vue3-carousel": "0.1.21"
   },
   "devDependencies": {
