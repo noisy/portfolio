@@ -16,7 +16,7 @@
       <template #items>
         <div class="container position-relative">
           <Talk
-            v-for="talk in filteredTalks"
+            v-for="talk in filteredTalksSortedByDate"
             :key="talk.id"
             class="item"
             :class="{ hidden: talk.hidden }"
@@ -51,5 +51,11 @@ const filteredTalks = computed(() => {
     return { ...talk, hidden: !show };
   });
   return result;
+});
+
+const filteredTalksSortedByDate = computed(() => {
+  return filteredTalks.value
+    .slice(0)
+    .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 });
 </script>
