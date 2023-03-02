@@ -281,7 +281,7 @@ const db: IDB = {
       title: "Blockchain - czym jest i jak działa",
       conference: "#6 Wrocław Blockchain Meetup",
       description: "",
-      date: "Feb 5, 2018",
+      date: "Aug 28, 2017",
       filterTags: ["blockchain"],
     },
     // {
