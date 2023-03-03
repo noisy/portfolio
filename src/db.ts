@@ -247,6 +247,7 @@ const db: IDB = {
       description: "",
       date: "Oct 18, 2018",
       filterTags: ["git"],
+      slides: "https://slides.com/noisy/git-workflow-pr/",
     },
     {
       source: "youtube",
