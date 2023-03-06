@@ -1,5 +1,10 @@
 <?xml version='1.0' encoding='iso-8859-1'?>
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 462 462" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 462 462">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 462 462" width="50" height="50" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 462 462">
+  <style>
+    path {
+      fill: white;
+    }
+  </style>
   <g>
     <path d="m167,142c4.142,0 7.5-3.358 7.5-7.5v-8c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v8c0,4.142 3.357,7.5 7.5,7.5z"/>
     <path d="m295,142c4.142,0 7.5-3.358 7.5-7.5v-8c0-4.142-3.358-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v8c0,4.142 3.357,7.5 7.5,7.5z"/>
