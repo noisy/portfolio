@@ -19,10 +19,11 @@
   background: $theme-color-primary;
   width: 80px;
   height: 80px;
-  padding-top: 1.25rem;
   top: -40px;
   left: 50%;
   margin-left: -40px;
+  display: grid;
+  place-items: center;
 }
 
 .logo img {

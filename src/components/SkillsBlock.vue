@@ -4,9 +4,7 @@
       class="skills-block-inner bg-white shadow-sm py-4 px-5 position-relative"
     >
       <h4 class="skills-cat text-center mb-3 mt-5">{{ groupName }}</h4>
-      <div
-        class="skills-icon-holder position-absolute d-inline-block rounded-circle text-center"
-      >
+      <div class="skills-icon-holder position-absolute rounded-circle">
         <img class="skills-icon" :src="getAsset(icon)" />
       </div>
       <ul class="skills-list list-unstyled text-secondary">
