@@ -435,7 +435,7 @@
       </div>
 
       <div class="col author-info">
-        <h4 class="mb-2 font-weight-bold">Krzysztof Szumny</h4>
+        <h4 class="mb-2 font-weight-bold"></h4>
         <div class="mb-3">
           I'm a full stack developer with a passion for software development and
           UX. You can follow me via the various channels below:

@@ -12,7 +12,7 @@
           </div>
           <div class="col text-center text-md-start">
             <div class="lead">Hello, my name is</div>
-            <h2 class="mt-0 display-4 font-weight-bold">Krzysztof Szumny</h2>
+            <h2 class="mt-0 display-4 font-weight-bold">{{ fullName }}</h2>
             <div class="bio mb-3">
               I'm a full-stack developer specialised in frontend and backend
               development for complex scalable web apps. I write about web
@@ -43,3 +43,8 @@
     </div>
   </header>
 </template>
+
+<script setup lang="ts">
+import { useMe } from "@/composables";
+const { fullName } = useMe();
+</script>

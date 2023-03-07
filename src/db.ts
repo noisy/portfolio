@@ -2,6 +2,14 @@ import { allFilterTag } from "./types";
 import type { IDB } from "./types/IDB";
 
 const db: IDB = {
+  me: {
+    firstName: "Krzysztof",
+    lastName: "Szumny",
+    fullName: "Krzysztof Szumny",
+    title: "",
+    email: "hello@krzysztofszumny.com",
+    location: "",
+  },
   projects: [
     {
       name: "Seerene",
@@ -349,7 +357,6 @@ const db: IDB = {
     githubProfile: "https://github.com/noisy",
     stackOverflowProfile: "https://stackoverflow.com/users/338581/noisy",
   },
-  contactEmail: "hello@krzysztofszumny.com",
   flags: {
     polish: "🇵🇱",
     english: "🇬🇧",

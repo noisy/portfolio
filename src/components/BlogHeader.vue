@@ -10,7 +10,7 @@
           />
         </div>
         <div class="col align-self-center">
-          <h2 class="page-heading mb-2">Krzysztof Szumny's Blog</h2>
+          <h2 class="page-heading mb-2">{{ fullName }}'s Blog</h2>
           <div class="page-heading-tagline mb-3">
             I write about web development and life as a developer.
             <br class="d-lg-block d-none" />You can follow me via the various
@@ -72,6 +72,7 @@
 </template>
 
 <script setup lang="ts">
-import { useDB } from "@/composables";
+import { useDB, useMe } from "@/composables";
 const { links } = useDB();
+const { fullName } = useMe();
 </script>
