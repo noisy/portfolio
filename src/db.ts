@@ -3,11 +3,11 @@ import type { IDB } from "./types/IDB";
 
 const db: IDB = {
   me: {
-    firstName: "Krzysztof",
+    firstName: "Marek",
     lastName: "Szumny",
-    fullName: "Krzysztof Szumny",
+    fullName: "Marek Szumny",
     title: "",
-    email: "hello@krzysztofszumny.com",
+    email: "szumny.marek@gmail.com",
     location: "",
   },
   projects: [
