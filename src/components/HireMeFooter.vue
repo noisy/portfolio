@@ -15,8 +15,8 @@
         Looking for an experienced full-stack developer to build your web app or
         ship your software product? To start an initial chat, just drop me an
         email at
-        <a class="link-on-bg text-link" :href="`mailto:${contactEmail}`">{{
-          contactEmail
+        <a class="link-on-bg text-link" :href="`mailto:${email}`">{{
+          email
         }}</a>
         or use the
         <router-link class="link-on-bg text-link" :to="{ name: 'contact' }"
@@ -33,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { useDB } from "@/composables/useDB";
+import { useMe } from "@/composables";
 
-const { contactEmail } = useDB();
+const { email } = useMe();
 </script>

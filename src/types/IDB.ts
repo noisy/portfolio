@@ -1,6 +1,7 @@
 import type { ILanguageFilter } from ".";
 import type { IBlogPost } from "./IBlogPost";
 import type { ILanguage } from "./ILanguage";
+import type { IMe } from "./IMe";
 import type {
   ICompany,
   IProject,
@@ -11,6 +12,7 @@ import type { ITalk, ITalkFilter } from "./ITalk";
 import type { ITestimonial } from "./ITestimonial";
 
 export interface IDB {
+  me: IMe;
   projects: IProject[];
   projectFilters: IProjectFilter[];
   companies: ICompany[];
@@ -25,7 +27,6 @@ export interface IDB {
     stackOverflowProfile?: string;
   };
   flags: Record<ILanguage, string>;
-  contactEmail: string;
   blogPosts: IBlogPost[];
   skillsGroups: ISkillGroup[];
 }
