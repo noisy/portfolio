@@ -8,7 +8,15 @@
       <footer class="blockquote-footer presudo-hidden mt-4">
         <div class="row client-profile">
           <div class="col-12 col-md-auto">
-            <img :src="getAsset(pictureUrl)" alt="" class="rounded-circle" />
+            <img
+              :src="
+                pictureUrl
+                  ? getAsset(pictureUrl)
+                  : getAsset(`@/images/testimonials/picture-default.svg`)
+              "
+              alt=""
+              class="photo rounded-circle"
+            />
           </div>
           <div class="col">
             <cite
@@ -38,6 +46,30 @@
                   </a>
                 </span>
               </template>
+              <template v-if="type == 'written'">
+                <span class="d-block position-absolute source-link">
+                  <div>
+                    <img
+                      v-if="signature"
+                      :src="getAsset(`@/images/testimonials/${signature}`)"
+                      alt=""
+                      class="rounded-circle"
+                    />
+                  </div>
+                  <a
+                    class="text-secondary text-link"
+                    :href="url"
+                    target="_blank"
+                  >
+                    Check signed recommendation
+                    <font-awesome-icon
+                      icon="external-link-alt"
+                      class="ms-1"
+                      transform="up-1"
+                    />
+                  </a>
+                </span>
+              </template>
             </cite>
           </div>
         </div>
@@ -54,6 +86,7 @@ defineProps<{
   title: string;
   body: string;
   pictureUrl: string;
+  signature?: string;
   url: string;
   type: string;
 }>();

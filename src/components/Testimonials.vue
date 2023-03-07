@@ -19,6 +19,7 @@
               :picture-url="t.pictureUrl"
               :type="t.type"
               :url="t.url"
+              :signature="t.signature"
             />
           </Slide>
 
