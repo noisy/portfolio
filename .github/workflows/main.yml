@@ -5,6 +5,8 @@ on: [push]
 jobs:
   cypress-run:
     runs-on: ubuntu-latest
+    container:
+      image: cypress/base:14.19.0
     steps:
       - name: Checkout
         uses: actions/checkout@v3
