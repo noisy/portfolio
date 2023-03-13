@@ -1,3 +1,7 @@
+[![Unit tests](https://github.com/noisy/portfolio/actions/workflows/unittests.yml/badge.svg)](https://github.com/noisy/portfolio/actions/workflows/unittests.yml)
+[![Cypress Tests](https://github.com/noisy/portfolio/actions/workflows/cypress.yml/badge.svg)](https://github.com/noisy/portfolio/actions/workflows/cypress.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/2e7e8fbe-a8c3-4773-915f-55a36210e6a1/deploy-status)](https://app.netlify.com/sites/krzysztofszumny/deploys)
+
 # portfolio
 
 This template should help get you started developing with Vue 3 in Vite.
