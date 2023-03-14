@@ -26,6 +26,8 @@ jobs:
           wait-on: "http://localhost:5050"
           wait-on-timeout: 120
           record: true
+          parallel: true
+          group: "reksio"
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
@@ -42,6 +44,8 @@ jobs:
           install: false
           record: true
           component: true
+          parallel: true
+          group: "reksio"
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
