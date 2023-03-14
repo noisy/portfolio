@@ -9,6 +9,7 @@ export default defineConfig({
       return require("./cypress/plugins/index.ts").default(on, config);
     },
     baseUrl: "http://localhost:5050",
+    specPattern: "cypress/e2e/**/*.cy.ts",
   },
 
   component: {
@@ -16,5 +17,6 @@ export default defineConfig({
       framework: "vue",
       bundler: "vite",
     },
+    specPattern: "src/components/**/*.cy.ts",
   },
 });
