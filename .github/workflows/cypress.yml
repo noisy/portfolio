@@ -17,9 +17,10 @@ jobs:
           # just perform install
           runTests: false
 
-      - name: e2e tests
+      - name: E2E tests
         uses: cypress-io/github-action@v5.3.0
         with:
+          config-file: cypress.config.e2e.ts
           install: false
           build: npm run build
           start: npm run preview
@@ -27,7 +28,7 @@ jobs:
           wait-on-timeout: 120
           record: true
         env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_E2E_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -36,14 +37,15 @@ jobs:
           # re-enable PR comment bot
           COMMIT_INFO_SHA: ${{github.event.pull_request.head.sha}}
 
-      - name: components
+      - name: Components tests
         uses: cypress-io/github-action@v5.3.0
         with:
+          config-file: cypress.config.components.ts
           install: false
           record: true
           component: true
         env:
-          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY_2 }}
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_COMPONENTS_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
           # determine the unique run id necessary to re-run the checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
