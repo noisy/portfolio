@@ -10,4 +10,11 @@ export default defineConfig({
     },
     baseUrl: "http://localhost:5050",
   },
+
+  component: {
+    devServer: {
+      framework: "vue",
+      bundler: "vite",
+    },
+  },
 });
