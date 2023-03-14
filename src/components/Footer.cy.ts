@@ -16,6 +16,6 @@ describe("<Footer />", () => {
 
     cy.get("@emailLink")
       .should("have.attr", "href")
-      .and("include", "mailto:hello@krzysztofszumny.com");
+      .and("include", "mailto:reksio@reksio.com");
   });
 });
