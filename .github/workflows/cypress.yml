@@ -10,11 +10,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
-      # Install NPM dependencies, cache them correctly
-      # and run all Cypress tests
+
+      - name: Install dependencies
+        uses: cypress-io/github-action@v5
+        with:
+          # just perform install
+          runTests: false
+
       - name: e2e tests
         uses: cypress-io/github-action@v5.3.0
         with:
+          install: false
           build: npm run build
           start: npm run preview
           wait-on: "http://localhost:5050"
@@ -33,6 +39,7 @@ jobs:
       - name: components
         uses: cypress-io/github-action@v5.3.0
         with:
+          install: false
           record: true
           component: true
         env:
