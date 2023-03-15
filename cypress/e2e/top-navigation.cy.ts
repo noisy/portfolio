@@ -9,6 +9,7 @@ describe("Top navigation test", () => {
     cy.get('.navbar a[href="/blog"]').as("blog");
     cy.get('.navbar a[href="#hire-me"]').as("contact");
   });
+
   it("Should check if top navigation buttons have correct addresses", () => {
     cy.get("@home")
       .invoke("text")
