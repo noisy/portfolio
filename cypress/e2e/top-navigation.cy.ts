@@ -11,68 +11,31 @@ describe("Top navigation test", () => {
   });
 
   it("Should check if top navigation buttons have correct addresses", () => {
-    cy.get("@home").should('have.text', 'Home')
-    cy.get("@projects")
-      .invoke("text")
-      .then((text1) => {
-        cy.get(".navbar")
-          .contains("Projects")
-          .invoke("text")
-          .then((text2) => {
-            expect(text1).to.equal(text2);
-          });
-      });
-    cy.get("@talks")
-      .invoke("text")
-      .then((text1) => {
-        cy.get(".navbar")
-          .contains("Talks")
-          .invoke("text")
-          .then((text2) => {
-            expect(text1).to.equal(text2);
-          });
-      });
-    cy.get("@blog")
-      .invoke("text")
-      .then((text1) => {
-        cy.get(".navbar")
-          .contains("Blog")
-          .invoke("text")
-          .then((text2) => {
-            expect(text1).to.equal(text2);
-          });
-      });
-    cy.get("@contact")
-      .invoke("text")
-      .then((text1) => {
-        cy.get(".navbar")
-          .contains("Contact")
-          .invoke("text")
-          .then((text2) => {
-            expect(text1).to.equal(text2);
-          });
-      });
+    ["Home", "Projects", "Talks", "Blog", "Contact"].forEach((item) => {
+      cy.get(`@${item.toLowerCase()}`).should("include.text", item);
+    });
   });
 
-  it("Should mimic real user interactions with top navigation", () => {
+  describe("navigation flow", () => {
     function goBackToHome() {
       return cy.go("back").location("pathname").should("eq", "/");
     }
-    cy.get("@projects").click();
-    cy.location("pathname").should("eq", "/projects");
-    cy.get("h2").invoke("text").should("eq", "Projects");
-    goBackToHome();
-    cy.get("@talks").click();
-    cy.location("pathname").should("eq", "/talks");
-    cy.get("h2").invoke("text").should("eq", "Talks");
-    goBackToHome();
-    cy.get("@blog").click();
-    cy.location("pathname").should("eq", "/blog");
-    cy.get("h2").invoke("text").should("include", "Blog");
-    goBackToHome();
-    cy.get("@contact").click();
-    cy.url().should("include", "#hire-me");
-    goBackToHome();
+
+    ["Projects", "Talks", "Blog"].forEach((page) => {
+      it(`Should go to ${page} and back`, () => {
+        cy.get(`@${page.toLowerCase()}`).click();
+        cy.location("pathname").should("eq", `/${page.toLowerCase()}`);
+        cy.get("h2").invoke("text").should("include", page);
+        goBackToHome();
+      });
+    });
+
+    it("Should go to contact and back", () => {
+      cy.get("@contact").click();
+      cy.url().should("include", "#hire-me");
+      goBackToHome();
+      // todo: check if we are scrolled back to top
+    });
   });
 
   it("Should check the correct place for slider under every element in top navigation", () => {
