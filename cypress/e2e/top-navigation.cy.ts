@@ -1,21 +1,5 @@
 /// <reference types='cypress' />
 
-const navItems = [
-  // ["Home", "home", "/"],
-  ["Projects", "projects", "/projects"],
-  ["Talks", "talks", "/talks"],
-  ["Blog", "blog", "/blog"],
-  ["Contact", "contact", "#hire-me"],
-];
-
-const database = [
-  { page: "Home", name: "home", address: "/" },
-  { page: "Projects", name: "projects", address: "/projects" },
-  { page: "Talks", name: "talks", address: "/talks" },
-  { page: "Blog", name: "blog", address: "/blog" },
-  { page: "Contact", name: "contact", address: "#hire-me" },
-];
-
 describe("Top navigation test", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -27,33 +11,68 @@ describe("Top navigation test", () => {
   });
 
   it("Should check if top navigation buttons have correct addresses", () => {
-    ["Home", "Projects", "Talks", "Blog", "Contact"].forEach((item) => {
-      cy.get(`@${item.toLowerCase()}`).should("include.text", item);
-    });
+    cy.get("@home").should('have.text', 'Home')
+    cy.get("@projects")
+      .invoke("text")
+      .then((text1) => {
+        cy.get(".navbar")
+          .contains("Projects")
+          .invoke("text")
+          .then((text2) => {
+            expect(text1).to.equal(text2);
+          });
+      });
+    cy.get("@talks")
+      .invoke("text")
+      .then((text1) => {
+        cy.get(".navbar")
+          .contains("Talks")
+          .invoke("text")
+          .then((text2) => {
+            expect(text1).to.equal(text2);
+          });
+      });
+    cy.get("@blog")
+      .invoke("text")
+      .then((text1) => {
+        cy.get(".navbar")
+          .contains("Blog")
+          .invoke("text")
+          .then((text2) => {
+            expect(text1).to.equal(text2);
+          });
+      });
+    cy.get("@contact")
+      .invoke("text")
+      .then((text1) => {
+        cy.get(".navbar")
+          .contains("Contact")
+          .invoke("text")
+          .then((text2) => {
+            expect(text1).to.equal(text2);
+          });
+      });
   });
 
-  describe("navigation flow", () => {
+  it("Should mimic real user interactions with top navigation", () => {
     function goBackToHome() {
       return cy.go("back").location("pathname").should("eq", "/");
     }
-
-    database
-      .filter(({ page }) => page != "Home" && page != "Contact")
-      .forEach(({ page, name, address }) => {
-        it.only(`Should go to ${page} and back`, () => {
-          cy.get(`@${name}`).click();
-          cy.location("pathname").should("eq", address);
-          cy.get("h2").invoke("text").should("include", page);
-          goBackToHome();
-        });
-      });
-
-    it("Should go to contact and back", () => {
-      cy.get("@contact").click();
-      cy.url().should("include", "#hire-me");
-      goBackToHome();
-      // todo: check if we are scrolled back to top
-    });
+    cy.get("@projects").click();
+    cy.location("pathname").should("eq", "/projects");
+    cy.get("h2").invoke("text").should("eq", "Projects");
+    goBackToHome();
+    cy.get("@talks").click();
+    cy.location("pathname").should("eq", "/talks");
+    cy.get("h2").invoke("text").should("eq", "Talks");
+    goBackToHome();
+    cy.get("@blog").click();
+    cy.location("pathname").should("eq", "/blog");
+    cy.get("h2").invoke("text").should("include", "Blog");
+    goBackToHome();
+    cy.get("@contact").click();
+    cy.url().should("include", "#hire-me");
+    goBackToHome();
   });
 
   it("Should check the correct place for slider under every element in top navigation", () => {
