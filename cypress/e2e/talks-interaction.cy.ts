@@ -23,8 +23,8 @@ describe("Talks page correct content", () => {
     cy.get(".section")
       .contains("Docker - Easy Containerization")
       .as("docker-pl");
-    });
-      
+  });
+
   it('should be only "All" filter marked as selected after page being loaded', () => {
     cy.get('#talk-filters > [data-filter="*"]').should("have.class", "active");
     cy.get('[data-filter="git"]').should("not.have.class", "active");
@@ -38,7 +38,7 @@ describe("Talks page correct content", () => {
     cy.get('[data-filter="polish"]').should("not.have.class", "active");
   });
 
-  it('should display all filters', () => {
+  it("should display all filters", () => {
     cy.get("@git-pl").should("be.visible");
     cy.get("@steem-pl").should("be.visible");
     cy.get("@bitcoins-en").should("be.visible");
@@ -47,7 +47,7 @@ describe("Talks page correct content", () => {
     cy.get("@lightning-en").should("be.visible");
     cy.get("@docker-pl").should("be.visible");
   });
-  
+
   it("Should mimic real user interactions with talks buttons and show all talks in each category", () => {
     cy.get('[data-filter="git"]').click();
     cy.get('#talk-filters > [data-filter="*"]').should(
@@ -235,9 +235,5 @@ describe("Talks page correct content", () => {
     cy.get("@blockchain1-pl").should("be.visible");
     cy.get("@lightning-en").should("not.be.visible");
     cy.get("@docker-pl").should("not.be.visible");
-  });
-
-  afterEach(() => {
-    cy.clearCookies();
   });
 });

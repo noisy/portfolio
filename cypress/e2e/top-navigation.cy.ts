@@ -55,50 +55,39 @@ describe("Top navigation test", () => {
   });
 
   it("Should mimic real user interactions with top navigation", () => {
-    function goBackToHome(cy) {
+    function goBackToHome() {
       return cy.go("back").location("pathname").should("eq", "/");
     }
     cy.get("@projects").click();
     cy.location("pathname").should("eq", "/projects");
     cy.get("h2").invoke("text").should("eq", "Projects");
-    goBackToHome(cy);
+    goBackToHome();
     cy.get("@talks").click();
     cy.location("pathname").should("eq", "/talks");
     cy.get("h2").invoke("text").should("eq", "Talks");
-    goBackToHome(cy);
+    goBackToHome();
     cy.get("@blog").click();
     cy.location("pathname").should("eq", "/blog");
     cy.get("h2").invoke("text").should("include", "Blog");
-    goBackToHome(cy);
+    goBackToHome();
     cy.get("@contact").click();
     cy.url().should("include", "#hire-me");
-    goBackToHome(cy);
+    goBackToHome();
   });
 
   it("Should check the correct place for slider under every element in top navigation", () => {
-    cy.get("@projects")
-      .click()
-      .then(($el) => {
-        const leftOffset = Math.round($el.position().left);
-        cy.get("#slide-line").should("have.css", "left", `${leftOffset}px`);
-      });
-    cy.get("@talks")
-      .click()
-      .then(($el) => {
-        const leftOffset = Math.round($el.position().left);
-        cy.get("#slide-line").should("have.css", "left", `${leftOffset}px`);
-      });
-    cy.get("@blog")
-      .click()
-      .then(($el) => {
-        const leftOffset = Math.round($el.position().left);
-        cy.get("#slide-line").should("have.css", "left", `${leftOffset}px`);
-      });
-    cy.get("@home")
-      .click()
-      .then(($el) => {
-        const leftOffset = Math.round($el.position().left);
-        cy.get("#slide-line").should("have.css", "left", `${leftOffset}px`);
-      });
+    function checkSlideLinePosition($el) {
+      const leftOffset = Math.round($el.position().left);
+      cy.get("#slide-line").should("have.css", "left", `${leftOffset}px`);
+    }
+
+    cy.get("@projects").click().then(checkSlideLinePosition);
+    cy.get("@talks").click().then(checkSlideLinePosition);
+    cy.get("@blog").click().then(checkSlideLinePosition);
+    cy.get("@home").click().then(checkSlideLinePosition);
   });
+
+  it(
+    "Should check the correct place for slider under HOVERING over element in top navigation"
+  );
 });
