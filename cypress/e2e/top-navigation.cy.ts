@@ -11,16 +11,7 @@ describe("Top navigation test", () => {
   });
 
   it("Should check if top navigation buttons have correct addresses", () => {
-    cy.get("@home")
-      .invoke("text")
-      .then((text1) => {
-        cy.get(".navbar")
-          .contains("Home")
-          .invoke("text")
-          .then((text2) => {
-            expect(text1).to.equal(text2);
-          });
-      });
+    cy.get("@home").should('have.text', 'Home')
     cy.get("@projects")
       .invoke("text")
       .then((text1) => {
