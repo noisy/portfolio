@@ -23,6 +23,9 @@ describe("Talks page correct content", () => {
     cy.get(".section")
       .contains("Docker - Easy Containerization")
       .as("docker-pl");
+    });
+      
+  it('should be only "All" filter marked as selected after page being loaded', () => {
     cy.get('#talk-filters > [data-filter="*"]').should("have.class", "active");
     cy.get('[data-filter="git"]').should("not.have.class", "active");
     cy.get('[data-filter="docker"]').should("not.have.class", "active");
