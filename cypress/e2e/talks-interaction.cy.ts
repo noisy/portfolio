@@ -38,7 +38,7 @@ describe("Talks page correct content", () => {
     cy.get('[data-filter="polish"]').should("not.have.class", "active");
   });
 
-  it("Should mimic real user interactions with talks buttons and show all talks in each category", () => {
+  it('should display all filters', () => {
     cy.get("@git-pl").should("be.visible");
     cy.get("@steem-pl").should("be.visible");
     cy.get("@bitcoins-en").should("be.visible");
@@ -46,7 +46,9 @@ describe("Talks page correct content", () => {
     cy.get("@blockchain1-pl").should("be.visible");
     cy.get("@lightning-en").should("be.visible");
     cy.get("@docker-pl").should("be.visible");
-
+  });
+  
+  it("Should mimic real user interactions with talks buttons and show all talks in each category", () => {
     cy.get('[data-filter="git"]').click();
     cy.get('#talk-filters > [data-filter="*"]').should(
       "not.have.class",
