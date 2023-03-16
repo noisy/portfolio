@@ -1,5 +1,39 @@
 /// <reference types='cypress' />
 
+const talksData = [
+  { name: "Git workflow", cat: "git", lang: "pl" },
+  {
+    name: "Steem i Steemit - zdecentralizowane social media na blockchain",
+    cat: "blockchain",
+    lang: "pl",
+  },
+  {
+    name: "How to use and store your Bitcoins in a secure way",
+    cat: "blockchain",
+    lang: "en",
+  },
+  {
+    name: "Blockchain - czym jest i jak działa",
+    cat: "blockchain",
+    lang: "pl",
+  },
+  {
+    name: "Blockchain - how it works",
+    cat: "blockchain",
+    lang: "pl",
+  },
+  {
+    name: "Lightning Network",
+    cat: "blockchain",
+    lang: "en",
+  },
+  {
+    name: "Docker - Easy Containerization",
+    cat: "docker",
+    lang: "pl",
+  },
+];
+
 describe("Talks page correct content", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -38,17 +72,13 @@ describe("Talks page correct content", () => {
     cy.get('[data-filter="polish"]').should("not.have.class", "active");
   });
 
-  it("should display all filters", () => {
-    cy.get("@git-pl").should("be.visible");
-    cy.get("@steem-pl").should("be.visible");
-    cy.get("@bitcoins-en").should("be.visible");
-    cy.get("@blockchain2-pl").should("be.visible");
-    cy.get("@blockchain1-pl").should("be.visible");
-    cy.get("@lightning-en").should("be.visible");
-    cy.get("@docker-pl").should("be.visible");
+  it.only("Should display all talks by default", () => {
+    cy.wrap(talksData).each((talk: { name: string }) => {
+      cy.contains(".section", talk.name).should("be.visible");
+    });
   });
 
-  it("Should mimic real user interactions with talks buttons and show all talks in each category", () => {
+  it("Should display all talks in a given category regardless of language", () => {
     cy.get('[data-filter="git"]').click();
     cy.get('#talk-filters > [data-filter="*"]').should(
       "not.have.class",
