@@ -31,4 +31,19 @@ export const projects: RouteRecordRaw[] = [
     name: "project-hiveprojects.io",
     component: HiveProjects,
   },
+  {
+    path: "portfolio",
+    name: "project-portfolio",
+    component: HiveProjects,
+  },
+  {
+    path: "call-of-juarez-the-cartel",
+    name: "project-call-of-juarez-the-cartel",
+    component: HiveProjects,
+  },
+  {
+    path: "neuroshima",
+    name: "project-neuroshima",
+    component: HiveProjects,
+  },
 ];
