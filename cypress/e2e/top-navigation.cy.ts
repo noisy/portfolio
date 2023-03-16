@@ -30,7 +30,7 @@ describe("Top navigation test", () => {
       });
     });
 
-    it("Should go to contact and back", () => {
+    it("Should go to Contact and back", () => {
       cy.get("@contact").click();
       cy.url().should("include", "#hire-me");
       goBackToHome();
