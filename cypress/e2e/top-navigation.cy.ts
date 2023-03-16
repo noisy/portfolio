@@ -44,10 +44,9 @@ describe("Top navigation test", () => {
       cy.get("#slide-line").should("have.css", "left", `${leftOffset}px`);
     }
 
-    cy.get("@projects").click().then(checkSlideLinePosition);
-    cy.get("@talks").click().then(checkSlideLinePosition);
-    cy.get("@blog").click().then(checkSlideLinePosition);
-    cy.get("@home").click().then(checkSlideLinePosition);
+    ["projects", "talks", "blog", "home"].forEach((page) => {
+      cy.get(`@${page}`).click().then(checkSlideLinePosition);
+    });
   });
 
   it(
