@@ -1,5 +1,8 @@
 /// <reference types='cypress' />
 
+import "cypress-real-events";
+import { checkIfElementIsEntirelyInViewport } from "../utils";
+
 describe("Top navigation test", () => {
   beforeEach(() => {
     cy.visit("/");
@@ -30,11 +33,19 @@ describe("Top navigation test", () => {
       });
     });
 
-    it("Should go to Contact and back", () => {
-      cy.get("@contact").click();
+    it("Should scroll to Contact and back", () => {
+      cy.get("@contact").realClick();
       cy.url().should("include", "#hire-me");
+      cy.get("#hire-me")
+        .should("be.visible")
+        .then(checkIfElementIsEntirelyInViewport);
+
       goBackToHome();
-      // todo: check if we are scrolled back to top
+
+      cy.window().then((win) => {
+        // we use 20, because after click and before scrolling site is scrolled a bit
+        expect(win.scrollY).to.be.lessThan(20);
+      });
     });
   });
 

@@ -72,9 +72,9 @@ describe("Talks page correct content", () => {
     cy.get('[data-filter="polish"]').should("not.have.class", "active");
   });
 
-  it.only("Should display all talks by default", () => {
-    cy.wrap(talksData).each((talk: { name: string }) => {
-      cy.contains(".section", talk.name).should("be.visible");
+  it("Should display all talks by default", () => {
+    cy.wrap(talksData).each(({ name }: { name: string }) => {
+      cy.contains(".section", name).should("be.visible");
     });
   });
 
