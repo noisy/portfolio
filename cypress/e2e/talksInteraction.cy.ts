@@ -1,6 +1,6 @@
 /// <reference types='cypress' />
 
-const talksData = [
+const talks = [
   { name: "Git workflow", cat: "git", lang: "pl" },
   {
     name: "Steem i Steemit - zdecentralizowane social media na blockchain",
@@ -73,7 +73,7 @@ describe("Talks page correct content", () => {
   });
 
   it("Should display all talks by default", () => {
-    cy.wrap(talksData).each(({ name }: { name: string }) => {
+    cy.wrap(talks).each(({ name }: { name: string }) => {
       cy.contains(".section", name).should("be.visible");
     });
   });
