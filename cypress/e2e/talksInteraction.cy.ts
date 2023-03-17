@@ -1,16 +1,7 @@
 /// <reference types='cypress' />
 
-const talksFilters = [
-  // "*",
-  // "docker",
-  "git",
-  // "blockchain"
-];
-const languageFilters = [
-  "*",
-  // "polish",
-  // "english"
-];
+const talksFilters = ["*", "docker", "git", "blockchain"];
+const languageFilters = ["*", "polish", "english"];
 
 function assertFiltersWorksCorrectly(
   wrapperSelector: string,
@@ -40,9 +31,6 @@ function assertVisabilityOfItems(
   visibleItems: string[],
   hiddenItems: string[]
 ) {
-  cy.log(visibleItems.join(", "));
-  cy.log(hiddenItems.join(", "));
-
   visibleItems.forEach((item) => {
     cy.get(`@${item}`).should("be.visible");
   });
@@ -61,7 +49,7 @@ function assertVisabilityOfItems(
 }
 
 const talks = [
-  { name: "Git workflow", cat: "git", lang: "pl", alias: "git-pl" },
+  { name: "Git workflow", cat: "git", lang: "polish", alias: "git-pl" },
   {
     name: "Steem i Steemit - zdecentralizowane social media na blockchain",
     cat: "blockchain",
@@ -127,13 +115,12 @@ describe("Talks page correct content", () => {
 
   talksFilters.forEach((talkFilter) => {
     languageFilters.forEach((langFilter) => {
-      it.skip(`Should display proper items for talk filter: ${talkFilter} and language filter ${langFilter}`, () => {
+      it(`Should display proper items for talk filter "${talkFilter}" and language filter "${langFilter}"`, () => {
         assertFiltersWorksCorrectly(
           "#talk-filters",
           talkFilter,
           talksFilters.filter((tf) => tf != talkFilter)
         );
-
         assertFiltersWorksCorrectly(
           "#language-filters",
           langFilter,
@@ -141,11 +128,19 @@ describe("Talks page correct content", () => {
         );
 
         const visibleItems = talks
-          .filter(({ cat, lang }) => cat == talkFilter && lang == langFilter)
+          .filter(
+            ({ cat, lang }) =>
+              (cat == talkFilter || talkFilter == "*") &&
+              (lang == langFilter || langFilter == "*")
+          )
           .map(({ alias }) => alias);
 
         const hiddenItems = talks
-          .filter(({ cat, lang }) => cat != talkFilter || lang != langFilter)
+          .filter(
+            ({ cat, lang }) =>
+              (cat != talkFilter && talkFilter != "*") ||
+              (lang != langFilter && langFilter != "*")
+          )
           .map(({ alias }) => alias);
 
         assertVisabilityOfItems(visibleItems, hiddenItems);
