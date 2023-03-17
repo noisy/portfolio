@@ -76,194 +76,300 @@ describe("Talks page correct content", () => {
     cy.wrap(talks).each(({ name }: { name: string }) => {
       cy.contains(".section", name).should("be.visible");
     });
+
+    // assertVisabilityOfItems(
+    //   [
+    //     "bitcoins-en",
+    //     "blockchain1-pl",
+    //     "blockchain2-pl",
+    //     "docker-pl",
+    //     "git-pl",
+    //     "lightning-en",
+    //     "steem-pl",
+    //   ],
+    //   []
+    // );
   });
+
+  function assertFiltersWorksCorrectly(
+    wrapperSelector: string,
+    filterToSelect: string,
+    expectedDisabledFilters: string[]
+  ) {
+    cy.get(`${wrapperSelector} > [data-filter="${filterToSelect}"]`).click();
+    cy.get(`${wrapperSelector} > [data-filter="${filterToSelect}"]`).should(
+      "have.class",
+      "active"
+    );
+
+    cy.wrap(expectedDisabledFilters).each((item: string) => {
+      cy.get(`${wrapperSelector} > [data-filter="${item}"]`).should(
+        "not.have.class",
+        "active"
+      );
+    });
+
+    // cy.get('#language-filters > [data-filter="*"]').should(
+    //   "have.class",
+    //   "active"
+    // );
+  }
+
+  function assertVisabilityOfItems(
+    visibleItems: string[],
+    hiddenItems: string[]
+  ) {
+    cy.wrap(visibleItems).each((item) => {
+      cy.get(`@${item}`).should("be.visible");
+    });
+
+    cy.wrap(hiddenItems).each((item) => {
+      cy.get(`@${item}`).should("not.be.visible");
+    });
+  }
 
   it("Should display all talks in a given category regardless of language", () => {
-    cy.get('[data-filter="git"]').click();
-    cy.get('#talk-filters > [data-filter="*"]').should(
-      "not.have.class",
-      "active"
+    assertFiltersWorksCorrectly("#talk-filters", "git", [
+      "*",
+      "docker",
+      "blockchain",
+    ]);
+    assertVisabilityOfItems(
+      ["git-pl"],
+      [
+        "bitcoins-en",
+        "blockchain1-pl",
+        "blockchain2-pl",
+        "docker-pl",
+        "lightning-en",
+        "steem-pl",
+      ]
     );
-    cy.get('[data-filter="git"]').should("have.class", "active");
-    cy.get('[data-filter="docker"]').should("not.have.class", "active");
-    cy.get('[data-filter="blockchain"]').should("not.have.class", "active");
-    cy.get('#language-filters > [data-filter="*"]').should(
-      "have.class",
-      "active"
-    );
-    cy.get("@steem-pl").should("not.be.visible");
-    cy.get("@bitcoins-en").should("not.be.visible");
-    cy.get("@blockchain2-pl").should("not.be.visible");
-    cy.get("@blockchain1-pl").should("not.be.visible");
-    cy.get("@lightning-en").should("not.be.visible");
-    cy.get("@docker-pl").should("not.be.visible");
 
-    cy.get('[data-filter="docker"]').click();
-    cy.get('#talk-filters > [data-filter="*"]').should(
-      "not.have.class",
-      "active"
+    assertFiltersWorksCorrectly("#talk-filters", "docker", [
+      "*",
+      "git",
+      "blockchain",
+    ]);
+    assertVisabilityOfItems(
+      ["docker-pl"],
+      [
+        "bitcoins-en",
+        "blockchain1-pl",
+        "blockchain2-pl",
+        "git-pl",
+        "lightning-en",
+        "steem-pl",
+      ]
     );
-    cy.get('[data-filter="git"]').should("not.have.class", "active");
-    cy.get('[data-filter="docker"]').should("have.class", "active");
-    cy.get('[data-filter="blockchain"]').should("not.have.class", "active");
-    cy.get('#language-filters > [data-filter="*"]').should(
-      "have.class",
-      "active"
-    );
-    cy.get("@git-pl").should("not.be.visible");
-    cy.get("@steem-pl").should("not.be.visible");
-    cy.get("@bitcoins-en").should("not.be.visible");
-    cy.get("@blockchain2-pl").should("not.be.visible");
-    cy.get("@blockchain1-pl").should("not.be.visible");
-    cy.get("@lightning-en").should("not.be.visible");
-    cy.get("@docker-pl").should("be.visible");
 
-    cy.get('[data-filter="blockchain"]').click();
-    cy.get('#talk-filters > [data-filter="*"]').should(
-      "not.have.class",
-      "active"
+    assertFiltersWorksCorrectly("#talk-filters", "blockchain", [
+      "*",
+      "git",
+      "docker",
+    ]);
+    assertVisabilityOfItems(
+      [
+        "bitcoins-en",
+        "blockchain1-pl",
+        "blockchain2-pl",
+        "lightning-en",
+        "steem-pl",
+      ],
+      ["docker-pl", "git-pl"]
     );
-    cy.get('[data-filter="git"]').should("not.have.class", "active");
-    cy.get('[data-filter="docker"]').should("not.have.class", "active");
-    cy.get('[data-filter="blockchain"]').should("have.class", "active");
-    cy.get('#language-filters > [data-filter="*"]').should(
-      "have.class",
-      "active"
-    );
-    cy.get("@git-pl").should("not.be.visible");
-    cy.get("@steem-pl").should("be.visible");
-    cy.get("@bitcoins-en").should("be.visible");
-    cy.get("@blockchain2-pl").should("be.visible");
-    cy.get("@blockchain1-pl").should("be.visible");
-    cy.get("@lightning-en").should("be.visible");
-    cy.get("@docker-pl").should("not.be.visible");
   });
 
-  it("Should mimic real user interactions with talks buttons and show correct English and Polish talks in each category", () => {
-    cy.get('[data-filter="english"]').click();
-    cy.get('#language-filters > [data-filter="*"]').should(
-      "not.have.class",
-      "active"
-    );
-    cy.get('[data-filter="english"]').should("have.class", "active");
-    cy.get('[data-filter="polish"]').should("not.have.class", "active");
-    cy.get("@git-pl").should("not.be.visible");
-    cy.get("@steem-pl").should("not.be.visible");
-    cy.get("@bitcoins-en").should("be.visible");
-    cy.get("@blockchain2-pl").should("not.be.visible");
-    cy.get("@blockchain1-pl").should("not.be.visible");
-    cy.get("@lightning-en").should("be.visible");
-    cy.get("@docker-pl").should("not.be.visible");
+  it("Given talks from particular category, it should display proper items in regards of selected language filter", () => {
+    ////////// FOR ALL talk category: *, ENGLISH, POLISH
+    assertFiltersWorksCorrectly("#talk-filters", "*", [
+      "git",
+      "docker",
+      "blockchain",
+    ]);
 
-    cy.get('[data-filter="polish"]').click();
-    cy.get('#language-filters > [data-filter="*"]').should(
-      "not.have.class",
-      "active"
+    assertFiltersWorksCorrectly("#language-filters", "english", [
+      "*",
+      "polish",
+    ]);
+    assertVisabilityOfItems(
+      ["bitcoins-en", "lightning-en"],
+      ["blockchain1-pl", "blockchain2-pl", "docker-pl", "git-pl", "steem-pl"]
     );
-    cy.get('[data-filter="english"]').should("not.have.class", "active");
-    cy.get('[data-filter="polish"]').should("have.class", "active");
-    cy.get("@git-pl").should("be.visible");
-    cy.get("@steem-pl").should("be.visible");
-    cy.get("@bitcoins-en").should("not.be.visible");
-    cy.get("@blockchain2-pl").should("be.visible");
-    cy.get("@blockchain1-pl").should("be.visible");
-    cy.get("@lightning-en").should("not.be.visible");
-    cy.get("@docker-pl").should("be.visible");
 
-    cy.get('#language-filters > [data-filter="*"]').click;
-    cy.get('[data-filter="git"]').click();
-    cy.get('[data-filter="english"]').click();
-    cy.get('#language-filters > [data-filter="*"]').should(
-      "not.have.class",
-      "active"
+    assertFiltersWorksCorrectly("#language-filters", "polish", [
+      "*",
+      "english",
+    ]);
+    assertVisabilityOfItems(
+      ["blockchain1-pl", "blockchain2-pl", "docker-pl", "git-pl", "steem-pl"],
+      ["bitcoins-en", "lightning-en"]
     );
-    cy.get('[data-filter="english"]').should("have.class", "active");
-    cy.get('[data-filter="polish"]').should("not.have.class", "active");
-    cy.get("@git-pl").should("not.be.visible");
-    cy.get("@steem-pl").should("not.be.visible");
-    cy.get("@bitcoins-en").should("not.be.visible");
-    cy.get("@blockchain2-pl").should("not.be.visible");
-    cy.get("@blockchain1-pl").should("not.be.visible");
-    cy.get("@lightning-en").should("not.be.visible");
-    cy.get("@docker-pl").should("not.be.visible");
 
-    cy.get('[data-filter="polish"]').click();
-    cy.get('#language-filters > [data-filter="*"]').should(
-      "not.have.class",
-      "active"
-    );
-    cy.get('[data-filter="english"]').should("not.have.class", "active");
-    cy.get('[data-filter="polish"]').should("have.class", "active");
-    cy.get("@git-pl").should("be.visible");
-    cy.get("@steem-pl").should("not.be.visible");
-    cy.get("@bitcoins-en").should("not.be.visible");
-    cy.get("@blockchain2-pl").should("not.be.visible");
-    cy.get("@blockchain1-pl").should("not.be.visible");
-    cy.get("@lightning-en").should("not.be.visible");
-    cy.get("@docker-pl").should("not.be.visible");
+    ////////// FOR GIT: *, ENGLISH, POLISH
 
-    cy.get('#language-filters > [data-filter="*"]').click;
-    cy.get('[data-filter="docker"]').click();
-    cy.get('[data-filter="english"]').click();
-    cy.get('#language-filters > [data-filter="*"]').should(
-      "not.have.class",
-      "active"
-    );
-    cy.get('[data-filter="english"]').should("have.class", "active");
-    cy.get('[data-filter="polish"]').should("not.have.class", "active");
-    cy.get("@git-pl").should("not.be.visible");
-    cy.get("@steem-pl").should("not.be.visible");
-    cy.get("@bitcoins-en").should("not.be.visible");
-    cy.get("@blockchain2-pl").should("not.be.visible");
-    cy.get("@blockchain1-pl").should("not.be.visible");
-    cy.get("@lightning-en").should("not.be.visible");
-    cy.get("@docker-pl").should("not.be.visible");
+    assertFiltersWorksCorrectly("#talk-filters", "git", [
+      "*",
+      "docker",
+      "blockchain",
+    ]);
 
-    cy.get('[data-filter="polish"]').click();
-    cy.get('#language-filters > [data-filter="*"]').should(
-      "not.have.class",
-      "active"
-    );
-    cy.get('[data-filter="english"]').should("not.have.class", "active");
-    cy.get('[data-filter="polish"]').should("have.class", "active");
-    cy.get("@git-pl").should("not.be.visible");
-    cy.get("@steem-pl").should("not.be.visible");
-    cy.get("@bitcoins-en").should("not.be.visible");
-    cy.get("@blockchain2-pl").should("not.be.visible");
-    cy.get("@blockchain1-pl").should("not.be.visible");
-    cy.get("@lightning-en").should("not.be.visible");
-    cy.get("@docker-pl").should("be.visible");
+    assertFiltersWorksCorrectly("#language-filters", "*", [
+      "polish",
+      "english",
+    ]);
 
-    cy.get('#language-filters > [data-filter="*"]').click;
-    cy.get('[data-filter="blockchain"]').click();
-    cy.get('[data-filter="english"]').click();
-    cy.get('#language-filters > [data-filter="*"]').should(
-      "not.have.class",
-      "active"
+    assertVisabilityOfItems(
+      ["git-pl"],
+      [
+        "bitcoins-en",
+        "blockchain1-pl",
+        "blockchain2-pl",
+        "docker-pl",
+        "lightning-en",
+        "steem-pl",
+      ]
     );
-    cy.get('[data-filter="english"]').should("have.class", "active");
-    cy.get('[data-filter="polish"]').should("not.have.class", "active");
-    cy.get("@git-pl").should("not.be.visible");
-    cy.get("@steem-pl").should("not.be.visible");
-    cy.get("@bitcoins-en").should("be.visible");
-    cy.get("@blockchain2-pl").should("not.be.visible");
-    cy.get("@blockchain1-pl").should("not.be.visible");
-    cy.get("@lightning-en").should("be.visible");
-    cy.get("@docker-pl").should("not.be.visible");
 
-    cy.get('[data-filter="polish"]').click();
-    cy.get('#language-filters > [data-filter="*"]').should(
-      "not.have.class",
-      "active"
+    assertFiltersWorksCorrectly("#language-filters", "english", [
+      "*",
+      "polish",
+    ]);
+
+    assertVisabilityOfItems(
+      [],
+      [
+        "bitcoins-en",
+        "blockchain1-pl",
+        "blockchain2-pl",
+        "docker-pl",
+        "git-pl",
+        "lightning-en",
+        "steem-pl",
+      ]
     );
-    cy.get('[data-filter="english"]').should("not.have.class", "active");
-    cy.get('[data-filter="polish"]').should("have.class", "active");
-    cy.get("@git-pl").should("not.be.visible");
-    cy.get("@steem-pl").should("be.visible");
-    cy.get("@bitcoins-en").should("not.be.visible");
-    cy.get("@blockchain2-pl").should("be.visible");
-    cy.get("@blockchain1-pl").should("be.visible");
-    cy.get("@lightning-en").should("not.be.visible");
-    cy.get("@docker-pl").should("not.be.visible");
+
+    assertFiltersWorksCorrectly("#language-filters", "polish", [
+      "*",
+      "english",
+    ]);
+
+    assertVisabilityOfItems(
+      ["git-pl"],
+      [
+        "bitcoins-en",
+        "blockchain1-pl",
+        "blockchain2-pl",
+        "docker-pl",
+        "lightning-en",
+        "steem-pl",
+      ]
+    );
+
+    ///////////
+
+    ////////// FOR DOCKER: *, ENGLISH, POLISH
+
+    assertFiltersWorksCorrectly("#talk-filters", "docker", [
+      "*",
+      "git",
+      "blockchain",
+    ]);
+
+    assertFiltersWorksCorrectly("#language-filters", "*", [
+      "polish",
+      "english",
+    ]);
+
+    assertVisabilityOfItems(
+      ["docker-pl"],
+      [
+        "bitcoins-en",
+        "blockchain1-pl",
+        "blockchain2-pl",
+        "git-pl",
+        "lightning-en",
+        "steem-pl",
+      ]
+    );
+
+    assertFiltersWorksCorrectly("#language-filters", "english", [
+      "*",
+      "polish",
+    ]);
+
+    assertVisabilityOfItems(
+      [],
+      [
+        "bitcoins-en",
+        "blockchain1-pl",
+        "blockchain2-pl",
+        "docker-pl",
+        "git-pl",
+        "lightning-en",
+        "steem-pl",
+      ]
+    );
+
+    assertFiltersWorksCorrectly("#language-filters", "polish", [
+      "*",
+      "english",
+    ]);
+
+    assertVisabilityOfItems(
+      ["docker-pl"],
+      [
+        "bitcoins-en",
+        "blockchain1-pl",
+        "blockchain2-pl",
+        "git-pl",
+        "lightning-en",
+        "steem-pl",
+      ]
+    );
+
+    ////////// FOR BLOCKCHAIN: *, ENGLISH, POLISH
+
+    assertFiltersWorksCorrectly("#talk-filters", "blockchain", [
+      "*",
+      "git",
+      "docker",
+    ]);
+
+    assertFiltersWorksCorrectly("#language-filters", "*", [
+      "polish",
+      "english",
+    ]);
+
+    assertVisabilityOfItems(
+      [
+        "bitcoins-en",
+        "blockchain1-pl",
+        "blockchain2-pl",
+        "lightning-en",
+        "steem-pl",
+      ],
+      ["docker-pl", "git-pl"]
+    );
+
+    assertFiltersWorksCorrectly("#language-filters", "english", [
+      "*",
+      "polish",
+    ]);
+
+    assertVisabilityOfItems(
+      ["bitcoins-en", "lightning-en"],
+      ["steem-pl", "blockchain1-pl", "blockchain2-pl", "docker-pl", "git-pl"]
+    );
+
+    assertFiltersWorksCorrectly("#language-filters", "polish", [
+      "*",
+      "english",
+    ]);
+
+    assertVisabilityOfItems(
+      ["blockchain1-pl", "blockchain2-pl", "steem-pl"],
+      ["bitcoins-en", "docker-pl", "git-pl", "lightning-en"]
+    );
   });
 });
