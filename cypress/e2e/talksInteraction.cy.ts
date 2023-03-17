@@ -1,36 +1,102 @@
 /// <reference types='cypress' />
 
+const talksFilters = [
+  // "*",
+  // "docker",
+  "git",
+  // "blockchain"
+];
+const languageFilters = [
+  "*",
+  // "polish",
+  // "english"
+];
+
+function assertFiltersWorksCorrectly(
+  wrapperSelector: string,
+  filterToSelect: string,
+  expectedDisabledFilters: string[]
+) {
+  cy.get(`${wrapperSelector} > [data-filter="${filterToSelect}"]`).click();
+  cy.get(`${wrapperSelector} > [data-filter="${filterToSelect}"]`).should(
+    "have.class",
+    "active"
+  );
+
+  cy.wrap(expectedDisabledFilters).each((item: string) => {
+    cy.get(`${wrapperSelector} > [data-filter="${item}"]`).should(
+      "not.have.class",
+      "active"
+    );
+  });
+
+  // cy.get('#language-filters > [data-filter="*"]').should(
+  //   "have.class",
+  //   "active"
+  // );
+}
+
+function assertVisabilityOfItems(
+  visibleItems: string[],
+  hiddenItems: string[]
+) {
+  cy.log(visibleItems.join(", "));
+  cy.log(hiddenItems.join(", "));
+
+  visibleItems.forEach((item) => {
+    cy.get(`@${item}`).should("be.visible");
+  });
+
+  // cy.wrap(visibleItems).each((item) => {
+  //   cy.get(`@${item}`).should("be.visible");
+  // });
+
+  hiddenItems.forEach((item) => {
+    cy.get(`@${item}`).should("not.be.visible");
+  });
+
+  // cy.wrap(hiddenItems).each((item) => {
+  //   cy.get(`@${item}`).should("not.be.visible");
+  // });
+}
+
 const talks = [
-  { name: "Git workflow", cat: "git", lang: "pl" },
+  { name: "Git workflow", cat: "git", lang: "pl", alias: "git-pl" },
   {
     name: "Steem i Steemit - zdecentralizowane social media na blockchain",
     cat: "blockchain",
-    lang: "pl",
+    lang: "polish",
+    alias: "steem-pl",
   },
   {
     name: "How to use and store your Bitcoins in a secure way",
     cat: "blockchain",
-    lang: "en",
+    lang: "english",
+    alias: "bitcoins-en",
   },
   {
     name: "Blockchain - czym jest i jak działa",
     cat: "blockchain",
-    lang: "pl",
+    lang: "polish",
+    alias: "blockchain2-pl",
   },
   {
     name: "Blockchain - how it works",
     cat: "blockchain",
-    lang: "pl",
+    lang: "polish",
+    alias: "blockchain1-pl",
   },
   {
     name: "Lightning Network",
     cat: "blockchain",
-    lang: "en",
+    lang: "english",
+    alias: "lightning-en",
   },
   {
     name: "Docker - Easy Containerization",
     cat: "docker",
-    lang: "pl",
+    lang: "polish",
+    alias: "docker-pl",
   },
 ];
 
@@ -57,6 +123,34 @@ describe("Talks page correct content", () => {
     cy.get(".section")
       .contains("Docker - Easy Containerization")
       .as("docker-pl");
+  });
+
+  talksFilters.forEach((talkFilter) => {
+    languageFilters.forEach((langFilter) => {
+      it.skip(`Should display proper items for talk filter: ${talkFilter} and language filter ${langFilter}`, () => {
+        assertFiltersWorksCorrectly(
+          "#talk-filters",
+          talkFilter,
+          talksFilters.filter((tf) => tf != talkFilter)
+        );
+
+        assertFiltersWorksCorrectly(
+          "#language-filters",
+          langFilter,
+          languageFilters.filter((lf) => lf != langFilter)
+        );
+
+        const visibleItems = talks
+          .filter(({ cat, lang }) => cat == talkFilter && lang == langFilter)
+          .map(({ alias }) => alias);
+
+        const hiddenItems = talks
+          .filter(({ cat, lang }) => cat != talkFilter || lang != langFilter)
+          .map(({ alias }) => alias);
+
+        assertVisabilityOfItems(visibleItems, hiddenItems);
+      });
+    });
   });
 
   it('should be only "All" filter marked as selected after page being loaded', () => {
@@ -90,43 +184,6 @@ describe("Talks page correct content", () => {
     //   []
     // );
   });
-
-  function assertFiltersWorksCorrectly(
-    wrapperSelector: string,
-    filterToSelect: string,
-    expectedDisabledFilters: string[]
-  ) {
-    cy.get(`${wrapperSelector} > [data-filter="${filterToSelect}"]`).click();
-    cy.get(`${wrapperSelector} > [data-filter="${filterToSelect}"]`).should(
-      "have.class",
-      "active"
-    );
-
-    cy.wrap(expectedDisabledFilters).each((item: string) => {
-      cy.get(`${wrapperSelector} > [data-filter="${item}"]`).should(
-        "not.have.class",
-        "active"
-      );
-    });
-
-    // cy.get('#language-filters > [data-filter="*"]').should(
-    //   "have.class",
-    //   "active"
-    // );
-  }
-
-  function assertVisabilityOfItems(
-    visibleItems: string[],
-    hiddenItems: string[]
-  ) {
-    cy.wrap(visibleItems).each((item) => {
-      cy.get(`@${item}`).should("be.visible");
-    });
-
-    cy.wrap(hiddenItems).each((item) => {
-      cy.get(`@${item}`).should("not.be.visible");
-    });
-  }
 
   it("Should display all talks in a given category regardless of language", () => {
     assertFiltersWorksCorrectly("#talk-filters", "git", [
