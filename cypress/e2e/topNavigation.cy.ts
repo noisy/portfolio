@@ -60,7 +60,18 @@ describe("Top navigation test", () => {
     });
   });
 
-  it(
-    "Should check the correct place for slider under HOVERING over element in top navigation"
-  );
+  it.skip("Should check the correct place for slider under every clicked and hovered element in top navigation", () => {
+    //Sometimes works, sometimes not. It looks like slider moves to previous place before realHover reads it's position.
+    function checkSlideLinePosition($el) {
+      const leftOffset = Math.round($el.position().left);
+      cy.get("#slide-line").should("have.css", "left", `${leftOffset}px`);
+    }
+
+    ["projects", "talks", "blog", "home"].forEach((page) => {
+      cy.get(`@${page}`).click().then(checkSlideLinePosition);
+      ["home", "projects", "talks", "blog", "contact"].forEach((page) => {
+        cy.get(`@${page}`).realHover().then(checkSlideLinePosition);
+      });
+    });
+  });
 });
