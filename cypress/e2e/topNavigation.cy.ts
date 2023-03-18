@@ -49,19 +49,9 @@ describe("Top navigation test", () => {
     });
   });
 
-  it("Should check the correct place for slider under every element in top navigation", () => {
-    function checkSlideLinePosition($el) {
-      const leftOffset = Math.round($el.position().left);
-      cy.get("#slide-line").should("have.css", "left", `${leftOffset}px`);
-    }
-
-    ["projects", "talks", "blog", "home"].forEach((page) => {
-      cy.get(`@${page}`).click().then(checkSlideLinePosition);
-    });
-  });
-
-  it.skip("Should check the correct place for slider under every clicked and hovered element in top navigation", () => {
-    //Sometimes works, sometimes not. It looks like slider moves to previous place before realHover reads it's position.
+  it("Should check the correct place for slider under every clicked and hovered element in top navigation", () => {
+    // Warning! This test can sometimes fail when run in Cypress Studio, because how Navigation component is implemented.
+    // TL;DR; any mouse movment during tests can cause this test to fail.
     function checkSlideLinePosition($el) {
       const leftOffset = Math.round($el.position().left);
       cy.get("#slide-line").should("have.css", "left", `${leftOffset}px`);
