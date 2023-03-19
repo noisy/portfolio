@@ -10,12 +10,17 @@ export type IProjectBadge =
   | "Vue"
   | "TypeScript"
   | "Blockchain"
-  | "jQuery";
+  | "jQuery"
+  | "Game"
+  | "Board Game"
+  | "Open Source"
+  | "Rest API";
 
 export type ITechnology =
   | "android"
   | "angular"
   | "apollographql"
+  | "bootstrap"
   | "c"
   | "cookiecutter"
   | "cpp"
@@ -45,15 +50,11 @@ export type ITechnology =
   | "vue";
 
 export type IProjectFilterTag =
-  | "angular"
+  | "responsive"
+  | "bootstrap"
   | "vue"
   | "python-django"
-  | "js-ts"
-  | "android"
-  | "java"
-  | "blockchain"
-  | "react"
-  | "c-cpp";
+  | "js-ts";
 
 export interface IProjectFilter extends IFilter {
   name: string;

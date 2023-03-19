@@ -4,17 +4,17 @@
   <Companies />
   <Testimonials :testimonials="testimonials" />
   <FeaturedProjects />
-  <LatestBlogPosts />
-  <FeaturedIn />
+  <!-- <LatestBlogPosts /> -->
+  <!-- <FeaturedIn /> -->
 </template>
 
 <script setup lang="ts">
 import {
   Bio,
   Companies,
-  FeaturedIn,
+  // FeaturedIn,
   FeaturedProjects,
-  LatestBlogPosts,
+  // LatestBlogPosts,
   SkillsOverview,
   Testimonials,
 } from "@/components";
