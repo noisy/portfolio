@@ -74,8 +74,8 @@ describe("Top navigation in mobile view (below 992px width) test", () => {
               "rgba(255, 255, 255, 0.55)"
             );
           });
-          ["home", "projects", "talks", "blog", "contact"].forEach((page3) => {
-            cy.get(`@${page3}`)
+          ["home", "projects", "talks", "blog", "contact"].forEach((alias) => {
+            cy.get(`@${alias}`)
               .realHover()
               .then(() => {
                 cy.get(`@${page3}`).should(
