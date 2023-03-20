@@ -1,11 +1,14 @@
 /// <reference types='cypress' />
 
-Cypress.config("viewportWidth", 990);
-
 import "cypress-real-events";
 import { checkIfElementIsEntirelyInViewport, goBackToHome } from "../utils";
+import { bootstrapBreakpoints } from "../utils/constants";
 
-describe("Top navigation in mobile view (below 992px width) test", () => {
+Cypress.config("viewportWidth", bootstrapBreakpoints.lg - 1);
+
+describe(`Top navigation in mobile view (below ${bootstrapBreakpoints.lg}px width) test`, () => {
+  let aliases: string[];
+
   beforeEach(() => {
     cy.visit("/");
     cy.get('.navbar a[href="/"]').as("home");
@@ -13,22 +16,29 @@ describe("Top navigation in mobile view (below 992px width) test", () => {
     cy.get('.navbar a[href="/talks"]').as("talks");
     cy.get('.navbar a[href="/blog"]').as("blog");
     cy.get('.navbar a[href="#hire-me"]').as("contact");
+    aliases = ["@home", "@projects", "@talks", "@blog", "@contact"];
   });
 
   it("Should open and close top navigation with toggler icon on every page", () => {
-    ["Home", "Projects", "Talks", "Blog", "Contact"].forEach((item) => {
+    aliases.forEach((alias) => {
       cy.get("#navigation").should("have.class", "collapse");
       cy.get(".navbar-toggler-icon").click();
       cy.get("#navigation").should("not.have.class", "collapse");
-      cy.get(`@${item.toLowerCase()}`).click();
+      cy.get(alias).click();
       cy.get("#navigation").should("have.class", "collapse");
     });
   });
 
   it("Should check if top navigation buttons have correct addresses", () => {
     cy.get(".navbar-toggler-icon").click();
-    ["Home", "Projects", "Talks", "Blog", "Contact"].forEach((item) => {
-      cy.get(`@${item.toLowerCase()}`).should("include.text", item);
+    [
+      { name: "Home", link: "/" },
+      { name: "Projects", link: "/projects" },
+      { name: "Talks", link: "/talks" },
+      { name: "Blog", link: "/blog" },
+      { name: "Contact", link: "#hire-me" },
+    ].forEach(({ name, link }) => {
+      cy.get(`.navbar a:contains('${name}')`).should("have.attr", "href", link);
     });
   });
 
@@ -44,7 +54,7 @@ describe("Top navigation in mobile view (below 992px width) test", () => {
     });
 
     it.skip("Should scroll to Contact and back", () => {
-      // expected 192 to be below 20
+      // TODO: fix the problem "expected 192 to be below 20"
       cy.get(".navbar-toggler-icon").click();
       cy.get("@contact").realClick();
       cy.url().should("include", "#hire-me");
@@ -61,33 +71,21 @@ describe("Top navigation in mobile view (below 992px width) test", () => {
     });
   });
 
-  context(
-    "Correct color for every clicked and hovered element in top navigation",
-    () => {
-      ["Projects", "Talks", "Blog", "Contact", "Home"].forEach((alias) => {
-        it(`Should check this on ${alias} page`, () => {
-          cy.get(".navbar-toggler-icon").click();
-          ["home", "projects", "talks", "blog", "contact"].forEach((alias) => {
-            cy.get(`@${alias}`).should(
-              "have.css",
-              "color",
-              "rgba(255, 255, 255, 0.55)"
-            );
-          });
-          ["home", "projects", "talks", "blog", "contact"].forEach((alias) => {
-            cy.get(`@${alias}`)
-              .realHover()
-              .then(() => {
-                cy.get(`@${alias}`).should(
-                  "have.css",
-                  "color",
-                  "rgba(255, 255, 255, 0.75)"
-                );
-              });
-          });
-          cy.get(`@${alias.toLowerCase()}`).click();
+  it("Should have correct color for every clicked and hovered element in top navigation", () => {
+    cy.get(".navbar-toggler-icon").click();
+    aliases.forEach((alias) => {
+      cy.get(alias).should("have.css", "color", "rgba(255, 255, 255, 0.55)");
+    });
+    aliases.forEach((alias) => {
+      cy.get(alias)
+        .realHover()
+        .then(() => {
+          cy.get(alias).should(
+            "have.css",
+            "color",
+            "rgba(255, 255, 255, 0.75)"
+          );
         });
-      });
-    }
-  );
+    });
+  });
 });
