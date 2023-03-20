@@ -3,7 +3,7 @@
 Cypress.config("viewportWidth", 990);
 
 import "cypress-real-events";
-import { checkIfElementIsEntirelyInViewport } from "../utils";
+import { checkIfElementIsEntirelyInViewport, goBackToHome } from "../utils";
 
 describe("Top navigation in mobile view (below 992px width) test", () => {
   beforeEach(() => {
@@ -33,10 +33,6 @@ describe("Top navigation in mobile view (below 992px width) test", () => {
   });
 
   context("Navigation flow", () => {
-    function goBackToHome() {
-      return cy.go("back").location("pathname").should("eq", "/");
-    }
-
     ["Projects", "Talks", "Blog"].forEach((page) => {
       it(`Should go to ${page} and back`, () => {
         cy.get(".navbar-toggler-icon").click();

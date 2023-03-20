@@ -1,7 +1,7 @@
 /// <reference types='cypress' />
 
 import "cypress-real-events";
-import { checkIfElementIsEntirelyInViewport } from "../utils";
+import { checkIfElementIsEntirelyInViewport, goBackToHome } from "../utils";
 
 describe("Top navigation test", () => {
   beforeEach(() => {
@@ -20,10 +20,6 @@ describe("Top navigation test", () => {
   });
 
   describe("navigation flow", () => {
-    function goBackToHome() {
-      return cy.go("back").location("pathname").should("eq", "/");
-    }
-
     ["Projects", "Talks", "Blog"].forEach((page) => {
       it(`Should go to ${page} and back`, () => {
         cy.get(`@${page.toLowerCase()}`).click();
