@@ -64,8 +64,8 @@ describe("Top navigation in mobile view (below 992px width) test", () => {
   context(
     "Correct color for every clicked and hovered element in top navigation",
     () => {
-      ["Projects", "Talks", "Blog", "Contact", "Home"].forEach((page) => {
-        it(`Should check this on ${page} page`, () => {
+      ["Projects", "Talks", "Blog", "Contact", "Home"].forEach((alias) => {
+        it(`Should check this on ${alias} page`, () => {
           cy.get(".navbar-toggler-icon").click();
           ["home", "projects", "talks", "blog", "contact"].forEach((alias) => {
             cy.get(`@${alias}`).should(
@@ -78,14 +78,14 @@ describe("Top navigation in mobile view (below 992px width) test", () => {
             cy.get(`@${alias}`)
               .realHover()
               .then(() => {
-                cy.get(`@${page3}`).should(
+                cy.get(`@${alias}`).should(
                   "have.css",
                   "color",
                   "rgba(255, 255, 255, 0.75)"
                 );
               });
           });
-          cy.get(`@${page.toLowerCase()}`).click();
+          cy.get(`@${alias.toLowerCase()}`).click();
         });
       });
     }
