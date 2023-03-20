@@ -1,7 +1,7 @@
 /// <reference types='cypress' />
 
 import "cypress-real-events";
-import { checkIfElementIsEntirelyInViewport, goBackToHome } from "../utils";
+import { checkIfElementIsEntirelyInViewport, goBackToHome } from "../../utils";
 
 describe("Top navigation test", () => {
   beforeEach(() => {

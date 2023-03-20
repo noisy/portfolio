@@ -1,8 +1,8 @@
 /// <reference types='cypress' />
 
 import "cypress-real-events";
-import { checkIfElementIsEntirelyInViewport, goBackToHome } from "../utils";
-import { bootstrapBreakpoints } from "../utils/constants";
+import { checkIfElementIsEntirelyInViewport, goBackToHome } from "../../utils";
+import { bootstrapBreakpoints } from "../../utils/constants";
 
 Cypress.config("viewportWidth", bootstrapBreakpoints.lg - 1);
 
