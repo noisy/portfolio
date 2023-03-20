@@ -67,8 +67,8 @@ describe("Top navigation in mobile view (below 992px width) test", () => {
       ["Projects", "Talks", "Blog", "Contact", "Home"].forEach((page) => {
         it(`Should check this on ${page} page`, () => {
           cy.get(".navbar-toggler-icon").click();
-          ["home", "projects", "talks", "blog", "contact"].forEach((page2) => {
-            cy.get(`@${page2}`).should(
+          ["home", "projects", "talks", "blog", "contact"].forEach((alias) => {
+            cy.get(`@${alias}`).should(
               "have.css",
               "color",
               "rgba(255, 255, 255, 0.55)"
