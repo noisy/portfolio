@@ -9,7 +9,14 @@ Testing, detecting bugs and their causes, has been a passion of mine for a long 
 - Praktyczny kurs testowania oprogramowania [Udemy](https://www.udemy.com/certificate/UC-169c5f4c-697b-499b-acd5-2ec51f5c6f07/)
 - Postman od podstaw - testowanie REST API [Udemy](https://www.udemy.com/certificate/UC-bcbf85f3-92da-4c40-9630-09c801ba4706/)
 - Kurs SQL od podstaw | MySQL [Udemy](https://www.udemy.com/certificate/UC-ffc05560-fc06-4db3-984a-93ce32a03421/)
+- MySQL tworzenie i zarządzanie bazami danych [Udemy](https://www.udemy.com/certificate/UC-5a2be6bc-6567-4019-aea6-bc9656fe0902/)
 - Kurs Jira od podstaw - zarządzanie projektami [Udemy](https://www.udemy.com/certificate/UC-e82733a4-b25f-4910-a346-7389d10ed379/)
+
+### Skills
+
+### Trophy
+Hackerrank Profile
+<img src="https://www.hackerrank.com/adicegielka?badge=java&stars=1&level=1&hr_r=1&utm_campaign=social-buttons&utm_medium=twitter&utm_source=badge_share_profile&social=linkedin">
 
 ### Books
 - Certyfikowany Tester ISTQB Poziom Podstawowy - Adam Roman i Lucjan Stapp
