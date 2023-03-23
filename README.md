@@ -13,6 +13,16 @@ Testing, detecting bugs and their causes, has been a passion of mine for a long 
 - Kurs Jira od podstaw - zarządzanie projektami [Udemy](https://www.udemy.com/certificate/UC-e82733a4-b25f-4910-a346-7389d10ed379/)
 
 ### Skills
+- Creating test scenarios
+- Writing test cases
+- Theoretical knowledge from the ISTQB
+- Agile methodologies, Scram
+- SQL / MySQL database basics
+- API testing
+- Java basics
+- Git
+- Basics of performance testing
+- HTML, CSS, JavaScript
 
 ### Trophy
 - [HackerRank Profile](https://www.hackerrank.com/adicegielka)<br>
