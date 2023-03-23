@@ -16,8 +16,8 @@ Testing, detecting bugs and their causes, has been a passion of mine for a long 
 
 ### Trophy
 - HackerRank Profile<br>
-<img src="HackerRank_Icon.png" alt="Logo HackerRank" height="200"> <img src="HackerRank_Rank.png" alt="HackerRank" 
-height="200">
+<img src="HackerRank_Icon.png" alt="Logo HackerRank" height="100"> <img src="HackerRank_Rank.png" alt="HackerRank" 
+height="100">
 
 ### Books
 - Certyfikowany Tester ISTQB Poziom Podstawowy - Adam Roman i Lucjan Stapp
