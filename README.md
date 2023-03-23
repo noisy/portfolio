@@ -15,8 +15,9 @@ Testing, detecting bugs and their causes, has been a passion of mine for a long 
 ### Skills
 
 ### Trophy
-HackerRank Profile
-<img src="https://www.hackerrank.com/adicegielka?badge=java&stars=1&level=1&hr_r=1">
+- HackerRank Profile
+<img src="HackerRank_Icon.png" alt="Logo HackerRank" width="300"> <img src="HackerRank_Rank.png" alt="HackerRank" 
+width="300">
 
 ### Books
 - Certyfikowany Tester ISTQB Poziom Podstawowy - Adam Roman i Lucjan Stapp
