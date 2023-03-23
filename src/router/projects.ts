@@ -1,11 +1,15 @@
 import {
+  CastoPro,
+  DeadIsland,
   HiveProjects,
   OperaMobile,
   Pitchup,
   PitchupPWA,
+  Portfolio,
   Seerene,
   SpisTresci,
 } from "@/views/projects";
+
 import type { RouteRecordRaw } from "vue-router";
 
 export const projects: RouteRecordRaw[] = [
@@ -34,7 +38,7 @@ export const projects: RouteRecordRaw[] = [
   {
     path: "portfolio",
     name: "project-portfolio",
-    component: HiveProjects,
+    component: Portfolio,
   },
   {
     path: "call-of-juarez-the-cartel",
@@ -42,8 +46,18 @@ export const projects: RouteRecordRaw[] = [
     component: HiveProjects,
   },
   {
+    path: "dead-island",
+    name: "project-dead-island",
+    component: DeadIsland,
+  },
+  {
     path: "neuroshima",
     name: "project-neuroshima",
     component: HiveProjects,
+  },
+  {
+    path: "castopro",
+    name: "project-castopro",
+    component: CastoPro,
   },
 ];
