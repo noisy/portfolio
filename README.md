@@ -18,6 +18,9 @@ Testing, detecting bugs and their causes, has been a passion of mine for a long 
 - [HackerRank Profile](https://www.hackerrank.com/adicegielka)<br>
 <img src="HackerRank_Icon.png" alt="Logo HackerRank" height="200"> <img src="HackerRank_Rank.png" alt="HackerRank" 
 height="200">
+- Codewars Profile](https://www.codewars.com/users/AdamCegielka)<br>
+<img src="Codewars_Icon.png" alt="Logo Codewars" height="200"> <img src="Codewars_Rank.png" alt="Rank Codewars" 
+height="200">
 
 ### Books
 - Certyfikowany Tester ISTQB Poziom Podstawowy - Adam Roman i Lucjan Stapp
