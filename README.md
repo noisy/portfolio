@@ -1,4 +1,4 @@
-![](../src/Banner.png)
+![](./src/Banner.png)
 
 ### About me
 Testing, detecting bugs and their causes, has been a passion of mine for a long time. In order to develop these abilities, I decided to take an intensive "Software Tester" course. According to the results of the Thomas PPA test, I am a thorough person who pays a lot of attention to detail, which makes me excel in my new role.
@@ -27,10 +27,10 @@ Testing, detecting bugs and their causes, has been a passion of mine for a long 
 
 ### Trophy
 - [HackerRank Profile](https://www.hackerrank.com/adicegielka)<br>
-<img src="HackerRank_Icon.png" alt="Logo HackerRank" height="200"> <img src="HackerRank_Rank.png" alt="HackerRank" 
+<img src="./src/HackerRank_Icon.png" alt="Logo HackerRank" height="200"> <img src="./src/HackerRank_Rank.png" alt="HackerRank" 
 height="200"><br>
 - [Codewars Profile](https://www.codewars.com/users/AdamCegielka)<br>
-<img src="Codewars_Icon.png" alt="Logo Codewars" height="200"> <img src="Codewars_Rank.png" alt="Rank Codewars" 
+<img src="./src/Codewars_Icon.png" alt="Logo Codewars" height="200"> <img src="./src/Codewars_Rank.png" alt="Rank Codewars" 
 height="200">
 
 ### Books
