@@ -28,11 +28,9 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 
 ### Trophy
 - [HackerRank Profile](https://www.hackerrank.com/adicegielka)<br>
-<img src="./src/HackerRank_Icon.png" alt="Logo HackerRank" height="200"> <img src="./src/HackerRank_Rank.png" alt="HackerRank" 
-height="200"><br>
+<img src="./src/HackerRank_Rank.png" alt="HackerRank" height="200"><br>
 - [Codewars Profile](https://www.codewars.com/users/AdamCegielka)<br>
-<img src="./src/Codewars_Icon.png" alt="Logo Codewars" height="200"> <img src="./src/Codewars_Rank.png" alt="Rank Codewars" 
-height="200">
+<img src="./src/Codewars_Rank.png" alt="Rank Codewars" height="200">
 
 ### Books
 - Certyfikowany Tester ISTQB Poziom Podstawowy - Adam Roman i Lucjan Stapp
