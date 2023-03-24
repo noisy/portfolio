@@ -1,5 +1,6 @@
 import {
   CastoPro,
+  CV,
   DeadIsland,
   HiveProjects,
   OperaMobile,
@@ -39,6 +40,11 @@ export const projects: RouteRecordRaw[] = [
     path: "portfolio",
     name: "project-portfolio",
     component: Portfolio,
+  },
+  {
+    path: "cv",
+    name: "project-cv",
+    component: CV,
   },
   {
     path: "call-of-juarez-the-cartel",

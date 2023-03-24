@@ -82,7 +82,8 @@ const db: IDB = {
       companyName: "Techland",
       thumbnail: "calljuarez/main.jpg",
       summaryTitle: "Call of Juarez: The Cartel",
-      summary: "",
+      summary:
+        "First-person modern-day shooter that follows a team of law enforcement officers as they take on a drug cartel in Los Angeles and Mexico (PC, PlayStation 3 & Xbox 360).",
       filterTags: [],
       badges: ["Game"],
       technologies: [],
