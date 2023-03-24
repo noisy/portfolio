@@ -4,18 +4,6 @@
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
 
-    Seerene describes their product as:
-
-    <Quote>
-      Seerene’s Digital Boardroom is a software analytics and process mining
-      technology that analyzes and visualizes the software development processes
-      in your company. It reveals weaknesses and turns your organization into a
-      well-oiled machine, delivering software efficiently, cost-effectively,
-      quickly, and with the highest quality. Seerene provides decision-makers
-      with the information needed to actively drive their organization towards
-      360° software excellence.
-    </Quote>
-
     <p class="video-container">
       <iframe
         class="video"
@@ -35,8 +23,6 @@
       information about new implementations or changes in the project to be
       tested on PC, PlayStation 3 and Xbox 360.
     </p>
-
-    <Carousel :items-to-show="1" :paths="imagesPaths" />
   </div>
 
   <div class="section-row">
@@ -162,82 +148,16 @@
       believe thanks to that everyone in the team felt more empowered and cared
       about the outcome even more.
     </p>
-
-    <Testimonial
-      v-for="t in testimonials"
-      :key="t.author"
-      :author="t.author"
-      :body="t.body"
-      :title="t.title"
-      :picture-url="t.pictureUrl"
-      :type="t.type"
-      :url="t.url"
-    >
-    </Testimonial>
   </div>
 
   <div class="section-row">
     <h3 class="section-title">Summary</h3>
-    <p>
-      When I've started working on this project, there were just 3 developers
-      from STXNext working on that. I believe the work of this initial team was
-      crucial in a process of building a strong and long-lasting relationship of
-      STXNext and its client, which before I left... resulted in the existence
-      of 2 big teams, with 5 devs &amp; 2 QAs, Scrum Master and Pruduct Owner in
-      each.
-    </p>
   </div>
 </template>
 
-<script lang="ts">
-import { Carousel, CoverImage, Quote, Testimonial } from "@/components";
-import { useDB, useProject } from "@/composables";
+<script setup lang="ts">
+import { CoverImage } from "@/components";
 import type { IProject, ITestimonial } from "@/types";
-import type { PropType } from "vue";
-import { defineComponent } from "vue";
-import "vue3-carousel/dist/carousel.css";
 
-export default defineComponent({
-  name: "Seerene",
-  components: {
-    CoverImage,
-    Carousel,
-    Testimonial,
-    Quote,
-  },
-  props: {
-    project: {
-      type: Object as PropType<IProject>,
-      required: true,
-    },
-    testimonials: {
-      type: Array as PropType<ITestimonial[]>,
-      required: true,
-    },
-  },
-  setup(props) {
-    const otherCaseStudies = ["opera-mobile"];
-    const { projects } = useDB();
-    const { getImagesPaths } = useProject();
-    return {
-      projects: projects.filter((p) => otherCaseStudies.includes(p.slug)),
-      imagesPaths: getImagesPaths(props.project, 3),
-    };
-  },
-});
+defineProps<{ project: IProject; testimonials: ITestimonial[] }>();
 </script>
-<style scoped>
-.video-container {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 56.25%;
-}
-.video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-</style>

@@ -77,21 +77,10 @@
   <div class="section-row">
     <h3 class="section-title">Summary</h3>
   </div>
-  <Testimonial
-    v-for="t in testimonials"
-    :key="t.author"
-    :author="t.author"
-    :body="t.body"
-    :title="t.title"
-    :picture-url="t.pictureUrl"
-    :type="t.type"
-    :url="t.url"
-  >
-  </Testimonial>
 </template>
 
 <script setup lang="ts">
-import { CoverImage, Testimonial } from "@/components";
+import { CoverImage } from "@/components";
 import type { IProject, ITestimonial } from "@/types";
 
 defineProps<{ project: IProject; testimonials: ITestimonial[] }>();
