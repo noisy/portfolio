@@ -115,7 +115,7 @@ const db: IDB = {
       summaryTitle: "Vue Based Web Portfolio",
       summary:
         "Hive Projects is a directory of over a hundred apps, sites and tools built by Hive community. Your project is not listed here? You can add it on your own!",
-      filterTags: ["responsive", "vue"],
+      filterTags: ["vue"],
       badges: ["Open Source"],
       technologies: ["typescript", "vue", "bootstrap"],
       thumbnailLogo: "hiveprojects.png",
