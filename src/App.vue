@@ -1,4 +1,5 @@
 <template>
+  <UnderConstruction v-if="isUnderConstruction" />
   <keep-alive>
     <Navigation />
   </keep-alive>
@@ -7,9 +8,10 @@
 </template>
 
 <script setup lang="ts">
-import { Footer, Navigation } from "@/components";
-import { useFavicon } from "@/composables";
+import { Footer, Navigation, UnderConstruction } from "@/components";
+import { useDB, useFavicon } from "@/composables";
 const { animateFavicon } = useFavicon();
+const { isUnderConstruction } = useDB();
 animateFavicon();
 </script>
 
