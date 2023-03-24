@@ -3,26 +3,34 @@
 
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
-    <p>CastoPro is Polish Castorama's loyalty program for the professionals.</p>
+    <p>
+      This project evolved from
+      <a
+        href="https://m.goit.global/pl/?utm_source=site&utm_medium=mainsite&utm_campaign=button"
+        >GoIT 7 days HTML+CSS Marathon</a
+      >, whereas a course attendant, I was creating a webpage based on a graphic
+      template from <a href="https://www.figma.com/">Figma</a>. During the
+      course, I uploaded the whole thing into GitHub and decided to convert the
+      entire code into a bilingual version of my CV.
+    </p>
     <h3 class="section-title">My role in this project</h3>
     <p>
-      Testing the CastoPro website was part of my recruitment process for one of
-      the prominent Polish analytics companies. For this task, I was given three
-      pieces of information:
-    </p>
-    <ul>
-      <li>link: CastoPro website</li>
-      <li>timeframe: 48h</li>
-      <li>task: find an error on the page</li>
-    </ul>
-    <p>
-      I decided to include CastoPro as a project because it's a public website
-      and some of the reported bugs were already corrected.
+      Creating an up-to-date CV is the first and most crucial step to
+      participating in the recruitment process. It goes without saying that if
+      you don't have a CV, you don't have a new job either. It is essential to
+      collect your experience and skills and then transfer it into a previously
+      created template. At the same time, from the very beginning, I assumed
+      that due to the continuous development of my skills, the created CV would
+      not be a closed document created once and for all but rather a place to be
+      updated from time to time.
     </p>
   </div>
 
   <div class="section-row">
     <h3 class="section-title">Challenges</h3>
+    <h4>Bingular version</h4>
+    <h4>Version to print</h4>
+    <h4>Strange spaces in lists</h4>
     <p>
       Because of the lack of information and no requirements about this task, I
       had to make some assumptions. It was unclear from the description if I
