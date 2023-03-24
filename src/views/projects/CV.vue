@@ -29,15 +29,24 @@
   <div class="section-row">
     <h3 class="section-title">Challenges</h3>
     <h4>Bingular version</h4>
+    <p>
+      Although the original version of this web-based CV was created only in the
+      Polish version (it was much easier due to type of previous work and
+      experience), the default version of the project was to be the English one,
+      which is mandatory in the IT industry. Therefore, the challenge was to
+      create such a CV that would be easy to maintain in both language versions,
+      giving the possibility of simple generation of pdf files, but also
+      available in the same place for viewers.
+    </p>
+    <p>
+      I created two HTML files operating on the same CSS file and integrated
+      them with a simple language switch. It's not a perfect solution because it
+      forces you to change the code in both files simultaneously, but it must be
+      enough for now.
+    </p>
     <h4>Version to print</h4>
     <h4>Strange spaces in lists</h4>
-    <p>
-      Because of the lack of information and no requirements about this task, I
-      had to make some assumptions. It was unclear from the description if I
-      should test only one page with this exact address or the entire content
-      for the loyalty program. There were also no additional requirements for a
-      specific testing environment and a responsive version.
-    </p>
+    <p></p>
     <h4 class="section-title">The task</h4>
     <p>
       I noticed only one minor technical error on the main page, so I assumed
