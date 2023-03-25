@@ -44,7 +44,22 @@
       forces you to change the code in both files simultaneously, but it must be
       enough for now.
     </p>
-    <h4>Version to print</h4>
+    <h4>Versions to print</h4>
+    <p>
+      With the idea of printing pages directly to the pdf files, I introduced a
+      new problem to the project. I should decide what will be exported for
+      printing, not be dependent on the page's content. I didn't want to include
+      a language switch or a recommendations section in the pdf file.
+      Additionally, I wanted to control where the page breaks would occur so
+      that the text section wouldn't be split across two pages.
+    </p>
+    <p>
+      Fortunately, such a problem was solved a long before, and I only needed to
+      implement the appropriate CSS classes into the code. In addition, the
+      clause distance from the other sections had to be significantly increased
+      to act as a footer and not leave empty white space at the bottom of the
+      second page.
+    </p>
     <h4>Strange spaces in lists</h4>
     <p></p>
     <h4 class="section-title">The task</h4>
@@ -53,36 +68,7 @@
       this task was about the whole site. I also decided to use the most popular
       web browser at that time (Chrome) and check CastoPro on smaller widths.
     </p>
-    <p>
-      Initially, I divided the task into two categories - static pages and
-      forms. Part one was pretty self-explanatory because pages like
-      'regulations,' 'faq,' 'benefits' or 'privacy-policy' had no interactive
-      elements. Their testing concerned the general checking of the whole, but
-      also i.e., the correctness of the links and behavior of the pages at
-      different window widths. I also included the mobile version of the top
-      drop-down menu in this category.
-    </p>
-    <p>
-      Forms were a different story. In this case, both 'registration' and
-      'login' were imperfect. The problem was that, along with the task, I did
-      not receive any data on which I could test the correct registration/login
-      process. And to fully complete the registration process, an actual
-      taxpayer identification number and a telephone number to verify the
-      account creation are required.
-    </p>
-    <p>
-      Finally, I decided to divide all the cases into more precise categories. I
-      have listed them all in order of importance to the end user:
-    </p>
-    <ul>
-      <li>main page</li>
-      <li>registration</li>
-      <li>login</li>
-      <li>responsive design</li>
-      <li>website usability</li>
-    </ul>
   </div>
-  <!--//section-row-->
   <div class="section-row">
     <h3 class="section-title">Biggest Lessons Learned</h3>
   </div>
