@@ -53,6 +53,7 @@ export type ITechnology =
   | "stripe"
   | "typescript"
   | "vue"
+  | "windows"
   | "xbox360";
 
 export type IProjectFilterTag =
