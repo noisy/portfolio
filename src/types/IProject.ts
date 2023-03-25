@@ -42,15 +42,18 @@ export type ITechnology =
   | "jestjs"
   | "jira"
   | "jquery"
+  | "mantis"
   | "paypal"
   | "postgresql"
+  | "ps3"
   | "python"
   | "solr"
   | "sqlalchemy"
   | "stripe"
   | "stripe"
   | "typescript"
-  | "vue";
+  | "vue"
+  | "xbox360";
 
 export type IProjectFilterTag =
   | "responsive"
