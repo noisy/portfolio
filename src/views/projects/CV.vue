@@ -31,7 +31,7 @@
     <h4>Bingular version</h4>
     <p>
       Although the original version of this web-based CV was created only in the
-      Polish version (it was much easier due to type of previous work and
+      Polish version (it was much easier due to the type of previous work and
       experience), the default version of the project was to be the English one,
       which is mandatory in the IT industry. Therefore, the challenge was to
       create such a CV that would be easy to maintain in both language versions,
@@ -60,26 +60,32 @@
       to act as a footer and not leave empty white space at the bottom of the
       second page.
     </p>
-    <h4>Strange spaces in lists</h4>
-    <p></p>
-    <h4 class="section-title">The task</h4>
+    <h4>Strange lists spacing</h4>
     <p>
-      I noticed only one minor technical error on the main page, so I assumed
-      this task was about the whole site. I also decided to use the most popular
-      web browser at that time (Chrome) and check CastoPro on smaller widths.
+      Once all of the above issues were resolved, I noticed two annoying bugs
+      with lists. Not only was the indentation of the second and subsequent
+      lines of list items not identical to the first, but there were also spaces
+      at the beginning of some lines in Firefox. Ultimately, entire lists looked
+      broken due to the lack of vertical alignment.
+    </p>
+    <p>
+      At first, I thought this was the problem with the Prettier extension for
+      Visual Code Studio, but the problem turned out to be a bullet in the
+      lists, which I had previously manipulated too much. The patch created for
+      one bug also fixed the second one, making it a double-win situation.
     </p>
   </div>
   <div class="section-row">
-    <h3 class="section-title">Biggest Lessons Learned</h3>
+    <h3 class="section-title">What I Learned</h3>
   </div>
   <p>
-    External E2E tests of the website with constant smaller and larger changes
-    do not make the tester's job easier.
+    I knew the basics of HTML and CSS before, but I can't remember the last time
+    I used them. It was good to systematize all this knowledge.
   </p>
-
-  <div class="section-row">
-    <h3 class="section-title">Summary</h3>
-  </div>
+  <p>
+    In addition, I started using Visual Studio Code from this project and
+    learned the basics of Git and its use from the command line.
+  </p>
 </template>
 
 <script setup lang="ts">
