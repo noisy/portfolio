@@ -2,7 +2,7 @@
   <CoverImage :url="`@/images/projects/${project.thumbnail}`" />
 
   <div class="section-row">
-    <h3 class="section-title">Project Background</h3>
+    <h3 class="section-title">Project background</h3>
     <p>
       This project evolved from
       <a
@@ -76,7 +76,7 @@
     </p>
   </div>
   <div class="section-row">
-    <h3 class="section-title">What I Learned</h3>
+    <h3 class="section-title">What I learned</h3>
   </div>
   <p>
     I knew the basics of HTML and CSS before, but I can't remember the last time

@@ -2,8 +2,8 @@
   <CoverImage :url="`@/images/projects/${project.thumbnail}`" />
 
   <div class="section-row">
-    <h3 class="section-title">Project Background</h3>
-    <p>CastoPro is Polish Castorama's loyalty program for the professionals.</p>
+    <h3 class="section-title">Project background</h3>
+    <p>CastoPro is Polish Castorama's loyalty program for professionals.</p>
     <h3 class="section-title">My role in this project</h3>
     <p>
       Testing the CastoPro website was part of my recruitment process for one of
@@ -16,8 +16,8 @@
       <li>task: find an error on the page</li>
     </ul>
     <p>
-      I decided to include CastoPro as a project because it's a public website
-      and some of the reported bugs were already corrected.
+      I decided to include CastoPro as a project because it's a public website,
+      and some reported bugs were already corrected.
     </p>
   </div>
 
@@ -34,16 +34,15 @@
     <p>
       I noticed only one minor technical error on the main page, so I assumed
       this task was about the whole site. I also decided to use the most popular
-      web browser at that time (Chrome) and check CastoPro on smaller widths.
+      web browser (Chrome) and check CastoPro on smaller widths.
     </p>
     <p>
-      Initially, I divided the task into two categories - static pages and
-      forms. Part one was pretty self-explanatory because pages like
-      'regulations,' 'faq,' 'benefits' or 'privacy-policy' had no interactive
-      elements. Their testing concerned the general checking of the whole, but
-      also i.e., the correctness of the links and behavior of the pages at
-      different window widths. I also included the mobile version of the top
-      drop-down menu in this category.
+      Initially, I divided the task into static pages and forms. Part one was
+      self-explanatory because pages like 'regulations,' 'faq,' 'benefits,' or
+      'privacy-policy' had no interactive elements. Their testing concerned the
+      general checking of the whole, but also, i.e., the correctness of the
+      links and behavior of the pages at different window widths. I also
+      included the mobile version of the top drop-down menu in this category.
     </p>
     <p>
       Forms were a different story. In this case, both 'registration' and
@@ -54,8 +53,8 @@
       account creation are required.
     </p>
     <p>
-      Finally, I decided to divide all the cases into more precise categories. I
-      have listed them all in order of importance to the end user:
+      Finally, I decided to divide all the cases into more specific categories.
+      I have listed them all in order of importance to the end user:
     </p>
     <ul>
       <li>main page</li>
@@ -67,16 +66,16 @@
   </div>
   <!--//section-row-->
   <div class="section-row">
-    <h3 class="section-title">Biggest Lessons Learned</h3>
+    <h3 class="section-title">What I learned</h3>
   </div>
   <p>
-    External E2E tests of the website with constant smaller and larger changes
-    do not make the tester's job easier.
+    External E2E tests of the website in production with constant changes do not
+    make the tester's job easier.
   </p>
-
-  <div class="section-row">
-    <h3 class="section-title">Summary</h3>
-  </div>
+  <p>
+    Also: It's hard to do an excellent job without a test account or information
+    on how to create it easily.
+  </p>
 </template>
 
 <script setup lang="ts">

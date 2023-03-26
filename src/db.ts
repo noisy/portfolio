@@ -20,7 +20,7 @@ const db: IDB = {
       companyName: "Castorama",
       thumbnail: "castopro/main.jpg",
       summaryTitle: "CastoPro",
-      summary: "Castorama's loyalty program for the professionals.",
+      summary: "Castorama's loyalty program for professionals.",
       filterTags: [],
       badges: ["Game", "Board Game"],
       technologies: [],
