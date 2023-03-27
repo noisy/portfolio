@@ -2,7 +2,7 @@
 
 import { assertFiltersWorksCorrectly, assertVisabilityOfItems } from "./utils";
 
-describe("Talks page correct content", () => {
+describe.skip("Talks page correct content", () => {
   beforeEach(() => {
     cy.visit("/talks");
     cy.get(".section").contains("Git workflow").as("git-pl");

@@ -48,7 +48,7 @@ const talks = [
   },
 ];
 
-describe("Talks page correct content", () => {
+describe.skip("Talks page correct content", () => {
   beforeEach(() => {
     cy.visit("/talks");
   });

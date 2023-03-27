@@ -1,6 +1,6 @@
-[![Unit tests](https://github.com/noisy/portfolio/actions/workflows/unittests.yml/badge.svg)](https://github.com/noisy/portfolio/actions/workflows/unittests.yml)
-[![Cypress Tests](https://github.com/noisy/portfolio/actions/workflows/cypress.yml/badge.svg)](https://github.com/noisy/portfolio/actions/workflows/cypress.yml)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/2e7e8fbe-a8c3-4773-915f-55a36210e6a1/deploy-status)](https://app.netlify.com/sites/krzysztofszumny/deploys)
+[![Unit tests](https://github.com/lukmarcus/portfolio/actions/workflows/unittests.yml/badge.svg)](https://github.com/lukmarcus/portfolio/actions/workflows/unittests.yml)
+[![Cypress Tests](https://github.com/lukmarcus/portfolio/actions/workflows/cypress.yml/badge.svg)](https://github.com/lukmarcus/portfolio/actions/workflows/cypress.yml)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/a7d3b899-983c-462b-a149-4f47c12e1d42/deploy-status)](https://app.netlify.com/sites/marekszumny/deploys)
 
 # portfolio
 
