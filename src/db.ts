@@ -49,7 +49,7 @@ const db: IDB = {
       url: "https://lukmarcus.github.io/",
       companyName: "Personal project",
       thumbnail: "cv/main.jpg",
-      summaryTitle: "cv",
+      summaryTitle: "Web-based CV",
       summary: "Constantly updated bilingual Curriculum Vitae.",
       filterTags: [],
       badges: ["Game"],

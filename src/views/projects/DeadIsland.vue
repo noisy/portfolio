@@ -45,21 +45,23 @@
       not accidentally keep some outdated settings.
     </p>
     <p>
-      PS3 Devkits had very limited debug options. Primary tools like video
+      Our PS3 Devkits had very limited debug options. Primary tools like video
       capturing were unavailable, and we had to do this in a 'primitive way'
       with a smartphone or camera. Playstation 3 has always been treated as a
       necessary evil.
     </p>
 
-    <h4 class="section-subtitle">Semi open world</h4>
+    <h4 class="section-subtitle">Semi-open worlds</h4>
     <p>
-      Dead Island consisted of several acts in which players navigated semi-open
-      worlds. This meant there were many places on the game map where players
-      could accidentally go and encounter a bug. Textures of the environment
-      were missing, sometimes there were even holes through which it was
-      possible to fall out of the map. In addition, it was possible to drive
-      vehicles from point A to point B. Efficient management of such a large
-      area is much more complex than dividing the game into corridor stages.
+      Dead Island consists of several acts in which players navigate through
+      semi-open worlds. It means there were many places on the game map which
+      players could accidentally visit and encounter a bug, i.e., textures of
+      the environment were missing, or sometimes there were even holes through
+      which it was possible to fall out of the map. In addition, because of this
+      large area, it was possible to drive vehicles all over the island, giving
+      even more problems. Efficient management of such semi-open worlds and
+      bug-watching is much more complex than dividing the game into corridor
+      stages.
     </p>
 
     <h4 class="section-subtitle">Escort missions</h4>
@@ -71,10 +73,7 @@
 
   <div class="section-row">
     <h3 class="section-title">Biggest Lessons Learned</h3>
-    <p>
-      Often the biggest lessons you learn happens after some big mistakes.
-      Fortunately, this time it was not like that.
-    </p>
+    <p></p>
   </div>
 
   <div class="section-row">
