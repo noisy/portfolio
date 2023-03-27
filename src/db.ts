@@ -9,6 +9,8 @@ const db: IDB = {
     fullName: "Marek Szumny",
     title: "",
     email: "szumny.marek@gmail.com",
+    github: "https://github.com/lukmarcus",
+    linkedin: "https://www.linkedin.com/in/marek-szumny-63ba3295/",
     location: "",
   },
   projects: [
