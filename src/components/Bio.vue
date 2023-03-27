@@ -21,7 +21,7 @@
               understanding of current leading technologies. I diligently
               document my entire learning journey on my
 
-              <a class="link-on-bg text-link" :href="`${linkedin}`"
+              <a class="link-on-bg text-link" :href="`${github}`"
                 >Github page</a
               >
               and this website. Want to know how I may help your project? Check
