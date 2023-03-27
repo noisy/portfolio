@@ -2,6 +2,7 @@ import { allFilterTag } from "./types";
 import type { IDB } from "./types/IDB";
 
 const db: IDB = {
+  isUnderConstruction: true,
   me: {
     firstName: "Marek",
     lastName: "Szumny",

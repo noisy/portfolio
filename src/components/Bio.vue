@@ -32,10 +32,11 @@
                 >case studies</router-link
               >.
             </div>
-            <router-link
+            <a
               class="theme-btn-on-bg btn font-weight-bold theme-btn-cta"
-              :to="{ name: 'contact' }"
-              >Hire Me</router-link
+              href="#hire-me"
+              target="_self"
+              >Hire Me</a
             >
           </div>
         </div>
