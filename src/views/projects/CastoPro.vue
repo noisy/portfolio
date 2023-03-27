@@ -4,6 +4,9 @@
   <div class="section-row">
     <h3 class="section-title">Project background</h3>
     <p>CastoPro is Polish Castorama's loyalty program for professionals.</p>
+  </div>
+
+  <div class="section-row">
     <h3 class="section-title">My role in this project</h3>
     <p>
       Testing the CastoPro website was part of my recruitment process for one of
@@ -30,7 +33,10 @@
       for the loyalty program. There were also no additional requirements for a
       specific testing environment and a responsive version.
     </p>
-    <h4 class="section-title">The task</h4>
+  </div>
+
+  <div class="section-row">
+    <h3 class="section-title">The task</h3>
     <p>
       I noticed only one minor technical error on the main page, so I assumed
       this task was about the whole site. I also decided to use the most popular
@@ -64,18 +70,18 @@
       <li>website usability</li>
     </ul>
   </div>
-  <!--//section-row-->
+
   <div class="section-row">
     <h3 class="section-title">What I learned</h3>
+    <p>
+      External E2E tests of the website in production with constant changes do
+      not make the tester's job easier.
+    </p>
+    <p>
+      Also: It's hard to do an excellent job without a test account or
+      information on how to create it easily.
+    </p>
   </div>
-  <p>
-    External E2E tests of the website in production with constant changes do not
-    make the tester's job easier.
-  </p>
-  <p>
-    Also: It's hard to do an excellent job without a test account or information
-    on how to create it easily.
-  </p>
 </template>
 
 <script setup lang="ts">

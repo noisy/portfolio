@@ -56,6 +56,7 @@ const db: IDB = {
       technologies: ["html5", "css3", "github"],
       thumbnailLogo: "techland.svg",
       featured: true,
+      repositoryUrl: "https://github.com/lukmarcus/lukmarcus.github.io",
     },
     {
       name: "Dead Island",

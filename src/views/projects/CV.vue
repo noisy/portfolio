@@ -13,6 +13,9 @@
       course, I uploaded the whole thing into GitHub and decided to convert the
       entire code into a bilingual version of my CV.
     </p>
+  </div>
+
+  <div class="section-row">
     <h3 class="section-title">My role in this project</h3>
     <p>
       Creating an up-to-date CV is the first and most crucial step to
@@ -28,7 +31,7 @@
 
   <div class="section-row">
     <h3 class="section-title">Challenges</h3>
-    <h4>Bingular version</h4>
+    <h4 class="section-subtitle">Bingular version</h4>
     <p>
       Although the original version of this web-based CV was created only in the
       Polish version (it was much easier due to the type of previous work and
@@ -44,7 +47,7 @@
       forces you to change the code in both files simultaneously, but it must be
       enough for now.
     </p>
-    <h4>Versions to print</h4>
+    <h4 class="section-subtitle">Versions to print</h4>
     <p>
       With the idea of printing pages directly to the pdf files, I introduced a
       new problem to the project. I should decide what will be exported for
@@ -60,7 +63,7 @@
       to act as a footer and not leave empty white space at the bottom of the
       second page.
     </p>
-    <h4>Strange lists spacing</h4>
+    <h4 class="section-subtitle">Strange spacing in lists</h4>
     <p>
       Once all of the above issues were resolved, I noticed two annoying bugs
       with lists. Not only was the indentation of the second and subsequent
@@ -77,15 +80,15 @@
   </div>
   <div class="section-row">
     <h3 class="section-title">What I learned</h3>
+    <p>
+      I knew the basics of HTML and CSS before, but I can't remember the last
+      time I used them. It was good to systematize all this knowledge.
+    </p>
+    <p>
+      In addition, I started using Visual Studio Code from this project and
+      learned the basics of Git and its use from the command line.
+    </p>
   </div>
-  <p>
-    I knew the basics of HTML and CSS before, but I can't remember the last time
-    I used them. It was good to systematize all this knowledge.
-  </p>
-  <p>
-    In addition, I started using Visual Studio Code from this project and
-    learned the basics of Git and its use from the command line.
-  </p>
 </template>
 
 <script setup lang="ts">
