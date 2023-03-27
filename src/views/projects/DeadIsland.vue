@@ -40,22 +40,29 @@
       Console from Sony was not only more challenging for developers but also
       for testers. Nightly builds sometimes didn't build correctly, so in the
       morning, no one was sure if it would work. The initial verification of the
-      build was time-consuming and did not ensure success. Playstation 3 has
-      always been treated as a necessary evil.
+      build was time-consuming and did not ensure success. In addition, new
+      accounts had to be created daily (local and network) so the console did
+      not accidentally keep some outdated settings.
     </p>
     <p>
-      Fortunately, our client and our team were long-term oriented, so we were
-      embracing opportunities to learn new things if particular tasks were not
-      critical. Everyone in a group was contributing the most in areas where he
-      felt the strongest, but we created a culture of working on things outside
-      of our area of expertise. That helped everyone in the team learn a lot of
-      new things.
+      PS3 Devkits had very limited debug options. Primary tools like video
+      capturing were unavailable, and we had to do this in a 'primitive way'
+      with a smartphone or camera. Playstation 3 has always been treated as a
+      necessary evil.
+    </p>
+
+    <h4 class="section-subtitle">Semi open world</h4>
+    <p>
+      Dead Island consisted of several acts in which players navigated semi-open
+      worlds. This meant there were many places on the game map where players
+      could accidentally go and encounter a bug. Textures of the environment
+      were missing, sometimes there were even holes through which it was
+      possible to fall out of the map. In addition, it was possible to drive
+      vehicles from point A to point B. Efficient management of such a large
+      area is much more complex than dividing the game into corridor stages.
     </p>
 
     <h4 class="section-subtitle">Escort missions</h4>
-    <p></p>
-
-    <h4 class="section-subtitle">Semi open world</h4>
     <p></p>
 
     <h4 class="section-subtitle">Multiplayer cooperation</h4>

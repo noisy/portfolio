@@ -62,7 +62,7 @@ const db: IDB = {
       name: "Dead Island",
       slug: "dead-island",
       type: "Game",
-      url: "https://en.wikipedia.org/wiki/Call_of_Juarez:_The_Cartel",
+      url: "https://en.wikipedia.org/wiki/Dead_Island",
       companyName: "Techland",
       thumbnail: "deadisland/main.jpg",
       summaryTitle: "Dead Island",
