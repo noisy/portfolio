@@ -51,7 +51,10 @@
           >
             <img
               class="img-fluid"
-              :src="getAsset(`@/images/webdev-icons/${iconName}.svg`)"
+              :src="
+                getAsset(`@/images/webdev-icons/${iconName}.svg`) ||
+                getAsset(`@/images/webdev-icons/${iconName}.png`)
+              "
               :title="iconName"
             />
           </div>
