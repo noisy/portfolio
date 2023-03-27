@@ -29,7 +29,7 @@
       <div class="card-body pb-0">
         <h4 class="card-title text-truncate text-center mb-0">
           <router-link
-            lass="text-link"
+            class="text-link"
             :to="{ name: `project-${project.slug}` }"
           >
             {{ project.name }}

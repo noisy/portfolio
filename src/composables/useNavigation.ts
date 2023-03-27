@@ -4,7 +4,7 @@ function updateSlideLine(to: RouteLocation): void {
   const slideLine = document.querySelector("#slide-line") as HTMLElement;
   const navItems = document.querySelectorAll("#navigation li");
   const currentItem = document.querySelector(
-    `nav a[href="${to.fullPath}`
+    `nav a[href="${to.fullPath}"]`
   ) as HTMLElement;
 
   navItems.forEach((navItem) => {

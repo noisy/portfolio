@@ -15,18 +15,17 @@
         Looking for an experienced full-stack developer to build your web app or
         ship your software product? To start an initial chat, just drop me an
         email at
-        <a class="link-on-bg text-link" :href="`mailto:${email}`">{{
-          email
-        }}</a>
-        or use the
+        <a class="link-on-bg text-link" :href="`mailto:${email}`">{{ email }}</a
+        >.
+        <!-- or use the
         <router-link class="link-on-bg text-link" :to="{ name: 'contact' }"
           >form on the contact page</router-link
-        >.
+        >. -->
       </div>
       <div class="text-center">
-        <router-link class="theme-btn-on-bg btn" :to="{ name: 'contact' }"
+        <!-- <router-link class="theme-btn-on-bg btn" :to="{ name: 'contact' }"
           >Let's Talk</router-link
-        >
+        > -->
       </div>
     </div>
   </section>

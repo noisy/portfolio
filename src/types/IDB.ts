@@ -12,6 +12,7 @@ import type { ITalk, ITalkFilter } from "./ITalk";
 import type { ITestimonial } from "./ITestimonial";
 
 export interface IDB {
+  isUnderConstruction: boolean;
   me: IMe;
   projects: IProject[];
   projectFilters: IProjectFilter[];
