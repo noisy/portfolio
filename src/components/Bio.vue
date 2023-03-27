@@ -14,18 +14,18 @@
             <div class="lead">Hello, my name is</div>
             <h2 class="mt-0 display-4 font-weight-bold">{{ fullName }}</h2>
             <div class="bio mb-3">
-              I'm a full-stack developer specialised in frontend and backend
-              development for complex scalable web apps. I write about web
-              development on
-              <router-link class="link-on-bg text-link" :to="{ name: 'blog' }"
-                >my blog</router-link
+              I'm an incredibly determined, self-driven, and fast-learning
+              individual, striving to become a professional Quality Assurance
+              Tester and Automation Engineer. I possess real-world experience in
+              automating e-commerce business processes and have a solid
+              understanding of current leading technologies. I diligently
+              document my entire learning journey on my
+
+              <a class="link-on-bg text-link" :href="`${github}`"
+                >Github page</a
               >
-              and regularly
-              <router-link class="link-on-bg text-link" :to="{ name: 'talks' }"
-                >speak</router-link
-              >
-              at various web conferences and meetups. Want to know how I may
-              help your project? Check out my project
+              and this website. Want to know how I may help your project? Check
+              out my project
               <router-link
                 class="link-on-bg text-link"
                 :to="{ name: 'projects' }"
@@ -47,5 +47,5 @@
 
 <script setup lang="ts">
 import { useMe } from "@/composables";
-const { fullName } = useMe();
+const { fullName, github } = useMe();
 </script>

@@ -4,5 +4,7 @@ export interface IMe {
   fullName: string;
   title: string;
   email: string;
+  github: string;
+  linkedin: string;
   location: string;
 }

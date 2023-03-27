@@ -12,11 +12,14 @@
         Interested in hiring me for your project?
       </h3>
       <div class="section-intro mx-auto text-center mb-3">
-        Looking for an experienced full-stack developer to build your web app or
-        ship your software product? To start an initial chat, just drop me an
-        email at
-        <a class="link-on-bg text-link" :href="`mailto:${email}`">{{ email }}</a
-        >.
+        Searching for a dedicated Quality Assurance Tester and aspiring
+        Automation Engineer to ensure the quality of your web app or software
+        product? To start an initial conversation, simply drop me an email at
+        <a class="link-on-bg text-link" :href="`mailto:${email}`">{{
+          email
+        }}</a>
+        or connect with me on
+        <a class="link-on-bg text-link" :href="`${linkedin}`">LinkedIn</a>.
         <!-- or use the
         <router-link class="link-on-bg text-link" :to="{ name: 'contact' }"
           >form on the contact page</router-link
@@ -34,5 +37,5 @@
 <script setup lang="ts">
 import { useMe } from "@/composables";
 
-const { email } = useMe();
+const { email, linkedin } = useMe();
 </script>
