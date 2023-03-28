@@ -14,23 +14,26 @@
             <div class="lead">Hello, my name is</div>
             <h2 class="mt-0 display-4 font-weight-bold">{{ fullName }}</h2>
             <div class="bio mb-3">
-              I'm an incredibly determined, self-driven, and fast-learning
-              individual, striving to become a professional Quality Assurance
-              Tester and Automation Engineer. I possess real-world experience in
-              automating e-commerce business processes and have a solid
-              understanding of current leading technologies. I diligently
-              document my entire learning journey on my
-
-              <a class="link-on-bg text-link" :href="`${github}`"
-                >Github page</a
-              >
-              and this website. Want to know how I may help your project? Check
-              out my project
-              <router-link
-                class="link-on-bg text-link"
-                :to="{ name: 'projects' }"
-                >case studies</router-link
-              >.
+              <p>
+                I'm an incredibly determined, self-driven, and fast-learning
+                individual, striving to become a professional Quality Assurance
+                Tester and Automation Engineer. I possess real-world experience
+                in automating e-commerce business processes and have a solid
+                understanding of current leading technologies.
+              </p>
+              <p>
+                I diligently document my entire learning journey on my
+                <a class="link-on-bg text-link" :href="`${github}`"
+                  >Github page</a
+                >
+                and this website. I encourage you to review my project
+                <router-link
+                  class="link-on-bg text-link"
+                  :to="{ name: 'projects' }"
+                  >case studies</router-link
+                >
+                to discover how I can add value to your project.
+              </p>
             </div>
             <a
               class="theme-btn-on-bg btn font-weight-bold theme-btn-cta"
