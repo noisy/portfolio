@@ -179,6 +179,15 @@ const db: IDB = {
       relevantForProjects: ["spistresci-pl"],
       url: "https://lukmarcus.github.io/recommendations/Marek%20Szumny%20NDDR%20EN.pdf",
     },
+    {
+      author: "Magdalena Szumna",
+      title: "Senior QA Engineer at Vue StoreFront",
+      type: "linkedin",
+      body: "Over the years, I've mentored many QAs, and I have to admit, Marek is one of the fastest learners I've had the opportunity to train. His dedication and attention to detail are truly remarkable. Marek possesses a strong analytical mindset, which has consistently enabled him to identify and resolve complex issues in a timely and efficient manner.",
+      relevantForProjects: [],
+      url: "https://www.linkedin.com/feed/update/urn:li:ugcPost:7041048617507274752?commentUrn=urn%3Ali%3Acomment%3A%28ugcPost%3A7041048617507274752%2C7046530659414122497%29&dashCommentUrn=urn%3Ali%3Afsd_comment%3A%287046530659414122497%2Curn%3Ali%3AugcPost%3A7041048617507274752%29",
+      pictureUrl: "@/images/testimonials/magdalena-szumna.jpg",
+    },
   ],
   links: {
     linkedinProfile: "https://www.linkedin.com/in/marek-szumny-63ba3295/",
