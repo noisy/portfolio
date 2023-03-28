@@ -24,7 +24,7 @@ const db: IDB = {
       summaryTitle: "CastoPro",
       summary: "Castorama's loyalty program for professionals.",
       filterTags: [],
-      badges: ["Game", "Board Game"],
+      badges: ["Website"],
       technologies: ["bootstrap5"],
       thumbnailLogo: "castopro.svg",
       featured: true,
@@ -45,7 +45,7 @@ const db: IDB = {
       featured: true,
     },
     {
-      name: "Web-based CV",
+      name: "HTML/CSS based CV",
       slug: "cv",
       type: "Webpage",
       url: "https://lukmarcus.github.io/",
@@ -54,7 +54,7 @@ const db: IDB = {
       summaryTitle: "Web-based CV",
       summary: "Constantly updated bilingual Curriculum Vitae.",
       filterTags: [],
-      badges: ["Game"],
+      badges: ["Website", "Open Source"],
       technologies: [
         "html5",
         "css3",
@@ -63,7 +63,7 @@ const db: IDB = {
         "github-pages",
         "google-analytics",
       ],
-      thumbnailLogo: "techland.svg",
+      thumbnailLogo: "marekszumny.svg",
       featured: true,
       repositoryUrl: "https://github.com/lukmarcus/lukmarcus.github.io",
     },
@@ -109,7 +109,7 @@ const db: IDB = {
       summary:
         "Hive Projects is a directory of over a hundred apps, sites and tools built by Hive community. Your project is not listed here? You can add it on your own!",
       filterTags: [],
-      badges: ["Open Source", "Rest API"],
+      badges: ["Website", "Open Source", "Rest API"],
       technologies: [
         "python",
         "django",
@@ -118,7 +118,7 @@ const db: IDB = {
         "github",
         "google-analytics",
       ],
-      thumbnailLogo: "hiveprojects.png",
+      thumbnailLogo: "wise-team.svg",
       featured: true,
       repositoryUrl: "https://github.com/wise-team/hiveprojects.io",
     },
@@ -147,19 +147,29 @@ const db: IDB = {
   ],
   companies: [
     {
-      name: "Steem",
-      url: "https://steem.com/",
-      logo: "logos/logo-steem.svg",
-    },
-    {
       name: "Techland",
       url: "https://techland.net/",
       logo: "logos/techland.svg",
     },
     {
+      name: "Wise-Team",
+      url: "http://web.archive.org/web/20200811211508/https://wise-team.io/",
+      logo: "logos/wise-team.svg",
+    },
+    {
       name: "Portal Games",
       url: "https://portalgames.pl/",
       logo: "logos/portalgames.png",
+    },
+    {
+      name: "New Deal",
+      url: "https://fit-net.com.pl/",
+      logo: "logos/fitnet.png",
+    },
+    {
+      name: "DR Trading",
+      url: "https://allegro.pl/uzytkownik/DR-Trading/sklep",
+      logo: "logos/drtrading.png",
     },
   ],
   talks: [],
