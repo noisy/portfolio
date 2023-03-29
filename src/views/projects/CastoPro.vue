@@ -3,7 +3,10 @@
 
   <div class="section-row">
     <h3 class="section-title">Project background</h3>
-    <p>CastoPro is Polish Castorama's loyalty program for professionals.</p>
+    <p>
+      CastoPro is a loyalty program for professionals offered by Castorama, a
+      leading home improvement retailer in Poland.
+    </p>
   </div>
 
   <div class="section-row">
