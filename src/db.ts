@@ -66,7 +66,7 @@ const db: IDB = {
       ],
       thumbnailLogo: "marekszumny.svg",
       featured: true,
-      repositoryUrl: "https://github.com/lukmarcus/lukmarcus.github.io",
+      repositoryUrl: "https://github.com/lukmarcus/cv",
     },
     {
       name: "Dead Island",
