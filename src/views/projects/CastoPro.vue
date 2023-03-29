@@ -64,7 +64,7 @@
         represent over
         <a
           href="https://web.archive.org/web/20230329150834/https://www.similarweb.com/browsers/poland/"
-          >82% of the polish market share</a
+          >82% of the Polish market share</a
         >.
       </li>
     </ul>
@@ -79,42 +79,74 @@
     </p>
     <p>
       Initially, I divided the task into static pages and forms. Part one was
-      self-explanatory because pages like 'regulations,' 'faq,' 'benefits,' or
-      'privacy-policy' had no interactive elements. Their testing concerned the
-      general checking of the whole, but also, i.e., the correctness of the
-      links and behavior of the pages at different window widths. I also
-      included the mobile version of the top drop-down menu in this category.
+      self-explanatory, as pages such as "Regulations," "FAQ," "Benefits," and
+      "Privacy Policy" had no interactive elements. Testing these pages involved
+      general checks of the entire page, as well as verifying the correctness of
+      the links and the behavior of the pages at different window widths.
+      Additionally, the mobile version of the top drop-down menu was included in
+      this category.
     </p>
     <p>
-      Forms were a different story. In this case, both 'registration' and
-      'login' were imperfect. The problem was that, along with the task, I did
-      not receive any data on which I could test the correct registration/login
-      process. And to fully complete the registration process, an actual
-      taxpayer identification number and a telephone number to verify the
-      account creation are required.
+      Forms were a different story. In this case, both the registration and
+      login forms were found to be imperfect. Despite having access to only a
+      limited number of real phone numbers, I was able to perform tests to the
+      best of my ability. The most interesting part of the testing came when I
+      began exploring negative paths, as both forms proved to be like
+      minefields, with numerous issues to address. Overall, this part of the
+      task was a lot of fun!
     </p>
     <p>
       Finally, I decided to divide all the cases into more specific categories.
       I have listed them all in order of importance to the end user:
     </p>
     <ul>
-      <li>main page</li>
-      <li>registration</li>
-      <li>login</li>
-      <li>responsive design</li>
-      <li>website usability</li>
+      <li>
+        <a
+          href="https://github.com/lukmarcus/Today-I-Learned/tree/main/Test_Case_Studies/CastoPro#main-page"
+          >Main page</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/lukmarcus/Today-I-Learned/tree/main/Test_Case_Studies/CastoPro#registration"
+          >Registration</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/lukmarcus/Today-I-Learned/tree/main/Test_Case_Studies/CastoPro#login"
+          >Login</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/lukmarcus/Today-I-Learned/tree/main/Test_Case_Studies/CastoPro#responsive-design"
+          >Responsive design</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/lukmarcus/Today-I-Learned/tree/main/Test_Case_Studies/CastoPro#website-usability"
+          >Website usability</a
+        >
+      </li>
     </ul>
   </div>
 
   <div class="section-row">
     <h3 class="section-title">What I learned</h3>
     <p>
-      External E2E tests of the website in production with constant changes do
-      not make the tester's job easier.
+      This task reminded me that in the real world, we don't always have access
+      to perfect information or clear requirements. However, this lack of
+      clarity should not be an excuse for not performing the necessary job,
+      especially when faced with urgency. In such situations, relying on one's
+      own judgment and knowledge about industry standards can serve as useful
+      guidelines for identifying what truly needs to be done.
     </p>
     <p>
-      Also: It's hard to do an excellent job without a test account or
-      information on how to create it easily.
+      On a more practical note, this task reminded me to always plan extra time
+      for testing negative paths, as they often contain the most difficult and
+      tricky bugs to identify and report.
     </p>
   </div>
 </template>
