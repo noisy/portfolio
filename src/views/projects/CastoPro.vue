@@ -9,18 +9,18 @@
   <div class="section-row">
     <h3 class="section-title">My role in this project</h3>
     <p>
-      Testing the CastoPro website was part of my recruitment process for one of
-      the prominent Polish analytics companies. For this task, I was given three
-      pieces of information:
+      As a part of my recruitment process for a prominent Polish analytics
+      company, I was tasked with testing the CastoPro website. The objective was
+      to find an error on the website within a timeframe of 48 hours. I was
+      provided with three pieces of information, which were: the CastoPro
+      website link, timeframe, and the task.
     </p>
-    <ul>
-      <li>link: CastoPro website</li>
-      <li>timeframe: 48h</li>
-      <li>task: find an error on the page</li>
-    </ul>
     <p>
-      I decided to include CastoPro as a project because it's a public website,
-      and some reported bugs were already corrected.
+      <i
+        >Disclaimer: CastoPro was selected as a case study due to its public
+        accessibility and the fact that none of the identified issues were
+        security threats.</i
+      >
     </p>
   </div>
 
