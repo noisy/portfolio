@@ -135,7 +135,7 @@ const db: IDB = {
         "Every profesional Software Developer and QA Engineer should have own portfolio. This project allows you to build one, adjust it to your needs, extend and share it with the world.",
       filterTags: ["vue"],
       badges: ["Open Source"],
-      technologies: ["typescript", "vue", "bootstrap5", "cypress"],
+      technologies: ["typescript", "vue", "bootstrap5", "cypress", "netlify"],
       thumbnailLogo: "portfolio.svg",
       featured: true,
       repositoryUrl: "https://github.com/noisy/portfolio",
