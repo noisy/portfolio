@@ -9,10 +9,8 @@
 
 <script setup lang="ts">
 import { Footer, Navigation, UnderConstruction } from "@/components";
-import { useDB, useFavicon } from "@/composables";
-const { animateFavicon } = useFavicon();
+import { useDB } from "@/composables";
 const { isUnderConstruction } = useDB();
-animateFavicon();
 </script>
 
 <style lang="scss">

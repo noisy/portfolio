@@ -41,7 +41,7 @@
           </li>
         </ul>
       </div>
-      <div class="sidebar-row">
+      <div class="sidebar-row" v-if="project.technologies.length > 0">
         <h3 class="sidebar-title mb-3">Technologies Used</h3>
         <div class="webdev-icons row mb-5 justify-content-center">
           <div
