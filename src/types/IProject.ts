@@ -14,7 +14,8 @@ export type IProjectBadge =
   | "Game"
   | "Board Game"
   | "Open Source"
-  | "Rest API";
+  | "Rest API"
+  | "Website";
 
 export type ITechnology =
   | "android"
