@@ -27,12 +27,44 @@
   <div class="section-row">
     <h3 class="section-title">Challenges</h3>
     <p>
-      Because of the lack of information and no requirements about this task, I
-      had to make some assumptions. It was unclear from the description if I
-      should test only one page with this exact address or the entire content
-      for the loyalty program. There were also no additional requirements for a
-      specific testing environment and a responsive version.
+      Throughout the project, I faced several challenges due to the lack of
+      information and specific requirements. With no clear task description, I
+      had to make assumptions on whether to test the entire website or just a
+      specific page. Given that the main page was relatively simple, I decided
+      to focus on testing the entire login and registration pages instead, as
+      these pages are often very error-prone. Additionally, no specific testing
+      environment or responsive version was requested.
     </p>
+    <p>
+      To address these challenges, I established the following requirements:
+    </p>
+    <ul>
+      <li>The website's <b>functionality should work</b> seamlessly.</li>
+      <li>
+        The website should be able to handle <b>negative scenarios</b> where
+        users fail to provide all the required data in the fields, such as
+        incomplete forms or incorrect input.
+      </li>
+      <li>
+        In such cases, the website should provide easy-to-understand
+        <b>feedback to assist the user</b>.
+      </li>
+      <li>
+        The website should be thoroughly tested on both
+        <b>desktop and mobile</b>
+        browsers to ensure optimal performance on all devices.
+      </li>
+      <li>
+        Since the website targets the Polish market, it was important to
+        prioritize testing on popular web browsers used in Poland, namely
+        <b>Google Chrome</b> and <b>Mozilla Firefox</b>, which together
+        represent over
+        <a
+          href="https://web.archive.org/web/20230329150834/https://www.similarweb.com/browsers/poland/"
+          >82% of the polish market share</a
+        >.
+      </li>
+    </ul>
   </div>
 
   <div class="section-row">
