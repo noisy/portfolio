@@ -22,7 +22,8 @@ const db: IDB = {
       companyName: "Castorama",
       thumbnail: "castopro/main.jpg",
       summaryTitle: "CastoPro",
-      summary: "Castorama's loyalty program for professionals.",
+      summary:
+        "CastoPro is a loyalty program for professionals offered by Castorama, a leading home improvement retailer in Poland.",
       filterTags: [],
       badges: ["Website"],
       technologies: [],
