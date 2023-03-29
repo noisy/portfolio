@@ -137,24 +137,24 @@
               No information about required fields during registration
             </a>
             <div class="collapse" id="collapseExample2">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> There are no marked required
                 fields on page <code>/pl/register</code>.
               </p>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>/pl/register</code>.</li>
               </ol>
-              <p dir="auto">
+              <p>
                 <strong>Actual result:</strong> No information about required
                 fields.
               </p>
-              <p dir="auto">
+              <p>
                 <strong>Expected result:</strong> Required fields are marked
                 (e.g., asterisks with a legend).
               </p>
-              <p dir="auto"><strong>Screenshot:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshot:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -179,7 +179,7 @@
               simultaneously
             </a>
             <div class="collapse" id="collapseExample3">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> Page
                 <code>/pl/register</code> does not check all required fields
                 simultaneously. The <code>E-mail</code> is checked first, then
@@ -187,8 +187,8 @@
                 name (<code>Imię</code>) with the last name
                 (<code>Nazwisko</code>).
               </p>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>/pl/register</code>.</li>
                 <li>
                   Click the button <code>DALEJ</code> (without filling in the
@@ -209,16 +209,16 @@
                 </li>
                 <li>Click the button <code>DALEJ</code>.</li>
               </ol>
-              <p dir="auto">
+              <p>
                 <strong>Actual result:</strong> Each subsequent error message
                 applies to only one field.
               </p>
-              <p dir="auto">
+              <p>
                 <strong>Expected result:</strong> All messages regarding
                 incorrectly completed fields appear simultaneously.
               </p>
-              <p dir="auto"><strong>Screenshots:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshots:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -263,13 +263,13 @@
               validated only after entering the phone number
             </a>
             <div class="collapse" id="collapseExample4">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> On page <code>/pl/register</code>,
                 the correctness of the written e-mail is validated only after
                 entering the phone number. Before that, any e-mail in the format
                 <code>x@x.xx</code> is correct:
               </p>
-              <ul dir="auto">
+              <ul>
                 <li>
                   wrong domain (<code>.cmo</code> instead of <code>.com</code>,
                   <code>.lp</code> instead of <code>.pl</code>, also
@@ -279,8 +279,8 @@
                   domains that don't exist (e.g., <code>@gmail.com.pl</code>)
                 </li>
               </ul>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>/pl/register</code>.</li>
                 <li>
                   Fill the <code>E-mail</code> field with the incorrect e-mail
@@ -297,16 +297,16 @@
                 </li>
                 <li>Click the button <code>DALEJ</code>.</li>
               </ol>
-              <p dir="auto">
+              <p>
                 <strong>Actual result:</strong> Information about an incorrect
                 e-mail appears only after entering the phone number.
               </p>
-              <p dir="auto">
+              <p>
                 <strong>Expected result:</strong> Information about an incorrect
                 e-mail appears even without entering a phone number.
               </p>
-              <p dir="auto"><strong>Screenshot:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshot:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -335,26 +335,26 @@
               The login page does not check both login fields simultaneously
             </a>
             <div class="collapse" id="collapseExample5">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> Page
                 <code>/pl/auth/login</code> does not check both fields
                 simultaneously. The password <code>Hasło</code> is checked
                 first, and then the e-mail (<code>Adres e-mail</code>).
               </p>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>pl/auth/login</code>.</li>
                 <li>Click login button <code>ZALOGUJ MNIE</code>.</li>
                 <li>Enter any password in the <code>Hasło</code> field.</li>
                 <li>Click login button <code>ZALOGUJ MNIE</code>.</li>
               </ol>
-              <p dir="auto">
+              <p>
                 <strong>Actual result:</strong> Error message about wrong email
                 or password. <strong>Expected result:</strong> Error messages
                 for both email and password fields.
               </p>
-              <p dir="auto"><strong>Screenshots:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshots:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -388,12 +388,12 @@
               Two formats of login errors
             </a>
             <div class="collapse" id="collapseExample6">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> Login error messages on page
                 <code>/pl/auth/login</code> have different graphical formats.
               </p>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>pl/auth/login</code>.</li>
                 <li>
                   Enter the e-mail address in the
@@ -405,16 +405,16 @@
                   entering any password in the <code>Hasło</code> field).
                 </li>
               </ol>
-              <p dir="auto">
+              <p>
                 <strong>Actual result:</strong> Two error messages in different
                 formats.
               </p>
-              <p dir="auto">
+              <p>
                 <strong>Expected result:</strong> Two identical-looking
                 messages.
               </p>
-              <p dir="auto"><strong>Screenshot:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshot:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -439,14 +439,14 @@
               e-mail is not in the database
             </a>
             <div class="collapse" id="collapseExample7">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> On the page
                 <code>/pl/auth/login</code>, when using the password recovery
                 option, if a valid e-mail is entered but one in the database, an
                 error appears that <code>this is not a valid e-mail</code>.
               </p>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>/pl/auth/login</code>.</li>
                 <li>
                   Click the button <code>NIE PAMIĘTAM HASŁA</code> under the
@@ -459,15 +459,13 @@
                 </li>
                 <li>Click the send button <code>WYŚLIJ</code>.</li>
               </ol>
-              <p dir="auto">
-                <strong>Actual result:</strong> Not a valid e-mail message.
-              </p>
-              <p dir="auto">
+              <p><strong>Actual result:</strong> Not a valid e-mail message.</p>
+              <p>
                 <strong>Expected result:</strong> A message that a link has been
                 sent if such an e-mail is in the database.
               </p>
-              <p dir="auto"><strong>Screenshot:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshot:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -498,25 +496,25 @@
               the 992px width
             </a>
             <div class="collapse" id="collapseExample8">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> Page <code>/pl/home</code> below
                 992px does not show the entire paragraph
                 <code>Od 25 lat wspieramy Profesjonalistów</code>.
               </p>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>/pl/home</code>.</li>
                 <li>Change the page width below 992px.</li>
               </ol>
-              <p dir="auto">
+              <p>
                 <strong>Actual result:</strong> The entire paragraph disappears.
               </p>
-              <p dir="auto">
+              <p>
                 <strong>Expected result:</strong> The paragraph adjusts to the
                 new width.
               </p>
-              <p dir="auto"><strong>Screenshot above 992px width:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshot above 992px width:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -528,8 +526,8 @@
                     style="max-width: 100%"
                 /></a>
               </p>
-              <p dir="auto"><strong>Screenshot below 992px width:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshot below 992px width:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -553,26 +551,26 @@
               The menu background is too short between 992px and 1098px width
             </a>
             <div class="collapse" id="collapseExample9">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> On pages with a width between
                 992px and 1098px, the background of the menu is too small for
                 the registration link <code>REJESTRACJA</code>.
               </p>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>/pl/home</code>.</li>
                 <li>Change the page width to between 992px and 1098px.</li>
               </ol>
-              <p dir="auto">
+              <p>
                 <strong>Actual result:</strong> The menu is too small for the
                 word <code>REJESTRACJA</code>.
               </p>
-              <p dir="auto">
+              <p>
                 <strong>Expected result:</strong> The width of the menu includes
                 all items.
               </p>
-              <p dir="auto"><strong>Screenshot:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshot:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -596,25 +594,25 @@
               The menu button overlaps the website logo below 284px width
             </a>
             <div class="collapse" id="collapseExample10">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> On pages with a width below 284px,
                 the top menu button overlaps the website logo.
               </p>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>/pl/home</code>.</li>
                 <li>Change the page width below 284px.</li>
               </ol>
-              <p dir="auto">
+              <p>
                 <strong>Actual result:</strong> The menu button overlaps the
                 website logo.
               </p>
-              <p dir="auto">
+              <p>
                 <strong>Expected result:</strong> The website logo shrinks, or
                 the menu button is below the website logo.
               </p>
-              <p dir="auto"><strong>Screenshot:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshot:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -638,7 +636,7 @@
               Opening and closing the menu is not a button, but narrow elements
             </a>
             <div class="collapse" id="collapseExample11">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> On pages with a width below 992px,
                 there is a menu button in the upper right corner of the page
                 instead of a full menu. This "button" is not an area but
@@ -646,21 +644,21 @@
                 When the menu is open, there is the "X" with the same problem,
                 which closes the menu.
               </p>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>/pl/home</code>.</li>
                 <li>Change the page width below 992px.</li>
               </ol>
-              <p dir="auto">
+              <p>
                 <strong>Actual result:</strong> Open and close menu items are
                 not easy to click.
               </p>
-              <p dir="auto">
+              <p>
                 <strong>Expected result:</strong> Open and close menu items are
                 buttons or larger areas that are easier to click.
               </p>
-              <p dir="auto"><strong>Screenshots:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshots:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -699,26 +697,26 @@
               The regulations page does not scale below 456px width
             </a>
             <div class="collapse" id="collapseExample12">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> The page
                 <code>/pl/castopro-regulations</code> stops scaling below 456px
                 width, and the table sticks out of the visible area.
               </p>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>/pl/castopro-regulations</code>.</li>
                 <li>Change the page width below 456px.</li>
               </ol>
-              <p dir="auto">
+              <p>
                 <strong>Actual result:</strong> The content of the page extends
                 beyond the visible area.
               </p>
-              <p dir="auto">
+              <p>
                 <strong>Expected result:</strong> The page adapts to the width
                 of the screen.
               </p>
-              <p dir="auto"><strong>Screenshot:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshot:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
@@ -742,26 +740,26 @@
               The privacy policy page does not scale below 382px width
             </a>
             <div class="collapse" id="collapseExample13">
-              <p dir="auto">
+              <p>
                 <strong>Description:</strong> The page
                 <code>/pl/privacy-policy</code> stops scaling below 382px width,
                 and the table sticks out of the visible area.
               </p>
-              <p dir="auto"><strong>Steps to reproduce:</strong></p>
-              <ol dir="auto">
+              <p><strong>Steps to reproduce:</strong></p>
+              <ol>
                 <li>Open page <code>/pl/privacy-policy</code>.</li>
                 <li>Change the page width below 382px.</li>
               </ol>
-              <p dir="auto">
+              <p>
                 <strong>Actual result:</strong> The content of the page extends
                 beyond the visible area.
               </p>
-              <p dir="auto">
+              <p>
                 <strong>Expected result:</strong> The page adapts to the width
                 of the screen.
               </p>
-              <p dir="auto"><strong>Screenshot:</strong></p>
-              <p dir="auto">
+              <p><strong>Screenshot:</strong></p>
+              <p>
                 <a
                   target="_blank"
                   rel="noopener noreferrer nofollow"
