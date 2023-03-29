@@ -105,15 +105,15 @@
         <ul>
           <li>
             <a
-              href="#collapseExample1"
+              href="#issue1"
               data-bs-toggle="collapse"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               The element <code>&lt;div class="container"&gt;</code> was not
               closed
             </a>
-            <div class="collapse" id="collapseExample1">
+            <div class="collapse" id="issue1">
               <p>
                 <strong>Description:</strong> In the code of the page
                 <code>/pl/home</code>, the element
@@ -130,13 +130,13 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample2"
+              href="#issue2"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               No information about required fields during registration
             </a>
-            <div class="collapse" id="collapseExample2">
+            <div class="collapse" id="issue2">
               <p>
                 <strong>Description:</strong> There are no marked required
                 fields on page <code>/pl/register</code>.
@@ -171,14 +171,14 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample3"
+              href="#issue3"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               The registration page does not check all required fields
               simultaneously
             </a>
-            <div class="collapse" id="collapseExample3">
+            <div class="collapse" id="issue3">
               <p>
                 <strong>Description:</strong> Page
                 <code>/pl/register</code> does not check all required fields
@@ -255,14 +255,14 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample4"
+              href="#issue4"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               The correctness of the e-mail on the registration page is
               validated only after entering the phone number
             </a>
-            <div class="collapse" id="collapseExample4">
+            <div class="collapse" id="issue4">
               <p>
                 <strong>Description:</strong> On page <code>/pl/register</code>,
                 the correctness of the written e-mail is validated only after
@@ -328,13 +328,13 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample5"
+              href="#issue5"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               The login page does not check both login fields simultaneously
             </a>
-            <div class="collapse" id="collapseExample5">
+            <div class="collapse" id="issue5">
               <p>
                 <strong>Description:</strong> Page
                 <code>/pl/auth/login</code> does not check both fields
@@ -381,13 +381,13 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample6"
+              href="#issue6"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               Two formats of login errors
             </a>
-            <div class="collapse" id="collapseExample6">
+            <div class="collapse" id="issue6">
               <p>
                 <strong>Description:</strong> Login error messages on page
                 <code>/pl/auth/login</code> have different graphical formats.
@@ -431,14 +431,14 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample7"
+              href="#issue7"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               Misleading error message during the password recovery when an
               e-mail is not in the database
             </a>
-            <div class="collapse" id="collapseExample7">
+            <div class="collapse" id="issue7">
               <p>
                 <strong>Description:</strong> On the page
                 <code>/pl/auth/login</code>, when using the password recovery
@@ -487,15 +487,15 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample13"
+              href="#issue13"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               The paragraph
               <code>Od 25 lat wspieramy Profesjonalistów</code> disappears below
               the 992px width
             </a>
-            <div class="collapse" id="collapseExample8">
+            <div class="collapse" id="issue8">
               <p>
                 <strong>Description:</strong> Page <code>/pl/home</code> below
                 992px does not show the entire paragraph
@@ -544,13 +544,13 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample9"
+              href="#issue9"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               The menu background is too short between 992px and 1098px width
             </a>
-            <div class="collapse" id="collapseExample9">
+            <div class="collapse" id="issue9">
               <p>
                 <strong>Description:</strong> On pages with a width between
                 992px and 1098px, the background of the menu is too small for
@@ -587,13 +587,13 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample10"
+              href="#issue10"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               The menu button overlaps the website logo below 284px width
             </a>
-            <div class="collapse" id="collapseExample10">
+            <div class="collapse" id="issue10">
               <p>
                 <strong>Description:</strong> On pages with a width below 284px,
                 the top menu button overlaps the website logo.
@@ -629,13 +629,13 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample11"
+              href="#issue11"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               Opening and closing the menu is not a button, but narrow elements
             </a>
-            <div class="collapse" id="collapseExample11">
+            <div class="collapse" id="issue11">
               <p>
                 <strong>Description:</strong> On pages with a width below 992px,
                 there is a menu button in the upper right corner of the page
@@ -690,13 +690,13 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample12"
+              href="#issue12"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               The regulations page does not scale below 456px width
             </a>
-            <div class="collapse" id="collapseExample12">
+            <div class="collapse" id="issue12">
               <p>
                 <strong>Description:</strong> The page
                 <code>/pl/castopro-regulations</code> stops scaling below 456px
@@ -733,13 +733,13 @@
           <li>
             <a
               data-bs-toggle="collapse"
-              href="#collapseExample13"
+              href="#issue13"
               aria-expanded="false"
-              aria-controls="collapseExample"
+              aria-controls="issue"
             >
               The privacy policy page does not scale below 382px width
             </a>
-            <div class="collapse" id="collapseExample13">
+            <div class="collapse" id="issue13">
               <p>
                 <strong>Description:</strong> The page
                 <code>/pl/privacy-policy</code> stops scaling below 382px width,
