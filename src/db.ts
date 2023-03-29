@@ -25,7 +25,7 @@ const db: IDB = {
       summary: "Castorama's loyalty program for professionals.",
       filterTags: [],
       badges: ["Website"],
-      technologies: ["bootstrap5"],
+      technologies: [],
       thumbnailLogo: "castopro.svg",
       featured: true,
     },
