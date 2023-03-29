@@ -99,7 +99,7 @@
       Finally, I decided to divide all the cases into more specific categories.
       I have listed them all in order of importance to the end user:
     </p>
-    <ul>
+    <ul id="issues">
       <li>
         Main page
         <ul>
@@ -810,3 +810,9 @@ collapseElementList.map(function (collapseEl) {
   return new Collapse(collapseEl);
 });
 </script>
+<style scoped>
+#issues img {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+</style>
