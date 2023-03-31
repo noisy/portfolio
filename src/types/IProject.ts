@@ -46,6 +46,7 @@ export type ITechnology =
   | "jira"
   | "jquery"
   | "mantis"
+  | "netlify"
   | "paypal"
   | "postgresql"
   | "ps3"
