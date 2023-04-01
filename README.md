@@ -5,7 +5,7 @@ Testing, detecting bugs and their causes, has been a passion of mine for a long 
 I am a former Motoparagliding National Team competitor, winner of the Polish Championship title three times, and team bronze medal at the European Championships and the World Championships.
 
 ### Courses and Certificates
-- Tester Oprogramowania [SDAcademy](#)
+- Tester Oprogramowania [SDAcademy](https://sdacademy.pl/kursy/software-tester/)
 - Podstawy manualnego testowania oprogramowania [Udemy](https://www.udemy.com/certificate/UC-11c0ad61-586b-43ce-9c06-9803c32dedaa/)
 - Praktyczny kurs testowania oprogramowania [Udemy](https://www.udemy.com/certificate/UC-169c5f4c-697b-499b-acd5-2ec51f5c6f07/)
 - Postman od podstaw - testowanie REST API [Udemy](https://www.udemy.com/certificate/UC-bcbf85f3-92da-4c40-9630-09c801ba4706/)
