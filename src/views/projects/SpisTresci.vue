@@ -243,7 +243,6 @@
 import {
   BlogPostThumbnail,
   Carousel,
-  CoverImage,
   Quote,
   Testimonial,
 } from "@/components";
@@ -255,7 +254,6 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "SpisTresci",
   components: {
-    CoverImage,
     Testimonial,
     Carousel,
     Quote,

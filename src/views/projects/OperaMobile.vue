@@ -1,6 +1,4 @@
 <template>
-  <CoverImage :url="`@/images/projects/${project.thumbnail}`" />
-
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
     <h3 class="section-title">My role in this project</h3>
@@ -35,7 +33,7 @@
 </template>
 
 <script setup lang="ts">
-import { CoverImage, Testimonial } from "@/components";
+import { Testimonial } from "@/components";
 import type { IProject, ITestimonial } from "@/types";
 
 defineProps<{ project: IProject; testimonials: ITestimonial[] }>();
