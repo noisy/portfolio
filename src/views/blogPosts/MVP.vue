@@ -234,7 +234,10 @@
       >
       I didn't validate whether anyone would be interested in funding my work in
       advance (investors, crowdfunding,
-      <a href="http://lexicon.ft.com/Term?term=3-Fs">FFF</a>)
+      <a
+        href="http://web.archive.org/web/20190424123747/http://lexicon.ft.com/Term?term=3-Fs"
+        >FFF</a
+      >)
     </p>
     <p>
       <em
