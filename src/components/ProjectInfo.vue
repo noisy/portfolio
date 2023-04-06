@@ -47,7 +47,7 @@
           <div
             v-for="iconName in project.technologies"
             :key="iconName"
-            class="webdev-icon col-2 col-sm-1 col-lg-2 me-0 mb-2"
+            class="webdev-icon col-2 col-xs-1 col-sm-1 col-lg-2 me-0 mb-2"
           >
             <img
               class="img-fluid"
