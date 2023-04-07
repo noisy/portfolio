@@ -370,8 +370,7 @@ const db: IDB = {
       author: "Krzysztof Szumny",
       slug: "mvp",
       published: true,
-      thumbnail:
-        "https://steemitimages.com/640x0/https://ipfs.pics/ipfs/QmYq5xu4N98WUJMjwjaGwaCZpgPWzNyhsrAkLaGvLS3uC1",
+      thumbnail: "../src/images/blog/mvp.png",
       publishedAt: new Date("2016-08-22 20:51"),
       intro:
         "Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod. Vivamus sed mi vitae dui iaculis venenatis...",
