@@ -1,6 +1,4 @@
 <template>
-  <CoverImage :url="`@/images/projects/${project.thumbnail}`" />
-
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
     <h3 class="section-title">My role in this project</h3>
@@ -23,7 +21,6 @@
 </template>
 
 <script lang="ts">
-import { CoverImage } from "@/components";
 import { useDB } from "@/composables";
 import type { IProject, ITestimonial } from "@/types";
 import type { PropType } from "vue";
@@ -32,9 +29,6 @@ import "vue3-carousel/dist/carousel.css";
 
 export default defineComponent({
   name: "Pitchup",
-  components: {
-    CoverImage,
-  },
   props: {
     project: {
       type: Object as PropType<IProject>,

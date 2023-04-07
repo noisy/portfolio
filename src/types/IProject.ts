@@ -1,24 +1,29 @@
 import type { AllFilterTag, IFilter } from ".";
 
 export type IProjectBadge =
-  | "Angular"
-  | "Java"
-  | "C/C++"
   | "Android"
-  | "Python"
-  | "Django"
-  | "Vue"
-  | "TypeScript"
+  | "Angular"
   | "Blockchain"
-  | "jQuery";
+  | "C/C++"
+  | "Django"
+  | "Java"
+  | "jQuery"
+  | "Python"
+  | "TypeScript"
+  | "Vue";
 
 export type ITechnology =
   | "android"
   | "angular"
   | "apollographql"
+  | "babeljs"
+  | "bootstrap4"
+  | "bootstrap5"
   | "c"
   | "cookiecutter"
   | "cpp"
+  | "css3"
+  | "cypress"
   | "django-rest-framework"
   | "django"
   | "docker"
@@ -26,34 +31,33 @@ export type ITechnology =
   | "github"
   | "gitlab"
   | "graphql"
+  | "html5"
   | "java"
   | "javascript"
   | "jenkins"
+  | "jestjs"
   | "jira"
   | "jquery"
+  | "paypal"
   | "postgresql"
   | "python"
   | "solr"
-  | "stripe"
   | "sqlalchemy"
-  | "typescript"
-  | "jestjs"
-  | "paypal"
-  | "cypress"
-  | "babeljs"
   | "stripe"
+  | "stripe"
+  | "typescript"
   | "vue";
 
 export type IProjectFilterTag =
-  | "angular"
-  | "vue"
-  | "python-django"
-  | "js-ts"
   | "android"
-  | "java"
+  | "angular"
   | "blockchain"
+  | "c-cpp"
+  | "java"
+  | "js-ts"
+  | "python-django"
   | "react"
-  | "c-cpp";
+  | "vue";
 
 export interface IProjectFilter extends IFilter {
   name: string;
