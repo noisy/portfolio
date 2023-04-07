@@ -18,12 +18,6 @@
             blogPost.publishedAt.toDateString()
           }}
         </li>
-        <li class="list-inline-item d-none">
-          <font-awesome-icon icon="comment" class="me-2" />
-          <a class="text-link" target="_self" href="#comments-block"
-            >8 Comments</a
-          >
-        </li>
       </ul>
     </div>
   </div>
