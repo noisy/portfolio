@@ -1,7 +1,9 @@
 <template>
   <div class="header-intro theme-bg-primary text-white py-5">
     <div class="container text-center">
-      <h2 class="page-heading mb-1">{{ blogPost.title }}</h2>
+      <h2 class="page-heading col-12 col-lg-9 col-xl-8 mx-auto mb-1">
+        {{ blogPost.title }}
+      </h2>
       <div class="page-heading-tagline mx-auto mb-3">
         {{ blogPost.tagline }}
       </div>
