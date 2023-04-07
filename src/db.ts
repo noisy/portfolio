@@ -370,7 +370,7 @@ const db: IDB = {
       author: "Krzysztof Szumny",
       slug: "mvp",
       published: true,
-      thumbnail: "src/images/blog/mvp.png",
+      thumbnail: "../src/images/blog/mvp.png",
       publishedAt: new Date("2016-08-22 20:51"),
       intro:
         "Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod. Vivamus sed mi vitae dui iaculis venenatis...",
