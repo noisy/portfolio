@@ -1,9 +1,13 @@
 <template>
+<div class="row">
   <PageHeader :title="project.name">
     <template #tagline>
+    <div class="col-12 col-md-8 col-lg-10 col-xl-12">
       {{ project.summary }}
+      </div>
     </template>
     <template #logo>
+    <div class="col-12 mx-auto">
       <div
         class="page-heading-logo font-weight-bold position-absolute mt-4 mt-md-0 py-3"
       >
@@ -16,8 +20,10 @@
           :src="`@/images/logos/${project.thumbnailLogo}`"
         /> -->
       </div>
+      </div>
     </template>
   </PageHeader>
+  </div>
 </template>
 
 <script setup lang="ts">
