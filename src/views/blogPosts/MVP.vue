@@ -4,19 +4,9 @@
       3 years ago, I realized that I had a dream - I wanted to build something
       important and significant on my own. I wasn't sure whether I was ready,
       but I decided to quit my dream job at
-      <a
-        href="http://www.opera.com/"
-        rel="noopener"
-        title="This link will take you away from steemit.com"
-        class="keychainify-checked steem-keychain-checked"
-        >Opera Software</a
-      >
+      <a href="http://www.opera.com/">Opera Software</a>
       and create
-      <router-link
-        :to="{ name: 'project-spistresci-pl' }"
-        rel="noopener"
-        title="This link will take you away from steemit.com"
-        class="keychainify-checked steem-keychain-checked"
+      <router-link :to="{ name: 'project-spistresci-pl' }"
         >my own startup</router-link
       >
       - a search engine and price comparison website for books and ebooks. I
@@ -48,9 +38,6 @@
       Lean Startup, which
       <a
         href="http://www.startuplessonslearned.com/2009/08/minimum-viable-product-guide.html"
-        rel="noopener"
-        title="This link will take you away from steemit.com"
-        class="keychainify-checked steem-keychain-checked"
         >explains</a
       >:
     </p>
@@ -74,13 +61,7 @@
       Validation of your idea without building anything
     </h3>
     <p>
-      <img
-        :src="img('picture1-640.png')"
-        :srcset="`
-          ${img('picture1-640.png')} 1x,
-          ${img('picture1-800.png')} 2x
-        `"
-      />
+      <img class="img-fluid w-100" :src="img('picture1.png')" />
     </p>
     <p>
       If you want to be a business owner, then you should be at the same time
@@ -95,9 +76,6 @@
       <em
         >"<a
           href="http://thenextweb.com/dd/2014/11/12/15-ways-test-minimum-viable-product/#gref"
-          rel="noopener"
-          title="This link will take you away from steemit.com"
-          class="keychainify-checked steem-keychain-checked"
           >15 ways to test your minimum viable product</a
         >"</em
       >. There are 8 items from article which could be used in an MVB instead of
@@ -155,10 +133,7 @@
       Being sure that there is demand for a product like yours
     </h3>
     <p>
-      <img
-        :src="img('vr-640.png')"
-        :srcset="`${img('vr-640.png')} 1x, ${img('vr-700.png')} 2x`"
-      />
+      <img class="img-fluid w-100" :src="img('vr.png')" />
     </p>
     <p>
       In the case of our startup I was sure that there is demand a for a price
@@ -193,7 +168,11 @@
     </p>
     <h3 class="section-title">What MVP is not</h3>
     <p>
-      <img :src="img('whatMVPisNot.gif')" alt="what MVP is not" />
+      <img
+        class="img-fluid w-100"
+        :src="img('whatMVPisNot.gif')"
+        alt="what MVP is not"
+      />
     </p>
     <p>
       I can agree that it is necessary in the process of creating an MVP to
@@ -214,17 +193,13 @@
     </h3>
     <p>
       With a list of
-      <a
-        href="https://www.cbinsights.com/blog/startup-failure-reasons-top/"
-        rel="noopener"
-        title="This link will take you away from steemit.com"
-        class="keychainify-checked steem-keychain-checked"
+      <a href="https://www.cbinsights.com/blog/startup-failure-reasons-top/"
         >top reasons why startups fail</a
       >
       I will try explain how MVP could save your project from failing.
     </p>
     <p>
-      <img class="w-100" :src="img('top10reasonsStartusFails.png')" />
+      <img class="img-fluid w-100" :src="img('top10reasonsStartusFails.png')" />
     </p>
     <p>But how can one single MVB or MVP do so much? The truth is, it can't!</p>
     <h4 class="section-subtitle">No Market Need</h4>
@@ -260,10 +235,7 @@
       I didn't validate whether anyone would be interested in funding my work in
       advance (investors, crowdfunding,
       <a
-        href="http://lexicon.ft.com/Term?term=3-Fs"
-        rel="noopener"
-        title="This link will take you away from steemit.com"
-        class="keychainify-checked steem-keychain-checked"
+        href="http://web.archive.org/web/20190424123747/http://lexicon.ft.com/Term?term=3-Fs"
         >FFF</a
       >)
     </p>
@@ -323,12 +295,7 @@
       that it looks quite different for different companies.
     </p>
     <p>
-      <img
-        :src="img('howToNotBuildMVP-640.png')"
-        :srcset="`
-          ${img('howToNotBuildMVP-640.png')} 1x,
-          ${img('howToNotBuildMVP-800.png')} 2x`"
-      />
+      <img class="img-fluid w-100" :src="img('howToNotBuildMVP.png')" />
     </p>
     <p>
       If you want to build a great restaurant, it is obvious that a location in
@@ -351,13 +318,7 @@
       MVP reliable and usable.
     </p>
     <p>
-      <img
-        :src="img('mvp-pyramid-640.png')"
-        :srcset="`
-          ${img('mvp-pyramid-640.png')} 1x,
-          ${img('mvp-pyramid-1000.png')} 2x
-        `"
-      />
+      <img class="img-fluid w-100" :src="img('mvp-pyramid.png')" />
     </p>
     <p>
       You have to remember that there is still a very high probability that your
@@ -381,13 +342,7 @@
     </p>
     <h3 class="section-title">Don't be afraid to find the right wall</h3>
     <p>
-      <img
-        :src="img('ladder-640.png')"
-        :srcset="`
-          ${img('ladder-640.png')} 1x,
-          ${img('ladder-736.png')} 2x
-        `"
-      />
+      <img class="img-fluid w-100" :src="img('ladder.png')" />
     </p>
     <p>
       MVP, in theory, is an easy concept, but in practice, it is extremely
@@ -490,35 +445,6 @@
         </ul>
       </div>
     </div>
-  </div> -->
-
-  <!-- <div id="comments-block" class="comments-block">
-    <div id="disqus_thread"></div>
-    <script type="text/javascript">
-      /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-      var disqus_shortname = "3wmthemes"; // required: replace example with your forum shortname
-
-      /* * * DON'T EDIT BELOW THIS LINE * * */
-      (function () {
-        var dsq = document.createElement("script");
-        dsq.type = "text/javascript";
-        dsq.async = true;
-        dsq.src = "//" + disqus_shortname + ".disqus.com/embed.js";
-        (
-          document.getElementsByTagName("head")[0] ||
-          document.getElementsByTagName("body")[0]
-        ).appendChild(dsq);
-      })();
-    </script>
-    <noscript
-      >Please enable JavaScript to view the
-      <a href="http://disqus.com/?ref_noscript"
-        >comments powered by Disqus.</a
-      ></noscript
-    >
-    <a href="http://disqus.com" class="dsq-brlink"
-      >comments powered by <span class="logo-disqus">Disqus</span></a
-    >
   </div> -->
 </template>
 

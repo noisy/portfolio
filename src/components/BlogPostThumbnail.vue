@@ -35,10 +35,6 @@
             <font-awesome-icon :icon="['far', 'clock']" class="me-2" />
             {{ blogPost.publishedAt.toDateString() }}
           </li>
-          <!-- <li class="list-inline-item">
-            <font-awesome-icon icon="comment" class="me-2" />
-            <a class="text-link" href="#">4 Comments</a>
-          </li> -->
         </ul>
         <div class="excerpt">
           {{ blogPost.intro }}

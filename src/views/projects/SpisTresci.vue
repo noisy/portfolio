@@ -179,11 +179,16 @@
         >a prize of $1,827.89</a
       >.
     </p>
-    <BlogPostThumbnail
-      class="mx-auto"
-      style="width: 70%"
-      :blog-post="mvpBlogPost"
-    />
+
+    <div class="blog-cards row">
+      <div class="col-12">
+        <BlogPostThumbnail
+          class="mx-auto"
+          style="width: 70%"
+          :blog-post="mvpBlogPost"
+        />
+      </div>
+    </div>
 
     <h4 class="section-subtitle">
       Solving a problem, which could be easily cheaply outsourced.
@@ -243,7 +248,6 @@
 import {
   BlogPostThumbnail,
   Carousel,
-  CoverImage,
   Quote,
   Testimonial,
 } from "@/components";
@@ -255,7 +259,6 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "SpisTresci",
   components: {
-    CoverImage,
     Testimonial,
     Carousel,
     Quote,
