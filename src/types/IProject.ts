@@ -61,14 +61,14 @@ export type ITechnology =
 
 export type IProjectFilterTag =
   | "android"
-  | "responsive"
-  | "bootstrap"
   | "blockchain"
+  | "bootstrap"
   | "c-cpp"
   | "java"
   | "js-ts"
   | "python-django"
-  | "js-ts";
+  | "responsive"
+  | "vue";
 
 export interface IProjectFilter extends IFilter {
   name: string;
