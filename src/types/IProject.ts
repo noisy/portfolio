@@ -46,7 +46,8 @@ export type ITechnology =
   | "stripe"
   | "stripe"
   | "typescript"
-  | "vue";
+  | "vue"
+  | "xstate";
 
 export type IProjectFilterTag =
   | "android"

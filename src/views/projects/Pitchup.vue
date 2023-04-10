@@ -1,13 +1,13 @@
 <template>
   <div class="section-row">
     <h3 class="section-title">Project Background</h3>
-    <h3 class="section-title">My role in this project</h3>
+    <h3 class="section-title">My Role in This Project</h3>
   </div>
 
   <div class="section-row">
     <h3 class="section-title">Chalanges</h3>
-    <h4 class="section-title">Complete re-write of whole Payment System</h4>
-    <h4 class="section-title">Non consistent architecture</h4>
+    <h4 class="section-title">Complete Re-Write of Whole Payment System</h4>
+    <h4 class="section-title">Non-Consistent Architecture</h4>
     <h4 class="section-title">Legacy Code</h4>
   </div>
 

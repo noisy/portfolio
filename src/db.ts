@@ -92,6 +92,7 @@ const db: IDB = {
         "gitlab",
         "docker",
         "stripe",
+        "xstate",
       ],
       thumbnailLogo: "logo-pitchup-mini.svg",
       featured: true,

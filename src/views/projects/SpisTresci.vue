@@ -27,7 +27,7 @@
       </iframe>
     </div>
   </div>
-  <h3 class="section-title">My role in this project &amp; our team</h3>
+  <h3 class="section-title">My Role in This Project &amp; Our Team</h3>
   <p>
     I was a founder, a lead developer, and a CEO of this project. My college
     Piotr Zawiślak from Opera Software, become a co-founder. After the start of
@@ -38,7 +38,7 @@
   </p>
   <p><img :src="img('spistresci-core-team.jpg')" class="w-100" /></p>
 
-  <h4 class="section-subtitle">Till this point, I was not a web developer</h4>
+  <h4 class="section-subtitle">Till This Point, I Was Not a Web Developer</h4>
   <p>
     Before I started working on this project, I've had ~4,5 years of commercial
     experience programming in C/C++ &amp; Java for Opera Software. But almost no
@@ -56,7 +56,7 @@
     speed enormously.
   </p>
 
-  <h4 class="section-subtitle">Books matching</h4>
+  <h4 class="section-subtitle">Books Matching</h4>
   <p>
     Every price comparison website should group the same products from different
     shops under one position. I thought this should be trivial because books
@@ -98,7 +98,7 @@
   </Quote>
 
   <h4 class="section-subtitle">
-    Establishing business relationships with ~50 online bookstores
+    Establishing Business Relationships with ~50 Online Bookstores
   </h4>
   <p>
     The most challenging partnership to establish was the first one. It took a
@@ -169,7 +169,7 @@
   <div class="section-row">
     <h3 class="section-title">Biggest Lessons Learned</h3>
 
-    <h4 class="section-subtitle">Not understanding what MVP truly means.</h4>
+    <h4 class="section-subtitle">Not Understanding What MVP Truly Means</h4>
     <p>
       About this very topic, I've written a separate elaborate article, which I
       recommend reading. Steem community appreciated and reworded it with
@@ -191,7 +191,7 @@
     </div>
 
     <h4 class="section-subtitle">
-      Solving a problem, which could be easily cheaply outsourced.
+      Solving a Problem, Which Could Be Easily and Cheaply Outsourced
     </h4>
     <p>
       Because I was an ambitious developer, I've wanted to design a solution for
@@ -200,7 +200,7 @@
       differently and do it semi-manually.
     </p>
 
-    <h4 class="section-subtitle">Not looking for investors early enough.</h4>
+    <h4 class="section-subtitle">Not Looking for Investors Early Enough</h4>
     <p>
       I had some small capital, which I believed should be enough to prepare an
       MVP. As it turned out, it wasn't enough, and additional capital would help
@@ -211,7 +211,7 @@
       metrics from the beginning, allowing us to avoid bankruptcy.
     </p>
 
-    <h4 class="section-subtitle">Failing is still better than not trying.</h4>
+    <h4 class="section-subtitle">Failing Is Still Better Than Not Trying</h4>
     <p>
       Despite a failure of the whole thing, I still believe it was worth it.
       This startup put me on the fast track of learning. Often people are afraid

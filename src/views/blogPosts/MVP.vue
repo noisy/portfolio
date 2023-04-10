@@ -26,7 +26,7 @@
       <strong>I was sure</strong> that I understood what
       <em>Minimum Viable Product</em> is - <strong>I was wrong!</strong>
     </p>
-    <h3 class="section-title">This seems to be straightforward, right?</h3>
+    <h3 class="section-title">This Seems to Be Straightforward, Right?</h3>
     <p>Let's start with a definition. The first one is very simple:</p>
 
     <Quote>
@@ -58,7 +58,7 @@
       can and you should test your idea without that.
     </p>
     <h3 class="section-title">
-      Validation of your idea without building anything
+      Validation of Your Idea Without Building Anything
     </h3>
     <p>
       <img class="img-fluid w-100" :src="img('picture1.png')" />
@@ -96,7 +96,7 @@
       money. If you want to build a business, you should first validate your
       idea with at least one technique described there.
     </p>
-    <h3>Minimum Viable <strong>Business</strong> - first, MVP - later</h3>
+    <h3>Minimum Viable <strong>Business</strong> - First, MVP - Later</h3>
     <p>
       MVB is a new term. For me it is helpful because it helps me split the idea
       of building a company into: "research &amp; planning" - MVB and "actual
@@ -130,7 +130,7 @@
       product is supposed to solve.
     </p>
     <h3 class="section-title">
-      Being sure that there is demand for a product like yours
+      Being Sure That There Is Demand for a Product Like Yours
     </h3>
     <p>
       <img class="img-fluid w-100" :src="img('vr.png')" />
@@ -166,7 +166,7 @@
       minimal version of your product - which one more time, will confirm that
       your assumptions wereactually correct. Do you see the pattern?
     </p>
-    <h3 class="section-title">What MVP is not</h3>
+    <h3 class="section-title">What MVP Is Not</h3>
     <p>
       <img
         class="img-fluid w-100"
@@ -189,7 +189,7 @@
       features which would present how awesome your project is.
     </p>
     <h3 class="section-title">
-      MVP is more like a process, which can save your business
+      MVP Is More Like a Process, Which Can Save Your Business
     </h3>
     <p>
       With a list of
@@ -289,7 +289,7 @@
       desired by customers, you should first implement a small part of it - 20%,
       and at the same time try to bring 80% of feature value to the table.
     </p>
-    <h3 class="section-title">MVP is different for each industry</h3>
+    <h3 class="section-title">MVP Is Different for Each Industry</h3>
     <p>
       I think one explanation for why there is so much confusion with MVP is
       that it looks quite different for different companies.
@@ -310,7 +310,7 @@
       product over and over again from scratch. You want to start with a
       foundation...
     </p>
-    <h4 class="section-subtitle">MVP for software developers</h4>
+    <h4 class="section-subtitle">MVP for Software Developers</h4>
     <p>
       First of all, if you are a programmer, that means that you are probably a
       very technical person. Even if your target market is other programmers,
@@ -340,7 +340,7 @@
       completely rewrite you code to meet new business criteria... without
       destroying everything in the process.
     </p>
-    <h3 class="section-title">Don't be afraid to find the right wall</h3>
+    <h3 class="section-title">Don't Be Afraid to Find the Right Wall</h3>
     <p>
       <img class="img-fluid w-100" :src="img('ladder.png')" />
     </p>
