@@ -25,7 +25,7 @@
       ></iframe>
     </p>
 
-    <h3 class="section-title">My role in this project</h3>
+    <h3 class="section-title">My Role in This Project</h3>
     <p>
       I've worked on Seerene during my years at
       <a href="https://www.stxnext.com/">Software House STXnext</a>. It is a
@@ -41,7 +41,7 @@
 
   <div class="section-row">
     <h3 class="section-title">Challenges</h3>
-    <h4 class="section-title">New frontend framework</h4>
+    <h4 class="section-title">New Frontend Framework</h4>
     <p>
       In 2015, I had a lot of experience with Django&amp;Python, only some
       experience with jQuery and BackboneJS, but no prior experience with
@@ -57,7 +57,7 @@
     </p>
 
     <h4 class="section-title">
-      Bootstrapping new team for a client, new code base, no know-how
+      Bootstrapping New Team for a Client, New Code Base, No Know-How
     </h4>
     <p>
       Because we formed a new independent team, we started with a very narrow
@@ -79,7 +79,7 @@
     </p>
 
     <h4 class="section-title">
-      Lack of infrastructure on our end; Custom CI build-system
+      Lack of Infrastructure on Our End; Custom CI Build-System
     </h4>
     <p>
       To be able to work on a product efficiently, our team needed to also set
@@ -117,7 +117,7 @@
       also proved it was easy to understand also from the code's perspective.
     </p>
 
-    <h4 class="section-title">Optimizing the speed of database queries</h4>
+    <h4 class="section-title">Optimizing the Speed of Database Queries</h4>
     <p>
       To be precise, it was not something on which I've worked personally,
       however, my team did. I've decided to mention this anyway, because of the
