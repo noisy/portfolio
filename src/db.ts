@@ -371,33 +371,12 @@ const db: IDB = {
       author: "Krzysztof Szumny",
       slug: "mvp",
       published: true,
-      thumbnail: "../src/images/blog/mvp.png",
+      thumbnail: "@/images/blog/mvp.png",
       publishedAt: new Date("2016-08-22 20:51"),
       intro:
         "Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod. Vivamus sed mi vitae dui iaculis venenatis...",
       tagline: "About how to not make a very costly mistake...",
     },
-    // {
-    //   title: "Example blog post about programming",
-    //   author: "Krzysztof Szumny",
-    //   slug: "example",
-    //   published: true,
-    //   thumbnail: "/images/blog/blog-post-thumb-2.jpg",
-    //   publishedAt: new Date(),
-    //   intro:
-    //     "Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod. Vivamus sed mi vitae dui iaculis venenatis...",
-    //   tagline: "Example of article about programming",
-    // },
-    // {
-    //   title: "title",
-    //   author: "author",
-    //   slug: "seerene",
-    //   published: true,
-    //   thumbnail: "/images/blog/blog-post-thumb-2.jpg",
-    //   publishedAt: new Date(),
-    //   intro:
-    //     "Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod. Vivamus sed mi vitae dui iaculis venenatis...",
-    // },
   ],
   skillsGroups: [
     {
