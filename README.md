@@ -37,3 +37,4 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 - Zawód Tester - Radosław Smilgin
 - Ścieżka Testera - Rafał Podraza
 - Testowanie Oprogramowania - Rafał Pawlak
+- Bezpieczeństwo Aplikacji Webowych - Securitum
