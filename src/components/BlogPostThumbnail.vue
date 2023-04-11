@@ -3,7 +3,7 @@
     <div class="card-img-container position-relative photo-wrapper">
       <img
         class="card-img-top rounded-0 object-fit-cover"
-        :src="blogPost.thumbnail"
+        :src="getAsset(blogPost.thumbnail)"
         alt=""
       />
       <div class="card-img-overlay overlay-mask overlay-logo text-center p-0">
@@ -45,8 +45,10 @@
 </template>
 
 <script setup lang="ts">
+import { useAssets } from "@/composables";
 import type { IBlogPost } from "@/types";
 
+const { getAsset } = useAssets();
 defineProps<{ blogPost: IBlogPost }>();
 </script>
 
