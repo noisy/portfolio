@@ -26,7 +26,7 @@ jobs:
           start: npm run preview
           wait-on: "http://localhost:5050"
           wait-on-timeout: 120
-          record: false
+          record: true
         env:
           CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_E2E_RECORD_KEY }}
           # Recommended: pass the GitHub token lets this action correctly
