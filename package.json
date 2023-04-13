@@ -2,8 +2,8 @@
   "name": "portfolio",
   "version": "0.2.0",
   "engines": {
-    "npm": "6.14.16",
-    "node": "14.19.0"
+    "npm": "8.19.4",
+    "node": "16.20.0"
   },
   "scripts": {
     "dev": "vite",
@@ -45,7 +45,7 @@
     "cypress-real-events": "1.7.6",
     "eslint": "8.38.0",
     "eslint-plugin-cypress": "2.13.2",
-    "eslint-plugin-vue": "9.10.0",
+    "eslint-plugin-vue": "8.7.1",
     "jsdom": "19.0.0",
     "prettier": "2.8.7",
     "sass": "1.62.0",
