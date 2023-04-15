@@ -8,6 +8,13 @@ jobs:
     container:
       image: cypress/base:18.15.0
     steps:
+      - name: reinstall ca-certificates
+        # Fix for https://github.com/noisy/portfolio/actions/runs/4708656910/jobs/8351231323
+        # https://stackoverflow.com/a/35824116/338581
+        run: |
+          apt-get update
+          apt-get install -y --reinstall ca-certificates
+
       - name: Checkout
         uses: actions/checkout@v3
 
