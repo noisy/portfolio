@@ -37,7 +37,7 @@
     "@types/jsdom": "21.1.1",
     "@types/node": "18.15.11",
     "@vitejs/plugin-vue": "4.1.0",
-    "@vue/eslint-config-prettier": "7.0.0",
+    "@vue/eslint-config-prettier": "7.1.0",
     "@vue/eslint-config-typescript": "11.0.2",
     "@vue/test-utils": "2.3.2",
     "@vue/tsconfig": "0.1.3",
