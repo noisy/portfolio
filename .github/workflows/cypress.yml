@@ -6,19 +6,26 @@ jobs:
   cypress-tests:
     runs-on: ubuntu-latest
     container:
-      image: cypress/base:14.19.0
+      image: cypress/base:18.15.0
     steps:
+      - name: reinstall ca-certificates
+        # Fix for https://github.com/noisy/portfolio/actions/runs/4708656910/jobs/8351231323
+        # https://stackoverflow.com/a/35824116/338581
+        run: |
+          apt-get update
+          apt-get install -y --reinstall ca-certificates
+
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: Install dependencies
-        uses: cypress-io/github-action@v5
+        uses: cypress-io/github-action@v5.6.1
         with:
           # just perform install
           runTests: false
 
       - name: E2E tests
-        uses: cypress-io/github-action@v5.3.0
+        uses: cypress-io/github-action@v5.6.1
         with:
           config-file: cypress.config.e2e.ts
           install: false
@@ -38,7 +45,7 @@ jobs:
           COMMIT_INFO_SHA: ${{github.event.pull_request.head.sha}}
 
       - name: Components tests
-        uses: cypress-io/github-action@v5.3.0
+        uses: cypress-io/github-action@v5.6.1
         with:
           config-file: cypress.config.components.ts
           install: false

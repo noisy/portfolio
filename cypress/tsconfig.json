@@ -3,6 +3,7 @@
   "include": ["./integration/**/*", "./support/**/*"],
   "compilerOptions": {
     "isolatedModules": false,
+    "ignoreDeprecations": "5.0",
     "target": "es5",
     "lib": ["es5", "dom"],
     "types": ["cypress"]
