@@ -2,8 +2,8 @@
   "name": "portfolio",
   "version": "0.2.0",
   "engines": {
-    "npm": "8.19.2",
-    "node": "16.18.1"
+    "npm": "9.5.0",
+    "node": "18.15.0"
   },
   "scripts": {
     "dev": "vite",
