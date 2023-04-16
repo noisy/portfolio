@@ -63,7 +63,8 @@ jobs:
 
   upload:
     runs-on: ubuntu-latest
-    if: ${{ failure() && github.job == 'cypress-tests' }}
+    needs: cypress-tests
+    if: ${{ failure() && needs.cypress-tests.result == 'failure' }}
     steps:
       - name: Upload test artifacts
         uses: actions/upload-artifact@v3
