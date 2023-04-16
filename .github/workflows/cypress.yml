@@ -44,6 +44,14 @@ jobs:
           # re-enable PR comment bot
           COMMIT_INFO_SHA: ${{github.event.pull_request.head.sha}}
 
+      - name: Upload test artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/screenshots/
+            cypress/videos/
+
       - name: Components tests
         uses: cypress-io/github-action@v5.6.1
         with:

@@ -6,6 +6,10 @@ export const config: Parameters<typeof defineConfig>[0] = {
     setupNodeEvents,
     baseUrl: "http://localhost:5050",
     specPattern: "cypress/e2e/**/*.cy.ts",
+    video: true,
+    videosFolder: "cypress/videos",
+    screenshotOnRunFailure: true,
+    screenshotsFolder: "cypress/screenshots",
   },
   component: {
     devServer: {
