@@ -27,7 +27,7 @@ describe("Top navigation test", () => {
     ["Projects", "Talks", "Blog"].forEach((page) => {
       it(`Should go to ${page} and back`, () => {
         cy.get(`@${page.toLowerCase()}`).click();
-        cy.location("pathname").should("eq", `/${page.toLowerCase()}`);
+        cy.location("pathname").should("eq", `/reksio-${page.toLowerCase()}`);
         cy.get("h2").invoke("text").should("include", page);
         goBackToHome();
       });

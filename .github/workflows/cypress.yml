@@ -44,6 +44,15 @@ jobs:
           # re-enable PR comment bot
           COMMIT_INFO_SHA: ${{github.event.pull_request.head.sha}}
 
+      - name: E2E tests - Upload test artifacts
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/screenshots/
+            cypress/videos/
+
       - name: Components tests
         uses: cypress-io/github-action@v5.6.1
         with:
@@ -60,3 +69,12 @@ jobs:
           COMMIT_INFO_MESSAGE: ${{github.event.pull_request.title}}
           # re-enable PR comment bot
           COMMIT_INFO_SHA: ${{github.event.pull_request.head.sha}}
+
+      - name: Components tests - Upload test artifacts
+        if: ${{ failure() }}
+        uses: actions/upload-artifact@v3
+        with:
+          name: cypress-artifacts
+          path: |
+            cypress/screenshots/
+            cypress/videos/
