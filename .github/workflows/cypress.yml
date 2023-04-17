@@ -24,7 +24,7 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          PR_DETAILS=$(gh api "${{ github.event.issue.pull_request.url }}" --jq '{ref: .head.ref, repo: .head.repo.full_name, sha: .head.sha}')
+          PR_DETAILS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "${{ github.event.issue.pull_request.url }}" | jq '{ref: .head.ref, repo: .head.repo.full_name, sha: .head.sha}')
           echo $PR_DETAILS
           echo "PR_REF=$(echo $PR_DETAILS | jq -r .ref)" >> $GITHUB_ENV
           echo "PR_REPO=$(echo $PR_DETAILS | jq -r .repo)" >> $GITHUB_ENV
@@ -38,7 +38,11 @@ jobs:
           apt-get install -y --reinstall ca-certificates
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.PR_REPO }}
+          ref: ${{ env.PR_REF }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
         uses: cypress-io/github-action@v5.6.1
