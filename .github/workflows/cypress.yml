@@ -14,10 +14,22 @@ jobs:
       (github.event_name == 'push' && github.ref == 'refs/heads/master') ||
       (github.event_name == 'issue_comment' &&
        contains(github.event.comment.body, 'e2e please!') &&
-       github.event.issue.pull_request)
+       github.event.issue.pull_request.url)
     container:
       image: cypress/base:18.15.0
     steps:
+      - name: Get pull request details
+        if: github.event_name == 'issue_comment'
+        id: pr-details
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          PR_DETAILS=$(gh api "${{ github.event.issue.pull_request.url }}" --jq '{ref: .head.ref, repo: .head.repo.full_name, sha: .head.sha}')
+          echo $PR_DETAILS
+          echo "PR_REF=$(echo $PR_DETAILS | jq -r .ref)" >> $GITHUB_ENV
+          echo "PR_REPO=$(echo $PR_DETAILS | jq -r .repo)" >> $GITHUB_ENV
+          echo "PR_SHA=$(echo $PR_DETAILS | jq -r .sha)" >> $GITHUB_ENV
+
       - name: reinstall ca-certificates
         # Fix for https://github.com/noisy/portfolio/actions/runs/4708656910/jobs/8351231323
         # https://stackoverflow.com/a/35824116/338581
