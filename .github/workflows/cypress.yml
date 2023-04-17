@@ -1,10 +1,20 @@
 name: Cypress Tests
 
-on: [push]
+on:
+  push:
+    branches:
+      - master
+  issue_comment:
+    types: [created]
 
 jobs:
   cypress-tests:
     runs-on: ubuntu-latest
+    if: |
+      (github.event_name == 'push' && github.ref == 'refs/heads/master') ||
+      (github.event_name == 'issue_comment' &&
+       contains(github.event.comment.body, 'e2e please!') &&
+       github.event.issue.pull_request)
     container:
       image: cypress/base:18.15.0
     steps:
