@@ -24,6 +24,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          apt-get update
+          apt-get install -y jq curl
           PR_DETAILS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "${{ github.event.issue.pull_request.url }}" | jq '{ref: .head.ref, repo: .head.repo.full_name, sha: .head.sha}')
           echo $PR_DETAILS
           echo "PR_REF=$(echo $PR_DETAILS | jq -r .ref)" >> $GITHUB_ENV
