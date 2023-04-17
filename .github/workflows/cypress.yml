@@ -38,7 +38,11 @@ jobs:
           apt-get install -y --reinstall ca-certificates
 
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.PR_REPO }}
+          ref: ${{ env.PR_REF }}
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Install dependencies
         uses: cypress-io/github-action@v5.6.1
