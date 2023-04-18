@@ -46,6 +46,10 @@ jobs:
           started_at: ${{ github.event.workflow_run.created_at }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          RESPONSE=$(echo ${{ steps.request-check-run.outputs.data }})
+          CHECK_RUN_ID=$(echo $RESPONSE | jq -r .id)
+          echo "CHECK_RUN_ID=$CHECK_RUN_ID" >> $GITHUB_ENV
 
       - name: reinstall ca-certificates
         # Fix for https://github.com/noisy/portfolio/actions/runs/4708656910/jobs/8351231323
@@ -113,7 +117,7 @@ jobs:
           route: PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}
           owner: ${{ github.event.repository.owner.login }}
           repo: ${{ github.event.repository.name }}
-          check_run_id: ${{ steps.request-check-run.outputs.data.id }}
+          check_run_id: ${{ env.CHECK_RUN_ID }} # Use the environment variable set in the previous step
           status: completed
           conclusion: ${{ job.status == 'success' && 'success' || 'failure' }}
           completed_at: ${{ github.event.workflow_run.updated_at }}
