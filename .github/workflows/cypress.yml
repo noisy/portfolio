@@ -32,6 +32,21 @@ jobs:
           echo "PR_REPO=$(echo $PR_DETAILS | jq -r .repo)" >> $GITHUB_ENV
           echo "PR_SHA=$(echo $PR_DETAILS | jq -r .sha)" >> $GITHUB_ENV
 
+      - name: Request check run
+        if: github.event_name == 'issue_comment'
+        id: request-check-run
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/{owner}/{repo}/check-runs
+          owner: ${{ github.event.repository.owner.login }}
+          repo: ${{ github.event.repository.name }}
+          name: Cypress Tests
+          head_sha: ${{ env.PR_SHA }}
+          status: queued
+          started_at: ${{ github.event.workflow_run.created_at }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: reinstall ca-certificates
         # Fix for https://github.com/noisy/portfolio/actions/runs/4708656910/jobs/8351231323
         # https://stackoverflow.com/a/35824116/338581
@@ -88,3 +103,19 @@ jobs:
           COMMIT_INFO_MESSAGE: ${{ github.event_name == 'issue_comment' && env.PR_TITLE || github.event.pull_request.title }}
           # re-enable PR comment bot
           COMMIT_INFO_SHA: ${{ github.event_name == 'issue_comment' && env.PR_SHA || github.event.pull_request.head.sha }}
+
+      # Add this step at the end of the job steps
+      - name: Update check run
+        if: github.event_name == 'issue_comment'
+        id: update-check-run
+        uses: octokit/request-action@v2.x
+        with:
+          route: PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}
+          owner: ${{ github.event.repository.owner.login }}
+          repo: ${{ github.event.repository.name }}
+          check_run_id: ${{ steps.request-check-run.outputs.data.id }}
+          status: completed
+          conclusion: ${{ job.status == 'success' && 'success' || 'failure' }}
+          completed_at: ${{ github.event.workflow_run.updated_at }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
