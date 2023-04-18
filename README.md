@@ -38,3 +38,10 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 - Ścieżka Testera - Rafał Podraza
 - Testowanie Oprogramowania - Rafał Pawlak
 - Bezpieczeństwo Aplikacji Webowych - Securitum
+
+### YouTube
+- [jaktestowac.pl]()
+- [testuj.p]()
+- [Testelka]()
+- [AmberTeam Testing]()
+- [Pasja informatyki]()
