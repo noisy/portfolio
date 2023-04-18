@@ -13,6 +13,17 @@ jobs:
     container:
       image: cypress/base:18.15.0
     steps:
+      - name: Add rocket reaction to comment
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions
+          owner: ${{ github.event.repository.owner.login }}
+          repo: ${{ github.event.repository.name }}
+          comment_id: ${{ github.event.comment.id }}
+          content: rocket
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
       - name: Get pull request details
         id: pr-details
         env:
