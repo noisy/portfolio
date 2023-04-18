@@ -1,9 +1,6 @@
-name: Cypress Tests
+name: Cypress Tests on Demand
 
 on:
-  push:
-    branches:
-      - master
   issue_comment:
     types: [created]
 
@@ -11,15 +8,12 @@ jobs:
   cypress-tests:
     runs-on: ubuntu-latest
     if: |
-      (github.event_name == 'push' && github.ref == 'refs/heads/master') ||
-      (github.event_name == 'issue_comment' &&
-       contains(github.event.comment.body, 'e2e please!') &&
+      (contains(github.event.comment.body, 'e2e please!') &&
        github.event.issue.pull_request.url)
     container:
       image: cypress/base:18.15.0
     steps:
       - name: Get pull request details
-        if: github.event_name == 'issue_comment'
         id: pr-details
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -33,16 +27,15 @@ jobs:
           echo "PR_SHA=$(echo $PR_DETAILS | jq -r .sha)" >> $GITHUB_ENV
 
       - name: Request check run
-        if: github.event_name == 'issue_comment'
         id: request-check-run
         uses: octokit/request-action@v2.x
         with:
           route: POST /repos/{owner}/{repo}/check-runs
           owner: ${{ github.event.repository.owner.login }}
           repo: ${{ github.event.repository.name }}
-          name: Cypress Tests
+          name: Cypress Tests on Demand
           head_sha: ${{ env.PR_SHA }}
-          status: queued
+          status: in_progress
           started_at: ${{ github.event.workflow_run.created_at }}
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -83,9 +76,9 @@ jobs:
           # determine the unique run id necessary to re-run the checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # overwrite commit message sent to Cypress Cloud
-          COMMIT_INFO_MESSAGE: ${{ github.event_name == 'issue_comment' && env.PR_TITLE || github.event.pull_request.title }}
+          COMMIT_INFO_MESSAGE: ${{ env.PR_TITLE }}
           # re-enable PR comment bot
-          COMMIT_INFO_SHA: ${{ github.event_name == 'issue_comment' && env.PR_SHA || github.event.pull_request.head.sha }}
+          COMMIT_INFO_SHA: ${{ env.PR_SHA }}
 
       - name: Components tests
         uses: cypress-io/github-action@v5.6.1
@@ -100,13 +93,12 @@ jobs:
           # determine the unique run id necessary to re-run the checks
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           # overwrite commit message sent to Cypress Cloud
-          COMMIT_INFO_MESSAGE: ${{ github.event_name == 'issue_comment' && env.PR_TITLE || github.event.pull_request.title }}
+          COMMIT_INFO_MESSAGE: ${{ env.PR_TITLE }}
           # re-enable PR comment bot
-          COMMIT_INFO_SHA: ${{ github.event_name == 'issue_comment' && env.PR_SHA || github.event.pull_request.head.sha }}
+          COMMIT_INFO_SHA: ${{ env.PR_SHA }}
 
       # Add this step at the end of the job steps
       - name: Update check run
-        if: github.event_name == 'issue_comment'
         id: update-check-run
         uses: octokit/request-action@v2.x
         with:
