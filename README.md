@@ -23,6 +23,7 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 - Java basics
 - Git
 - DevTools
+- Basics of automation tests
 - Basics of performance testing
 - HTML, CSS, JavaScript
 
@@ -40,8 +41,13 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 - Bezpieczeństwo Aplikacji Webowych - Securitum
 
 ### YouTube
-- [jaktestowac.pl]()
-- [testuj.p]()
-- [Testelka]()
-- [AmberTeam Testing]()
-- [Pasja informatyki]()
+- [jaktestowac.pl](https://www.youtube.com/@jaktestowac)
+- [testuj.pl](https://www.youtube.com/@testujplcommunity)
+- [Testelka](https://www.youtube.com/@testelka)
+- [AmberTeam Testing](https://www.youtube.com/@TestMasterAmberTeam)
+- [Po szklanie i na testowanie](https://www.youtube.com/@PoSzklanieINaTestowanie)
+- [Quality Island](https://www.youtube.com/@quality_island)
+- [Technika Programowania](https://www.youtube.com/@TechnikaProgramowania)
+- [Pasja informatyki](https://www.youtube.com/@Pasjainformatyki)
+- [SekurakTV](https://www.youtube.com/@SekurakTV)
+- [Szurek.tv](https://www.youtube.com/@KacperSzurek)
