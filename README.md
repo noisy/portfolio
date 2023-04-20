@@ -4,6 +4,10 @@
 Testing, detecting bugs and their causes, has been a passion of mine for a long time. In order to develop these abilities, I decided to take an intensive "Software Tester" course. According to the results of the Thomas PPA test, I am a thorough person who pays a lot of attention to detail, which makes me excel in my new role.<br>
 I am a former Motoparagliding National Team competitor, winner of the Polish Championship title three times, and team bronze medal at the European Championships and the World Championships.
 
+### My projects
+- [Guru99 Bank](https://github.com/adamcegielka/my-test-projects/tree/main/Guru99%20Bank)
+- [GoIT - QA Marathon](https://github.com/adamcegielka/my-test-projects/tree/main/GoIT%20-%20QA%20Marathon)
+
 ### Courses and Certificates
 - Tester Oprogramowania [SDAcademy](https://app.diplomasafe.com/pl-PL/diploma/dda1858c45f1a2c64b347a92d895ef44acadce0c1)
 - Podstawy manualnego testowania oprogramowania [Udemy](https://www.udemy.com/certificate/UC-11c0ad61-586b-43ce-9c06-9803c32dedaa/)
