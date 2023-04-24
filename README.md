@@ -36,6 +36,7 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 - [Codewars Profile](https://www.codewars.com/users/AdamCegielka)
 
 ### Books
+- Selenium WebDriver w Javie. Praktyczne wprowadzenie do tworzenia testów systemowych - Boni García
 - Certyfikowany Tester ISTQB Poziom Podstawowy - Adam Roman i Lucjan Stapp
 - Zawód Tester - Radosław Smilgin
 - Ścieżka Testera - Rafał Podraza
