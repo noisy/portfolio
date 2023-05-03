@@ -7,6 +7,7 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 ### My projects
 - [Guru99 Bank](https://github.com/adamcegielka/my-test-projects/tree/main/Guru99%20Bank)
 - [GoIT - QA Marathon](https://github.com/adamcegielka/my-test-projects/tree/main/GoIT%20-%20QA%20Marathon)
+- [AutomationExercise-Playwright](https://github.com/adamcegielka/my-test-projects/tree/main/AutomationExercise-Playwright)
 
 ### Courses and Certificates
 - Tester Oprogramowania [SDAcademy](https://app.diplomasafe.com/pl-PL/diploma/dda1858c45f1a2c64b347a92d895ef44acadce0c1)
@@ -16,6 +17,14 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 - Kurs SQL od podstaw | MySQL [Udemy](https://www.udemy.com/certificate/UC-ffc05560-fc06-4db3-984a-93ce32a03421/)
 - MySQL tworzenie i zarządzanie bazami danych [Udemy](https://www.udemy.com/certificate/UC-5a2be6bc-6567-4019-aea6-bc9656fe0902/)
 - Kurs Jira od podstaw - zarządzanie projektami [Udemy](https://www.udemy.com/certificate/UC-e82733a4-b25f-4910-a346-7389d10ed379/)
+
+### Improving skills
+- [DevTools](https://developer.chrome.com/docs/devtools/)
+- [Kurs Javascript dla superbohaterów](https://kursjs.pl/)
+- [Playwright with JavaScript](https://testautomationu.applitools.com/js-playwright-tutorial/)
+- [Playwright End To End Testing](https://www.lambdatest.com/blog/playwright-end-to-end-testing/)
+- [Cypress JavaScript Tutorial](https://www.lambdatest.com/learning-hub/cypress-javascript)
+- [Cypress with TypeScript](https://testautomationu.applitools.com/cypress-with-typescript/)
 
 ### Skills
 - Creating test cases
