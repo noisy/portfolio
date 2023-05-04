@@ -8,6 +8,7 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 - [GoIT - QA Marathon](https://github.com/adamcegielka/my-test-projects/tree/main/GoIT%20-%20QA%20Marathon)
 
 ### Courses and Certificates
+- CI/CD Jenkins dla testera/programisty w praktyce! [Udemy](https://www.udemy.com/certificate/UC-d899e853-2b48-4abb-a448-48f65cf6e71d/)
 - Tester Oprogramowania [SDAcademy](https://app.diplomasafe.com/pl-PL/diploma/dda1858c45f1a2c64b347a92d895ef44acadce0c1)
 - Podstawy manualnego testowania oprogramowania [Udemy](https://www.udemy.com/certificate/UC-11c0ad61-586b-43ce-9c06-9803c32dedaa/)
 - Praktyczny kurs testowania oprogramowania [Udemy](https://www.udemy.com/certificate/UC-169c5f4c-697b-499b-acd5-2ec51f5c6f07/)
@@ -49,6 +50,10 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 - Ścieżka Testera - Rafał Podraza
 - Testowanie Oprogramowania - Rafał Pawlak
 - Bezpieczeństwo Aplikacji Webowych - Securitum
+
+### Other books
+- Włosi - John Hooper
+- Starożytny Rzym od Romulusa do Justyniana - Thomas R. Martin
 
 ### YouTube
 - [jaktestowac.pl](https://www.youtube.com/@jaktestowac)
