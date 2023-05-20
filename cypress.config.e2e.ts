@@ -1,4 +1,5 @@
 import { defineConfig } from "cypress";
+import { cloudPlugin } from "cypress-cloud/plugin";
 import { config } from "./cypress.config";
 
 export default defineConfig({

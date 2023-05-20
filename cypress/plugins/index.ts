@@ -12,11 +12,13 @@
 // This function is called when a project is opened or re-opened (e.g. due to
 // the project's config changing)
 
+import { cloudPlugin } from "cypress-cloud/plugin";
+
 export default (
   on: Cypress.PluginEvents,
   config: Cypress.PluginConfigOptions
 ) => {
   // `on` is used to hook into various events Cypress emits
   // `config` is the resolved Cypress config
-  return config;
+  return cloudPlugin(on, config);
 };
