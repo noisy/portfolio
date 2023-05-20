@@ -22,3 +22,7 @@ function isInViewportEntirely(
     rect.right <= windowWidth
   );
 }
+
+export function goBackToHome() {
+  return cy.go("back").location("pathname").should("eq", "/");
+}
