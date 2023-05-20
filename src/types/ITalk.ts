@@ -19,4 +19,5 @@ export interface ITalk {
   description: string;
   date: string;
   filterTags: ITalkFilterTag[];
+  slides?: string;
 }

@@ -250,6 +250,7 @@ const db: IDB = {
         "Git jest potężnym narzędziem, które pozwala na współpracę wielu osób nad jednym projektem. Jego możliwości są ogromne, to jednak sprawia, że niektóre projekty używają go w sposób nieoptymalny. W tym filmie na przykładzie rzeczywistego otwarto-źródłowego projektu, omawiam workflow bazujące na Pull Requstach, a także to jak testy uruchamiane dla każdego Pull Requesta mogą pomóc w rozwijaniu projektu. Omawiam również jakie są zalety i wady takiego podejścia.",
       date: "Oct 18, 2018",
       filterTags: ["git"],
+      slides: "https://slides.com/noisy/git-workflow-pr/",
     },
     {
       source: "youtube",
