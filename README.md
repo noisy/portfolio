@@ -8,6 +8,7 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 - [GoIT - QA Marathon](https://github.com/adamcegielka/my-test-projects/tree/main/GoIT%20-%20QA%20Marathon)
 
 ### Courses and Certificates
+- Automated Software Testing with Playwright [Udemy](https://www.udemy.com/certificate/UC-51ad433b-1fad-4dac-9b78-77420adcf25c/)
 - CI/CD Jenkins dla testera/programisty w praktyce! [Udemy](https://www.udemy.com/certificate/UC-d899e853-2b48-4abb-a448-48f65cf6e71d/)
 - Tester Oprogramowania [SDAcademy](https://app.diplomasafe.com/pl-PL/diploma/dda1858c45f1a2c64b347a92d895ef44acadce0c1)
 - Podstawy manualnego testowania oprogramowania [Udemy](https://www.udemy.com/certificate/UC-11c0ad61-586b-43ce-9c06-9803c32dedaa/)
@@ -32,6 +33,7 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 - Agile methodologies, Scram
 - SQL / MySQL database basics
 - API testing
+- Playwright
 - Java basics
 - Git
 - DevTools
