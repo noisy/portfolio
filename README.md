@@ -3,6 +3,7 @@ Testing, detecting bugs and their causes, has been a passion of mine for a long 
 I am a former Motoparagliding National Team competitor, winner of the Polish Championship title three times, and team bronze medal at the European Championships and the World Championships.
 
 ### My projects
+- [my-shop-automationpractice-pl](https://github.com/adamcegielka/my-shop-automationpractice-pl)
 - [AutomationExercise-Playwright](https://github.com/adamcegielka/my-test-projects/tree/main/AutomationExercise-Playwright)
 - [Guru99 Bank](https://github.com/adamcegielka/my-test-projects/tree/main/Guru99%20Bank)
 - [GoIT - QA Marathon](https://github.com/adamcegielka/my-test-projects/tree/main/GoIT%20-%20QA%20Marathon)
