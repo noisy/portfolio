@@ -5,6 +5,7 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 ### My projects
 - [my-shop-automationpractice-pl](https://github.com/adamcegielka/my-shop-automationpractice-pl)
 - [sql-order-management](https://github.com/adamcegielka/sql-order-management)
+- [api-testing-with-postman](https://github.com/adamcegielka/api-testing-with-postman)
 - [AutomationExercise-Playwright](https://github.com/adamcegielka/my-test-projects/tree/main/AutomationExercise-Playwright)
 - [Guru99 Bank](https://github.com/adamcegielka/my-test-projects/tree/main/Guru99%20Bank)
 - [GoIT - QA Marathon](https://github.com/adamcegielka/my-test-projects/tree/main/GoIT%20-%20QA%20Marathon)
