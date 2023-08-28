@@ -33,7 +33,7 @@ I am a former Motoparagliding National Team competitor, winner of the Polish Cha
 - Creating test cases
 - Bug reporting
 - Theoretical knowledge from the ISTQB
-- Agile methodologies, Scram
+- Agile methodologies, Scrum
 - SQL / MySQL database basics
 - API testing
 - Playwright
