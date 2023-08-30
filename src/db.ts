@@ -7,9 +7,9 @@ const db: IDB = {
     firstName: "Adam",
     lastName: "Cegiełka",
     fullName: "Adam Cegiełka",
-    title: "",
-    email: "adamcegielka@tlen.pl",
-    location: "",
+    title: "Software Tester Engineer",
+    email: "adamcegielka@proton.me",
+    location: "Gdynia",
   },
   projects: [
 
