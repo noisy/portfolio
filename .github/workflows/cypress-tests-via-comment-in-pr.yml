@@ -1,0 +1,124 @@
+name: Cypress Tests on Demand
+
+on:
+  issue_comment:
+    types: [created]
+
+jobs:
+  cypress-tests:
+    runs-on: ubuntu-latest
+    if: |
+      (contains(github.event.comment.body, 'e2e please!') &&
+       github.event.issue.pull_request.url)
+    container:
+      image: cypress/base:18.15.0
+    steps:
+      - name: Add rocket reaction to comment
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/{owner}/{repo}/issues/comments/{comment_id}/reactions
+          owner: ${{ github.event.repository.owner.login }}
+          repo: ${{ github.event.repository.name }}
+          comment_id: ${{ github.event.comment.id }}
+          content: rocket
+        env:
+          GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+
+      - name: Get pull request details
+        id: pr-details
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          apt-get update
+          apt-get install -y jq curl
+          PR_DETAILS=$(curl -s -H "Authorization: token $GITHUB_TOKEN" "${{ github.event.issue.pull_request.url }}" | jq '{ref: .head.ref, repo: .head.repo.full_name, sha: .head.sha}')
+          echo $PR_DETAILS
+          echo "PR_REF=$(echo $PR_DETAILS | jq -r .ref)" >> $GITHUB_ENV
+          echo "PR_REPO=$(echo $PR_DETAILS | jq -r .repo)" >> $GITHUB_ENV
+          echo "PR_SHA=$(echo $PR_DETAILS | jq -r .sha)" >> $GITHUB_ENV
+
+      - name: Request check run
+        id: request-check-run
+        uses: octokit/request-action@v2.x
+        with:
+          route: POST /repos/{owner}/{repo}/check-runs
+          owner: ${{ github.event.repository.owner.login }}
+          repo: ${{ github.event.repository.name }}
+          name: Cypress Tests on Demand
+          head_sha: ${{ env.PR_SHA }}
+          status: in_progress
+          started_at: ${{ github.event.workflow_run.created_at }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: reinstall ca-certificates
+        # Fix for https://github.com/noisy/portfolio/actions/runs/4708656910/jobs/8351231323
+        # https://stackoverflow.com/a/35824116/338581
+        run: |
+          apt-get update
+          apt-get install -y --reinstall ca-certificates
+
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ env.PR_REPO }}
+          ref: ${{ env.PR_REF }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Install dependencies
+        uses: cypress-io/github-action@v5.6.1
+        with:
+          # just perform install
+          runTests: false
+
+      - name: E2E tests
+        uses: cypress-io/github-action@v5.6.1
+        with:
+          config-file: cypress.config.e2e.ts
+          install: false
+          build: npm run build
+          start: npm run preview
+          wait-on: "http://localhost:5050"
+          wait-on-timeout: 120
+          record: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_E2E_RECORD_KEY }}
+          # Recommended: pass the GitHub token lets this action correctly
+          # determine the unique run id necessary to re-run the checks
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # overwrite commit message sent to Cypress Cloud
+          COMMIT_INFO_MESSAGE: ${{ env.PR_TITLE }}
+          # re-enable PR comment bot
+          COMMIT_INFO_SHA: ${{ env.PR_SHA }}
+
+      - name: Components tests
+        uses: cypress-io/github-action@v5.6.1
+        with:
+          config-file: cypress.config.components.ts
+          install: false
+          record: true
+          component: true
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_COMPONENTS_RECORD_KEY }}
+          # Recommended: pass the GitHub token lets this action correctly
+          # determine the unique run id necessary to re-run the checks
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # overwrite commit message sent to Cypress Cloud
+          COMMIT_INFO_MESSAGE: ${{ env.PR_TITLE }}
+          # re-enable PR comment bot
+          COMMIT_INFO_SHA: ${{ env.PR_SHA }}
+
+      # Add this step at the end of the job steps
+      - name: Update check run
+        id: update-check-run
+        uses: octokit/request-action@v2.x
+        with:
+          route: PATCH /repos/{owner}/{repo}/check-runs/{check_run_id}
+          owner: ${{ github.event.repository.owner.login }}
+          repo: ${{ github.event.repository.name }}
+          check_run_id: ${{ fromJson(steps.request-check-run.outputs.data).id }}
+          status: completed
+          conclusion: ${{ job.status == 'success' && 'success' || 'failure' }}
+          completed_at: ${{ github.event.workflow_run.updated_at }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
