@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="118" height="17" viewBox="0 0 118 17" version="1.1" id="svg16" sodipodi:docname="logo-hogarth.svg" inkscape:version="1.0.2 (1.0.2+r75+1)">
+	<metadata id="metadata20">
+		<RDF>
+			<Work rdf:about="">
+				<format>
+					image/svg+xml
+				</format>
+				<type rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+			</Work>
+		</RDF>
+	</metadata>
+	<namedview pagecolor="#ffffff" bordercolor="#666666" borderopacity="1" objecttolerance="10" gridtolerance="10" guidetolerance="10" inkscape:pageopacity="0" inkscape:pageshadow="2" inkscape:window-width="1837" inkscape:window-height="1025" id="namedview18" showgrid="false" inkscape:zoom="10.652542" inkscape:cx="59" inkscape:cy="8.5" inkscape:window-x="0" inkscape:window-y="27" inkscape:window-maximized="1" inkscape:current-layer="svg16" />
+	<defs id="defs3">
+		<path id="29e1abx5xa" d="M0 0L118 0 118 16 0 16z" />
+	</defs>
+	<g fill="none" fill-rule="evenodd" id="g14">
+		<g id="g12">
+			<g transform="translate(-346 -44) translate(346 44.023)" id="g10">
+				<mask id="f0djnd6u0b" fill="#fff">
+					<use xlink:href="#29e1abx5xa" id="use5" />
+				</mask>
+				<path fill="#FFF" d="M10.68.286h2.881v15.427h-2.88V9.3h-7.8v6.413H0V.286h2.882v6.237h7.798V.286zm47.794 9.764l2.787-6.502h.26l2.787 6.502h-5.834zM59.57.286l-6.477 15.427h2.968l1.311-3.04h8.036l1.31 3.04h2.969L63.21.286h-3.639zm58.429 0v15.427h-2.88V9.3h-7.8v6.413h-2.881V.286h2.882v6.237h7.798V.286H118zm-30.132 0h13.561v2.579h-5.362v12.848h-2.881V2.865h-5.318V.286zM79.98 7.692h-4.743V2.798h4.7c1.603 0 2.534 1.014 2.534 2.403 0 1.63-1.06 2.49-2.49 2.49zM85.418 5.2c0-2.91-2.124-4.915-5.22-4.915h-7.843v15.427h2.882v-5.51h4.613l2.839 5.51h3.227L82.58 9.697c1.603-.727 2.838-2.358 2.838-4.496zM43.583 7.625h8.016C51.702 12.88 48.413 16 43.865 16c-4.659 0-7.95-3.416-7.95-8 0-4.54 3.291-8 7.928-8 3.726 0 6.458 2.03 7.28 5.138h-3.16c-.608-1.543-2.116-2.34-4.12-2.34-2.968 0-4.939 2.226-4.939 5.201 0 3.02 1.992 5.268 4.961 5.268 2.47 0 4.326-1.472 4.528-3.217h-4.81V7.625zm-18.454 5.576c-2.926 0-5.005-2.204-5.005-5.202 0-2.952 2.08-5.2 5.005-5.2 2.902 0 4.982 2.248 4.982 5.2 0 2.998-2.08 5.202-4.982 5.202zm0-13.201c-4.593 0-7.995 3.46-7.995 8 0 4.584 3.38 8 7.972 8 4.593 0 8.016-3.46 8.016-8 0-4.496-3.402-8-7.993-8z" mask="url(#f0djnd6u0b)" id="path8" style="fill:#000000;fill-opacity:1" />
+			</g>
+		</g>
+	</g>
+</svg>
