@@ -11,9 +11,7 @@ const db: IDB = {
     email: "adamcegielka@proton.me",
     location: "Gdynia",
   },
-  projects: [
-
-  ],
+  projects: [],
   projectFilters: [
     { name: "All", tag: allFilterTag, isActive: true },
     { name: "Python/Django", tag: "python-django", isActive: false },
@@ -195,9 +193,9 @@ const db: IDB = {
   ],
   links: {
     linkedinProfile: "https://www.linkedin.com/in/adam-cegielka/",
-    twitterProfile: "https://twitter.com/noisypl",
+    twitterProfile: "https://twitter.com/AdahoGlide",
     githubProfile: "https://github.com/adamcegielka",
-    stackOverflowProfile: "https://stackoverflow.com/users/338581/noisy",
+    stackOverflowProfile: "https://stackoverflow.com/users/20470056/adam",
   },
   flags: {
     polish: "🇵🇱",
@@ -221,7 +219,7 @@ const db: IDB = {
       name: "Manual Testing",
       skills: [
         "Creating test scenarios",
-        "Regression testing",
+        "Writing test cases",
         "Bugs raporting",
         "API testing",
         "Quality control",
@@ -230,23 +228,17 @@ const db: IDB = {
     },
     {
       name: "Automated Testing",
-      skills: [
-        "Cypress / Playwright",
-        "Currents.dev / Sorry-Cypress",
-        "Page Object Pattern",
-        "Cucumber / BDD",
-        "Newman (Postman CLI)",
-      ],
+      skills: ["Playwright / Selenium", "Cucumber / BDD", "Postman", "", ""],
       icon: "@/images/automated-testing-icon.svg",
     },
     {
       name: "Tools",
       skills: [
-        "Git CLI / GitHub",
-        "Chrome Dev Tools / XPath",
-        "SQL / SQLite / MySQL",
-        "HTML / CSS / Bootstrap",
-        "Linux /  Windows",
+        "Jira, Confluence, TestRail",
+        "VS Code, IntelliJ IDEA",
+        "MySQL Workbench",
+        "Chrome Dev Tools",
+        "ChatGPT",
       ],
       icon: "@/images/tools-icon.svg",
     },
