@@ -205,16 +205,15 @@ const db: IDB = {
   },
   blogPosts: [
     {
-      title:
-        "How I bankrupt my first startup by not understanding the definition of MVP - Minimum Viable Product",
-      author: "Krzysztof Szumny",
+      title: "Level UP: Paragliding vs Software Testing",
+      author: "Adam Cegiełka",
       slug: "mvp",
       published: true,
-      thumbnail: "@/images/blog/mvp.png",
-      publishedAt: new Date("2016-08-22 20:51"),
+      thumbnail: "@/images/blog/paragliding.png",
+      publishedAt: new Date("2023-08-31 21:00"),
       intro:
-        "Blog post intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque vel sapien quis nulla dictum euismod. Vivamus sed mi vitae dui iaculis venenatis...",
-      tagline: "About how to not make a very costly mistake...",
+        "There is a fascinating analogy in the world of paragliding and software testing that shows how to achieve a higher degree of excellence in both fields.",
+      tagline: "Strength of Work and Insight",
     },
   ],
   skillsGroups: [
