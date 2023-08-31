@@ -10,12 +10,12 @@
         >
           <a
             class="logo-link"
-            href="https://spidersweb.pl/2014/01/spistresci-pl.html"
+            href="https://www.gdynia.pl/co-nowego,2774/gdynianin-mistrzem-polski-paralotni,362349"
             target="_blank"
           >
             <img
               class="img-fluid svg-ie-fix mt-3"
-              src="@/images/logos/spidersweb.svg"
+              src="@/images/logos/gdynia.png"
             />
           </a>
         </div>
@@ -24,12 +24,12 @@
         >
           <a
             class="logo-link"
-            href="https://niebezpiecznik.pl/post/white-hat-hacking-w-praktyce-czyli-jak-przejalem-11-kont-i-kontrole-nad-21-tysiacami-dolarow-w-kryptowalucie/"
+            href="https://pinczow.com/2006/06/viii-mistrzostwa-polski-paralotni/"
             target="_blank"
           >
             <img
               class="img-fluid svg-ie-fix w-100"
-              src="@/images/logos/niebezpiecznik.png"
+              src="@/images/logos/pinczow.png"
           /></a>
         </div>
         <div
