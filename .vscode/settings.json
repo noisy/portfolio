@@ -2,19 +2,20 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-
   "editor.codeActionsOnSave": [
     "source.organizeImports",
     "source.fixAll.eslint"
   ],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
+  "files.exclude": {
+    "node_modules": true
+  },
   "files.trimTrailingWhitespace": true,
   "files.watcherExclude": {
     "**/.git/objects/**": true,
     "**/.git/subtree-cache/**": true,
     "**/node_modules/**": true
   },
-
-  "json.format.enable": false
+  "json.format.enable": false,
 }
