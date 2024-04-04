@@ -68,7 +68,8 @@ export interface IProjectFilter extends IFilter {
 export interface IProject {
   name: string;
   slug: string;
-  url: string;
+  url?: string;
+  urlName?: string;
   archivedUrl?: string;
   type: string;
   companyName?: string;
