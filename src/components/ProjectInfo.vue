@@ -22,15 +22,17 @@
               transform="grow-6 down-2"
             />
             <strong>Site Link: </strong>
-            <template v-if="project.url || project.archivedUrl">
-              <a :href="project.archivedUrl || project.url">{{
-                project.urlName || project.archivedUrl || project.url
-              }}</a>
-              <span v-if="project.archivedUrl"> (archived)</span>
-            </template>
-            <template v-else>
+            <a
+              v-if="project.url || project.archivedUrl"
+              :href="project.archivedUrl || project.url"
+              >{{ project.urlName || project.archivedUrl || project.url }}</a
+            >
+            <span v-if="project.archivedUrl"> (archived)</span>
+            <span
+              v-if="project.urlName && !project.url && !project.archivedUrl"
+            >
               {{ project.urlName }}
-            </template>
+            </span>
           </li>
           <li class="mb-2 mb-xl-4">
             <font-awesome-icon
