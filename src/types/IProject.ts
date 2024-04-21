@@ -87,7 +87,7 @@ export interface IProject {
 }
 export interface ICompany {
   name: string;
-  url: string;
+  url?: string;
   logo: string;
 }
 export interface ISkillGroup {
